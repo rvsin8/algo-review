@@ -22,3 +22,4 @@ const solve = async () => {
 }; 
 
 solve().then(console.log); //955584
+
