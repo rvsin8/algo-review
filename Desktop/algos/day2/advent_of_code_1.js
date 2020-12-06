@@ -40,7 +40,7 @@ const charCount = (target, str) => { //we want to get the target character and s
             count += 1; //increment the count
         }
     }
-    return count;
+    return count; 
 };
 
 solve().then(console.log);
