@@ -77,3 +77,5 @@ const solve = async () => {
 };
 
 solve().then(console.log);
+
+//O(n) runtime
