@@ -21,15 +21,22 @@ const solve = async () => {
             graph[source].push(destination); //graph at the source points to the destination
         }
     }
-    traverse(graph, 'shiny gold bag');
+    return traverse(graph, 'shiny gold bag') - 1;
 };
 
 
-const traverse = (graph, node) => {
+const traverse = (graph, node, visited = new Set()) => {
+    if (visited.has(node))
+        return 0;
+
+    visited.add(node);
+
     let numBagColors = 1; //we want a count of things, lets us know what current bag we're at
     for (let neighbor of graph[node]) { //visit neighbors from my current node
-        numBagColors += traverse(graph, neighbor); //increase it by the num value of this recursive call
+        numBagColors += traverse(graph, neighbor, visited); //increase it by the num value of this recursive call
     }
+
+    return numBagColors;
 };
 
 
