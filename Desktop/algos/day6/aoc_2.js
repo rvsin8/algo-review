@@ -35,5 +35,26 @@ const union = (set1, set2) => {
     return newSet;
 };
 
+const intersection = (set1, set2) => { //helper method
+    const newSet = new Set(); //set newSet into an empty set first
+
+    for(let item of set1) { //iterate through the first set
+        if (set2.has(item)) { //if set2 has that item
+            newSet.add(item); //add that item to newSet
+
+        }
+
+    }
+    return newSet; //return that same item
+
+}
+
+const s1 = new Set('aple');
+const s2 = new Set('pol');
+console.log(intersection(s1, s2));
+
+
+
+
 
 solve().then(console.log);
