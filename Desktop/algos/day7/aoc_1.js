@@ -9,14 +9,30 @@ const readLines = async () => {
 
 const solve = async () => {
     const lines = await readLines(); //array of every line in the file - readLines
-    const graph = {};
+    const graph = {}; //nodes will be keys of this object
     for (let line of lines) { //iterate through each line 
-        const { destination, source } = parseLine(line); //get parse line for every line -- we will get back an object with a destination and source
-        if (!(destination in graph))
-        
-    
+        const { destination, sources } = parseLine(line); //get parse line for every line -- we will get back an object with a destination and an array of sources
+        if (!(destination in graph)) //the first time i see a node, i want to seee if its in the graph if not in the graph 
+            graph[destination] = []; //we can add it to the graph
+
+        for (let source of sources){ //iterate through all source nodes & key into them
+            if (!(source in graph)) //if its not in there
+                graph[source] = []; //initialize them
+            graph[source].push(destination); //graph at the source points to the destination
+        }
+    }
+    traverse(graph, 'shiny gold bag');
+};
+
+
+const traverse = (graph, node) => {
+    let numBagColors = 1; //we want a count of things, lets us know what current bag we're at
+    for (let neighbor of graph[node]) { //visit neighbors from my current node
+        numBagColors += traverse(graph, neighbor); //increase it by the num value of this recursive call
     }
 };
+
+
 
 const parseLine = (line) => {
   const [ destination, rest ] = line.split('s contain ');
@@ -39,7 +55,6 @@ const parseLine = (line) => {
   };
 };
 
-console.log(parseLine('dark turquoise bags contain 4 dark bronze bags, 3 posh tan bags'));
+//console.log(parseLine('dark turquoise bags contain 4 dark bronze bags, 3 posh tan bags'));
 
-
-//solve().then(console.log); // 101
+solve().then(console.log); // 101
