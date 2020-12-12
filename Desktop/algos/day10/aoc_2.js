@@ -15,8 +15,8 @@ const solve = async () => {
     numWays(input); //function for our recursive call
 }; 
 
-const numWays = (array, i = 0) => {
-    if (i === array.length - 1)
+const numWays = (array, i = 0) => { //take in the array, we need to know our current position so we set i at index 0 of the array
+    if (i === array.length - 1) //
         return 1;
 
 };
