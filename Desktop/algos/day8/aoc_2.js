@@ -21,6 +21,7 @@ const getAcc = (instructions, i = 0, visited = new Set(), flipAvailable = true) 
         return -Infinity; //you can still add and subtract things from -infinity
 
     visited.add(i); //make sure instructions are marked as visited
+    const newVisited = new Set(visited);
     
     const { type, val } = instructions[i];
 
@@ -29,16 +30,22 @@ const getAcc = (instructions, i = 0, visited = new Set(), flipAvailable = true) 
     //nop
     if (type === 'jmp'){ //we need conditionals for each
         const paths = [ 
-            getAcc(instructions, i + val, visited, flipAvailable) //jmp is i(current instruction im at) + val presented and adding it to our current i
+            getAcc(instructions, i + val, newVisited, flipAvailable) //jmp is i(current instruction im at) + val presented and adding it to our current i
         ];
         if (flipAvailable)
-            paths.push(getAcc(instructions, i + 1, visited)); //rewatch this part
+            paths.push(getAcc(instructions, i + 1, newVisited, false)); //rewatch this part
         return Math.max(...paths); //rewatch this
 
     } else if (type === 'nop'){
-        return getAcc(instructions, i + 1, visited); //relook this //my value plus what my recursive call returns
-    } else {
-        return val + getAcc(instructions, i + 1, visited); //proceed to the very next instruction
+        const paths = [
+            getAcc(instructions, i + 1, newVisited, flipAvailable)
+        ]; //relook this //my value plus what my recursive call returns
+        if (flipAvailable)
+            paths.push(getAcc(instructions, i + val, newVisited, false)); //rewatch this part
+            return Math.max(...paths); //rewatch this
+
+    } else { //acc
+        return val + getAcc(instructions, i + 1, newVisited, flipAvailable); //proceed to the very next instruction
     }
 
 };
