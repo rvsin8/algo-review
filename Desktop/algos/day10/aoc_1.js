@@ -90,7 +90,7 @@ const readLines = async () => {
 
 const solve = async () => {
     const lines = await readLines();
-    const numbers = lines.map(Number); //we want the strings coverted into numbers
+    const numbers = lines.map(Number); //we want the strings converted into numbers
     const sorted = numbers.sort((a,b) => a - b ); //in increasing order
     //console.log(sorted)
     const last = sorted[sorted.length - 1]; //to fix off by one error thats why we do this
