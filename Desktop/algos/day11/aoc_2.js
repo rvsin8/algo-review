@@ -44,16 +44,16 @@ const grid1 = [
   [31, 32, 33, 34, 35, 36],
 ];
 
-const getX = (grid, row, col) => {
+const getX = (grid, row, col) => { //x-xis meaning im going across
   return [ 
-    grid[row].slice(0, col).reverse(),
-    grid[row].slice(col + 1)
+    grid[row].slice(0, col).reverse(), //we want the close element so 14 before 13
+    grid[row].slice(col + 1) //that can be in order
   ];
 };
 
-// console.log(getX(grid1, 2, 2));
+//console.log(getX(grid1, 2, 2)); //[ [ 14, 13 ], [ 16, 17, 18 ] ]
 
-const getY = (grid, row, col) => {
+const getY = (grid, row, col) => { //y-axis im going down
   const aboveAxis = [];
   for (let i = row - 1; i >= 0; i -= 1)
     aboveAxis.push(grid[i][col]);
@@ -67,11 +67,11 @@ const getY = (grid, row, col) => {
     belowAxis
   ]
 };
-// console.table(grid1);
-// console.log(getY(grid1, 2, 2));
+//console.table(grid1);
+//console.log(getY(grid1, 2, 2)); //[ [ 9, 3 ], [ 21, 27, 33 ] ]
 
 
-const getZ = (grid, row, col) => {
+const getZ = (grid, row, col) => { //diag from top left to bottom right, this is tough
   const leftAxis = [];
   for (let i = 1; row - i >= 0 && col - i >= 0; i += 1)
     leftAxis.push(grid[row - i][col - i]);
@@ -86,10 +86,10 @@ const getZ = (grid, row, col) => {
   ];
 };
 
-// console.table(grid1);
-// console.log(getZ(grid1, 2, 2));
+// console.table(grid1); [ [ 8, 1 ], [ 22, 28, 36 ] ]
+console.log(getZ(grid1, 2, 2));
 
-const getW = (grid, row, col) => {
+const getW = (grid, row, col) => { //top right to bottom left, this is tough to do
   const leftAxis = [];
   for (let i = 1; row + i < grid.length && col - i >= 0; i += 1)
     leftAxis.push(grid[row + i][col - i]);
@@ -105,14 +105,14 @@ const getW = (grid, row, col) => {
 };
 
 
-const nearestNeighbors = (grid, row, col) => {
-  const neighbors = [];
+const nearestNeighbors = (grid, row, col) => { //helper
+  const neighbors = []; //get an array
 
-  [getX, getY, getZ, getW].forEach(getAxis => {
-    const [ sideA, sideB ] = getAxis(grid, row, col);
+  [getX, getY, getZ, getW].forEach(getAxis => { //iterate through all the functions
+    const [ sideA, sideB ] = getAxis(grid, row, col); //you get both arrays back
     for (let spot of sideA) {      
-      if (spot !== '.') {
-        neighbors.push(spot);
+      if (spot !== '.') { //if not a dot
+        neighbors.push(spot); //it is a chair and push it into the array
         break;
       }
     }
@@ -151,7 +151,7 @@ const simulateRound = (grid) => {
         isStable = false;
       }
 
-      if (center === '#' && numOccupied >= 5) {
+      if (center === '#' && numOccupied >= 5) { //now its 5 from 4
         newGrid[row][col] = 'L';
         isStable = false;
       }
