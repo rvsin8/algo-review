@@ -15,7 +15,12 @@ const solve = async () => {
     const commands = lines.map(parseCommand); //we have the numbers and types in a table
     const cardinalCommands = commands.filter(command => cardinals.has(command.type)); //to check if our cardinal has that type
     const rotationCommands = commands.filter(command => !cardinals.has(command.type)); //to check if our cardinal does not have that type
-    console.log(calcCardinal(cardinalCommands)); //only directions not rotations
+    const cardinalDistance = calcCardinal(cardinalCommands); //only directions not rotations
+    const rotationDistance = calcRotation(rotationCommands); //only  rotations
+    const deltaX = Math.abs(cardinalDistance.x + rotationDistance.x); //to get the x distance we need the abs value of it
+    const deltaY = Math.abs(cardinalDistance.y + rotationDistance.y); //to get the y distance we need in abs value of it 
+
+    return deltaX + deltaY; //our answer the sum
 
     
 }; 
@@ -50,15 +55,26 @@ const calcRotation = (commands) => {
     for (let command of commands) { //we want to look into every single command
         const { type, val } = command; //type of command the number value and type
         if (type === 'L'){ //if my type equal north
-            ship.angle = (360 + ship.angle + val) % 360; //reverse order //no matter what we increase by 360 we wll get a positive value instead of a negative one
+            ship.angle = (360 + ship.angle - val) % 360; //reverse order //no matter what we increase by 360 we wll get a positive value instead of a negative one
         } else if (type === 'R'){ //if my type equal north
             ship.angle = (ship.angle + val) % 360; //we have to keep it in respects to 360 so we mod, we need to add whatever value we arrive at to the original value we have
+        } else {
+            if (ship.angle === 0){
+                ship.y += val;
+            } else if (ship.angle === 180){ //if my type equal 180
+                ship.y -= val; //it will be a negative y direction in value
+            } else if (ship.angle === 90){ //if my type equal 90
+                ship.x += val; //it will be a positive x direction in value
+            } else if (ship.angle === 270){ //if my type equal 270
+                ship.x -= val; //it will be a negative x direction in value
+            }
         }
-        console.log(ship);
-    }
+        //console.log(ship);
+    };
+    return ship;
 };
 
-calcRotation([{type:'L', val: 180}])
+//calcRotation([{type:'L', val: 180}])
 
 
 
