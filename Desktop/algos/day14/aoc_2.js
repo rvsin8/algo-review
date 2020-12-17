@@ -23,7 +23,14 @@ const getAddresses = (floatingAddress) => { //we get floating addresses
     const firstChar = floatingAddress[0]; //grab the first char or floating address
     const restAddress = floatingAddress.slice(1); //grab everything after the first char, shrinks the size of the address
     const partialAddresses = getAddresses(restAddress); //it should be an array that all the addresses that match that particular string
-
+    if (firstChar === 'X'){ //if the first char equal X
+        return [ 
+            ...partialAddresses.map(address => '0' + addr), //if i map over them i know each of them will be a string, for each address and take a 0 and put it infront of the string //we want to put the '...' to make sure they don't nest deeply
+            ...partialAddresses.map(address => '1' + addr) //if i map over them i know each of them will be a string, for each address and take a 1 and put it infront of the string  //we want to put the '...' to make sure they don't nest deeply
+        ]
+    } else { //an else lets us know the first char is not an x its a 0 or 1
+        return partialAddresses.map(addr => firstChar + addr);
+    }
 
 };
 
