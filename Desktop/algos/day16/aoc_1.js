@@ -21,10 +21,18 @@ const parseA = (section) => {
         //console.log(field);
 
         const [ range1, range2 ] = rangeStr.split(' or '); //will give us our two num since we split on the or
-        console.log(range1, range2);
-        const numbers = range1.splt('-').map(Number); //we can split on the - to get straight number data in the range hence we use the built in Numbers function
+        //console.log(range1, range2);
+        const numbers1 = range1.split('-').map(Number); //we can split on the - to get straight number data in the range hence we use the built in Numbers function
+        const numbers2 = range2.split('-').map(Number); //gives us two separate arrays
+
+        rules[field] = (val) => {
+            return numbers1[0] <= val && val <= numbers1[1] || numbers2[0] <= val && val <= numbers2[1] ; //we want to make sure the value is in the range so it says to be greater than the num at index0 while being smaller than the num in index1 aka our range1
+
+        };
+        console.log(rules)
         
     }
+    return rules;
     //console.log(lines);
 
 };
