@@ -6,6 +6,7 @@ const readLines = async () => {
 };
 
 
+
 const solve = async () => {
     const [sectionA, sectionB, sectionC] = await readLines(); //we want to split it by sections, we will focus on section A and section C
     const rules = parseA(sectionA);
@@ -13,9 +14,25 @@ const solve = async () => {
     const validTickets = getValidRows(nearbyTickets, rules);
     //console.log(nearbyTickets.length);
     //console.log(validTickets.length);
+    const columns = transpose(validTickets);
+    const possible = [];
+    console.log(rules);
+    for (let num = 0; num < columns.length; num += 1){ //iterate through every col
+        const column = columns[num];
 
+        const set = new Set();
 
-}; 
+        for (let field in rules) { //its an object so we do field in rules
+            const rule = rules[field];
+            const isCompatible = column.every(val => rule(val));
+            if (isCompatible)
+                set.add(field);
+        }
+
+        possible[num] = set;
+    }
+    console.log(possible);
+};
 
 const transpose = (grid) => { //we need to make our own built in function
     const newGrid = Array(grid[0].length)
@@ -37,7 +54,7 @@ const transpose = (grid) => { //we need to make our own built in function
 //
 //]);
 
-console.log(transposed)
+//console.log(transposed)
 
 const getValidRows = (rows, rules) => { //take in all the rows and see how it matches the rules
     const allRules = Object.values(rules); //convert all of your rules, rules are the object and keys are the function
@@ -46,15 +63,6 @@ const getValidRows = (rows, rules) => { //take in all the rows and see how it ma
     });
 
 };
-
-
-
-
-
-
-
-
-
 
 const parseA = (section) => {
     const lines = section.split('\n'); //split on the new line char, gives us an array of those strings
