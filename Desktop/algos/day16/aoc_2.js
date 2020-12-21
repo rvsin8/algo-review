@@ -53,8 +53,19 @@ const solve = async () => {
     }
 
     //console.log(map);
+    
     const myTicket = parseB(sectionB);
     console.log(myTicket);
+
+
+    let product = 1; //since we are multiplying 
+    for (let field in map) {
+        if (field.startsWith('departure')){ // start from departure on our ticket
+            const colNum = map[field]; //get every colNum on the field
+            product *= myTicket[colNum]; //and multiply it
+        }
+    }
+    return product;
 
 
 };
