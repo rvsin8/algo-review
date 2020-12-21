@@ -31,7 +31,32 @@ const solve = async () => {
 
         possible[num] = set;
     }
-    console.log(possible);
+    //console.log(possible);
+
+    const map = {};
+    while (Object.keys(map).length < columns.length){ //if the keys are less than the num of rules/cols
+        for (let col = 0; col < possible.length; col += 1){ //so we go through each col cause they are rules
+            const set = possible[col]; //access these diff sets
+
+            if (set.size === 1){ //if the set size is equal to exactly 1
+                const label = [...set][0];
+                map[label] = col; //we now know that col belongs to that label we got 
+
+                for (let otherSet of possible) { //now we need to let every set know that we found the label so we want to get rid of this in those sets
+                    otherSet.delete(label); //we want to delete the set we found earlier that matched from every other set
+
+                }
+            }
+
+        }
+
+    }
+
+    //console.log(map);
+    const myTicket = parseB(sectionB);
+    console.log(myTicket);
+
+
 };
 
 const transpose = (grid) => { //we need to make our own built in function
@@ -88,6 +113,16 @@ const parseA = (section) => {
     return rules;
     //console.log(lines);
 };
+
+
+const parseB = (section) => {
+    const ticketStr = section.split('\n')[1]; //split on new line char and grab the second ele 
+    return ticketStr.split(',').map(Number);
+};
+
+
+
+
 
 const parseC = (section) => {
     const lines = section.split('\n').slice(1); //split on the new line char, gives us an array of those strings
