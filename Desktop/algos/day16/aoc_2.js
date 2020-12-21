@@ -6,40 +6,55 @@ const readLines = async () => {
 };
 
 
-//via stack overflow - The flat method is not yet implemented in common browsers (only Chrome v69, Firefox Nightly and Opera 56). It’s an experimental feature. Therefore you cannot use it yet.
-
-//You may want to have your own flat function instead:
-
-
-Object.defineProperty(Array.prototype, 'flat', { //flat wasn't working so i had to google and create my own flat function,
-    value: function(depth = 1) {
-      return this.reduce(function (flat, toFlatten) {
-        return flat.concat((Array.isArray(toFlatten) && (depth>1)) ? toFlatten.flat(depth-1) : toFlatten);
-      }, []);
-    }
-});
-
 const solve = async () => {
     const [sectionA, sectionB, sectionC] = await readLines(); //we want to split it by sections, we will focus on section A and section C
     const rules = parseA(sectionA);
     const nearbyTickets = parseC((sectionC));
-    //console.log(nearbyTicket);
-    const allRules = Object.values(rules); //convert all of your rules, rules are the object and keys are the function
-
-    const values = nearbyTickets.flat(); //will convert 2D arrays into regular arrays
-
-    for (let val of values){ //for all the values in the value array we want to check which follow the rules
-        const isInvalid = allRules.every(rule => rule(val) === false); //if that value is invalid
-        if (isInvalid) //if a value is invalid
-            errorTotal += val; //add it to the total
-
-    }
-
-    return errorTotal
-
+    const validTickets = getValidRows(nearbyTickets, rules);
+    //console.log(nearbyTickets.length);
+    //console.log(validTickets.length);
 
 
 }; 
+
+const transpose = (grid) => { //we need to make our own built in function
+    const newGrid = Array(grid[0].length)
+    .fill()
+    .map(() => []);
+    for (let r = 0; r < grid.length; r += 1){
+        for (let c = 0; c < grid[0].length; c += 1){
+            newGrid[c][r] = grid[r][c];
+        }
+    }
+    return newGrid;
+
+};
+
+//const transposed = transpose([
+//    ['a', 'b'],
+//    ['c', 'd'],
+//    ['e', 'f']
+//
+//]);
+
+console.log(transposed)
+
+const getValidRows = (rows, rules) => { //take in all the rows and see how it matches the rules
+    const allRules = Object.values(rules); //convert all of your rules, rules are the object and keys are the function
+    return rows.filter(row => { //we want to return valid rows
+        return !row.some(val => allRules.every(rules => rules(val) === false)); //i want to choose the rows that don't have an invalid value, an invalid val is one that fails every rule
+    });
+
+};
+
+
+
+
+
+
+
+
+
 
 const parseA = (section) => {
     const lines = section.split('\n'); //split on the new line char, gives us an array of those strings
