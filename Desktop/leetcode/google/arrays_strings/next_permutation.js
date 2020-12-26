@@ -79,6 +79,7 @@ const nextPermutation = function(nums) {
 };
 
 //faster solution on leetcode
+
 // objective: find next (larger) permutation. If not
     // avilable, sort ascending
 // method: Iterate from before-last right to left and see if you find curr < next.

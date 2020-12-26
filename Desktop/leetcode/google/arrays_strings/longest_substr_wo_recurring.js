@@ -70,12 +70,5 @@ var lengthOfLongestSubstring = function(s) {
 
 
     }
-
-
-
-
-
-
-
     return count;
 };
