@@ -31,6 +31,19 @@
 
 
 function maxArea(a){
+    let start = 0; //set it to 0 as first index
+    let end = a.length - 1; //last index
+    let area = 0; //area will start at 1
+
+    while(start - end){ //while the start is less than the end, we want two things
+        const width = end - start; //one is the width, which is the end - start
+        const height = Math.min(a[start], a[end]); //and the height, which is the minimum of the index of that start and the array ending index
+        area = Math.max(area, width * height);//and update the area, where the area is the max result of a height and width
+        a[start] < a[end] ? start++ : end--;//we need to update our pointers properly, so if the start is less than the end, we increment the start if not decrement the end
+
+    }
+
+    return area;
 
 
 }

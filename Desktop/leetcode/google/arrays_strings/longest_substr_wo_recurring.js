@@ -29,28 +29,53 @@
 //0 <= s.length <= 5 * 104
 //s consists of English letters, digits, symbols and spaces.
 
+//brute force 
+// "abcabcbb" for each char we are creating a set and checking all the following char in the set with no repeats
+// first set - [a, b, c] we are done checking bc a repeats, 3
+// second set - [b, c, a] we are dome checking bc b repeats, 3
+// third set - [c, a, b] we are done checking bc c repeats, 3
+// ....
+
+// second solution is the sliding window method
+// first step set is [a] the sliding window begins
+// second step is [a,b] the sliding window is bigger
+// third step is [a,b,c] and even bigger
+// fourth step is [a,b,c,a] we have to now change the window since we have a repeating character
+// fifth step is [b,c,a] we got rid of the most left element
+// sixth step is [b,c,a,b] we have to now change the window since we have a repeating character
+// seventh step is [c,a,b] we got rid of the most left element
+// and so on
+
+//sliding window method
 
 var lengthOfLongestSubstring = function(s) {
-    if (!s) return 0; //if the string is empty return 0
-    if (s.length < 2) return s.length; //if the string is less than 2 return the original string bc we are looking for re-occurring chars 
-    var ls = s[0]; // longest string
-    var cs = s[0]; // current string
-    for (var i = 1; i < s.length; i++) { //iterate through the index
-        var index = cs.indexOf(s[i]); // get index of current character in current string and save it in a variable 
-        if (index > -1) { // found the character in current string
-            if (cs.length > ls.length) { //if the length of the current string is greater than the longest string - replace it
-                ls = cs; // update longest string, replace it
-            }
-            cs = cs.substring(index + 1,cs.length) + s[i]; // remove the first part of the string which contains repeated character //use this for the next longest string in the sentence
+    let count = 0; //start count
+    let i = 0; //get the index for the start
+    let j = 0; //get the index for the end
+    let n = s.length; // the length as well 
+
+    let set = new Set();
+
+    while (i < n && j < n){ //i and j need to both be less than the length
+        let char = s.charAt(j); //this is the new character or the most right character
+        if(!set.has(char)) { //if the char is not in the set
+            set.add(char); //we have to add the char
+            j++; //we can move the right side of the window
+            count = Math.max (count, j - i); //j - i gives you the pos of the end of the window and the start
         } else {
-            cs = cs + s[i];  //if not return the string count
-        }        
-    }
-    if (cs.length > ls.length) { //if the length of the current string is greater than the longest string - replace it
-        ls = cs;                
-    }
-    return ls.length;
-};
+            set.delete(s.charAt(i)); //in the other case we have to delete the first ele
+            i++; //will move the left part of the sliding window
+        }
 
 
-//make sense out of this line by line
+
+    }
+
+
+
+
+
+
+
+    return count;
+}
