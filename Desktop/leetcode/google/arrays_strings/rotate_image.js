@@ -31,7 +31,7 @@
 //then move to the next ring, inner ring and so on
 //O(n), n is the matrix
 
-const swap = (matrix, i, j, k, l) => {
+const swap = (matrix, i, j, k, l) => { //swapping functions that swaps two indices in our matrix
     const temp = matrix[k][l];
     matrix[k][l] = matrix[i][j];
     matrix[i][j] = temp;
