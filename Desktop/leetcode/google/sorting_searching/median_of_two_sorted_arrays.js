@@ -42,3 +42,14 @@
 //we need to now sort every ele from lowest to highest
 //we need to know if there is an even or odd amount of elements in the array, if its odd we know its the median val but if its even then we need tot ake the 2 num separating the lower and higher half we need to get their median value
 
+function findMedianSortedArrays(arr1, arr2) {
+    var concat = arr1.concat(arr2); //concat the array
+    concat = concat.sort(function (a,b) {return a-b}); //js sort function and this will make sure its sorted in order
+    var length = concat.length; //this length will let us know if this is an array with an odd or even num of integers/eles
+
+    if (length % 2 == 1) { //if we divide the length by 2 and get a 1 its odd
+        return concat[(length / 2) - .5]//5/2 = 2.5 - .5 = 2 so we look at idx 2
+    } else {
+        return (concat[length/2] + concat[(length / 2) - 1]) / 2 //upper boundary , lower boundary divided by 2
+    }
+}
