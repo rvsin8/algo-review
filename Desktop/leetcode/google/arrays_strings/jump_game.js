@@ -39,18 +39,16 @@
 //in idx0 which is 2 can we get to 1, yes 0 + 2 >= 1
 //we can get to the last index from the first one
 
-var canJump = function(nums){
+var canJump = function(nums) {
     let lastValidIndex = nums.length - 1; //to get the last idx aka the leftmost valid idx
 
     for (let i = nums.length - 1; i >= 0; i--){
-        if (i + nums[i] > lastValidIndex){ //check to see if the idx we on is the leftmostvalid idx
+        if (i + nums[i] >= lastValidIndex){ //check to see if the idx we on is the leftmostvalid idx
            lastValidIndex = i; //then we need to update the last valid index to the index we on
 
         }
     }
 
     return lastValidIndex === 0;
-
-
 };
 
