@@ -53,6 +53,17 @@ var mergeTwoLists = function(l1, l2){
             dummy.next = l2; //we set our pointer to l2 val
             l2 = l2.next; //we then look at the next node in that list
         } 
+        dummy = dummy.next; //whenever we find the smallest next ele we can use the new dummy next prop to link to whatever one is smallest
     }
+
+    if (l1 !== null) { //if the first linked list is not the one that has the null reference
+        dummy.next = l1;
+
+
+    } else {
+        dummy.next = l2; //if the second linked list is not the one that has the null reference
+    }
+
+    return head.next; //we dont want to return -1 but the next node
 
 };
