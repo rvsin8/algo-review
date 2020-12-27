@@ -24,8 +24,8 @@ function isValidSubsequence(array, sequence) {//takes in two nonempty arrays; ar
     let seqIdx = 0; //keep track our position in the seq array
 
     while (arrIdx < array.length && seqIdx < sequence.length){ //while both our array and sequence array are less than their respective lengths
-        if (array[arrIdx] === sequence[seqIdx]) seqIdx++;
-        arrIdx++;
+        if (array[arrIdx] === sequence[seqIdx]) seqIdx++; //if our arridx matches our seqidx, that means we found our current ele in the subseq so we go to our next ele in our seqarr
+        arrIdx++; //move on to the next seq in our array no matter what we will keep movign along here
     }
-    return seqIdx === sequence.length;
+    return seqIdx === sequence.length; //return whether or not we found a valid subsequence, if the seqidx === seqlength means we found all the valid subseq
 }
