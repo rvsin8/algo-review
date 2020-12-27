@@ -36,3 +36,9 @@
 //0 <= n <= 1000
 //1 <= m + n <= 2000
 //-106 <= nums1[i], nums2[i] <= 106
+
+//my understanding
+//we need to concatenate the two lists to create one large array with all value using concat function
+//we need to now sort every ele from lowest to highest
+//we need to know if there is an even or odd amount of elements in the array, if its odd we know its the median val but if its even then we need tot ake the 2 num separating the lower and higher half we need to get their median value
+
