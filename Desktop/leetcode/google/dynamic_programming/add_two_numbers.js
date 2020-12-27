@@ -44,7 +44,25 @@ var addTwoNumber = function(l1, l2){
     while (p1 !== null || p2 !== null){ //if either of our linked list has a next node we will keep iterating
         let x = (p1 !== null) ? p1.value : 0; //we need to check if our first pointer is on a node and if it is it will be the value of that node and if its not not we will make it 0 so we can add the other pointer it
         let y = (p2 !== null) ? p2.value : 0; //same logic as above
+        let sum = x + y + carry; // 4 + 8 + 0 = 12
 
+        carry = Math.floor(sum / 10); //we need to reset our carry for the next iteration
+        current.next = new ListNode(sum % 10); //new node linked to it
+        current = current.next; //for the next loop
+
+        if (p1 !== null){ //if neither equal null we will just advance
+            p1.next;
+        }
+
+        if (p2 !== null){
+            p2.next;
+        }
     }
+
+    if (carry > 0){ //if the final carry is greater than 0
+        current.next = new ListNode(1); //add a new node that is 1
+    }
+
+    return dummyHead.next; //returning dummyheads next property
 };
 
