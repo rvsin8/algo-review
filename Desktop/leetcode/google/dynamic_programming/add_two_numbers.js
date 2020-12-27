@@ -34,7 +34,7 @@
 //if we have a carry with no more columns we will just add the carry to the beginning 
 
 
-var addTwoNumber = function(l1, l2){
+let addTwoNumbers = function(l1, l2){
     let dummyHead = new ListNode(0); //make a new third linked list for the solution
     let p1 = l1; //pointer for the first head
     let p2 = l2; //pointer for the second head
@@ -42,8 +42,8 @@ var addTwoNumber = function(l1, l2){
     let carry = 0; //our carry
 
     while (p1 !== null || p2 !== null){ //if either of our linked list has a next node we will keep iterating
-        let x = (p1 !== null) ? p1.value : 0; //we need to check if our first pointer is on a node and if it is it will be the value of that node and if its not not we will make it 0 so we can add the other pointer it
-        let y = (p2 !== null) ? p2.value : 0; //same logic as above
+        let x = (p1 !== null) ? p1.val : 0; //we need to check if our first pointer is on a node and if it is it will be the value of that node and if its not not we will make it 0 so we can add the other pointer it
+        let y = (p2 !== null) ? p2.val : 0; //same logic as above
         let sum = x + y + carry; // 4 + 8 + 0 = 12
 
         carry = Math.floor(sum / 10); //we need to reset our carry for the next iteration
@@ -51,11 +51,11 @@ var addTwoNumber = function(l1, l2){
         current = current.next; //for the next loop
 
         if (p1 !== null){ //if neither equal null we will just advance
-            p1.next;
+            p1 = p1.next;
         }
 
         if (p2 !== null){
-            p2.next;
+            p2 = p2.next;
         }
     }
 
