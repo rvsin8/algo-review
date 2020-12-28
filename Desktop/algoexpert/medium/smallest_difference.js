@@ -54,9 +54,9 @@ function smallestDifference(arrayOne, arrayTwo) {
             return [firstNum, secondNum]; //if its the same nums then the difference is 0 and we found our answer
         }
 
-        if (smallest > current){
-            smallest = current;
-            smallestPair = [firstNum, secondNum];
+        if (smallest > current){ //once we calc the current diff, if its smaller then we ...
+            smallest = current; //update the smallest
+            smallestPair = [firstNum, secondNum]; //we want the pairs updated as well since the pairs are our answers
         }
 
     }
