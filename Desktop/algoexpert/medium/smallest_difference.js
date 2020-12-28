@@ -61,5 +61,6 @@ function smallestDifference(arrayOne, arrayTwo) {
 
     }
 
-    return smallestPairs;
+    return smallestPair;
 }
+
