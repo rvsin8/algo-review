@@ -40,18 +40,18 @@ function smallestDifference(arrayOne, arrayTwo) {
     let current = Infinity; //initialize the current var for the curr diff
     let smallestPair = []; //where we keep track of our pairs
 
-    while (idxOne < arrayOne.length && idxTwo < arrayTwo.length){
-        let firstNum = arrayOne[idxOne];
-        let secondNum = arrayOne[idxTwo];
+    while (idxOne < arrayOne.length && idxTwo < arrayTwo.length){ //while both of our pointers are valid and in bounds, we will do our comparisons 
+        let firstNum = arrayOne[idxOne]; //our first number
+        let secondNum = arrayOne[idxTwo]; //our sec number
 
-        if (firstNum < secondNum){
-            current = secondNum - firstNum;
-            idxOne++;
-        } else if (secondNum < firstNum) {
-            current = firstNum - secondNum;
-            idxTwo++;
+        if (firstNum < secondNum){ //if our first num is less than our sec
+            current = secondNum - firstNum; //we want our first num to be subtracted by our second num
+            idxOne++; //keep iterating up (greater) in our first array with our first num
+        } else if (secondNum < firstNum) { //if sec num is less than first
+            current = firstNum - secondNum; //sub sec num by our first
+            idxTwo++; //iterate through the second array
         } else {
-            return [firstNum, secondNum];
+            return [firstNum, secondNum]; //if its the same nums then the difference is 0 and we found our answer
         }
 
         if (smallest > current){
