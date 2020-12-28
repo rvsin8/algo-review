@@ -19,3 +19,10 @@
 //we start from the left and 6 should be coming after 1,2,4 but before 7 which is idx 3
 //12 we will start from the right, behind 19,18,16 but after 7 so idx 9.
 //sort from idx3 to idx9
+
+//time complexity
+//O(N) where N is the length of the input array, first we find all of our unsorted num which is one pass which is O(N) time
+//to find the final of the smallest and greatest num, all we have to do is a couple of iterations which are all O(N)
+
+//space complexity
+//O(1) everything happens in place, we are not going to be storing much
