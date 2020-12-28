@@ -30,3 +30,36 @@
 
 //space complexity 
 //O(1) bc we are sorting arrays in place and we are not storing any additional memory we are just keeping track of our best pairs
+
+function smallestDifference(arrayOne, arrayTwo) {
+    arrayOne.sort((a, b) => a - b); //we want to sort arr1
+    arrayTwo.sort((a, b) => a - b); //we want to sort arr2
+    let idxOne = 0; //declare pointer1
+    let idxTwo = 0; //declare pointer2
+    let smallest = Infinity; //initialize smallest var for the smallest diff - infinity will simplify the line of code
+    let current = Infinity; //initialize the current var for the curr diff
+    let smallestPair = []; //where we keep track of our pairs
+
+    while (idxOne < arrayOne.length && idxTwo < arrayTwo.length){
+        let firstNum = arrayOne[idxOne];
+        let secondNum = arrayOne[idxTwo];
+
+        if (firstNum < secondNum){
+            current = secondNum - firstNum;
+            idxOne++;
+        } else if (secondNum < firstNum) {
+            current = firstNum - secondNum;
+            idxTwo++;
+        } else {
+            return [firstNum, secondNum];
+        }
+
+        if (smallest > current){
+            smallest = current;
+            smallestPair = [firstNum, secondNum];
+        }
+
+    }
+
+    return smallestPairs;
+}
