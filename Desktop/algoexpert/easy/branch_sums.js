@@ -28,15 +28,15 @@ function branchSums(root){//
 }
 
 function calculateBranchSums(node, runningSum, sums){//
-    if (!node) return;
+    if (!node) return; //node that has 1 child, just return it
 
-    const newRunningSum = runningSum + node.value;
-    if (!node.left && !node.right){
-        sums.push(newRunningSum);
+    const newRunningSum = runningSum + node.value; //we want to add the value of our node to the running sum
+    if (!node.left && !node.right){  //if node left or right is none we will ...
+        sums.push(newRunningSum); //add it to our sums list
         return;
     }
 
-    calculateBranchSums(node.left, newRunningSum, sums);
+    calculateBranchSums(node.left, newRunningSum, sums); 
     calculateBranchSums(node.right, newRunningSum, sums);
 }
 
