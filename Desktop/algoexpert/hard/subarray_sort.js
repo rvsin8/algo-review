@@ -39,25 +39,25 @@ function subarraySort(array){
         }
     }
 
-    if (minOutOfOrder === Infinity){
+    if (minOutOfOrder === Infinity){ //if minoutoforder is equal to float infinity that means everything is already we want to return [-1, -1]
         return [-1, -1];
     }
 
-    let subarrayLeftIdx = 0;
-    while (minOutOfOrder >= array[subarrayLeftIdx]){
-        subarrayLeftIdx++;
+    let subarrayLeftIdx = 0; //start at the left side for the small number
+    while (minOutOfOrder >= array[subarrayLeftIdx]){ //any num that is smaller than or equal to our minimum num, must be sorted - so we keep going essentially skipping it
+        subarrayLeftIdx++; //we increment this num //when we leave this while loop we found where its suppose to be
     }
 
-    let subarrayRightIdx = 0;
-    while (maxOutOfOrder <= array[subarrayRightIdx]){
-        subarrayRight--;
+    let subarrayRightIdx = array.length - 1; //start at the right for the bigger number
+    while (maxOutOfOrder <= array[subarrayRightIdx]){ //any num that is bigger than or equal to our maximum order, it is in order
+        subarrayRightIdx--; //we increment this num //when we leave this while loop we found where its suppose to be
     }
 
-    return [subarrayLeftIdx, subarrayRightIdx];
+    return [subarrayLeftIdx, subarrayRightIdx]; //return our answer
 }
 
-function isOutOfOrder(i, num, array){
-    if (i === 0) return num > array[i + 1];
-    if (i === array.length - 1) return num < array[i -1];
-    return num > array[i + 1] || num < array[i - 1];
+function isOutOfOrder(i, num, array){ //take in idx num and our array, we want to check our adjacent number
+    if (i === 0) return num > array[i + 1]; //if i is the first num, we will return that the num is greater than the next num and if it is than its out of order
+    if (i === array.length - 1) return num < array[i -1]; //if its the last num, if the num is less than the num before it than its also out of order
+    return num > array[i + 1] || num < array[i - 1]; //this is for middle nums, so the num is either greater than the following num and smaller than the previous num and that means its out of order
 }
