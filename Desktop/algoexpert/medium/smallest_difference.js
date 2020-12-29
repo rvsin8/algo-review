@@ -1,6 +1,7 @@
 //Smallest Difference
 //Arrays
 
+//notes
 //gives your two array of integers and asks you to find a pair of numbers where one comes from the 1st array and another from the 2nd array with the smallest difference
 //array A [-1, 5, 10, 20, 28, 3]
 //array B [26, 134, 135, 15, 17]
