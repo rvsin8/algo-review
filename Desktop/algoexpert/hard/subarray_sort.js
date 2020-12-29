@@ -28,14 +28,14 @@
 //O(1) everything happens in place, we are not going to be storing much
 
 function subarraySort(array){
-    let minOutOfOrder = Infinity;
-    let maxOutOfOrder = -Infinity;
+    let minOutOfOrder = Infinity; //initialize this to be infinity bc itll make our comparions a lot easier
+    let maxOutOfOrder = -Infinity; //initialize this to be infinity bc itll make our comparions a lot easier
 
-    for (let i = 0; i < array.length; i++){
-        const num = array[i];
-        if (isOutOfOrder(i, num, array)){
-            minOutOfOrder = Math.min(minOutOfOrder, num);
-            maxOutOfOrder = Math.max(maxOutOfOrder, num);
+    for (let i = 0; i < array.length; i++){ //go through out entire array and keep track of our idx so we can compare our int to its adjacent numbers //if our num is out of order
+        const num = array[i]; //keep track of our idx
+        if (isOutOfOrder(i, num, array)){ //helper function to check and return a boolean if the current number is out of order
+            minOutOfOrder = Math.min(minOutOfOrder, num); //we update our min number
+            maxOutOfOrder = Math.max(maxOutOfOrder, num); //we update our max number
         }
     }
 
