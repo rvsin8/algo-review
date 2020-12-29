@@ -27,3 +27,19 @@
 //space complexity 
 //O(1) we are doing it in place, we did not use a axillary data structure
 
+function moveElementToEnd(array, toMove){
+    let i = 0; //pointer in the beginning
+    let j = array.length - 1; //pointer in the end
+    while (i < j){ //once i > j they have overlapped and we have seen the entire array and we exit the loop
+        while (i < j && array[j] === toMove) j--; //while array[j] is equal to the value to move, we decrement j
+        if (array[i] ==== toMove) swap(i, j, array);
+        i++;
+    }
+    return array;
+}
+
+function swap(i, j, array){
+    const temp = array[j];
+    array[j] = array[i];
+    array[i] = temp;
+}
