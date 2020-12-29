@@ -26,3 +26,22 @@
 //space complexity
 //recursive will be O(log(N)), we would be calling the findBST value multiple times and so we are adding frames on the call stack and using extra memory
 //worst O(N) N if theres one branch so we call it on each and every node
+//iteratively we get O(1) we are just storing the closest value but not using frames on a callstack
+
+function findClosestValueInBst(tree, target) {
+    return findClosestValueInBstHelper(tree, target, tree.value);
+}
+
+function findClosestValueInBstHelper(tree, target, closest) {
+    if (tree === null) return closest;
+    if (Math.abs(target - closest) > Math.abs(target - tree.value)){
+        closest = tree.value;
+    }
+    if (target < tree.value){
+        return findClosestValueInBstHelper(tree.left, target, closest);
+    } else if (target > tree.value) {
+        return findClosestValueInBstHelper(tree.right, target, closest);
+    } else {
+        return closest;
+    }
+}
