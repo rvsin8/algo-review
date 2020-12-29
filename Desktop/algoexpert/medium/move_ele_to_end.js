@@ -16,12 +16,14 @@
 //swap 2 and 4 then
 //[4,1,2,2,2,3,2,2] now our first pointer moves to the right which is 1 and the end of the array me move to the left which is 3
 //since the first pointer is at 1 is where we want it, we will move to the right to 2
-
+//swap first pointer 2 with 3 and we get [4,1,3,2,2,2,2,2] and we are done
 
 
 //time complexity
 //linear O(n), you can't do this better bc you have to traverse the entire array no matter that maybe binary search but no
+//we started with the pointers, we visited every idx once and then performed some swaps which are constant time operations
 
 
 //space complexity 
+//O(1) we are doing it in place, we did not use a axillary data structure
 
