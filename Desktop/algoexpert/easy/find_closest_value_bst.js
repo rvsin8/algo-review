@@ -28,20 +28,20 @@
 //worst O(N) N if theres one branch so we call it on each and every node
 //iteratively we get O(1) we are just storing the closest value but not using frames on a callstack
 
-function findClosestValueInBst(tree, target) {
-    return findClosestValueInBstHelper(tree, target, tree.value);
+function findClosestValueInBst(tree, target) { //takes in the bst and target value
+    return findClosestValueInBstHelper(tree, target, tree.value); //return helper method takes in a bst target and closest value
 }
 
-function findClosestValueInBstHelper(tree, target, closest) {
-    if (tree === null) return closest;
-    if (Math.abs(target - closest) > Math.abs(target - tree.value)){
-        closest = tree.value;
+function findClosestValueInBstHelper(tree, target, closest) { //helper method so we can keep track of the closest value variable
+    if (tree === null) return closest; //base case, a point in which where we stop calling the method // when the current node is a null node so its in the bottoom of the tree
+    if (Math.abs(target - closest) > Math.abs(target - tree.value)){ //otherwise we want to compute the abs value, if the abs value of target - closest is greater than the abs value of the target and tree value
+        closest = tree.value; //we update the closest var
     }
-    if (target < tree.value){
-        return findClosestValueInBstHelper(tree.left, target, closest);
-    } else if (target > tree.value) {
-        return findClosestValueInBstHelper(tree.right, target, closest);
+    if (target < tree.value){ //once we get the difference, we want to start comparing, so if target is less than tree.value
+        return findClosestValueInBstHelper(tree.left, target, closest); //go to the left subtree
+    } else if (target > tree.value) { //if its greater
+        return findClosestValueInBstHelper(tree.right, target, closest); //we go to the right tree 
     } else {
-        return closest;
+        return closest; //last case is that if a value is equal to target val then we just return closest bc we found it 
     }
 }
