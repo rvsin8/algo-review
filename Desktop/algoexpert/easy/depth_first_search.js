@@ -23,4 +23,12 @@
 // Time = O(V+E) //rewatch this to understand why its this
 
 //space complexity
-//O(V) we are holding an array via V nodes
+//O(V) we are holding an array via V nodes //rewatch this as well.
+
+depthFirstSearch(array) {
+    array.push(this.name); //want to push the node name to our array 
+    for (const child of this.children) { //for their child in the node
+        child.depthFirstSearch(array); //we will run this function on the child and pass in the final array
+    }
+    return array;
+}
