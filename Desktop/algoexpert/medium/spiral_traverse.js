@@ -35,39 +35,41 @@
 //space complexity 
 //O(N) space, we are storing N value
 
+//iterative solution
+
 function spiralTraverse(array) {
-    const result = [];
-    let startRow = 0,
-        endRow = array.length - 1;
-    let startCol = 0,
-        endCol = array[0].length - 1;
+    const result = []; //empty list where we will put all of our spiral numbers
+    let startRow = 0, //row is the outter array
+        endRow = array.length - 1; //our bounds for start row and end row
+    let startCol = 0, //column is the inner array
+        endCol = array[0].length - 1; //our bounds for start column and end column
 
-    while (startRow <= endRow && startCol <= endCol){
-        for (let col = startCol; col <= endCol; col++){
-            result.push(array[startRow][col]);
+    while (startRow <= endRow && startCol <= endCol){ //start traversal and keep it going while this condition is true, that aslong as the starting row/starting col is smaller than or equal to the end row/ end column - we will traverse (we use = to avoid repeats) 
+        for (let col = startCol; col <= endCol; col++){ //top border to the ending of that border
+            result.push(array[startRow][col]); //add those integers to the result array
         }
 
-        for (let row = startRow + 1; row <= endRow; row++){
-            result.push(array[row][endCol]);
+        for (let row = startRow + 1; row <= endRow; row++){ //right border, we don't want to double count so we do +1 on the statt row
+            result.push(array[row][endCol]); //add those integers to the result array
         }
 
-        for (let col = endCol - 1; col >= startCol; col--){
-            if (startRow === endRow) break;
-            result.push(array[endRow][col]);
+        for (let col = endCol - 1; col >= startCol; col--){ //bottom border, reverse order
+            if (startRow === endRow) break; //avoid double counting single column
+            result.push(array[endRow][col]);  //add those integers to the result array
         }
 
 
-        for (let row = endRow - 1; row > startRow; row--){
+        for (let row = endRow - 1; row > startRow; row--){ //left border
             if (startCol === endCol) break;
             result.push(array[row][startCol]);
         }
-
-        startRow++;
-        endRow--;
-        startCol++;
-        endCol--;
+        //for inner loop
+        startRow++; //up by 1
+        endRow--; //down by 1
+        startCol++; //up by 1
+        endCol--; //down by 1
     }
 
-    return result;
+    return result; //return the array with ours results
 
 }
