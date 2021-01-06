@@ -37,25 +37,26 @@ function longestPeak(array){
     let longestPeakLength = 0; //set it to 0 we will add to this the length of our longest peak
     let i = 1; //we will start from idx at 1 bc we need to check the adjacent values to see if it indeed a peak
 
-    while (i < array.length - 1) {
-        const isPeak = array[i-1] < array[i] && array[i + 1] < array[i];
-        if (!isPeak){
-            i++;
+    while (i < array.length - 1) { //while i is less than the array length - 1, up to the sec to last val
+        const isPeak = array[i-1] < array[i] && array[i + 1] < array[i]; //if adjacent values are less than the val then it is a peak
+        if (!isPeak){ //if its not a peak
+            i++; //keep iterating
             continue;
         }
 
-        let leftIdx = i - 2;
-        while (leftIdx >= 0 && array[leftIdx] < array[leftIdx + 1]) {
-        leftIdx --;
+        let leftIdx = i - 2; //expanding to the left, we do 2 bc we already know its bigger than the adjacent val hence why its even a peak
+        while (leftIdx >= 0 && array[leftIdx] < array[leftIdx + 1]) { //while those nums are smaller and in bounds than the idx before it
+        leftIdx --; //we keep going
         }
 
-        let rightIdx = i + 2;
-        while (rightIdx < array.length && array[rightIdx] < array[rightIdx - 1]) {
-        rightIdx ++;
+        let rightIdx = i + 2; //expanding to the right, we do 2 bc we already know its bigger than the adjacent val hence why its even a peak
+        while (rightIdx < array.length && array[rightIdx] < array[rightIdx - 1]) { //while those nums are smaller and in bounds than the idx before it
+        rightIdx ++; //we keep going
         }
 
-        const currentPeakLength = rightIdx - leftIdx - 1;
-        longestPeakLength = Math.max(longestPeakLength, currentPeakLength);
-        i = rightIdx 
+        const currentPeakLength = rightIdx - leftIdx - 1; //will get us the length of the peak
+        longestPeakLength = Math.max(longestPeakLength, currentPeakLength); //we get the maximum peak length
+        i = rightIdx; //we no longer need to explore all the values in the while loop, once we reach a val we no longer makes it a peak, we want to explore it to see if itself is a peak
     }
+    return longestPeakLength; //return the longest peak length
 }
