@@ -14,4 +14,7 @@
 //2 is not the tip of a peak bc its not greater than 3
 //3,3 is not the of a peak bc it is not greater than 3
 //4 is because it is greater than both 3 and 0
+//10 is because it is greater than 0 and 6
+//the rest are not
+//now we have to compare the peak lengths, from both of the peaks lets traverse to the left and see how long we can go without strictly decreasing
 
