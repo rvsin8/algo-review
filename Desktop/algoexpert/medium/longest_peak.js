@@ -26,4 +26,7 @@
 //you will never visit more than N nodes/elements in an array again
 
 //space complexity
+//we might need a lil bit auxillary space if we store all peaks
+//can we do our two tasks in a single operation ? find peaks and compare lengths - yes we can
+//we can record length in our first iteration, combining two tasks
 //
