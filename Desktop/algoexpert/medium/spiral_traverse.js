@@ -26,4 +26,11 @@
 //we don't to double count so we will be doing +1 in some cases
 //we want to grab all of the val in reverse order inclusively 
 //once it hits the starting column, we want to start one row above we dont want to double count 10 or 1, ending row - 1 and starting row + 1
+//we need the same logic for the inner column
 
+//time complexity 
+//O(N) time where n is the total num of ele in the 2d array
+//big N bc we traversing through every val at-least once
+
+//space complexity 
+//O(N) space, we are storing N value
