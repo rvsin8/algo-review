@@ -12,3 +12,15 @@
 //algorithm
 //we call the function on each node, maybe recursively
 //whenever we are at a given node, we are going to add that node to the final array and for every children in that node we will call in the dfs on it and return the final array
+//[A] parent node
+//[B] --> [AB] --> [ABE]
+//[ABE] --> [ABEF] --> [ABEFI] --> [ABEFIJ]
+//[ABEFIJ] --> [ABEFIJC] & SO ON ...
+
+//time complexity 
+//a vertix is a node on the graph
+//all the edges (connected lines) are represented by e for edges 
+// Time = O(V+E) //rewatch this to understand why its this
+
+//space complexity
+//O(V) we are holding an array via V nodes
