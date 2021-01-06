@@ -33,3 +33,29 @@
 //instead of storing the length we will just update it peak by peak
 //O(1)space if we do this
 
+function longestPeak(array){
+    let longestPeakLength = 0; //set it to 0 we will add to this the length of our longest peak
+    let i = 1; //we will start from idx at 1 bc we need to check the adjacent values to see if it indeed a peak
+
+    while (i < array.length - 1) {
+        const isPeak = array[i-1] < array[i] && array[i + 1] < array[i];
+        if (!isPeak){
+            i++;
+            continue;
+        }
+
+        let leftIdx = i - 2;
+        while (leftIdx >= 0 && array[leftIdx] < array[leftIdx + 1]) {
+        leftIdx --;
+        }
+
+        let rightIdx = i + 2;
+        while (rightIdx < array.length && array[rightIdx] < array[rightIdx - 1]) {
+        rightIdx ++;
+        }
+
+        const currentPeakLength = rightIdx - leftIdx - 1;
+        longestPeakLength = Math.max(longestPeakLength, currentPeakLength);
+        i = rightIdx 
+    }
+}
