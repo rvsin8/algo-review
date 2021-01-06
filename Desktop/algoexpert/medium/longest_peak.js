@@ -24,9 +24,12 @@
 //with no peaks its constant time
 //with peaks its linear time O(N) bc if you have an array full of peaks - you stop at the points where the triangles meet
 //you will never visit more than N nodes/elements in an array again
+//we will go through the peaks twice, once when we iterate the first time and then again backwards when we find the peak
 
 //space complexity
 //we might need a lil bit auxillary space if we store all peaks
 //can we do our two tasks in a single operation ? find peaks and compare lengths - yes we can
 //we can record length in our first iteration, combining two tasks
-//
+//instead of storing the length we will just update it peak by peak
+//O(1)space if we do this
+
