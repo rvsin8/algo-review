@@ -24,3 +24,13 @@
 //if n is in memoize then return memoize of n else store in it in the memoize that is not in there yet in a hash table  then return memoize 
 //this algo will run in O(N) time because we calculate every fib num ONCE and we store it in the hash table
 //space complexity will remain O(1) we still have a call stack via recursive call and we have a memoize hash table
+
+//iterative solution is the best one bc it eliminates space
+//we have an array of the last two fib numbers 
+//we initialize the array to have the first 2 fib numbers, then we start calc every fib num there after
+//while the counter is <= n keep calc the next fib num
+//array is [0,1]
+//next = 0 + 1 = 1, we get rid of the first num which is 0, and have an array of [1,1]
+//next = 1 + 1 = 2, [1,2]
+//so on ... 
+//ay any given time we are only storing 2 fib numbers
