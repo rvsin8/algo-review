@@ -19,4 +19,8 @@
 //re hear the time complexity explanation 
 //space would be O(N) bc fib(6) calls fib(5) then fib(4) and so on... until we hot hit our base case and we store all of thus
 
-
+//second recursive call that uses memoization aka caching
+//store the solution of n in a hash table and access them in O(1) in the future
+//if n is in memoize then return memoize of n else store in it in the memoize that is not in there yet in a hash table  then return memoize 
+//this algo will run in O(N) time because we calculate every fib num ONCE and we store it in the hash table
+//space complexity will remain O(1) we still have a call stack via recursive call and we have a memoize hash table
