@@ -15,4 +15,8 @@
 // else return the formula --> fib(n-1) + fib(n-2)
 // fib of 4 --> (fib(4-1)) + fib(4-2 )--> fib(3) - fib(2) --> recall the function for 3 but 2 would be 1
 // fib(3) --> do the same as above
+//time complexity is not great for this bc it will be a complexity of 2^n bc we keep calling the call over and over again 
+//re hear the time complexity explanation 
+//space would be O(N) bc fib(6) calls fib(5) then fib(4) and so on... until we hot hit our base case and we store all of thus
+
 
