@@ -16,3 +16,10 @@
 //we can traverse through the array and get our leftrunningproduct in there
 //then we will reverse and do the same for runningproduct and multiply by it from left product that is already in there
 //[1,5,5,20] leftrunningproduct
+//[[8,40,10,20] multiply it by right and get our final answer
+
+//time complexity 
+//time = O(N) //we are traversing right to left and left to right
+
+//space complexity
+//space = O(N) //rework this
