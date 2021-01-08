@@ -34,3 +34,16 @@
 //next = 1 + 1 = 2, [1,2]
 //so on ... 
 //ay any given time we are only storing 2 fib numbers
+//space is O(1) we are not storing anything except 2 values and no recursive calls
+
+function getNthFib(n) {
+    const lastTwo = [0, 1]; //we initialize our base case which is what the formula gives us - 0, 1
+    let counter = 3; //from here we have to calc the third one
+    while (counter <= n){ //while counter is less than or equal to n, we calc the fib num
+        const nextFib = lastTwo[0] + lastTwo[1]; //next fib is equal to the sum of lasttwo at idx 0 and lasttwo at idx 1
+        lastTwo[0] = lastTwo[1]; //we moved the val at idx 0 to the garbage and the last val at idx 1  to idx 0
+        lastTwo[1] = nextFib; //the idx at 1 will now be the nextFib values
+        counter++; //update our counter
+    }
+    return n > 1 ? lastTwo[1] : lastTwo[0]; //return lasttwo of 1 and our edge case is the first fib num, that is the only case we dont want to return lastwo of 1 but lastwo of 0
+}
