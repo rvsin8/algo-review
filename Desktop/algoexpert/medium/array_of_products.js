@@ -23,3 +23,20 @@
 
 //space complexity
 //space = O(N) //rework this
+
+function arrayOfProducts(array){
+    const products = new Array(array.length).fill(1); //have a new array and declare every var in there with 1 and that is where we will store the left products
+
+    let leftRunningProduct = 1; //declare left running product 
+    for (let i = 0; i < array.length; i++) { //iterate through the array
+        products[i] = leftRunningProduct; //replace each idx with the left running point
+        leftRunningProduct *= array[i]; //calc the left running product and mult by the original array
+    }
+
+    let rightRunningProduct = 1; //declare right running point
+    for (let i = array.length - 1; i > -1; i--){ //iterate reverse through the array to get the right running products
+        products[i] *= rightRunningProduct; //replace each idx with the right running point
+        rightRunningProduct *= array[i]; //calc the right running product with the left running points that was saved
+    }
+    return products; //return that array
+}
