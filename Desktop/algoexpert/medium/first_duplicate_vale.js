@@ -13,4 +13,12 @@
 //[5,1,3,2,5,3]
 //index = abs(value) - 1
 //index = abs(5) - 1 = 4 --> [5,1,3,2-5,3] now if we hit that neg again that means we have seen this num before
-//index = abs(1) - 1 = 0 
+//index = abs(1) - 1 = 0 --> [-5,1,3,2,-5,3]
+//index = abs(3) - 1 = 2 --> [-5,1,-3,2,-5,3]
+//index = abs(2) - 1 = 1 --> [-5,-1,-3,2,-5.3]
+//index = abs(-5) - 1 = 4 --> since the value at 4 is already negative that is how we know this is the first dups
+//return 5
+
+//time complexity
+
+//space complexity
