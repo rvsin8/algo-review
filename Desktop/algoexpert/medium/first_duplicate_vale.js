@@ -10,4 +10,7 @@
 
 //algorithm
 //we can do it in one traversal and constant space complexity 
-//
+//[5,1,3,2,5,3]
+//index = abs(value) - 1
+//index = abs(5) - 1 = 4 --> [5,1,3,2-5,3] now if we hit that neg again that means we have seen this num before
+//index = abs(1) - 1 = 0 
