@@ -26,7 +26,7 @@
 //we are not storing anything 
 
 function firstDuplicateValue(array) {
-    for (const value of array) {
+    for (const value of array) { //linear traversal where we loop through ele by ele
         const absValue = Math.abs(value);
         if (array[absValue - 1] < 0) return absValue;
         array[absValue - 1] *= -1;

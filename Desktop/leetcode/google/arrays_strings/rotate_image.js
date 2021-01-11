@@ -37,7 +37,7 @@ const swap = (matrix, i, j, k, l) => { //swapping functions that swaps two indic
     matrix[i][j] = temp;
 }
 
-var rotate = function(matrix) {
+var rotate = function(matrix) { //established a low and hi bond, basically our dimensions of our 2d matrix
     let lo = 0; //start with the beginning 
     let hi = matrix.length - 1; //dimensions of our matrix, last idx of our matrix
 

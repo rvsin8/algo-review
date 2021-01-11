@@ -1,0 +1,8 @@
+Chapter 1 - The Role of Algorithms in Computing 
+
+1.1 Algorithms 
+- informally, an algorithm is any well-defined computational procedure that takes some value, or set of values, 
+as input and produces some value, or sets of values as output. It is thus a sequence of computational steps that
+transform the input into the output.
+- we can also view an algo as a tool for solving a well-specified computational problem. The statement of the pro-
+blem specifies in general terms the desired input/output relationship. 
