@@ -27,9 +27,9 @@
 
 function firstDuplicateValue(array) {
     for (const value of array) { //linear traversal where we loop through ele by ele
-        const absValue = Math.abs(value);
-        if (array[absValue - 1] < 0) return absValue;
-        array[absValue - 1] *= -1;
+        const absValue = Math.abs(value); //if an array of abs val - 1 (to get the idx) and if its less than 0 then its a negative and we've seen
+        if (array[absValue - 1] < 0) return absValue; //return thar value
+        array[absValue - 1] *= -1; //map the val to indexes and look for them and make them negative
     }
-    return -1
+    return -1 //return -1 for no dups
 }
