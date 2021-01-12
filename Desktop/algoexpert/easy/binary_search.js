@@ -8,4 +8,5 @@
 //you going to want to find the middle num in the array first
 //based on the middle you'll either look through the first half or the second half of the array
 //you will have two pointer - left / right
+//they'll be in two opposite spots
 
