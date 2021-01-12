@@ -32,4 +32,22 @@
 //if you implement it iteratively it will be O(1)space we are not using additional space as you should be
 //recursively then you might have a complexity O(log(N))
 
+function binarySearch(array, target){
+    return binarySearchHelper(array, target, 0, array.length - 1);
+} 
 
+function binarySearchHelper(array, target, left, right){
+    while (left <= right){
+        const middle = Math.floor((left + right) / 2);
+        const potentialMatch = array[middle];
+
+        if (target === potentialMatch){
+            return middle;
+        } else if (target < potentialMatch) {
+            right = middle - 1;
+        } else {
+            left = middle + 1;
+        }
+    }
+    return -1;
+}
