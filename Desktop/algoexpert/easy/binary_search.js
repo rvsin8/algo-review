@@ -26,6 +26,10 @@
 //if a num is not in the array and it cannot be found, once we do that we say we have never found the num
 
 //time complexity
+//O(log(N)) - we are eliminating half our input, every time we traverse
 
 //space complexity
+//if you implement it iteratively it will be O(1)space we are not using additional space as you should be
+//recursively then you might have a complexity O(log(N))
+
 
