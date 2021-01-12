@@ -33,3 +33,14 @@
 //it would be the max depth of the array here it is 3 recursive calls
 //O(d) where d is the depth of the subarrays
 
+function productSum(array, multiplier = 1) { //we pass in the multiplier --> the integer that we use to multiply the depths of social depths
+    let sum = 0; //sum we start from 0 where we keep adding
+    for (const element of array){
+        if (Array.isArray(element)) { //in js if we do ".isArray" we can see if something is an array
+            sum += productSum(element, multiplier + 1); //we call this recursively where we add the ele together and then multiply it by our multiplier
+        } else {
+            sum += element; //if its not another array just add the ele together in a sum
+        }
+    }
+    return sum * multiplier;
+}
