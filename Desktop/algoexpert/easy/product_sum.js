@@ -42,5 +42,5 @@ function productSum(array, multiplier = 1) { //we pass in the multiplier --> the
             sum += element; //if its not another array just add the ele together in a sum
         }
     }
-    return sum * multiplier;
+    return sum * multiplier; //return it multiplied by the last multiplier 
 }
