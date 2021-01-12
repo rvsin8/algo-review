@@ -21,4 +21,14 @@
 //step 1 sum = 5
 //step 2 sum = 7 but is a special array so we call on it recursively call on the array where the sum will be = 0 and multiplier will equal to 2 --> 7 + (-1)  = 6 and then multiplied by 2 which is 12 and add that to the sum we had outside the bracket which is 7 and the total is 19 now
 // step 3 19 + 3 = 22
-//[6,[-13,8], sum = 0 and multiplier is 2 first level but next level sum is 0 and multiplier is 3
+//[6,[-13,8], sum = 0 and multiplier is 2 first level but next level sum is 0 and multiplier is 3 so we do :
+//-13 + 8 = -5 then we do -5 * 3 = -15 then we do 6 + (-15) = =9 then -9 + 4 = -5 the  multiplier with 2 and get -10 
+//add that to the total sum 22 + (-10) = 12 our answer
+
+//time complexity
+//O(n) where n is the total number of elements including the subarrays and so on so it will be O(12)
+
+//space complexity
+//it is a recursive call bc we call on a callstack
+//it would be the max depth of the array here it is 3 recursive calls
+//O(d) where d is the depth of the subarrays
