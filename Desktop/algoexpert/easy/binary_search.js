@@ -23,4 +23,9 @@
 //21 to 33 is not it, so we erase 21 since its less, so now we move that left pointer to the right to our last one which is 33
 //[33] once our left and right overlap that is our num and return 33 which was it
 //we return idx 3
+//if a num is not in the array and it cannot be found, once we do that we say we have never found the num
+
+//time complexity
+
+//space complexity
 
