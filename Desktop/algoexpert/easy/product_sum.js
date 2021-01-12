@@ -17,3 +17,8 @@
 //now we git a special array, here we apply recursive approach
 //if we hit an array --> add to the sum the product sum to the array recursively 
 //the multiplier increases as we go deeper in the array
+//sum = 0 . multiplier = 5
+//step 1 sum = 5
+//step 2 sum = 7 but is a special array so we call on it recursively call on the array where the sum will be = 0 and multiplier will equal to 2 --> 7 + (-1)  = 6 and then multiplied by 2 which is 12 and add that to the sum we had outside the bracket which is 7 and the total is 19 now
+// step 3 19 + 3 = 22
+//[6,[-13,8], sum = 0 and multiplier is 2 first level but next level sum is 0 and multiplier is 3
