@@ -32,3 +32,4 @@
 //it is a recursive call bc we call on a callstack
 //it would be the max depth of the array here it is 3 recursive calls
 //O(d) where d is the depth of the subarrays
+
