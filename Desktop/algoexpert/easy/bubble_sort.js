@@ -30,16 +30,16 @@
 
 function bubbleSort(array) {
     let isSorted = false; //false at the beginning we assume the array is not sorted
-    let counter = 0;
+    let counter = 0; //we declare a counter
     while (!isSorted) { //while the array is NOT array
         isSorted = true; //we set the isSorted is true and then we jump into
-        for (let i = 0; i < array.length - 1 - counter; i++) { //our for loop, we are comparing num to the next one so we don't need to go to the end
+        for (let i = 0; i < array.length - 1 - counter; i++) { //our for loop, we are comparing num to the next one so we don't need to go to the end //go up to the - counter (idk)
             if (array[i] > array[i + 1]) { //if the array is greater than its adjacent 
                 swap(i, i + 1, array); //we swap them in order via helper function
                 isSorted = false; //our array was clearly not sorted
             }
         }
-        counter ++;
+        counter ++; //increment our counter by 1 every time we go through the for loop
     }
     return array; //return our array in the end
 }
