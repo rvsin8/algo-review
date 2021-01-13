@@ -36,16 +36,16 @@ function bubbleSort(array) {
         for (let i = 0; i < array.length - 1 - counter; i++) { //our for loop, we are comparing num to the next one so we don't need to go to the end
             if (array[i] > array[i + 1]) { //if the array is greater than its adjacent 
                 swap(i, i + 1, array); //we swap them in order via helper function
-                isSorted = false; 
+                isSorted = false; //our array was clearly not sorted
             }
         }
         counter ++;
     }
-    return array;
+    return array; //return our array in the end
 }
 
-function swap(i, j, array) {
-    const temp = array[j];
+function swap(i, j, array) { //helper function
+    const temp = array[j]; 
     array[j] = array[i];
     array[i] = temp;
 }
