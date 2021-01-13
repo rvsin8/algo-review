@@ -23,28 +23,28 @@
 //recursive calls
 
 function binaryTreeDiameter(tree) {
-    return getTreeInfo(tree).diameter;
+    return getTreeInfo(tree).diameter; //return the helper method's diameter
 }
 
 function getTreeInfo(tree){
-    if (tree === null) {
-        return new TreeInfo(0,0)
+    if (tree === null) { //if there is none node we got to a leaf node
+        return new TreeInfo(0,0); //return 0,0 for null values
     }
 
-    const leftTreeInfo = getTreeInfo(tree.left);
-    const rightTreeInfo = getTreeInfo(tree.right);
+    const leftTreeInfo = getTreeInfo(tree.left); //left side of the tree
+    const rightTreeInfo = getTreeInfo(tree.right); //right side oif the tree
+.
+    const longestPathThroughRoot = leftTreeInfo.height + rightTreeInfo.height; //height of left and right tree added together will give us the longest path from root
+    const maxDiameterSoFar = Math.max(leftTreeInfo.diameter, rightTreeInfo.diameter); //max diam so far from our recursive results --> max diameter from the left subtree and the max of the right subtree
+    const currentDiameter = Math.max(longestPathThroughRoot, maxDiameterSoFar); //we want to calculate the current diameter, the longest path in the root can be longer than the max diam
+    const currentHeight = 1 + Math.max(leftTreeInfo.height, rightTreeInfo.height); //1 + max of the left and right subtree
 
-    const longestPathThroughRoot = leftTreeInfo.height + rightTreeInfo.height;
-    const maxDiameterSoFar = Math.max(leftTreeInfo.diameter, rightTreeInfo.diameter);
-    const currentDiameter = Math.max(longestPathThroughRoot, maxDiameterSoFar);
-    const currentHeight = 1 + Math.max(leftTreeInfo.height, rightTreeInfo.height);
-
-    return new getTreeInfo(currentDiameter, currentHeight);
+    return new TreeInfo(currentDiameter, currentHeight); //return the treeinfo
 }
 
-class TreeInfo {
+class TreeInfo { //define this class
     constructor(diameter, height){
-        this.diameter = diameter;
-        this.height = height;
+        this.diameter = diameter; //return diameter
+        this.height = height; //return height
     }
 }
