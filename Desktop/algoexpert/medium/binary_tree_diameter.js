@@ -48,3 +48,5 @@ class TreeInfo { //define this class
         this.height = height; //return height
     }
 }
+
+//confused af
