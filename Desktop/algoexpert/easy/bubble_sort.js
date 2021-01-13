@@ -29,17 +29,23 @@
 //O(1) we are running the algorithm in place, we did not allocate additional memory
 
 function bubbleSort(array) {
-    let isSorted = false;
+    let isSorted = false; //false at the beginning we assume the array is not sorted
     let counter = 0;
-    while (!isSorted) {
-        isSorted = true;
-        for (let i = 0; i < array.length - 1 - counter; i++) {
-            if (array[i] > array[i + 1]) {
-                swap(i, i + 1, array);
-                isSorted = false;
+    while (!isSorted) { //while the array is NOT array
+        isSorted = true; //we set the isSorted is true and then we jump into
+        for (let i = 0; i < array.length - 1 - counter; i++) { //our for loop, we are comparing num to the next one so we don't need to go to the end
+            if (array[i] > array[i + 1]) { //if the array is greater than its adjacent 
+                swap(i, i + 1, array); //we swap them in order via helper function
+                isSorted = false; 
             }
         }
         counter ++;
     }
     return array;
+}
+
+function swap(i, j, array) {
+    const temp = array[j];
+    array[j] = array[i];
+    array[i] = temp;
 }
