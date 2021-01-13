@@ -19,9 +19,9 @@
 
 function inOrderTraverse(tree, array){
     if (tree !== null) { //if the tree is not none, we will do some tings
-        inOrderTraverse(tree.left, array);
-        array.push(tree.value);
-        inOrderTraverse(tree.right, array);
+        inOrderTraverse(tree.left, array); //call the inOrderTraverse on the left side 
+        array.push(tree.value); //push to the array the current tree value
+        inOrderTraverse(tree.right, array); //call the inOrderTraverse on the right side
     }
-    return array;
+    return array; //return the array
 }
