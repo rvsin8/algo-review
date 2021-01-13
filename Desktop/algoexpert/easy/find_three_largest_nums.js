@@ -37,12 +37,18 @@ function updateLargest(threeLargest, num) { //take in 3 largest num and present 
     }
 }
 
+//[0,1,2]
+//[x,y,z]
+//for i in range(0, 2+1)
+//if i == 2;
+//[y,z,num]
+
 function shiftAndUpdate(array, num, idx) { //we need our array, the num we want to update, an idx which is the last idx of the array of 3 nums that we want to shift / update
     for (let i = 0; i <= idx; i++) { //traverse
-        if (i === idx) {
-            array[i] = num;
+        if (i === idx) { //if we are at a point of our iteration that we are in the last idx we passed into our method
+            array[i] = num; //update array of i to be updated to the num we want to put
         } else {
-            array[i] = array[i + 1];
+            array[i] = array[i + 1]; //example idx2
         }
     }
 }
