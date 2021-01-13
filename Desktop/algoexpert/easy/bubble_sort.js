@@ -15,4 +15,10 @@
 //[5,2,8,5,9,6,3]
 //[5,2,8,5,6,9,3]
 //[5,2,8,5,6,3,9] //we are done with ONE iteration but the entire array is not sorted
+//[2,5,5,6,3,8,9] //second iteration
+//[2,5,5,3,6,8,9] //third
+//[2,5,3,5,6,8,9] //fourth
+//[2,3,5,5,6,8,9] //fifth and final iteration
 
+//time complexity 
+//
