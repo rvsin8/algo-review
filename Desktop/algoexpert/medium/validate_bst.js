@@ -17,3 +17,10 @@
 //we will validate every subtree using this algo
 // -inf <= node.value < 10
 
+//time complexity
+//O(N) where n is the number of nodes of the bst, every operation is constant time
+
+//space complexity 
+//O(d) space where d is the depth on the bst, we are using space on the call stack
+//the depth of the tree is the length of the longest branch
+//
