@@ -19,3 +19,30 @@
 //space complexity
 //O(1) space bc we are not using any additional memory
 
+function findThreeLargestNumbers(array) {
+    const threeLargest = [null, null, null]; //array of length three and we can initialize with none or null values
+    for (const num of array) { //traverse the array, for eveyr num we will call a helper method
+        updateLargest(threeLargest, num); //pass in num and three largest
+    }
+    return threeLargest; //return final array
+}
+
+function updateLargest(threeLargest, num) { //take in 3 largest num and present num
+    if (threeLargest[2] === null || num > threeLargest[2]) { //if 3 largest in idx in none or the num is greater than threelargest at 2 ..
+        shiftAndUpdate(threeLargest, num, 2); //we want to update our num at idx 2 via helper method that will shift the num and update
+    } else if (threeLargest[1] === null || num > threeLargest[1]) {
+        shiftAndUpdate(threeLargest, num, 1);
+    } else if (threeLargest[0] === null || num > threeLargest[0]) {
+        shiftAndUpdate(threeLargest, num, 0);
+    }
+}
+
+function shiftAndUpdate(array, num, idx) {
+    for (let i = 0; i <= idx; i++) {
+        if (i === idx) {
+            array[i] = num;
+        } else {
+            array[i] = array[i + 1];
+        }
+    }
+}
