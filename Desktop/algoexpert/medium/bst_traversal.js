@@ -25,3 +25,22 @@ function inOrderTraverse(tree, array){
     }
     return array; //return the array
 }
+
+function preOrderTraverse(tree, array){
+    if (tree !== null) { //if the tree is not none, we will do some tings
+        array.push(tree.value); //push to the array the current tree value
+        inOrderTraverse(tree.left, array); //call the inOrderTraverse on the left side 
+        inOrderTraverse(tree.right, array); //call the inOrderTraverse on the right side
+    }
+    return array; //return the array
+}
+
+
+function postOrderTraverse(tree, array){
+    if (tree !== null) { //if the tree is not none, we will do some tings
+        inOrderTraverse(tree.left, array); //call the inOrderTraverse on the left side 
+        inOrderTraverse(tree.right, array); //call the inOrderTraverse on the right side
+        array.push(tree.value); //push to the array the current tree value
+    }
+    return array; //return the array
+}
