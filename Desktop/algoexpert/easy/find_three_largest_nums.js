@@ -37,8 +37,8 @@ function updateLargest(threeLargest, num) { //take in 3 largest num and present 
     }
 }
 
-function shiftAndUpdate(array, num, idx) {
-    for (let i = 0; i <= idx; i++) {
+function shiftAndUpdate(array, num, idx) { //we need our array, the num we want to update, an idx which is the last idx of the array of 3 nums that we want to shift / update
+    for (let i = 0; i <= idx; i++) { //traverse
         if (i === idx) {
             array[i] = num;
         } else {
