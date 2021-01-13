@@ -23,4 +23,15 @@
 //space complexity 
 //O(d) space where d is the depth on the bst, we are using space on the call stack
 //the depth of the tree is the length of the longest branch
-//
+
+
+function validateBst(tree) {
+    return validateBstHelper(tree, -Infinity, Infinity); //we need a helper funct to keep track of left anf right nodes //take in a tree with a min and max val --> -infinity/infinity
+}
+
+function validateBstHelper(tree, minValue, maxValue){ //helper function takes in a tree, min and max value
+    if (tree === null) return true; //we have hit the bottom of the tree and its true
+    if (tree.value < minValue || tree.value >= maxValue) return false; //we want to make sure the node value is in between the min and max value, so if its less than the min val or exceeds the max value then we return false
+    const leftIsValid = validateBstHelper(tree.left, minValue, tree.value); //
+    return leftIsValid && validateBstHelper(tree.right, tree.value, maxValue);
+}
