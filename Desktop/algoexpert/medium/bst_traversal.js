@@ -29,8 +29,8 @@ function inOrderTraverse(tree, array){
 function preOrderTraverse(tree, array){
     if (tree !== null) { //if the tree is not none, we will do some tings
         array.push(tree.value); //push to the array the current tree value //grab the 10 first
-        inOrderTraverse(tree.left, array); //call the inOrderTraverse on the left side 
-        inOrderTraverse(tree.right, array); //call the inOrderTraverse on the right side
+        preOrderTraverse(tree.left, array); //call the inOrderTraverse on the left side 
+        preOrderTraverse(tree.right, array); //call the inOrderTraverse on the right side
     }
     return array; //return the array
 }
@@ -38,8 +38,8 @@ function preOrderTraverse(tree, array){
 
 function postOrderTraverse(tree, array){
     if (tree !== null) { //if the tree is not none, we will do some tings
-        inOrderTraverse(tree.left, array); //call the inOrderTraverse on the left side 
-        inOrderTraverse(tree.right, array); //call the inOrderTraverse on the right side
+        postOrderTraverse(tree.left, array); //call the inOrderTraverse on the left side 
+        postOrderTraverse(tree.right, array); //call the inOrderTraverse on the right side
         array.push(tree.value); //push to the array the current tree value //grab the 10 last
     }
     return array; //return the array
