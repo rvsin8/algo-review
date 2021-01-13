@@ -28,7 +28,7 @@ function binaryTreeDiameter(tree) {
 
 function getTreeInfo(tree){
     if (tree === null) {
-        return new getTreeInfo(0,0)
+        return new TreeInfo(0,0)
     }
 
     const leftTreeInfo = getTreeInfo(tree.left);
