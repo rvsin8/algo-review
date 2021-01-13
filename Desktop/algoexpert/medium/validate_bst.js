@@ -32,6 +32,6 @@ function validateBst(tree) {
 function validateBstHelper(tree, minValue, maxValue){ //helper function takes in a tree, min and max value
     if (tree === null) return true; //we have hit the bottom of the tree and its true
     if (tree.value < minValue || tree.value >= maxValue) return false; //we want to make sure the node value is in between the min and max value, so if its less than the min val or exceeds the max value then we return false
-    const leftIsValid = validateBstHelper(tree.left, minValue, tree.value); //
-    return leftIsValid && validateBstHelper(tree.right, tree.value, maxValue);
+    const leftIsValid = validateBstHelper(tree.left, minValue, tree.value); //call the helper on the left subtree to see if its valid
+    return leftIsValid && validateBstHelper(tree.right, tree.value, maxValue); //we also want to see if the right subtree is valid
 }
