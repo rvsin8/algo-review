@@ -21,4 +21,9 @@
 //[2,3,5,5,6,8,9] //fifth and final iteration
 
 //time complexity 
-//
+//O(N^2) where n i the length of our input array - it is squared bc we are looping through the array multiple times until the array gets sorted
+//in the worst case we will do a bunch of for loops
+
+//space complexity
+//O(1) we are running the algorithm in place, we did not allocate additional memory
+
