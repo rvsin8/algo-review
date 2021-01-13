@@ -16,3 +16,12 @@
 
 //space complexity
 //O(n) bc we are creating an array of length n where we are storing all these values
+
+function inOrderTraverse(tree, array){
+    if (tree !== null) { //if the tree is not none, we will do some tings
+        inOrderTraverse(tree.left, array);
+        array.push(tree.value);
+        inOrderTraverse(tree.right, array);
+    }
+    return array;
+}
