@@ -15,3 +15,9 @@
 //longest path is 1 at the moment and height is 2 bc its 2 nodes
 //going backwards 9-8-7 (2,3)
 //6-5-4-3-7-8-9 (6,4) //this is super confusing
+
+//time complexity 
+//O(N) we visit every node once so its this, n is the num of nodes in the tree
+
+//space complexity
+//recursive calls
