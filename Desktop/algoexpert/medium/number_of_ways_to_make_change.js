@@ -35,5 +35,5 @@ function numberOfWaysToMakeChange(n, denoms) { //n is an integer val and so is d
             }
         }
     }
-    return ways[n];
+    return ways[n]; //return the ways of n
 }
