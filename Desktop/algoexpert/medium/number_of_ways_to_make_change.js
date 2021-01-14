@@ -25,13 +25,13 @@
 //space complexity
 //O(n) where n is our target amount
 
-function numberOfWaysToMakeChange(n, denoms) {
-    const ways = new Araay(n + 1).fill(0);
-    ways[0] = 1;
-    for (let denom of denoms) {
-        for (let amount = 1; amount < n + 1; amount++) {
-            if (denom <= amount){
-                ways[amount] += ways[amount - denom];
+function numberOfWaysToMakeChange(n, denoms) { //n is an integer val and so is denoms
+    const ways = new Array(n + 1).fill(0); //fill the new array with 0
+    ways[0] = 1;//base case - at idx 0 we will set it to 1
+    for (let denom of denoms) { //for this for loop
+        for (let amount = 1; amount < n + 1; amount++) { //for amount in range
+            if (denom <= amount){ //if denom is less or equal to amount then 
+                ways[amount] += ways[amount - denom]; //we will update our ways array, which is ways amount - denom //this is equivalent to ways[amount] = ways[amount] + ways[amount - denom]
             }
         }
     }
