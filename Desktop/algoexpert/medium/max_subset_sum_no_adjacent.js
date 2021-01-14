@@ -41,3 +41,4 @@ function maxSubsetSumNoAdjacent(array) {
     }
     return first; //return the max subset sum no adjacent
 }
+//review this
