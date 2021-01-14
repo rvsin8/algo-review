@@ -13,4 +13,8 @@
 //at idx 2, we can add the 12 to 7 and get 19 and store it in our array --> [7,10,19]
 //at idx 3, we cannot get a higher integer than 19 so we leave it as --> [7,10,19,19]
 //at idx 4, we can add 9 to 7 and 12 --> 28 and get [7,10,19,19,28]
-//at idx 5, we can add 14 to 12 and 7 and get 33 --> [7,10,19,19,28,33]
+//at idx 5, we can add 14 to 12 and 7 and get 33 --> [7,10,19,19,28,33] with 33 is the max subset sum with no adjacent value
+
+//maxSums = the array we are building
+//array = our input array
+//maxSums[i] = will be the maximum value at { 1) maxSums[i-1] or 2) maxSums[i-2] + array[i] } //this will be our two base cases
