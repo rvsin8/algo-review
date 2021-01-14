@@ -30,12 +30,12 @@
 //after each iteration we will update our two values first --> current, second --> first this makes it O(1)
 
 function maxSubsetSumNoAdjacent(array) {
-    if (!array.length) return 0;
-    if (array.length === 1) return array[0];
-    let second = array[0];
-    let first = Math.max(array[0], array[1]);
-    for (let i = 2; i < array.length; i++){
-        const current = Math.max(first, second + array[i]);
+    if (!array.length) return 0; //edge case 1 --> if length is null then 0
+    if (array.length === 1) return array[0]; //if array length is 1 then return the num at idx 0
+    let second = array[0]; //declare second variable will represent max sum of i - 2 --> array[2]
+    let first = Math.max(array[0], array[1]); //i-1 --> initialize to the max val of 0 and 1
+    for (let i = 2; i < array.length; i++){ //traverse through the array
+        const current = Math.max(first, second + array[i]); //
         second = first;
         first = current;
     }
