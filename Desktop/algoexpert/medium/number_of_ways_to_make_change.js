@@ -16,3 +16,5 @@
 //we move on to 5, we cannot use a $5 donation for 0, 1, 2, 3, and 4. 
 //for ways[5] += ways[5-5] --> 1 + 0 = 5 so we update 5 to 2.
 //if denom <= amount then we will say ways[amount] += ways[amount-denom]
+//5,6,7,8,9 will all be updated to 2 and 10 will be 3 --> ways[10] += ways[10-5] --> 1 + ways[5] --> 1 + 2 = 3
+//
