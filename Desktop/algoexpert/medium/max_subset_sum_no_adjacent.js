@@ -35,9 +35,9 @@ function maxSubsetSumNoAdjacent(array) {
     let second = array[0]; //declare second variable will represent max sum of i - 2 --> array[2]
     let first = Math.max(array[0], array[1]); //i-1 --> initialize to the max val of 0 and 1
     for (let i = 2; i < array.length; i++){ //traverse through the array
-        const current = Math.max(first, second + array[i]); //
-        second = first;
-        first = current;
+        const current = Math.max(first, second + array[i]); //max sum of i-2 and max sum of i-2 + array[i]
+        second = first; //update second to first, we don't want to update first first bc we don't want to overwrite that value at first
+        first = current; //update first to current
     }
-    return first;
+    return first; //return the max subset sum no adjacent
 }
