@@ -28,3 +28,16 @@
 //we can do better bc only need only 2 stored values as in our formula via var first i-1 and var sec i-2
 //current = max(first, second + array[i])
 //after each iteration we will update our two values first --> current, second --> first this makes it O(1)
+
+function maxSubsetSumNoAdjacent(array) {
+    if (!array.length) return 0;
+    if (array.length === 1) return array[0];
+    let second = array[0];
+    let first = Math.max(array[0], array[1]);
+    for (let i = 2; i < array.length; i++){
+        const current = Math.max(first, second + array[i]);
+        second = first;
+        first = current;
+    }
+    return first;
+}
