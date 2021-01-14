@@ -18,3 +18,11 @@
 //maxSums = the array we are building
 //array = our input array
 //maxSums[i] = will be the maximum value at { 1) maxSums[i-1] or 2) maxSums[i-2] + array[i] } //this will be our two base cases
+//maxSums[2] = max(maxSums[1], maxSums[0] + array[2]) --> max(10, 19) so we store the 19 via this formula since its greater than 10
+
+//time complexity 
+//O(n) time, where n is the length of our array and we have to visit every ele once
+
+//space complexity
+//O(n) space, bc we are building a new array
+//we can do better bc only need only 2 stored values as in our formula via var first i-1 and var sec i-2
