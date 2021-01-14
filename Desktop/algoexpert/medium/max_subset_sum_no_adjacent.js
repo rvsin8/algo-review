@@ -26,3 +26,4 @@
 //space complexity
 //O(n) space, bc we are building a new array
 //we can do better bc only need only 2 stored values as in our formula via var first i-1 and var sec i-2
+//current = max(first, second + array[i])
