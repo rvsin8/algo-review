@@ -18,3 +18,9 @@
 //if denom <= amount then we will say ways[amount] += ways[amount-denom]
 //5,6,7,8,9 will all be updated to 2 and 10 will be 3 --> ways[10] += ways[10-5] --> 1 + ways[5] --> 1 + 2 = 3
 //ways[10] = 3 + ways[10] --> 3 + 1 = 4
+
+//time complexity
+//O(nd) where d is the number of denominations, we are iterating through each domination and elements as well
+
+//space complexity
+//O(n) where n is our target amount
