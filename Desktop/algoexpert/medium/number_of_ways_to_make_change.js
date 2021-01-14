@@ -11,4 +11,8 @@
 //algorithm 
 //there is one way to make $0 which is nothing
 //next one is $1 is 1<=1 --> yes update our ways array --> ways[1] += ways[1-1] or ways[1] = ways[1] + ways[1-1] //wtf is going on // 0 + 1 = 1
-//next is $2 --> 1 < 2, ways[2] = ways[2-1] --> 1
+//next is $2 --> 1 < 2, ways[2] = ways[2-1] --> 1 or ways[2] = ways[2] - ways[2-1] = 1 as well
+//we know now the entire first row will have atleast 1 way to make change
+//we move on to 5, we cannot use a $5 donation for 0, 1, 2, 3, and 4. 
+//for ways[5] += ways[5-5] --> 1 + 0 = 5 so we update 5 to 2.
+//if denom <= amount then we will say ways[amount] += ways[amount-denom]
