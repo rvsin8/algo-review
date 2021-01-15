@@ -14,4 +14,7 @@
 //$0 we need 0 coins so we have 0 on idx 0
 //$1, is 1 <= 1, yes it is so there is at-least 1 way to get to that
 //$2, is 1 <= 2, yes 2-1 = 1 coin here, and one coin already and we get 1 + 1 = 2 at idx2
-//the list goes on
+//the list goes on for all denoms
+//for $2 we have the idx respectively as - 0, 1, 1, 2, 2, 3, 3
+//for $4 we have 0, 1, 1, 2, 1, 2, 2 
+//for each denom and amount we are building, if the denom <= amount : we can update our nums array --> nums[amount] = minimum (nums[amount], 1 + nums[amount - denom] )
