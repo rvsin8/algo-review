@@ -17,4 +17,11 @@
 //the list goes on for all denoms
 //for $2 we have the idx respectively as - 0, 1, 1, 2, 2, 3, 3
 //for $4 we have 0, 1, 1, 2, 1, 2, 2 
-//for each denom and amount we are building, if the denom <= amount : we can update our nums array --> nums[amount] = minimum (nums[amount], 1 + nums[amount - denom] )
+//for each denom and amount we are building, if the denom <= amount : we can update our nums array --> nums[amount] = minimum (nums[amount], 1 + nums[amount - denom] ]
+//confused
+
+//time complexity
+//O(nd) iterating through the array of denoms and amount, d is the num of denominations we have
+
+//space complexity
+//O(n) building an array
