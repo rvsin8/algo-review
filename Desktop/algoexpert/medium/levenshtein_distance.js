@@ -13,8 +13,9 @@
 //   "" y a b d
 //"" 0  1 2 3 4
 //a  1  1 1 2 3
-//b  2  
-//c  3
+//b  2  2 2 1 2
+//c  3  3 3 2 2
 
 //we are going to call this 2D array our "edits table" or "E"
-//if str1[r] == str2[c] 
+//if str1[r] == str2[c] : E[r][c] == E[r-1][c-1]
+//else E[r][c] = 1 + min(E[r][c-1], E[r-1][c], E[r-1][c-1])
