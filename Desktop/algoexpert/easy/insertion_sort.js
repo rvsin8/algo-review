@@ -30,3 +30,5 @@ function swap(i, j, array) { //swap helper
     array[i] = temp;
 
 }
+
+//review this
