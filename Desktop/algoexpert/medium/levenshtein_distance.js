@@ -17,5 +17,12 @@
 //c  3  3 3 2 2
 
 //we are going to call this 2D array our "edits table" or "E"
-//if str1[r] == str2[c] : E[r][c] == E[r-1][c-1]
+//if str1[r-1] == str2[c-1] : E[r][c] == E[r-1][c-1]
 //else E[r][c] = 1 + min(E[r][c-1], E[r-1][c], E[r-1][c-1])
+
+//time complexity
+//O(nm) where n is the length of str1 and m is the length of str2
+
+
+//space complexity
+//O(nm) we are only storing in that 2D array and nothing else
