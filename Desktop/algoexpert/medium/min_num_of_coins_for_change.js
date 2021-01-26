@@ -25,3 +25,13 @@
 
 //space complexity
 //O(n) building an array
+
+function minNumbersOfCoinsForChnage(n, denoms) {
+    const numOfCoins = new Array(n+1).fill(Infinity);
+    numOfCoins[0] = 0;
+    for (const denom of denoms) {
+        for (let amount = 0; amount < numOfCoins.length; amount++){
+            if (denom <= )
+        }
+    }
+}
