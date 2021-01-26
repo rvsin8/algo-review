@@ -10,8 +10,11 @@
 //for long strings, dynamic programming will help
 //we will build a 2D array, at each idx we will store the min operations we need to turn it into another substring 
 
-//"" y a b d
-//""
-//a
-//b
-//c
+//   "" y a b d
+//"" 0  1 2 3 4
+//a  1  1 1 2 3
+//b  2  
+//c  3
+
+//we are going to call this 2D array our "edits table" or "E"
+//if str1[r] == str2[c] 
