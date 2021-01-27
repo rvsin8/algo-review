@@ -25,12 +25,12 @@
 //O(1) not storing anything outside of maxending here and maxsofar
 
 function kadanesAlgorithm(array) {
-    let maxEndingHere = array[0];
-    let maxSoFar = array[0];
-    for (let i = 1; i < array.length; i++) {
+    let maxEndingHere = array[0];//equal to array at idx 0
+    let maxSoFar = array[0]; //equal array at idx 0
+    for (let i = 1; i < array.length; i++) { //we can start from idx 1 and traverse from there
         const num = array[i];
-        maxEndingHere = Math.max(num, maxEndingHere + num);
-        maxSoFar = Math.max(maxSoFar, maxEndingHere);
+        maxEndingHere = Math.max(num, maxEndingHere + num); //take the max of the num alone or the previous num + num
+        maxSoFar = Math.max(maxSoFar, maxEndingHere); //current value of maxsofar or maxendinghere
     }
-    return maxSoFar;
+    return maxSoFar; //return maxsofar
 }
