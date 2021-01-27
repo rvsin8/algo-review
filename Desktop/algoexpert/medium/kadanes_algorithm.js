@@ -13,4 +13,5 @@
 //with 3,5 and -9 [3,5,-9] is -1
 //we can either sum up 3 5 -9 1 which is 0 or just 1 and here 1 is greater than 0 --> so we choose 1
 //max Sum = -1 + 1 or just 1 (we will do this at each idx to see if we want to recount from that idx)
-//
+//maxEndingHere = max{maxEndingHere + num} or max{num}
+//so 3+5 = 8 --> now we compare 8 + (-9 or -9 will be 8 + -9  and so on ...
