@@ -15,3 +15,11 @@
 //max Sum = -1 + 1 or just 1 (we will do this at each idx to see if we want to recount from that idx)
 //maxEndingHere = max{maxEndingHere + num} or max{num}
 //so 3+5 = 8 --> now we compare 8 + (-9 or -9 will be 8 + -9  and so on ...
+//we come up with all the greatest sum at each idx and it is 19 for this
+//to improve time and space complexity we can have - maxSoFar where we keep track of the highest sum of a subset so far --> maxSoFar = max maxSoFar} or max{maxEndingHere}
+
+//time complexity
+//O(n) where n is the length of the input array
+
+//space complexity 
+//O(1) not storing anything outside of maxending here and max so far
