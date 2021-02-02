@@ -22,3 +22,18 @@
 //space complexity
 //O(1) - we do not need an extra list just a few var to keep track
 
+function hasSingleCycle(array){
+    let numElementsVisited = 0;//we want o visit n elements, so we want to keep track of the ele visited
+    let currentIdx = 0;//we want to keep track of our index
+    while (numElementsVisited < array.length) { //while loop so much that the ele visited is smaller than the array itself 
+        numElementsVisited++; //increment like i said before 
+        currentIdx = getNextIdx(currentIdx, array); //jump through our ele, we will update our idx via helper method
+    }
+    return currentIdx === 0; //return this when we are done, if it equals 0 and this will be true and we got a single cycle
+}
+
+function getNextIdx(currentIdx, array){ //helper method
+    const jump = array[currentIdx]; //the value is - will be w.e the vale is at the current idx
+    const nextIdx = (currentIdx + jump) % array.length; //next idx is current dx + jump but we module it by the array so it does not exceed bounds
+    return nextIdx >= 0 ? nextIdx : nextIdx + array.length; //return nextidx if it is a pos or 0 num, otherwise  do nextidx + array length bc it is the same as moving forward as being neg //this is confusing re-read this
+}
