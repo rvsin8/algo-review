@@ -37,3 +37,5 @@ function getNextIdx(currentIdx, array){ //helper method
     const nextIdx = (currentIdx + jump) % array.length; //next idx is current dx + jump but we module it by the array so it does not exceed bounds
     return nextIdx >= 0 ? nextIdx : nextIdx + array.length; //return nextidx if it is a pos or 0 num, otherwise  do nextidx + array length bc it is the same as moving forward as being neg //this is confusing re-read this
 }
+
+//neg and pos num confuse me
