@@ -17,5 +17,8 @@
 //3. when we get to a point where n = 6, if we are not back to our starting point we got a problem
 
 //time complexity 
+//O(n) - where n is the length of the input array, we are jumping through n elements 
 
 //space complexity
+//O(1) - we do not need an extra list just a few var to keep track
+
