@@ -9,3 +9,10 @@
 //and so on
 //[2,5,8,9,5,6,3]
 //[2,3,8,9,5,6,5] and so on
+
+//time complexity
+//O(n^2) - we kept iterating through the array and reduce the length by 1 each iteration
+
+
+//space complexity
+//O(1) - we are not storing anything just swapping
