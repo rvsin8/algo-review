@@ -11,5 +11,16 @@
 //its difficult bc in code it is confusing
 //we will be using another data structure in this called a queue which is a ds that follows the rule of first in first out - first thing we put in will be the first thing that comes out via array
 //while the queue is not empty, we will pop it and make it our current node and put it in our final array
-//then we add all the child nodes of A to the queue and then pop it out to the current nodes then to the array and we keep doing this to each child nodes
+//then we add all the child nodes of A to the queue and then pop it via first in first out to the current nodes then to the array and we keep doing this to each child nodes
+//when our queue is empty we can break out of our while loop
+
+//time complexity
+//O(v + e), v is the num of vertices and e is the num of edges
+//in a graph you have vertices and edges
+//vertices is the nodes (diff points in a graph)
+//edges are the things that connect the nodes, lines btw A and B, etc.
+//edges take into account how many children nodes there are
+
+//space complexity
+//O(v)
 
