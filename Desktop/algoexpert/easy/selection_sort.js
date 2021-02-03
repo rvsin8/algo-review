@@ -16,3 +16,16 @@
 
 //space complexity
 //O(1) - we are not storing anything just swapping
+
+function selectionSort(array) {
+    let startIdx = 0; //keep track of the idx of the first num of the unsorted sublist
+    while (startIdx < array.length - 1){ //
+        let smallestIdx = startIdx;
+        for (let i = startIdx + 1; i < array.length; i++){
+            if (array[smallestIdx] > array[i]) smallestIdx = i;
+        }
+        swap(startIdx, smallestIdx, array);
+        startIdx++;
+    }
+    return array;
+}
