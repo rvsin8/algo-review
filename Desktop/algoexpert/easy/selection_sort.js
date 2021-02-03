@@ -19,13 +19,19 @@
 
 function selectionSort(array) {
     let startIdx = 0; //keep track of the idx of the first num of the unsorted sublist
-    while (startIdx < array.length - 1){ //
-        let smallestIdx = startIdx;
-        for (let i = startIdx + 1; i < array.length; i++){
-            if (array[smallestIdx] > array[i]) smallestIdx = i;
+    while (startIdx < array.length - 1){ //while current idx is less than array length - 1
+        let smallestIdx = startIdx; //smallest idx will be the first idx integer 
+        for (let i = startIdx + 1; i < array.length; i++){ //for idx in range
+            if (array[smallestIdx] > array[i]) smallestIdx = i; //is the smallest idx is > the i we are at, then the smallest idx becomes i at the end of the array
         }
-        swap(startIdx, smallestIdx, array);
+        swap(startIdx, smallestIdx, array); //we then swap
         startIdx++;
     }
     return array;
+}
+
+function swap(i, j, array) {
+    const temp = array[j];
+    array[j] = array[i];
+    array[i] = temp;
 }
