@@ -23,4 +23,18 @@
 
 //space complexity
 //O(v)
+//we are storing an array of v nodes names
+
+breadthFirstSearch(array){ //takes in an array
+    const queue = [this]; //initialize our queue - javascript array; [this] is the root node
+    while (queue.length > 0) { //while the length of the queue is greater than 0 (not empty) 
+        const current = queue.shift();//let the current node be queue.shift where we implement FIFO
+        array.push(current.name); //push it 
+        for (const child of current.children) { //for every child in our node 
+            queue.push(child); //append it
+        }
+    }
+    return array; //once it done return the array
+
+}
 
