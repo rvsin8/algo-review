@@ -38,3 +38,4 @@ breadthFirstSearch(array){ //takes in an array
 
 }
 
+//figure out what append means
