@@ -22,4 +22,11 @@
 
 //more optimal solution 
 //once we sort every word and found all anagrams - we can dump them in a hash table and have all of the anagrams bucketed together
-//
+//we will go word by word and see if a word is in the hash table, if not we add it ins
+//much simpler time
+
+//time complexity
+//O(w*n*log(n))
+
+//space complexity
+//O(wn)
