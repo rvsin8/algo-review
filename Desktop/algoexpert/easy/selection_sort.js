@@ -24,13 +24,13 @@ function selectionSort(array) {
         for (let i = startIdx + 1; i < array.length; i++){ //for idx in range
             if (array[smallestIdx] > array[i]) smallestIdx = i; //is the smallest idx is > the i we are at, then the smallest idx becomes i at the end of the array
         }
-        swap(startIdx, smallestIdx, array); //we then swap
+        swap(startIdx, smallestIdx, array); //we then swap current idx and the smallest idx
         startIdx++;
     }
     return array;
 }
 
-function swap(i, j, array) {
+function swap(i, j, array) { //swap helper function
     const temp = array[j];
     array[j] = array[i];
     array[i] = temp;
