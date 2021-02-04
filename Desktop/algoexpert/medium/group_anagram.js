@@ -10,3 +10,5 @@
 //we will re-arrange the indices in a sorted way --> 1act, 3act, 4act, 2flop, 6flop, 0oy, 5oy
 //all the anagrams are now together 
 //we can access original code via idx
+//[act,tac,cat], [flop, olfp], [yo, oy]
+//
