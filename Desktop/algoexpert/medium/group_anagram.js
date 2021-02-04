@@ -11,4 +11,15 @@
 //all the anagrams are now together 
 //we can access original code via idx
 //[act,tac,cat], [flop, olfp], [yo, oy]
+
+//time complexity 
+//O(w*n*log(n) + n*w*log(w)) 
+//we are sorting arrays its usually nlongn time where n is the time of input array 
+//review this because its confusing 
+
+//space complexity 
+//O(wn) - w is the num of words that were given and n is the length of the longest word
+
+//more optimal solution 
+//once we sort every word and found all anagrams - we can dump them in a hash table and have all of the anagrams bucketed together
 //
