@@ -33,4 +33,11 @@ function longestPalindromicSubstring(string) {
     return string.slice(currentLongest[0], currentLongest[1]);
 }
 
-
+function getLongestPalindromFrom(string, leftIdx, rightIdx) {
+    while (leftIdx >= 0 && rightIdx < string.length) {
+        if (string[leftIdx] !== string[rightIdx]) break;
+        leftIdx--;
+        rightIdx++;
+    }
+    return [leftIdx + 1, rightIdx];
+}
