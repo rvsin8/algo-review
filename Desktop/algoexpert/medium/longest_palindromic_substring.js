@@ -20,5 +20,8 @@
 
 
 //more optimal space complexity
-//O(n) 
+//O(n) bc we slice and store the final substring
 
+function longestPalindromicSubstring(string) {
+    
+}
