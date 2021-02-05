@@ -11,10 +11,14 @@
 //a is the first letter of the pali -> can't nothing is to the left
 //b is the next, to the left is a and to the right is a, so it is a palindrome aba, can we go farther out ? no bc in the left we are out of the string, we also have to check a even length check and a and b are not equal to each other 
 //second a i the next one, to the left is b and to the right is x and is not a palindrome same goes for even length palindrome 
-//and so on
+//and so on until we hit second z where we have a even palindrome with the length of 6
 
 
 //more optimal time complexity
+//O(n^2) where n is the length of input string
+//we are iterating through the array once O(n) time, we do two expansions after every iterations one at the letter and one in btw the letters
+
 
 //more optimal space complexity
+//O(n) 
 
