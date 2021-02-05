@@ -30,3 +30,14 @@
 
 //space complexity
 //O(wn)
+
+function groupAnagrams(words){
+    const anagrams = {};
+    for (const word of words) {
+        const sortedWord = word.split('').sort().join('');
+        if (sortedWord in anagrams) {
+            anagrams[sortedWord].push(word);
+        }
+    }
+    return Object.values(anagrams);
+}
