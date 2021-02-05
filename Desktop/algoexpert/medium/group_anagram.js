@@ -31,12 +31,15 @@
 //space complexity
 //O(wn)
 
-function groupAnagrams(words){
-    const anagrams = {};
-    for (const word of words) {
-        const sortedWord = word.split('').sort().join('');
-        if (sortedWord in anagrams) {
-            anagrams[sortedWord].push(word);
+//simpler solution
+function groupAnagrams(words) { //takes in a string
+    const anagrams = {}; //hashtable of anagrams
+    for (const word of words) { //iterate for every word of words
+        const sortedWord = word.split('').sort().join(''); //sorted version of this word 
+        if (sortedWord in anagrams) { //if the sorted word is in the hash table of anagrams
+            anagrams[sortedWord].push(word); //we will append //still dont know what append means
+        } else {
+            anagrams[sortedWord] = [word]; //if not then we add a new array of the word
         }
     }
     return Object.values(anagrams);
