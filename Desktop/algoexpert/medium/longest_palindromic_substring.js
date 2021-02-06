@@ -30,14 +30,14 @@ function longestPalindromicSubstring(string) {
         const longest = odd[1] - odd[0] > even[1] - even[0] ? odd : even; //takre a look at odd and take a look at even, check which one is longer by taking the difference from idx 1 and idx 0
         currentLongest = currentLongest[1] - currentLongest[0] > longest[1] - longest[0] ? currentLongest : longest; //when the current idx is longer than the longest we found by far
     }
-    return string.slice(currentLongest[0], currentLongest[1]);
+    return string.slice(currentLongest[0], currentLongest[1]); //
 }
 
-function getLongestPalindromFrom(string, leftIdx, rightIdx) {
-    while (leftIdx >= 0 && rightIdx < string.length) {
-        if (string[leftIdx] !== string[rightIdx]) break;
-        leftIdx--;
-        rightIdx++;
+function getLongestPalindromFrom(string, leftIdx, rightIdx) { //
+    while (leftIdx >= 0 && rightIdx < string.length) { //while left idx is greater than or equal to 0 and right idx is less than length of the string so if we are still in the string
+        if (string[leftIdx] !== string[rightIdx]) break; //if the letter at the left idx is not = to the letter to the right idx then we break
+        leftIdx--; //we move the left idx of the left pointer one more to the left
+        rightIdx++;//we do the same for the right as ^
     }
-    return [leftIdx + 1, rightIdx];
+    return [leftIdx + 1, rightIdx]; //return left idx + 1 and right idx bc once we break out the whole loop that means we are either past the indices or we are at a left idx that is not equal to the right idx so we break out //the current left idx we are at, that means we are an idx too far to the left
 }
