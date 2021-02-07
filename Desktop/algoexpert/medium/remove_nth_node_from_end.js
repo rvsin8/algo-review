@@ -45,5 +45,5 @@ function removeKthNodeFromEnd(head, k) { //takes in the head and kth value we wa
         second = second.next; //increment second pointer same pace
         first = first.next; //increment first pointer same pace
     }
-    first.next = first.next.next;
+    first.next = first.next.next; //when we break out the while loop, everything is shifted by one //removes the node we wants away // first is pointing to the node right before the node we want to remove //first.next = NODE TO REMOVE //first.next.next = NODE TO REMOVE.next
 }
