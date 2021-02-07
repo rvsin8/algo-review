@@ -13,6 +13,9 @@
 //have our second pointer traverse the linked list before the first pointer
 //have it traverse 4 node, so the second pointer is now 4 nodes ahead si 4 is n
 //we can move both pointers at once as we traverse, same pace until our second pointer goes past the end aka null value
+//as it moves second pointer hits null and first pointer hits 6
+//bc our second pointer was n nodes ahead of our first pointer, now as we move together, the sec pointer n nodes ahead and when it hits the null vale we know the first pointer is hitting the value we want to be at and remove
+
 
 
 //time complexity
