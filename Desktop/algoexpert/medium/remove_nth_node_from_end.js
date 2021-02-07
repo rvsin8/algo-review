@@ -41,9 +41,9 @@ function removeKthNodeFromEnd(head, k) { //takes in the head and kth value we wa
         return;
     }
     
-    while (second.unit !== null) {
-        second = second.next;
-        first = first.next;
+    while (second.unit !== null) {//if the second pointer does not hit null
+        second = second.next; //increment second pointer same pace
+        first = first.next; //increment first pointer same pace
     }
-    first.next = first.next.nest;
+    first.next = first.next.next;
 }
