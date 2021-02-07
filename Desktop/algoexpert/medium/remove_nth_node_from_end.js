@@ -2,7 +2,10 @@
 //Linked Lists
 
 //my understanding 
-//
+//we are given a head node that will store integer values
+//given an integer value, and remove the nth node from the end of the lsit
+//0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9, 4
+//0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 7 -> 8 -> 9 
 
 //time complexity
 
