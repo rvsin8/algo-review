@@ -21,10 +21,10 @@
 //once our sec pointer is immediately at null, we are done and we remove the head node of the list
 
 //time complexity
-//O(n)
+//O(n) - where n is the length of the linked list
 
 //space complexity
-//0(1)
+//0(1) - constant space bc all we are doing is moving the pointers, keeping track of the nodes at the pointers, we are not storing much else
 
 function removeKthNodeFromEnd(head, k) {
     let counter = 1;
