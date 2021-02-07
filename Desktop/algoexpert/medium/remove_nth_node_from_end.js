@@ -15,12 +15,16 @@
 //we can move both pointers at once as we traverse, same pace until our second pointer goes past the end aka null value
 //as it moves second pointer hits null and first pointer hits 6
 //bc our second pointer was n nodes ahead of our first pointer, now as we move together, the sec pointer n nodes ahead and when it hits the null vale we know the first pointer is hitting the value we want to be at and remove
-
-
+//we have to keep track of the node before the one we want to disregard like 5
+//we just want the arrow pointing from 5 to 6 to point at 7 instead so we need to keep track of 5
+//what if the node we want gone is the first int/node
+//once our sec pointer is immediately at null, we are done and we remove the head node of the list
 
 //time complexity
+//O(n)
 
 //space complexity
+//0(1)
 
 function removeKthNodeFromEnd(head, k) {
     let counter = 1;
