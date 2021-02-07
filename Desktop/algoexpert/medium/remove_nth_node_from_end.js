@@ -26,13 +26,13 @@
 //space complexity
 //0(1) - constant space bc all we are doing is moving the pointers, keeping track of the nodes at the pointers, we are not storing much else
 
-function removeKthNodeFromEnd(head, k) {
-    let counter = 1;
-    let first = head;
-    let second = head;
-    while (counter <= k) {
-        second = second.next;
-        counter++;
+function removeKthNodeFromEnd(head, k) { //takes in the head and kth value we want to remove from end
+    let counter = 1; //we need to have a counter value to see how much we have traversed
+    let first = head; //first is going to point to head
+    let second = head; //as well as second
+    while (counter <= k) { //while counter is less than or equal to k
+        second = second.next; //we want our second pointer to point to second.next
+        counter++; //increment the counter
     }
 
     if (second === null) {
