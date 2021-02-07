@@ -6,6 +6,14 @@
 //given an integer value, and remove the nth node from the end of the lsit
 //0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9, 4
 //0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 7 -> 8 -> 9 
+//since we have a single linked list its not as easy as a double linked list
+//so we traverse the linked list with 2 pointers and find the solution
+//first and second pointers
+//have both pointers point at the head of the linked list
+//have our second pointer traverse the linked list before the first pointer
+//have it traverse 4 node, so the second pointer is now 4 nodes ahead si 4 is n
+//we can move both pointers at once as we traverse, same pace until our second pointer goes past the end aka null value
+
 
 //time complexity
 
