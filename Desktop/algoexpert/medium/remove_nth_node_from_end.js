@@ -30,14 +30,14 @@ function removeKthNodeFromEnd(head, k) { //takes in the head and kth value we wa
     let counter = 1; //we need to have a counter value to see how much we have traversed
     let first = head; //first is going to point to head
     let second = head; //as well as second
-    while (counter <= k) { //while counter is less than or equal to k
+    while (counter <= k) { //while counter is less than or equal to k, make sure k is inclusively for off by 1 errors
         second = second.next; //we want our second pointer to point to second.next
         counter++; //increment the counter
     }
 
-    if (second === null) {
-        head.value = head.next.value;
-        head.next = head.next.next;
+    if (second === null) { //if second pointer is null
+        head.value = head.next.value; //your first pointer is pointing to the head node. so update its value and next pointer
+        head.next = head.next.next; //head.value is now updated to the following node
         return;
     }
     
