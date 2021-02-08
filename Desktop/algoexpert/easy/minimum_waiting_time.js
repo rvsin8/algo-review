@@ -29,13 +29,13 @@
 
 
 function minimumWaitingTime(queries) {
-    queries.sort((a,b) => a - b);
+    queries.sort((a,b) => a - b); //sort it in place in ascending order
 
-    let totalWaitingTime = 0;
-    for (let idx = 0; idx < queries.length; idx++){
+    let totalWaitingTime = 0; //define totalwaitingtime to 0, we will keep track of the total
+    for (let idx = 0; idx < queries.length; idx++){ //traverse through the query
         const duration = queries[idx];
-        const queriesLeft = queries.length - (idx + 1);
-        totalWaitingTime += duration * queriesLeft;
+        const queriesLeft = queries.length - (idx + 1); //the +1 accounts for the first idx // a little confused here
+        totalWaitingTime += duration * queriesLeft; //multiple the current duration by the num of queries left and add that to the total waiting time
     }
-    return totalWaitingTime;
+    return totalWaitingTime; 
 }
