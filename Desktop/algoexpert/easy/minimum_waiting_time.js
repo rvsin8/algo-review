@@ -2,6 +2,12 @@
 //Greedy Algorithms
 
 //my understanding
+//we have an input array with positive values with at least one integer
+//we need to minimize the waiting time for a query
+//a waiting time is how long a query must wait to execute 
+//[3,2,1,2,6]
+//[6,1,2,2,3] - query1 = 0 , query2 = 6, query3 = 6 + 1 = 7, query4 = 6 + 1 + 2 = 9, query5 = 11 --> 11 + 9 + 6 + 7 = 33 not the answer is 17
+//find a better order to find minimum waiting time
 
 //time complexity 
 //O(nlogn)
