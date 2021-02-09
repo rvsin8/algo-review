@@ -2,7 +2,14 @@
 //Arrays
 
 //my understandings
-
+//an algorithm competition where multiple teams will compete against each other
+//have multiple competitions and there will be one winner and one loser
+//each team will compete each other one time - round robbin
+//the team that wins, has the most num of points
+//there will never be a tie
+//you have an array in which there are strings, the first string is the home team and the second string is the away string
+//the result array will have the winner of the competition and will be the same size as the competition array
+//if you see a 0 in the result array, to that corresponding idx in the competition array the home team won and 1 means the away team has away
 
 //time complexity 
 //O(n)
@@ -11,7 +18,7 @@
 //O(k)
 
 
-const HOME_TEAM_WON = 1;
+const HOME_TEAM_WON = 1; //
 
 function tournamentWinner(competitions, results) {
     let currentBestTeam = '';
