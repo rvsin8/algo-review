@@ -49,7 +49,7 @@ function tournamentWinner(competitions, results) { //takes in two parameters
         updateScores(winningTeam, 3, scores); //update the score with the winning, three points and the total score
 
         if (scores[winningTeam] > scores[currentBestTeam]) { //if scores of the winning team is better than the score of the current best team
-            currentBesTeam = winningTeam; //we update that winning team to the current best team
+            currentBestTeam = winningTeam; //we update that winning team to the current best team
         }
     }
     return currentBestTeam;
@@ -61,3 +61,5 @@ function updateScores(team, points, scores) {
 
     scores[team] += points; //add the points to the team given here
 }
+
+//recheck this cannot submit solution
