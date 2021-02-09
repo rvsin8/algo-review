@@ -2,7 +2,13 @@
 //Stacks
 
 //my understandings 
-//we are asked to implement a stacked 
+//we are asked to implement a stack ds that has extra special properties via min max
+//a stack is a simple ds, like stacking books - follows LIFO, opposite of a queue
+//LIFO - last in first out
+//LILO- last in last out is for queues
+//a min max stack is not only a stack we can peek at and pop values off the stack - we can also access the min or max value in the stack at any time
+
+
 
 
 //time complexity 
