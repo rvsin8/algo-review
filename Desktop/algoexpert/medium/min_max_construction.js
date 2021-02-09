@@ -41,21 +41,21 @@ class MinMaxStack {
             const newMinMax = {min: number, max: number}; //decale min max to a num
             if (this.minMaxStack.length) { //if the length of our min max stack is truthy - as in we have values in our stack
                 const lastMinMax = this.minMaxStack[this.minMaxStack.length - 1]; //grab the last min max value
-                newMinMax.min = Math.min(lastMinMax.min, number); //
-                newMinMax.max = Math.max(lastMinMax.max, number);
+                newMinMax.min = Math.min(lastMinMax.min, number); //new min is the last min and our new num
+                newMinMax.max = Math.max(lastMinMax.max, number); //same goes for max ^
 
 
             }
-            this.minMaxStack.push(newMinMax);
-            this.stack.push(number);
+            this.minMaxStack.push(newMinMax); //ans
+            this.stack.push(number); //ans
         }
 
         getMin() {
-            return this.minMaxStack[this.minMaxStack.length - 1].min;
+            return this.minMaxStack[this.minMaxStack.length - 1].min; //min property 
         }
 
         getMax() {
-            return this.minMaxStack[this.minMaxStack.length - 1].max;
+            return this.minMaxStack[this.minMaxStack.length - 1].max; //,ax property
         }
     }
 }
