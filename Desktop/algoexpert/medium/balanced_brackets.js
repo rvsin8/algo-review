@@ -2,6 +2,10 @@
 //Stacks
 
 //my understanding
+//you are given a string of brackets and there are three types with two versions - open bracket and close bracket
+//balance - the string needs to have as many opening brackets as many closed brackets and it needs to match
+//you cant have a closing bracket before an opening bracket and you cannot overlap different types of brackets together
+
 
 //time complexity 
 //O(n)
