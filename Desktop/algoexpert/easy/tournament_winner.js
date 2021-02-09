@@ -10,6 +10,14 @@
 //you have an array in which there are strings, the first string is the home team and the second string is the away string
 //the result array will have the winner of the competition and will be the same size as the competition array
 //if you see a 0 in the result array, to that corresponding idx in the competition array the home team won and 1 means the away team has away
+//competitions = [["HTML", "C#"], ["C#", "Python"], ["Python", "HTML"]}
+//results = [0,0,1] --> Python won the tournament, they won 2 games
+
+//solution
+//HTML lost the first competition and C# won
+//Python won the second competition, C#  lost
+//Python won the last competition, HTML lost
+//Python has 6 points, C# has 3 points and HTML has 0
 
 //time complexity 
 //O(n)
