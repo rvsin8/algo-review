@@ -2,8 +2,11 @@
 //Greedy Algorithm
 
 //my understanding 
-
-
+//we get two inputs for this - one is a positive k which is the num of workers that must complete the tasks and the other is the duration of tasks that must be completed and will always be atleast 2k
+//[[4,2],[0,5],[3,1]]
+//these tasks are going to be denoted of their idx
+//[4,2] mean task wt idx4 and task with idx2 which is duration task of 2 and duration task 1
+//[0,l5] 
 
 //time complexity 
 //O(nlog(n))
