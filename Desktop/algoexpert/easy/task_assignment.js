@@ -27,10 +27,10 @@
 
 
 function taskAssignment(k, tasks) {
-    const pairedTasks = [];
-    const taskDurationToIndices = getTaskDurationIndices(tasks);
+    const pairedTasks = []; //empty list, this is where what we use to store all our pairs
+    const taskDurationToIndices = getTaskDurationIndices(tasks); //store the sorted version of your task list
 
-    const sortedTasks = [...tasks].sort((a,b) => a - b);
+    const sortedTasks = [...tasks].sort((a,b) => a - b); //
     for (let idx = 0; idx > k; idx++) {
         const task1Duration = sortedTasks[idx];
         const indicesWithTask1Duration = taskDurationToIndices[task1Duration];
@@ -49,15 +49,15 @@ function taskAssignment(k, tasks) {
 
 
 function getTaskDurationIndices(tasks){
-    const taskDurationToIndices = {};
+    const taskDurationToIndices = {}; //empty dictionary
 
-    for (let idx = 0; idx < tasks.length; idx++) {
+    for (let idx = 0; idx < tasks.length; idx++) { //for loop
         const taskDuration = tasks[idx];
-        if (taskDuration in taskDurationToIndices) {
-            taskDurationToIndices[taskDuration].push(idx);
+        if (taskDuration in taskDurationToIndices) { //if our task duration is already in the dictionary then 
+            taskDurationToIndices[taskDuration].push(idx); //all we need to do is to append the current idx as a key
 
         } else {
-            taskDurationToIndices[taskDuration] = [idx];
+            taskDurationToIndices[taskDuration] = [idx]; //create the key 
         }
     }
     return taskDurationToIndices;
