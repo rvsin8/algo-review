@@ -10,9 +10,10 @@
 //4,2 = 1 + 5 = 6
 //0,5 = 1 + 4 = 5
 //3,1 = 3 + 3 = 6
+//we sort it - [1,1,3,3,4,5]
 
 //time complexity 
-//O(nlog(n))
+//O(nlog(n)) - bc its a sorting algorithm
 
 
 //space complexity
