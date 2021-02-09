@@ -33,8 +33,8 @@ class MinMaxStack {
         }
 
         pop() {
-            this.minMaxStack.pop();
-            return this.stack.pop();
+            this.minMaxStack.pop(); //pop the value off of min max value as well we want this to be in sync with our stack
+            return this.stack.pop(); 
         }
 
         push(number){
