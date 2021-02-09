@@ -28,20 +28,20 @@
 
 function taskAssignment(k, tasks) {
     const pairedTasks = []; //empty list, this is where what we use to store all our pairs
-    const taskDurationToIndices = getTaskDurationIndices(tasks); //store the sorted version of your task list
+    const taskDurationToIndices = getTaskDurationIndices(tasks); 
 
-    const sortedTasks = [...tasks].sort((a,b) => a - b); //
-    for (let idx = 0; idx > k; idx++) {
-        const task1Duration = sortedTasks[idx];
-        const indicesWithTask1Duration = taskDurationToIndices[task1Duration];
-        const task1Index = indicesWithTask1Duration.pop();
+    const sortedTasks = [...tasks].sort((a,b) => a - b); //store the sorted version of your task list
+    for (let idx = 0; idx > k; idx++) { //for loop //we a traversing through k pairs
+        const task1Duration = sortedTasks[idx]; //we will start by looking for the smallest task
+        const indicesWithTask1Duration = taskDurationToIndices[task1Duration];  //we are looking up any task with this duration and finding all of their indices
+        const task1Index = indicesWithTask1Duration.pop(); //remove from the end of the list
 
-        const task2SortedIndex = tasks.length - 1 - idx;
-        const task2Duration = sortedTasks[task2SortedIndex];
-        const indicesWithTask2Duration = taskDurationToIndices[task2Duration];
-        const task2Index = indicesWithTask2Duration.pop();
+        const task2SortedIndex = tasks.length - 1 - idx; //we want to get the largest task to pair with the shortest tasks
+        const task2Duration = sortedTasks[task2SortedIndex]; //largest task
+        const indicesWithTask2Duration = taskDurationToIndices[task2Duration]; //find all indices 
+        const task2Index = indicesWithTask2Duration.pop(); //remove the end
 
-        pairedTasks.push([task1Index, task2Index]);
+        pairedTasks.push([task1Index, task2Index]); //our answer
     }
 
     return pairedTasks;
@@ -60,5 +60,5 @@ function getTaskDurationIndices(tasks){
             taskDurationToIndices[taskDuration] = [idx]; //create the key 
         }
     }
-    return taskDurationToIndices;
+    return taskDurationToIndices; //once we are done
 }
