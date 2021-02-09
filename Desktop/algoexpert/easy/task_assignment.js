@@ -6,7 +6,10 @@
 //[[4,2],[0,5],[3,1]]
 //these tasks are going to be denoted of their idx
 //[4,2] mean task wt idx4 and task with idx2 which is duration task of 2 and duration task 1
-//[0,l5] 
+//[0,l5]  means idx0 task is 1sec and idx5 task is 4s
+//4,2 = 1 + 5 = 6
+//0,5 = 1 + 4 = 5
+//3,1 = 3 + 3 = 6
 
 //time complexity 
 //O(nlog(n))
