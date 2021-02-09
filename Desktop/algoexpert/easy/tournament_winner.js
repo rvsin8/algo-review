@@ -5,8 +5,10 @@
 
 
 //time complexity 
+//O(n)
 
 //space complexity 
+//O(k)
 
 
 const HOME_TEAM_WON = 1;
