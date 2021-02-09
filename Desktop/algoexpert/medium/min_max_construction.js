@@ -7,6 +7,11 @@
 //LIFO - last in first out
 //LILO- last in last out is for queues
 //a min max stack is not only a stack we can peek at and pop values off the stack - we can also access the min or max value in the stack at any time
+//we want to be able peek, pop, push and get min or max values in constant time and space
+//5, 7, 2
+//min - 5 5 2
+//max - 5 7 7 
+//peek - 5 7 2
 
 
 
