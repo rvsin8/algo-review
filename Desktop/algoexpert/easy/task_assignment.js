@@ -27,5 +27,25 @@ function taskAssignment(k, tasks) {
         const task2Duration = sortedTasks[task2SortedIndex];
         const indicesWithTask2Duration = taskDurationToIndices[task2Duration];
         const task2Index = indicesWithTask2Duration.pop();
+
+        pairedTasks.push([task1Index, task2Index]);
     }
+
+    return pairedTasks;
+}
+
+
+function getTaskDurationIndices(tasks){
+    const taskDurationToIndices = {};
+
+    for (let idx = 0; idx < tasks.length; idx++) {
+        const taskDuration = tasks[idx];
+        if (taskDuration in taskDurationToIndices) {
+            taskDurationToIndices[taskDuration].push(idx);
+
+        } else {
+            taskDurationToIndices[taskDuration] = [idx];
+        }
+    }
+    return taskDurationToIndices;
 }
