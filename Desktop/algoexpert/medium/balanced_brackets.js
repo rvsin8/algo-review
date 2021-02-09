@@ -36,12 +36,12 @@ function balancedBrackets(string) {
             if (stack.length == 0) { //if the stack is not empty by the end of it then its false 
                 return false;
             }
-            if (stack[stack.length - 1] === matchingBrackets[char]) { //if the last bracket is equal to the  matching letter then pop them out the stack
+            if (stack[stack.length - 1] === matchingBrackets[char]) { //if the last bracket is equal to the last matching bracket then pop them out the stack
                 stack.pop();
             } else {
-                return false;
+                return false; //if theres no match then its false
             }
         }
     }
-    return stack.length === 0;
+    return stack.length === 0; //we want to check if the stack is empty
 }
