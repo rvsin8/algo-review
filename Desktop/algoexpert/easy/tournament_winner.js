@@ -18,6 +18,13 @@
 //Python won the second competition, C#  lost
 //Python won the last competition, HTML lost
 //Python has 6 points, C# has 3 points and HTML has 0
+//keep track of all the teams and how many points they have and then find the team with the most points
+//use a hash map or hash table and in there we will have the name of the team and the value as their score
+//loop through all the competition list and see who won each comp
+//update their score, whoever won add three to their ds
+//if the team is not in the ds, we assume they did not win a game
+//we do this so on ...
+
 
 //time complexity 
 //O(n)
