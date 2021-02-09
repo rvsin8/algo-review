@@ -16,10 +16,12 @@
 //
 
 //time complexity 
-//O(1)
+//O(1) 
 
 //space complexity
 //O(1)
+//overall
+//O(N) all we are doing is storing 2 values a min and max so we are not using extra space
 
 class MinMaxStack {
     constructor() {
