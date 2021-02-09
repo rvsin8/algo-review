@@ -25,11 +25,11 @@
 
 class MinMaxStack {
     constructor() {
-        this.minMaxStack = [];
-        this.stack = [];
+        this.minMaxStack = []; //list that holds our min and max value at any given time
+        this.stack = []; //holds our stack
 
         peek() {
-            return this.stack[this.stack.length - 1];
+            return this.stack[this.stack.length - 1]; //return the value at the end of the list
         }
 
         pop() {
