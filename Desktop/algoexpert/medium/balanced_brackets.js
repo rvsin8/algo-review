@@ -22,21 +22,21 @@
 //O(n) - where n is the length of the string
 
 //space complexity
-//O(n) - 
+//O(n) - storing brackets
 
 function balancedBrackets(string) {
-    const openingBrackets = '([{';
-    const closingBrackets = ')]}';
-    const matchingBrackets = {')' : '(', ']' : '[', '}' : '{'};
-    const stack = [];
-    for (const char of strings) {
-        if (openingBrackets.includes(char)) {
-            stack.push(char);
-        } else if (closingBrackets.includes(char)) {
-            if (stack.length == 0) {
+    const openingBrackets = '([{'; //save the opening brackets
+    const closingBrackets = ')]}'; //save the closing brackets
+    const matchingBrackets = {')' : '(', ']' : '[', '}' : '{'}; //match up the brackets
+    const stack = []; //store brackets in a stack
+    for (const char of string) { //the bracket is in the string 
+        if (openingBrackets.includes(char)) { //if it is an opening bracket
+            stack.push(char); //push it to the stack
+        } else if (closingBrackets.includes(char)) { //if it is a closing bracket
+            if (stack.length == 0) { //if the stack is not empty by the end of it then its false 
                 return false;
             }
-            if (stack[stack.length - 1] === matchingBrackets[char]) {
+            if (stack[stack.length - 1] === matchingBrackets[char]) { //if the last bracket is equal to the  matching letter then pop them out the stack
                 stack.pop();
             } else {
                 return false;
