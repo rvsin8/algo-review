@@ -14,13 +14,16 @@
 //1,5 = 6
 //1,4 = 5
 //3,3 = 6
+//we want the longest task to be paired to the shorted one to be paired up
+//keep track of indices bc thats what we to give as our answer
+
 
 //time complexity 
 //O(nlog(n)) - bc its a sorting algorithm
 
 
 //space complexity
-//O(n)
+//O(n) we need to keep track of the tasks and their pairings, we need a new list with n ele inside it
 
 
 function taskAssignment(k, tasks) {
