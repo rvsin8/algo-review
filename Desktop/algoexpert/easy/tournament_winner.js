@@ -22,6 +22,11 @@ function tournamentWinner(competitions, results) {
         const winningTeam = result === HOME_TEAM_WON ? homeTeam : awayTeam;
 
         updateScores(winningTeam, 3, scores);
+
+        if (scores[winningTeam] > scores[currentBestTeam]) {
+            currentBesTeam = winningTeam;
+        }
     }
+    return currentBestTeam;
 
 }
