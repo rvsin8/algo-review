@@ -27,6 +27,7 @@ class MinMaxStack {
     constructor() {
         this.minMaxStack = []; //list that holds our min and max value at any given time
         this.stack = []; //holds our stack
+    }
 
         peek() {
             return this.stack[this.stack.length - 1]; //return the value at the end of the list
@@ -57,5 +58,5 @@ class MinMaxStack {
         getMax() {
             return this.minMaxStack[this.minMaxStack.length - 1].max; //,ax property
         }
-    }
 }
+
