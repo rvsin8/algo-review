@@ -14,15 +14,15 @@
 //if we have opening brackets in the stack we want o check the last bracket - if the last bracket does not match the closing bracket we then have an imbalance but in this situation we do :D
 //[(.(,(] --> now we are up to a closing ')'
 //[(,(] --> now we are at another closing ')'
-//so on
+//so on until the stack is empty bc if it isnt empty then it is unbalanced 
 
 
 
 //time complexity 
-//O(n)
+//O(n) - where n is the length of the string
 
 //space complexity
-//O(n)
+//O(n) - 
 
 function balancedBrackets(string) {
     const openingBrackets = '([{';
