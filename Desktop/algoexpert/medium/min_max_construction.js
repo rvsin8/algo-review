@@ -2,7 +2,7 @@
 //Stacks
 
 //my understandings 
-//
+//we are asked to implement a stacked 
 
 
 //time complexity 
