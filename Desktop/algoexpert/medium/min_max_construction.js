@@ -12,9 +12,8 @@
 //min - 5 5 2
 //max - 5 7 7 
 //peek - 5 7 2
-
-
-
+//we have to store all our numbers via an array and we can pop and peek and get the min and max value from that array
+//
 
 //time complexity 
 //O(1)
