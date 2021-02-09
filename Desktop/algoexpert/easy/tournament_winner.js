@@ -24,23 +24,24 @@
 //update their score, whoever won add three to their ds
 //if the team is not in the ds, we assume they did not win a game
 //we do this so on ...
-
+//save the best team as a string in the beginning of the algorithm and we will continue to update this string
+//
 
 //time complexity 
-//O(n)
+//O(n) n is the number of competition we have aka the length of that list
 
 //space complexity 
-//O(k)
+//O(k) //k is number of teams we have competing, our scores ds stores k and its values 
 
 
-const HOME_TEAM_WON = 1; //
+const HOME_TEAM_WON = 1; //we can use this constant variable
 
-function tournamentWinner(competitions, results) {
-    let currentBestTeam = '';
-    const scores = {[currentBestTeam]: 0};
+function tournamentWinner(competitions, results) { //takes in two parameters
+    let currentBestTeam = ''; //keep track of our best team with the highest scores
+    const scores = {[currentBestTeam]: 0}; //set it to the default value of 0
 
-    for (let idx = 0; idx < competitions.length; idx++) {
-        const result = results[idx];
+    for (let idx = 0; idx < competitions.length; idx++) { //access to the value and ele in our competition array with its indices 
+        const result = results[idx]; //our corresponding index
         const [homeTeam, awayTeam] = competitons[idx];
 
         const winningTeam = result === HOME_TEAM_WON ? homeTeam : awayTeam;
