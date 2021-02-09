@@ -11,8 +11,10 @@
 //we will traverse through a string and we check for an opening bracket and there are only 3 types of opening bracket
 //[(.(,[]
 //now we are up to the closing bracket so now we check our stack to make sure its not empty 
-//if we have opening brackets in the stack we wantt o check the last bracket - if the last bracket does not match the closing bracket we then have an imbalance but in this situation we do :D
-//
+//if we have opening brackets in the stack we want o check the last bracket - if the last bracket does not match the closing bracket we then have an imbalance but in this situation we do :D
+//[(.(,(] --> now we are up to a closing ')'
+//[(,(] --> now we are at another closing ')'
+//so on
 
 
 
