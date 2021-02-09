@@ -30,3 +30,9 @@ function tournamentWinner(competitions, results) {
     return currentBestTeam;
 
 }
+
+function updateScores(team, points, scores) {
+    if (!(team in scores)) scores[team] = 0;
+
+    scores[team] += points;
+}
