@@ -40,9 +40,9 @@ function classPhotos(redShirtHeights, blueShirtHeights) {
         const blueShirtHeight = blueShirtHeights[idx]; //reasoning above
 
         if (shirtColorInFirstRow === 'RED') { //if the red shirts are in our first row
-            if (redShirtHeights >= blueShirtHeights) return false; //if any of the red heights are taller than the blue students behind them return false
+            if (redShirtHeight >= blueShirtHeight) return false; //if any of the red heights are taller than the blue students behind them return false
 
-        } else if (blueShirtHeights >= redShirtHeights) return false; //same goes for blue shirts if they are in the first row
+        } else if (blueShirtHeight >= redShirtHeight) return false; //same goes for blue shirts if they are in the first row
     }
 
     return true;
