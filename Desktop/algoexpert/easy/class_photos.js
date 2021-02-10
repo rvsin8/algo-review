@@ -16,6 +16,11 @@
 //blue shirts = [6,9,2,4,5]
 //whatever color shirt our tallest student is wearing has to be in the back row
 //so blue shirts must be in the back row
+//first thing we do is determine which color should be in the front or back via tallest student
+//[6,9,2,4,5] - we take the 9 out 
+//[5,8,1,3,4] - we take the 8 out and put it in front of the 9 since its the largest num in the red shirt array
+//[6,2,4,5]
+//[5,1,3,4]
 
 //time complexity 
 //O(nlog(n))
