@@ -28,21 +28,21 @@
 //O(nlog(n)) //we need to sort the blue shirt and red shirt height 
 
 //space complexity
-//O(1) we dont need any auxillary space for this algo
+//O(1) we dont need any auxillary space for this algo bc we can modify the array
 
 function classPhotos(redShirtHeights, blueShirtHeights) {
-    redShirtHeights.sort((a,b) => b - a);
-    blueShirtHeights.sort((a,b) => b - a);
+    redShirtHeights.sort((a,b) => b - a); //sort the red shirt in descending order
+    blueShirtHeights.sort((a,b) => b - a); //sort the blue shirts in descending order
 
-    const shirtColorInFirstRow = redShirtHeights[0] < blueShirtHeights[0] ? 'RED' : 'BLUE';
-    for (let idx = 0; idx < redShirtHeights.length; idx++) {
-        const redShirtHeights = redShirtHeights[idx];
-        const blueShirtHeights = blueShirtHeights[idx];
+    const shirtColorInFirstRow = redShirtHeights[0] < blueShirtHeights[0] ? 'RED' : 'BLUE'; //if red shirt height at idx 0 is less than blue shirt then red shirts will be in the first row, if not it will be blue shirts
+    for (let idx = 0; idx < redShirtHeights.length; idx++) { //
+        const redShirtHeight = redShirtHeights[idx]; //we will use this to compare students by height and make sure the criteria is met
+        const blueShirtHeight = blueShirtHeights[idx]; //reasoning above
 
-        if (shirtColorInFirstRow === 'RED') {
-            if (redShirtHeights >= blueShirtHeights) return false;
+        if (shirtColorInFirstRow === 'RED') { //if the red shirts are in our first row
+            if (redShirtHeights >= blueShirtHeights) return false; //if any of the red heights are taller than the blue students behind them return false
 
-        } else if (blueShirtHeights >= redShirtHeights) return false;
+        } else if (blueShirtHeights >= redShirtHeights) return false; //same goes for blue shirts if they are in the first row
     }
 
     return true;
