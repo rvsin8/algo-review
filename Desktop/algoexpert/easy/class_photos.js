@@ -11,6 +11,11 @@
 //everyone in the front row must be shorter than those in the back row
 //return true if we are able to take a pic accordingly 
 
+//solution 
+//red shirts = [5,8,1,3,4]
+//blue shirts = [6,9,2,4,5]
+//whatever color shirt our tallest student is wearing has to be in the back row
+//so blue shirts must be in the back row
 
 //time complexity 
 //O(nlog(n))
