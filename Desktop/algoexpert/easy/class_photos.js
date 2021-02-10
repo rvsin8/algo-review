@@ -25,10 +25,10 @@
 //even if its a tie on height it shall return false
 
 //time complexity 
-//O(nlog(n))
+//O(nlog(n)) //we need to sort the blue shirt and red shirt height 
 
 //space complexity
-//O(1)
+//O(1) we dont need any auxillary space for this algo
 
 function classPhotos(redShirtHeights, blueShirtHeights) {
     redShirtHeights.sort((a,b) => b - a);
