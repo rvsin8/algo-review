@@ -11,7 +11,9 @@
 
 //my solution
 //brute force approach is not optimal -- just loop through all positive integers until we hit one we cannot make
-
+//optimal solution 
+//first sort the input array - [1,1,2,3,5,7,22]; change = k
+//1..k is all the change we can make
 
 
 //time complexity 
