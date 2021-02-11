@@ -22,14 +22,16 @@
 //then is 7, 1-18 yes 
 //finally 22 --> we cannot make 20 cents
 //change = previous coin + 1 //22 is greater thn our change + 1 and thats the first time it occurs in the array
-
+//when we hit a coin greater than our change plus one then we cannot make that copin
+//[1,1,4] --> 4 > 2 + 1 so we cannot make 3
+//V > C + 1
 
 
 //time complexity 
-//O(nlogn)
+//O(nlogn) we need sort our input array and then irate through it in one time
 
 //space complexity 
-//O(1)
+//O(1) we actually are going to sort this input array in place - mutate
 
 function nonConstructibleCHnage(coins) {
     coins.sort((a,b) => a - b);
