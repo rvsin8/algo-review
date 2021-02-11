@@ -34,14 +34,14 @@
 //O(1) we actually are going to sort this input array in place - mutate
 
 function nonConstructibleCHnage(coins) {
-    coins.sort((a,b) => a - b);
+    coins.sort((a,b) => a - b); //we sort this input array in place
 
-    let currentChangeCreated = 0;
-    for (const coin of coins) {
-        if (coin > currentChangeCreated + 1) return currentChangeCreated + 1;
+    let currentChangeCreated = 0; //c value we keep track and update
+    for (const coin of coins) { //all the coin in the coins
+        if (coin > currentChangeCreated + 1) return currentChangeCreated + 1; //if the coin is created than the current change + 1 then we have to return the current change + 1 bc it cannot be made
 
-        currentChangeCreated += coin;
+        currentChangeCreated += coin; //otherwise we add the value of the coin to the current change created
     }
 
-    return currentChangeCreated + 1;
+    return currentChangeCreated + 1; //
 }
