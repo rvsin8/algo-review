@@ -25,8 +25,11 @@
 //F --> X --> D + P
 //S --> 2X --> 2D + 2P
 //we want overlap and our target node is R
-
-
+//the distance of the entire linked list is T
+//T = 2D + 2P - P --> 2D + P
+//R = T - P - D therefore --> 2D + P - P - D = D // R = D
+//we can reset F to the node and move it in pace with S bc then it will reach our target node at the same time
+//they both hit 4 at the same time and overlap again 
 
 //time complexity 
 //O(n)
