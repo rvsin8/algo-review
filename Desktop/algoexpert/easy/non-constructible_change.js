@@ -43,5 +43,5 @@ function nonConstructibleCHnage(coins) {
         currentChangeCreated += coin; //otherwise we add the value of the coin to the current change created
     }
 
-    return currentChangeCreated + 1; //
+    return currentChangeCreated + 1; //if we break out the loop this will be our answer bc that is the next change we cannot make in array after going through every coin
 }
