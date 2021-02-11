@@ -47,14 +47,14 @@ function largestRange(array) {
             currentLength++; //we increment our total length 
             left--; //and continue going left by decrementing 
         }
-        while (right in nums) {
-            nums[right] = false;
-            currentLength++;
-            right++;
+        while (right in nums) { //while right is in the hash table
+            nums[right] = false; //we set that table to false
+            currentLength++; //we increase the total length
+            right++;//we go further right and increment 
         }
-        if (currentLength > longestLength) {
-            longestLength = currentLength;
-            bestRange = [left + 1, right - 1];
+        if (currentLength > longestLength) { //once the new range's length surpasses the longest known range length we have stored
+            longestLength = currentLength; //we update it to the new longest length
+            bestRange = [left + 1, right - 1]; //we do this +1 and -1 --> the leftmost num that wasnt 1 //relook at this a little confusing
         }
     }
     return bestRange;
