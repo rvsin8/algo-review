@@ -5,9 +5,10 @@
 
 
 //time complexity 
-
+//O(n)
 
 //space complexity 
+//O(1)
 
 function findLoop(head) {
     let first = head.next;
