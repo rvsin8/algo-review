@@ -2,6 +2,10 @@
 //Searching
 
 //my understanding
+//look for a number in a 2D array aka a matrix
+//matrix is sorted, every row and col are sorted in ascending order
+//we have a target number and if it is in the matrix then we want the indices at which that matrix is placed
+
 
 
 //time complexity 
