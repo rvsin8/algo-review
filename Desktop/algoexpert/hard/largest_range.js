@@ -14,7 +14,9 @@
 //we can start at 1 and see what numbers are less than or greater than 1
 //1 so what comes before it ? 0, what comes before 0 ? -1 but we do not have that so the range starts at 0
 //what comes after 1 ? 2,3,4,5,6,7 so that is where our range ends at 7
-
+//next move to the next num which is 11
+//to the left of 11 is 10 and we have it, do we have 9 ? no so we start at 10
+//to the right we have 12 and yes we have it, 13 ? no so the next range is [10,11,12]
 
 
 //time complexity
