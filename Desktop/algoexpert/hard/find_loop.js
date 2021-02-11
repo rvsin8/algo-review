@@ -18,6 +18,13 @@
 //idx3 - F
 //idx4 - S so on
 //once our two pointers overlap - we ended one iteration of traversal
+//F traveled x distance, visited x nodes
+//S traveled 2x distance
+//origin to the loop intiation is d
+//initiation to overlap is p
+//F --> X --> D + P
+//S --> 2X --> 2D + 2P
+//we want overlap and our target node is R
 
 
 
