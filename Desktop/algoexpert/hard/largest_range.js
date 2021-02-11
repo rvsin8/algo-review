@@ -8,6 +8,13 @@
 //largest range is [0,7]
 //obvious way to solve this is by sorting but there is a more optimal solution
 
+//more optimal solution
+//without sorting it we need to find a way to access each integer very fast
+//it may useful to have a hash-table which we will do where we store all the numbers and we can access this in constant time
+//we can start at 1 and see what numbers are less than or greater than 1
+//1 so what comes before it ? 0, what comes before 0 ? -1 but we do not have that so the range starts at 0
+//what comes after 1 ? 2,3,4,5,6,7 so that is where our range ends at 7
+
 
 
 //time complexity
