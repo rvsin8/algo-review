@@ -12,6 +12,12 @@
 //technique - traverse the list with two pointers
 //you start with the pointer in the first node in the list and a second pointer there as well
 //second pointer will go through every other node while the first pointer traverses through each one
+//idx0 - F S
+//idx1 - F
+//idx2 - F S
+//idx3 - F
+//idx4 - S so on
+//once our two pointers overlap - we ended one iteration of traversal
 
 
 
