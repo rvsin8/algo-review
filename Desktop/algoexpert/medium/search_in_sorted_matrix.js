@@ -32,11 +32,11 @@ function searchInSortedMatrix(matrix, target) {
     while (row < matrix.length && col >= 0) { //traverse through our matrix while our row is less than our matrix and the column is >= 0
         if (matrix[row][col] > target) { //if the matrix at our row and at our column are greater than our target number
             col--; //we move our column to the left - decrementing it
-        } else if (matrix[row][col] < target) { //
-            row++;
+        } else if (matrix[row][col] < target) { //if it is less than our target
+            row++; //we move down the row, we are incrementing our row
         } else {
-            return [row, col];
+            return [row, col]; //else means we found it and we return our indices of our target value
         }
     }
-    return [-1, -1];
+    return [-1, -1]; //if it is not found we return -1,-1
 }
