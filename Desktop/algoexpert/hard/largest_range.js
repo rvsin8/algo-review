@@ -36,16 +36,16 @@ function largestRange(array) {
     for (const num of array) { //we go through our array
         nums[num] = true; //set every num in our hash table to true 
     }
-    for (const num of array) {
-        if (!nums[num]) continue;
-        nums[num] = false;
-        let currentLength = 1;
-        let left = num - 1;
-        let right = num + 1;
-        while (left in nums) {
-            nums[left] = false;
-            currentLength++;
-            left--;
+    for (const num of array) { //for num in our array
+        if (!nums[num]) continue; //if the value in our hash table is false, we continue and skip that number
+        nums[num] = false; //otherwise we set it to false
+        let currentLength = 1; //we set the current length to 1, we are expanding the length 
+        let left = num - 1; //left side expansions 
+        let right = num + 1; //right side expansions
+        while (left in nums) { //while left num is in our input array
+            nums[left] = false; //we set that integer to be false
+            currentLength++; //we increment our total length 
+            left--; //and continue going left by decrementing 
         }
         while (right in nums) {
             nums[right] = false;
