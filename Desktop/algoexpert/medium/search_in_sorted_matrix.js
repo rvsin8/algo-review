@@ -13,6 +13,11 @@
 //start at the top right which is a 1000 and a 1000 is > 44
 //it tells us that 44 cannot be in the column bc 1000 is on top so we get rid of an entire column
 //move to the left to 15 which is < 44
+//it tells us we can get rid of that row that 15 is in
+//now we move below 15 to 32 which is also < 44 so we get rid of that column as well
+//we move again to the bottom to 35 and its < 44, so we eliminate the left again
+//now we are at 45 and it is > 44 and we get rid of the bottom 
+//we then go to the left and we hit 44 our target number and now we can return the indices it is at --> [3,3]
 
 //time complexity 
 //O(n + m)
