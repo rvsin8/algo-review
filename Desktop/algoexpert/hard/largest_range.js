@@ -17,7 +17,11 @@
 //next move to the next num which is 11
 //to the left of 11 is 10 and we have it, do we have 9 ? no so we start at 10
 //to the right we have 12 and yes we have it, 13 ? no so the next range is [10,11,12]
-
+//next is 3 and with this we would get the same exact range we would get in our range for 1 so that is not optimal 
+//with a hash table we can have every number in the hash table to a boolean which will tell us if its correct or true that we can explore this number
+//we start with assigning all our numbers in the hash table to true and whenever we explore a number and find it in the hash table we change it value from true to false
+//15 is the only one that is not false and we go through it and change it to false which has the range of [15]
+//finally we are left with out final range [0,7]
 
 //time complexity
 //O(N)
