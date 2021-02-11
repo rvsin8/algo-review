@@ -16,4 +16,10 @@ function findLoop(head) {
         first = first.next;
         second = second.next.next;
     }
+    first = head;
+    while (first !== second) {
+        first = first.next;
+        second = seconf.next;
+    }
+    return first;
 }
