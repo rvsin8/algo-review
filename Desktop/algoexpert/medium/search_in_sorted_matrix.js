@@ -27,12 +27,12 @@
 //O(1) we are not storing anything we can do this traversal in place
 
 function searchInSortedMatrix(matrix, target) {
-    let row = 0;
-    let col = matrix[0].length - 1;
-    while (row < matrix.length && col >= 0) {
-        if (matrix[row][col] > target) {
-            col--;
-        } else if (matrix[row][col] < target) {
+    let row = 0; //row starts at the first idx which is 0 and we keep track of this
+    let col = matrix[0].length - 1; //keep track of column which starts at the last value of the first row which is -1
+    while (row < matrix.length && col >= 0) { //traverse through our matrix while our row is less than our matrix and the column is >= 0
+        if (matrix[row][col] > target) { //if the matrix at our row and at our column are greater than our target number
+            col--; //we move our column to the left - decrementing it
+        } else if (matrix[row][col] < target) { //
             row++;
         } else {
             return [row, col];
