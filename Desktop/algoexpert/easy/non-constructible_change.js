@@ -33,7 +33,7 @@
 //space complexity 
 //O(1) we actually are going to sort this input array in place - mutate
 
-function nonConstructibleCHnage(coins) {
+function nonConstructibleChange(coins) {
     coins.sort((a,b) => a - b); //we sort this input array in place
 
     let currentChangeCreated = 0; //c value we keep track and update
