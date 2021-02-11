@@ -20,10 +20,11 @@
 //we then go to the left and we hit 44 our target number and now we can return the indices it is at --> [3,3]
 
 //time complexity 
-//O(n + m)
+//O(n + m) where n is the length of the rows and m is the length of the columns
+//greatest amount of traversal we can do is to opposite corners where we traverse an entire column and row
 
 //space complexity
-//O(1)
+//O(1) we are not storing anything we can do this traversal in place
 
 function searchInSortedMatrix(matrix, target) {
     let row = 0;
