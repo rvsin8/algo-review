@@ -32,22 +32,22 @@
 //they both hit 4 at the same time and overlap again 
 
 //time complexity 
-//O(n)
+//O(N) we traversed exactly N times
 
 //space complexity 
-//O(1)
+//O(1) constant space
 
 function findLoop(head) {
-    let first = head.next;
-    let second = head.next.next;
+    let first = head.next; //start in the head, iterate through each one
+    let second = head.next.next; //start in head, iterate through every other
+    while (first !== second) { //while first does not equal second
+        first = first.next; //keep traversing
+        second = second.next.next; //keep traversing 
+    } //once we leave the loop
+    first = head; //bring the first pointer to the head
     while (first !== second) {
-        first = first.next;
-        second = second.next.next;
+        first = first.next; //traverse every 
+        second = second.next; //traverse every at same pace at the first node
     }
-    first = head;
-    while (first !== second) {
-        first = first.next;
-        second = seconf.next;
-    }
-    return first;
+    return first; //return once they overlap at the first pointer
 }
