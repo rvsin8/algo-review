@@ -24,21 +24,21 @@
 //finally we are left with out final range [0,7]
 
 //time complexity
-//O(N)
+//O(N) we iterate through each number in a hashtable 
 
 //space complexity
-//O(N)
+//O(N) we store each integer in a has table
 
 function largestRange(array) {
-    let bestRange = [];
-    let longestLength = 0;
-    const nums = {};
-    for (const num of array) {
-        nums[num] = true;
+    let bestRange = []; //this array will hold the two number, first and last num of the range
+    let longestLength = 0; //hold the longest length of the range, will let us know if it needs to be updated
+    const nums = {}; //hashtable for all our numbers
+    for (const num of array) { //we go through our array
+        nums[num] = true; //set every num in our hash table to true 
     }
     for (const num of array) {
         if (!nums[num]) continue;
-        nums[num] = falsel
+        nums[num] = false;
         let currentLength = 1;
         let left = num - 1;
         let right = num + 1;
