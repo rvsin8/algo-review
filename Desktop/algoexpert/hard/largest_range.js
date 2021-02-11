@@ -2,6 +2,12 @@
 //Array
 
 //my understanding
+//[1,11,3,0,15,5,2,4,10,7,12,6]
+//you are given an array of int and want to find the largest range of numbers in this array
+//range is a set of numbers that come one after another
+//largest range is [0,7]
+//obvious way to solve this is by sorting but there is a more optimal solution
+
 
 
 //time complexity
