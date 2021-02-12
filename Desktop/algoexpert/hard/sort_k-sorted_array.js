@@ -22,10 +22,28 @@ function sortKSortedArray(array, k) {
         minHeapWithKElements.insert(currentElement);
     }
 
-    while (@minHeapWithKElements.isEmpty()){
+    while (minHeapWithKElements.isEmpty()) {
         const minElement = minHeapWithKElements.remove();
         array[nextIndexToInsertElement] = minElement;
         nextIndexToInsertElement++;
     }
     return array;
  }
+
+class MinHeap {
+    constructor(array) {
+        this.heap = this.buildHeap(array);
+    }
+
+    isEmpty() {
+        return this.heap.length === 0;
+    }
+
+    buildHeap(array) {
+        const firstParentIdx = Math.floor((array.length - 2) / 2);
+        for (let currentIdx = firstParentIdx; currentIdx >= 0; currentIdx--) {
+            this.siftDown(currentIdx, array.length - 1, array);
+        }
+        return array;
+    }
+}
