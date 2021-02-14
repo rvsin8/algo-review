@@ -2,6 +2,8 @@
 //Heaps
 
 //my understanding
+//we are given two inpurs - the first input is a partially sorted array and the second input will be the integer k and this value will always be greater than or equal to 0
+//a k sorted array is defined as an array where the integers are k sorted from their sorted positions
 
 
 //time complexity
@@ -45,5 +47,12 @@ class MinHeap {
             this.siftDown(currentIdx, array.length - 1, array);
         }
         return array;
+    }
+
+    siftDown(currentIdx, endIdx, heap) {
+        let childOneIdx = currentIdx * 2 + 1;
+        while (childOneIdx <= endIdx) {
+            const childTwoIdx = currentIdx * 2 + 2 <= endIdx ? currentI
+        }
     }
 }
