@@ -10,7 +10,13 @@
 //no integer is more than 3 positions away from its sorted idx
 
 //my solution
-//
+//the first thing we need to place at idx 0, we know it has to be to the left of the middle bc at most that integer can only be 3 idx away
+//we only need to look at k+1 elements to consider for each idx
+//for position 1 we can look 3 to the left or the right --> k + 1 elements to consider
+//first we find idx 0 which is 1 the minimum element 
+//then we pick the second minimum which is 2
+//[5,4,7,6,5] are left and in our new array we have [1,2,3] so far
+//so on
 
 //time complexity
 
