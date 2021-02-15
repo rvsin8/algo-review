@@ -9,6 +9,11 @@
 //these nodes will be represented by objects
 //our nodes will have a value and a next attribute (go to another node or null/none)
 
+//solution
+//all our dups will be grouped together since it is in ascending order
+//we go integer by integer we will look to the left an the right to see if there are dups
+
+
 //time complexity 
 //O(n)
 
