@@ -47,5 +47,5 @@ function removeDuplicatesFromLinkedList(linkedList) {
         currentNode = nextDistinctNode; //current distinct node is equal to current node
     }
 
-    return linkedList;
+    return linkedList; //return the modified array
 }
