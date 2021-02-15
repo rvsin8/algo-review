@@ -2,7 +2,12 @@
 //Linked Lists
 
 //my understanding
-
+//we will be given a linked list
+//we want to remove the duplicate values and return the linked lists with all those integers removed
+//1 -> 1 --> 3 --> 4 --> 4 --> 5 --> 6 --> 6
+//the list will always be sorted
+//these nodes will be represented by objects
+//our nodes will have a value and a next attribute (go to another node or null/none)
 
 //time complexity 
 //O(n)
