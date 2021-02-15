@@ -20,6 +20,12 @@
 //we have current node and we are looking for the next distinct node
 //we want to change the next pointer that 1 is pointing to, to a distinct value
 //our next distinct hits 3 and that is where the pointer will point to next
+//now our current node points to 3 and our next distinct to 4
+//we move to the next current node to 4
+//we move our next distinct node which is also 4, again it is also 4 and then it is 5
+//we then point first 4 to 5 now 
+//and we do the same for 5 and have it point to one of the 6
+//for 6 our next distinct node will be none
 
 //time complexity 
 //O(n)
