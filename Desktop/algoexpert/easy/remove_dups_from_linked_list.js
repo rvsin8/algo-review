@@ -13,6 +13,13 @@
 //all our dups will be grouped together since it is in ascending order
 //we go integer by integer we will look to the left and/or the right to see if there are dups
 //we have to change the next attribute once we find a dup to a different value and then delete the dup integer it originally pointed too
+//currentNode = head
+//temp = currentNode.next.next
+//currentNode.next = temp
+//at idx 0 we have 1
+//we have current node and we are looking for the next distinct node
+//we want to change the next pointer that 1 is pointing to, to a distinct value
+//our next distinct hits 3 and that is where the pointer will point to next
 
 //time complexity 
 //O(n)
