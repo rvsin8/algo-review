@@ -25,6 +25,15 @@
 //to add an element takes the same as O(log(n))
 //O(n) is what it takes to initialize a brand new heap
 
+//continue
+//we want to sort into place immediately 
+//we want to initialize min heap and a variable to keep track of the next position (SortedIdx)
+//we start with k + 1 elements in our min heap and then we loop from the k + 1 INDX
+//we will remove our element in our min heap and sort it into our sorted idx
+//now add the next element to the min heap
+//repeat for the next idx
+//repeat the process until we have a sorted array
+
 //time complexity
 //O(nlog(k))
 
