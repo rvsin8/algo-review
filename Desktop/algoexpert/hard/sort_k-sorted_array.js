@@ -43,20 +43,20 @@
 function sortKSortedArray(array, k) {
     const minHeapWithKElements = new MinHeap(array.slice(0, Math.min(k+1, array.length))); //this is how we initialize our min heap
 
-    let nextIndexToInsertElement = 0;
-    for (let idx = k + 1; idx < array.length; idx++) {
-        const minElement = minHeapWithKElements.remove();
-        array[nextIndexToInsertElement] = minElement;
-        nextIndexToInsertElement++;
+    let nextIndexToInsertElement = 0; //keep track of thius
+    for (let idx = k + 1; idx < array.length; idx++) { //for idx in range to the array length
+        const minElement = minHeapWithKElements.remove(); //remove and give us the minimum ele in our min heap
+        array[nextIndexToInsertElement] = minElement; //we put it in the correct idx
+        nextIndexToInsertElement++; //and we move on to the bnext idx
 
-        const currentElement = array[idx];
-        minHeapWithKElements.insert(currentElement);
+        const currentElement = array[idx]; //that element is kept in a variable 
+        minHeapWithKElements.insert(currentElement); //we insert it in our current ele 
     }
 
-    while (minHeapWithKElements.isEmpty()) {
-        const minElement = minHeapWithKElements.remove();
-        array[nextIndexToInsertElement] = minElement;
-        nextIndexToInsertElement++;
+    while (minHeapWithKElements.isEmpty()) { //while there are ele still left
+        const minElement = minHeapWithKElements.remove(); //lets remove them 
+        array[nextIndexToInsertElement] = minElement; //and put it in the correct position
+        nextIndexToInsertElement++; //increment 
     }
     return array;
  }
