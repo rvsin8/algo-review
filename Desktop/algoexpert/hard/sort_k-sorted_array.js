@@ -17,11 +17,19 @@
 //then we pick the second minimum which is 2
 //[5,4,7,6,5] are left and in our new array we have [1,2,3] so far
 //so on
+//much more efficient way than merge sort and other sort methods 
+//a min heap may be a better method to use for this algorithm
+//a min heap is a tree-like algorithm --> all children nodes must be greater than their parent node, so node A will be the minimum integers in the tree
+//since A will always be the minimum, it will take constant time to look at O(1)
+//to remove A would take O(log(n))
+//to add an element takes the same as O(log(n))
+//O(n) is what it takes to initialize a brand new heap
 
 //time complexity
-
+//O(nlog(k))
 
 //space complexity
+//O(k)
 
 function sortKSortedArray(array, k) {
     const minHeapWithKElements = new MinHeap(array.slice(0, Math.min(k+1, array.length)));
