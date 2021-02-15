@@ -28,23 +28,23 @@
 //for 6 our next distinct node will be none
 
 //time complexity 
-//O(n)
+//O(n) bc all we have to do is through all of the nodes ONCE
 
 
 //space complexity
-//O(1)
+//O(1) we use no extra space
 
 
 function removeDuplicatesFromLinkedList(linkedList) {
-    let currentNode = linkedList;
-    while (currentNode !== null) {
-        let nextDistinctNode = currentNode.next;
-        while (nextDistinctNode !== null && nextDistinctNode.value === currentNode.value) {
-            nextDistinctNode = nextDistinctNode.next;
+    let currentNode = linkedList; //first node of our linked list
+    while (currentNode !== null) { //while its not none means we still have nodes 
+        let nextDistinctNode = currentNode.next; //the next distinct node is linked
+        while (nextDistinctNode !== null && nextDistinctNode.value === currentNode.value) { //while next distinct node is not none and is equal to the current node value
+            nextDistinctNode = nextDistinctNode.next; //we change the next distinct node once we find a match
         }
 
-        currentNode.next = nextDistinctNode;
-        currentNode = nextDistinctNode;
+        currentNode.next = nextDistinctNode; //uh?
+        currentNode = nextDistinctNode; //current distinct node is equal to current node
     }
 
     return linkedList;
