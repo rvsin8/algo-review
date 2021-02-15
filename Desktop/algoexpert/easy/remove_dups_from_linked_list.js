@@ -11,8 +11,8 @@
 
 //solution
 //all our dups will be grouped together since it is in ascending order
-//we go integer by integer we will look to the left an the right to see if there are dups
-
+//we go integer by integer we will look to the left and/or the right to see if there are dups
+//we have to change the next attribute once we find a dup to a different value and then delete the dup integer it originally pointed too
 
 //time complexity 
 //O(n)
