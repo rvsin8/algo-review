@@ -35,10 +35,10 @@
 //repeat the process until we have a sorted array
 
 //time complexity
-//O(nlog(k))
+//O(nlog(k)) we iterate through our input array and it takes log k operation  //look into this time complexity bc its confusing
 
 //space complexity
-//O(k)
+//O(k) we have k + 1 or k elements in our heap
 
 function sortKSortedArray(array, k) {
     const minHeapWithKElements = new MinHeap(array.slice(0, Math.min(k+1, array.length)));
