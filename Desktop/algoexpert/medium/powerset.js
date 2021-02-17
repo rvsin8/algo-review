@@ -2,6 +2,9 @@
 //Recursions
 
 //my understandings 
+//write a function that takes in a set of elements and wants us to have that function generate the powerset of that set of numbers
+//a powerset in match is defined as the set of all subsets
+//P([1,2,3]) = [[], [1], [2], [3], [1,2], [1,3], [2,3], [1,2,3]]
 
 
 //time complexity
