@@ -21,7 +21,10 @@
 //we shift all the pointers to the right
 //p1 = p2 // p2 = p3 // p3 = p2.next or p3.next
 //we must do these things in order^
-//we need to reverse the head
+//we need to reverse the head, aslong as p2 is not null we will continue to do these operations until it is null
+// p3 = p2.next then we do p2.next = p1 then p1 = p2 and then ps = p3 to handle the head of the linked list
+
+
 
 
 //time complexity
