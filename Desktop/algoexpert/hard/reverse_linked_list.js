@@ -17,6 +17,11 @@
 //we will have p2 at 2 and p1 at 1
 //p2.next = p1 - will lead to 2 --> 1
 //next is the 3 node but we lost our reference to the 3 node from the 2 node bc our p2.next does not equal 3 anymore
+//declare a p3 that is at 3
+//we shift all the pointers to the right
+//p1 = p2 // p2 = p3 // p3 = p2.next or p3.next
+//we must do these things in order^
+//we need to reverse the head
 
 
 //time complexity
