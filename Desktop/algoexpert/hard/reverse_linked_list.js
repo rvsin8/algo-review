@@ -28,10 +28,10 @@
 //this is mad confusing 
 
 //time complexity
-//O(n)
+//O(n) n is the length of the linked list
 
 //space complexity 
-//O(1)
+//O(1) we are only storing an extra 3 variables only
 
 function reverseLinkedList(head) {
     let previousNode = null;
