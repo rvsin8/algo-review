@@ -2,6 +2,9 @@
 //Recursion
 
 //my understanding
+//given three inputs: top one is the manager of some chain with the other two being employees of that company
+//we want the lowest common manager of those 2 employees
+//close to the "youngest common ancestor" problem
 
 
 //time complexity 
