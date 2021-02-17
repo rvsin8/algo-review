@@ -36,7 +36,7 @@ function getOrgInfo(manager, reportOne, reportTwo) { //helper method
         numImportantReports += orgInfo.numImportantReports; //increment //?
     }
     if (manager === reportOne || manager === reportTwo) numImportantReports++; //if manager is equal to report 1 or report 2 then we need to increment important reports
-    const lowestCommonManager = numImportantReports == 2 ? manager : null;
+    const lowestCommonManager = numImportantReports == 2 ? manager : null; //lowest common manager,if its equal to 2 if not it is null
     return {lowestCommonManager, numImportantReports};
 }
 
