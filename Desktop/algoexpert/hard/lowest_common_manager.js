@@ -9,3 +9,8 @@
 
 //space complexity 
 //O(d)
+
+function getLowestCommonManager(topManager, reportOne, reportTwo) {
+    return getOrgInfo(topManager, reportOne, reportTwo).lowestCommonManager;
+}
+
