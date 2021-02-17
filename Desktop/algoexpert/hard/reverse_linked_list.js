@@ -1,8 +1,12 @@
 //Reverse Linked List
 //Linked Lists
 
-//my understandings 
-
+//my understandings
+//popular interview question
+//difficult 
+//given a singly linked list, this sll consists of nodes and every node has a ".next" property 
+//the tail points to the none / null value
+//0 --> 1 --> 2 --> 3 --> 4 --> 5 and we want 5 --> 4 --> 3 --> 2 --> 1 --> 0
 
 //time complexity
 //O(n)
@@ -21,3 +25,5 @@ function reverseLinkedList(head) {
     }
     return previousNode;
 }
+
+
