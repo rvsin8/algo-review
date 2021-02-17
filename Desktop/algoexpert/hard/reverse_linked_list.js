@@ -34,13 +34,13 @@
 //O(1) we are only storing an extra 3 variables only
 
 function reverseLinkedList(head) {
-    let previousNode = null;
-    let currentNode = head;
-    while (currentNode !== null) {
-        const nextNode = currentNode.next;
-        currentNode.next = previousNode;
-        previousNode = currentNode;
-        currentNode = nextNode;
+    let previousNode = null; //p1 is none bc the node that is the current node in question is pointed by p2 we want the head become the tail and to null
+    let currentNode = head; 
+    while (currentNode !== null) { //while we are not done with the linked list
+        const nextNode = currentNode.next; //captured the p2.next node that we will use to reference
+        currentNode.next = previousNode; //we reversed the current node
+        previousNode = currentNode; //update
+        currentNode = nextNode; //update
     }
     return previousNode;
 }
