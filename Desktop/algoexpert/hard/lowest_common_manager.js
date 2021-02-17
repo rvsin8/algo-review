@@ -25,11 +25,11 @@
 //O(d) where d is depth of the org tree
 
 function getLowestCommonManager(topManager, reportOne, reportTwo) {
-    return getOrgInfo(topManager, reportOne, reportTwo).lowestCommonManager;
+    return getOrgInfo(topManager, reportOne, reportTwo).lowestCommonManager; //#of report 1 or report 2 and top manager and get the lowest common manager
 }
 
-function getOrgInfo(manager, reportOne, reportTwo) {
-    let numImportantReports = 0;
+function getOrgInfo(manager, reportOne, reportTwo) { //helper method
+    let numImportantReports = 0; //
     for (const directReport of manager.directReports) {
         const orgInfo = getOrgInfo(directReport, reportOne, reportTwo);
         if (!!orgInfo.lowestCommonManager) return orgInfo;
