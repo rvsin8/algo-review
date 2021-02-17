@@ -23,7 +23,7 @@
 //recursive solution
 function powerset(array, idx = null) {
     if (idx === null) { //if the idx is none, 
-        idx = array.length - 1; //idx will equal to the length of the array - 1
+        idx = array.length - 1; //idx will equal to the length of the array - 1, the last ele of our variable
     }
 
     if (idx < 0) { //if the array is empty we return an empty set
@@ -39,3 +39,5 @@ function powerset(array, idx = null) {
     }
     return subsets;
 }
+
+//review this
