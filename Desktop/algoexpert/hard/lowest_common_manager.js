@@ -15,12 +15,14 @@
 //P = 0 + 0 + 1 = 1 under H and B
 //I = 1 under B
 //B = 2
+//start at the stop of the chain and check for every report and lowest common manager at every subtree until it is found
+//we keep doing down until we hit every report, add them up and see where is the lowest common manager 
 
 //time complexity 
-//O(n)
+//O(n) where n is the number of people in this org chain
 
 //space complexity 
-//O(d)
+//O(d) where d is depth of the org tree
 
 function getLowestCommonManager(topManager, reportOne, reportTwo) {
     return getOrgInfo(topManager, reportOne, reportTwo).lowestCommonManager;
