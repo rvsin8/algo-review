@@ -29,13 +29,15 @@ function getLowestCommonManager(topManager, reportOne, reportTwo) {
 }
 
 function getOrgInfo(manager, reportOne, reportTwo) { //helper method
-    let numImportantReports = 0; //
-    for (const directReport of manager.directReports) {
-        const orgInfo = getOrgInfo(directReport, reportOne, reportTwo);
-        if (!!orgInfo.lowestCommonManager) return orgInfo;
-        numImportantReports += orgInfo.numImportantReports;
+    let numImportantReports = 0; //keep track of this
+    for (const directReport of manager.directReports) { //for each direct report ..
+        const orgInfo = getOrgInfo(directReport, reportOne, reportTwo); //we will get org info 
+        if (!!orgInfo.lowestCommonManager) return orgInfo; //if we got a manager that is not none return the org info
+        numImportantReports += orgInfo.numImportantReports; //increment //?
     }
-    if (manager === reportOne || manager === reportTwo) numImportantReports++;
+    if (manager === reportOne || manager === reportTwo) numImportantReports++; //if manager is equal to report 1 or report 2 then we need to increment important reports
     const lowestCommonManager = numImportantReports == 2 ? manager : null;
     return {lowestCommonManager, numImportantReports};
 }
+
+//review this
