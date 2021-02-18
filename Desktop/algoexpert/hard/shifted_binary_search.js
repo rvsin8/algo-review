@@ -14,6 +14,12 @@
 //we can look at the leftmost pointer at 45 and realize it is > than 33
 //if the left pointer is < or = our middle pointer then we want to check
 //if our target number is < the middle number AND target num is >= the left num, then we explore the left side
+//if its the opposite then we search the right side
+//if the left num is > than the middle we know the left side is not sorted
+//so 33 is < 73 and < 45 so we eliminate the left side and recalc the middle --> 5 + 9 = 14 / 2 = 7 so 21
+//33 is > 21, so we eliminate the left 0 - 21 and we now arrive at our left pointer being at 33 and right at 45
+//recalc middle pointer --> 8 +9 = 17 / 2 --> 8 aka 33
+
 
 //time complexity
 //O(log(n))
