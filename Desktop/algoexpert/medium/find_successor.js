@@ -39,17 +39,17 @@ function findSuccessor(tree, node) { //tree aka root node
 
 function getLeftmostChild(node) {
     let currentNode = node; //
-    while (currentNode.left !== null) {
-        currentNode = currentNode.left;
+    while (currentNode.left !== null) { //while current node.left is not null
+        currentNode = currentNode.left; //we will go to the left child
     }
     return currentNode;
 }
 
 function getRightmostParent(node) {
     let currentNode = node;
-    while (currentNode.parent !== null && currentNode.parent.right === currentNode) {
-        currentNode = currentNode.parent;
+    while (currentNode.parent !== null && currentNode.parent.right === currentNode) { //if we have a parent and if we came from the right child of the parent node
+        currentNode = currentNode.parent; //set current node to its parent
     }
 
-    return currentNode.parent;
+    return currentNode.parent; //when condition is false
 }
