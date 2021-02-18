@@ -22,12 +22,12 @@
 
 
 //time complexity
-//O(log(n))
+//O(log(n)) where n is the entire length of our array, so we get rid of half our array every iteration
 
 //space complexity
-//O(1)
+//O(1) iterative method
 
-//space being O(log(n))
+//space being O(log(n)) recursively 
 function shiftedBinarySearch(array, target) {
     return shiftedBinarySearchHelper(array, target, 0, array.length - 1);
 }
