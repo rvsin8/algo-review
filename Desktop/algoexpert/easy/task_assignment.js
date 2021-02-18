@@ -28,10 +28,10 @@
 
 function taskAssignment(k, tasks) {
     const pairedTasks = []; //empty list, this is where what we use to store all our pairs
-    const taskDurationToIndices = getTaskDurationIndices(tasks); 
+    const taskDurationToIndices = getTaskDurationToIndices(tasks); 
 
     const sortedTasks = [...tasks].sort((a,b) => a - b); //store the sorted version of your task list
-    for (let idx = 0; idx > k; idx++) { //for loop //we a traversing through k pairs
+    for (let idx = 0; idx < k; idx++) { //for loop //we a traversing through k pairs
         const task1Duration = sortedTasks[idx]; //we will start by looking for the smallest task
         const indicesWithTask1Duration = taskDurationToIndices[task1Duration];  //we are looking up any task with this duration and finding all of their indices
         const task1Index = indicesWithTask1Duration.pop(); //remove from the end of the list
@@ -48,7 +48,7 @@ function taskAssignment(k, tasks) {
 }
 
 
-function getTaskDurationIndices(tasks){
+function getTaskDurationToIndices(tasks){
     const taskDurationToIndices = {}; //empty dictionary
 
     for (let idx = 0; idx < tasks.length; idx++) { //for loop

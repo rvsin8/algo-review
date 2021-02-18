@@ -26,6 +26,7 @@ function hasSingleCycle(array){
     let numElementsVisited = 0;//we want o visit n elements, so we want to keep track of the ele visited
     let currentIdx = 0;//we want to keep track of our index
     while (numElementsVisited < array.length) { //while loop so much that the ele visited is smaller than the array itself 
+        if (numElementsVisited > 0 && currentIdx === 0) return false;
         numElementsVisited++; //increment like i said before 
         currentIdx = getNextIdx(currentIdx, array); //jump through our ele, we will update our idx via helper method
     }
