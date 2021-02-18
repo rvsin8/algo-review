@@ -20,7 +20,10 @@
 //on all our nodes we have access to the parent node
 //left visit right, so if a node has a right subtree and that means its successor must be in the right subtree
 //the node successor is going to be the furthest left node in this nodes right subtree
-
+//ancestor are all parent nodes of a node
+//whenever we are the right child of a node, we know it cannot be the successor
+//what node allowed us to visit that right node, so we look at the parent and that will be the successor (makes more sense in the example)
+//we can solve this ins O(h) where h is the height of the tree
 
 //time complexity 
 //O(h)
