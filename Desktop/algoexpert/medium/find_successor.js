@@ -2,7 +2,12 @@
 //Binary Trees
 
 //my understanding 
-
+//we are given an input binary tree and an input, what we want to do is to find the success or that input node
+//the successor is the next node to be visited 
+//for 5 it will be 1
+//we look at the left then visit the current node and look to the right
+//1 --> 2 --> 4 --> 6 --> 4 --> 2 --> 5 --> 2 --> 1 --> 3
+//[6, 4, 2, 5, 1, 3] is our in order traversal 
 
 //time complexity 
 //O(h)
