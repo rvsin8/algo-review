@@ -5,8 +5,10 @@
 
 
 //time complexity 
+//O(h)
 
 //space complexity 
+//O(1)
 
 function findSuccessor(tree, node) {
     if (node.right != null) return getLeftmostChild(node.right);
