@@ -5,8 +5,10 @@
 
 
 //time complexity 
+//O(n) 
 
 //space complexity 
+//O(1)
 
 function waterArea(heights) {
     if (heights.length === 0) return 0;
