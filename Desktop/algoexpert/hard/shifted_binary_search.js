@@ -21,5 +21,17 @@ function shiftedBinarySearchHelper(array, target, left, right) {
     const rightNum = array[right];
     if (taeget === potentialMatch) {
         return middle;
+    } else if (leftNum <= potentialMatch) {
+        if (target < potentialMatch && target >= leftNum) {
+            return shiftedBinarySearchHelper(array, tagret, left, middle - 1);
+        } else {
+            return shiftedBinarySearchHelper(array, target, middle + 1, right);
+        }
+    } else {
+        if (target > potentialMatch && target <= rightNum) {
+            return shiftedBinarySearchHelper(array, target, middle + 1, right);
+        } else {
+            return shiftedBinarySearchHelper(array, target, left, middle - 1);
+        }
     }
 }
