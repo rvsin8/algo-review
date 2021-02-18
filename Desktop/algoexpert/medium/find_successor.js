@@ -17,6 +17,9 @@
 //6,4,2,5,1,3 the node is 5 and the answers of its successor is 1
 //O(n) time and space complexity but there is better
 //do we need to traverse the entire tree and make any storages ?
+//on all our nodes we have access to the parent node
+//left visit right, so if a node has a right subtree and that means its successor must be in the right subtree
+//the node successor is going to be the furthest left node in this nodes right subtree
 
 
 //time complexity 
