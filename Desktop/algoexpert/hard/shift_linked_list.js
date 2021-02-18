@@ -10,3 +10,11 @@
 //space complexity 
 //O(1)
 
+function shifLinkedList(head, k) {
+    let listLength = 1;
+    let listTail = head;
+    while (listTail.next !== null) {
+        listTail = listTail.next;
+        listLength++;
+    }
+}
