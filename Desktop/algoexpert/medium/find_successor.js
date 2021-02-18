@@ -8,6 +8,16 @@
 //we look at the left then visit the current node and look to the right
 //1 --> 2 --> 4 --> 6 --> 4 --> 2 --> 5 --> 2 --> 1 --> 3
 //[6, 4, 2, 5, 1, 3] is our in order traversal 
+//every node we are given we will have the value, left child, right child and parent
+//root node has no parent
+//having no successor can happen for example is 3 so we return none/null
+
+//solution 
+//we can start from the root, traverse through the tree and store those values
+//6,4,2,5,1,3 the node is 5 and the answers of its successor is 1
+//O(n) time and space complexity but there is better
+//do we need to traverse the entire tree and make any storages ?
+
 
 //time complexity 
 //O(h)
