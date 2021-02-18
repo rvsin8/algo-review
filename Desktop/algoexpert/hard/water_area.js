@@ -16,7 +16,13 @@
 //so btw pillars wt height 8 and height 10 and the minimum height it 8
 //what is the height of our current idx (idx3) is 0 so water will stored at the height of 8
 //idx5 has a height 5 and 8 - 5 will store height 3 of water
-//have a new array and in that array at each idx store 
+//have a new array and in that array at each idx store tallest pillar to the left of the idx
+//idx0 tallest height to the left is 0
+//idx1 is 0
+//idx2 is 8
+//idx3 is 8
+//idx4 is 8
+//so on til we hit idx8 and it is then height 10 and then so on as well
 
 //time complexity 
 //O(n) 
