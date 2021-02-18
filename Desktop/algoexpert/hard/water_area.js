@@ -23,6 +23,12 @@
 //idx3 is 8
 //idx4 is 8
 //so on til we hit idx8 and it is then height 10 and then so on as well
+//make an another array with the tallest height to the right
+//going backwards it is 0,3,3,3,3,3,3,10,10,10,10,10,10,10
+//build a third array - what is the smallest between these two pillars - take the smallest one and see if the current pillar or idx we are at has room for water above it
+//minHeight is the min value between the leftmax and rightmax 
+//if our current height is less than minimum height then w is equal to minHeight - height //else w = 0
+//final area with the formula --> [0,0,8,8,3,8,8,0,3,3,2,2,3,0]
 
 //time complexity 
 //O(n) 
