@@ -28,14 +28,41 @@
 //build a third array - what is the smallest between these two pillars - take the smallest one and see if the current pillar or idx we are at has room for water above it
 //minHeight is the min value between the leftmax and rightmax 
 //if our current height is less than minimum height then w is equal to minHeight - height //else w = 0
-//final area with the formula --> [0,0,8,8,3,8,8,0,3,3,2,2,3,0]
+//final area with the formula --> [0,0,8,8,3,8,8,0,3,3,2,2,3,0] this is a O(n) space complexity 
 
 //time complexity 
-//O(n) 
+//O(n) n is the length of our input array
 
 //space complexity 
-//O(1)
+//O(1) is the more optimal solution
 
+function waterArea(heights) {
+    const maxes = new Array(heights.length).fill(0); //initialize this array
+    let leftMax = 0; //first left max is 0 bc there is nothing to the left of it
+    for (let i = 0; i < heights.length; i++) { //range
+        const height = heights[i]; //we can declare our height to be the height at the idx we are at
+        maxes[i] = leftMax; //we are storing the left max in the maxes array
+        leftMax = Math.max(leftMax, height); //the left max is equal to the max of the leftmax or the current height we are at
+    }
+    let rightMax = 0;//initialize our first right max to 0
+    for (let i = heights.length - 1; i >= 0; i--) { //reverse range
+        const height = heights[i];
+        const minHeight = Math.min(rightMax, maxes[i]);
+        if (height < minHeight) {
+            maxes[i] = minHeight - height;
+        } else {
+            maxes[i] = 0;
+        }
+        rightMax = Math.max(rightMax, height);
+        
+    }
+    return maxes.reduce((a,b) => a + b, 0);
+}
+
+
+
+
+//more optimal solution with space complexity O(1)
 function waterArea(heights) {
     if (heights.length === 0) return 0;
 
