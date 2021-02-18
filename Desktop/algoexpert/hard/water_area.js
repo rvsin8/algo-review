@@ -46,17 +46,17 @@ function waterArea(heights) {
     }
     let rightMax = 0;//initialize our first right max to 0
     for (let i = heights.length - 1; i >= 0; i--) { //reverse range
-        const height = heights[i];
-        const minHeight = Math.min(rightMax, maxes[i]);
-        if (height < minHeight) {
-            maxes[i] = minHeight - height;
+        const height = heights[i]; //we can declare our height to be the height at the idx we are at
+        const minHeight = Math.min(rightMax, maxes[i]);//min height is the minimum of right max or maxes of i
+        if (height < minHeight) { //ig height is < min height 
+            maxes[i] = minHeight - height; //then maxes of i is equal to this difference via our formula 
         } else {
-            maxes[i] = 0;
+            maxes[i] = 0; //if not it is 0
         }
         rightMax = Math.max(rightMax, height);
         
     }
-    return maxes.reduce((a,b) => a + b, 0);
+    return maxes.reduce((a,b) => a + b, 0); //
 }
 
 
