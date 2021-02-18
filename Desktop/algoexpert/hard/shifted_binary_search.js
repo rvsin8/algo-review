@@ -29,28 +29,28 @@
 
 //space being O(log(n)) recursively 
 function shiftedBinarySearch(array, target) {
-    return shiftedBinarySearchHelper(array, target, 0, array.length - 1);
+    return shiftedBinarySearchHelper(array, target, 0, array.length - 1); //takes in array, target, left and right value idx 0 and last idx
 }
 
-function shiftedBinarySearchHelper(array, target, left, right) {
-    if (left > right) return -1;
-    const middle = Math.floor((left + right) / 2)
-    const potentialMatch = array[middle];
-    const leftNum = array[left];
-    const rightNum = array[right];
-    if (taeget === potentialMatch) {
-        return middle;
-    } else if (leftNum <= potentialMatch) {
-        if (target < potentialMatch && target >= leftNum) {
-            return shiftedBinarySearchHelper(array, tagret, left, middle - 1);
+function shiftedBinarySearchHelper(array, target, left, right) { //helper method that will keep track of the left and right
+    if (left > right) return -1; //base case, if the left exceeds the right pointer return -1 meaning we have not found the target 
+    const middle = Math.floor((left + right) / 2); //declare middle pointer 
+    const potentialMatch = array[middle]; //number of the middle idx
+    const leftNum = array[left]; //left num 
+    const rightNum = array[right]; //right num
+    if (taeget === potentialMatch) { //if target is equal to the middle value
+        return middle; //return middle
+    } else if (leftNum <= potentialMatch) { //if the left num smaller than or equal to the potenital match that means the left side of array is sorted and if the target is >= left num that means the target has to be in the left side
+        if (target < potentialMatch && target >= leftNum) { //if the tagret is < potential match if the target is >= left num that means the target has to be in the left side
+            return shiftedBinarySearchHelper(array, tagret, left, middle - 1); //explore left half
         } else {
-            return shiftedBinarySearchHelper(array, target, middle + 1, right);
+            return shiftedBinarySearchHelper(array, target, middle + 1, right); //explore right half
         }
-    } else {
-        if (target > potentialMatch && target <= rightNum) {
-            return shiftedBinarySearchHelper(array, target, middle + 1, right);
+    } else { //seachc the right half
+        if (target > potentialMatch && target <= rightNum) { //opposite as above, if the target is greater than the potential match and smaller than or equal too the right num
+            return shiftedBinarySearchHelper(array, target, middle + 1, right); //explore right half
         } else {
-            return shiftedBinarySearchHelper(array, target, left, middle - 1);
+            return shiftedBinarySearchHelper(array, target, left, middle - 1); //explore left path if those conditions are not met
         }
     }
 }
