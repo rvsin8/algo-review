@@ -2,6 +2,16 @@
 //Searching
 
 //my understanding 
+//[45,61,71,72,73,0,1,21,33,45] 33 --> 8
+//this may not always work, the array needs to have distinct numbers
+//use the bs algorithm 
+//you are given a sorted array of numbers that are shifted 45 - 73 and then 0 - 45
+//find out if the target num is in the array and return the target idx in the array
+//left pointer at 45 idx 0
+//right pointer at 45 idx 9
+//middle pointer = (0 + 9) / 2 = 4.5 and round it down to idx 4 which is 73
+//usually in bs we compared our middle num 73 to 33, and since 73 is >, we erase the right side but we cannot do that here
+//
 
 
 //time complexity
