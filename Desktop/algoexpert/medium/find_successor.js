@@ -23,7 +23,7 @@
 //ancestor are all parent nodes of a node
 //whenever we are the right child of a node, we know it cannot be the successor
 //what node allowed us to visit that right node, so we look at the parent and that will be the successor (makes more sense in the example)
-//we can solve this ins O(h) where h is the height of the tree
+//we can solve this ins O(h) where h is the height of the tree and it is better than O(n) review in video
 
 //time complexity 
 //O(h)
@@ -31,14 +31,14 @@
 //space complexity 
 //O(1)
 
-function findSuccessor(tree, node) {
-    if (node.right != null) return getLeftmostChild(node.right);
+function findSuccessor(tree, node) { //tree aka root node
+    if (node.right != null) return getLeftmostChild(node.right); //if a node has a right child, return get left most child
 
-    return getRightmostParent(node);
+    return getRightmostParent(node); //if we do not have a right child, we will get right most child
 }
 
 function getLeftmostChild(node) {
-    let currentNode = node;
+    let currentNode = node; //
     while (currentNode.left !== null) {
         currentNode = currentNode.left;
     }
