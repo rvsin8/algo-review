@@ -63,7 +63,7 @@ function shiftedBinarySearch(array, target) {
 }
 
 function shiftedBinarySearchHelper(array, target, left, right) {
-    while (left <= right) {
+    while (left <= right) { //while the left is smaller or equal than the right pointer
         const middle = Math.floor((left + right) / 2)
         const potentialMatch = array[middle];
         const leftNum = array[left];
@@ -87,3 +87,6 @@ function shiftedBinarySearchHelper(array, target, left, right) {
     return -1;
 
 }
+
+//recheck this and resubmit this
+
