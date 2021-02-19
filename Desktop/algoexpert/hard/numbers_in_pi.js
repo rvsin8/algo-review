@@ -14,21 +14,21 @@
 //now we look at 3141| 592 --> 5 is in there so now its --> 3141 | 5 | 92 and 9 is in there so 3141 | 5 | 9 | 2 --> 3 spaces but we dont store it cause 2 < 3
 //we iterate through all of the main numbers, we call the main method on the remaining number 
 //we can do this also right to left 
-
+//
 
 //time complexity 
-//O(n^3 + m)
+//O(n^3 + m) for every prefix we are computing - O(n^2) - and then to slice each prefix O(n^3) - and m is the array we are given.
 
 //space complexity
 //O(n + m) n is the length of our pi number and m is the length of ours nums in the array and itll take m spaces bc we are throwing them in a hash table and n bc we have a cache that stores for every idx for these pi num the minimum number of spaces
 
 function numbersInPi(pi, numbers) {
-    const numbersTable = {};
-    for (const number of numbers) {
+    const numbersTable = {}; //dump every number in a hash table
+    for (const number of numbers) { //every number maps to true in numbers
         numbersTable[number] = true;
     }
-    const minSpaces = getMinspaces(pi, numbersTable, {}, 0);
-    return minSpaces ===Infinity ? -1 : minSpaces;
+    const minSpaces = getMinSpaces(pi, numbersTable, {}, 0);
+    return minSpaces === Infinity ? -1 : minSpaces;
 }
 
 function getMinSpaces(pi, numbersTable, cache, idx) {
