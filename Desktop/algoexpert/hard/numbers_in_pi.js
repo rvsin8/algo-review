@@ -36,12 +36,14 @@ function getMinSpaces(pi, numbersTable, cache, idx) { //helper method
     if (idx in cache) return cache[idx]; //if its already stored in our cache, just return that value
     let minSpaces = Infinity; //keep track of minimum spaces
     for (let i = idx; i < pi.length; i++) { //iterate
-        const prefix = pi.slice(idx, i + 1); //
-        if (prefix in numbersTable) {
-            const minSpacesInSuffix = getMinSpaces(pi, numbersTable, cache, i + 1);
-            minSpaces = Math.min(minSpaces, minSpacesInSuffix + 1);
+        const prefix = pi.slice(idx, i + 1); //slice it at prefix
+        if (prefix in numbersTable) { //if the prefix is in the numbers table
+            const minSpacesInSuffix = getMinSpaces(pi, numbersTable, cache, i + 1); //then we want to look at our suffix
+            minSpaces = Math.min(minSpaces, minSpacesInSuffix + 1);//get the minimum spaces
         }
     }
-    cache[idx] = minSpaces;
-    return cache[idx];
+    cache[idx] = minSpaces;//store it in our cache
+    return cache[idx];//review this
 }
+
+//review this
