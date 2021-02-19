@@ -27,16 +27,16 @@ function numbersInPi(pi, numbers) {
     for (const number of numbers) { //every number maps to true in numbers
         numbersTable[number] = true;
     }
-    const minSpaces = getMinSpaces(pi, numbersTable, {}, 0);
+    const minSpaces = getMinSpaces(pi, numbersTable, {}, 0); //helper method  being called
     return minSpaces === Infinity ? -1 : minSpaces;
 }
 
-function getMinSpaces(pi, numbersTable, cache, idx) {
-    if (idx === pi.length) return -1;
-    if (idx in cache) return cache[idx];
-    let minSpaces = Infinity;
-    for (let i = idx; i < pi.length; i++) {
-        const prefix = pi.slice(idx, i + 1);
+function getMinSpaces(pi, numbersTable, cache, idx) { //helper method 
+    if (idx === pi.length) return -1; //base case if the idx is the length of pi or out of bounds we return -1
+    if (idx in cache) return cache[idx]; //if its already stored in our cache, just return that value
+    let minSpaces = Infinity; //keep track of minimum spaces
+    for (let i = idx; i < pi.length; i++) { //iterate
+        const prefix = pi.slice(idx, i + 1); //
         if (prefix in numbersTable) {
             const minSpacesInSuffix = getMinSpaces(pi, numbersTable, cache, i + 1);
             minSpaces = Math.min(minSpaces, minSpacesInSuffix + 1);
