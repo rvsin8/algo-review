@@ -13,12 +13,14 @@
 //now restart with the prefixes --> 314 | 1592 nope 314 does not exist but 3141 does
 //now we look at 3141| 592 --> 5 is in there so now its --> 3141 | 5 | 92 and 9 is in there so 3141 | 5 | 9 | 2 --> 3 spaces but we dont store it cause 2 < 3
 //we iterate through all of the main numbers, we call the main method on the remaining number 
+//we can do this also right to left 
+
 
 //time complexity 
 //O(n^3 + m)
 
 //space complexity
-//O(n + m)
+//O(n + m) n is the length of our pi number and m is the length of ours nums in the array and itll take m spaces bc we are throwing them in a hash table and n bc we have a cache that stores for every idx for these pi num the minimum number of spaces
 
 function numbersInPi(pi, numbers) {
     const numbersTable = {};
