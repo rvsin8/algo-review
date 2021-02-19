@@ -11,9 +11,8 @@
 // 31 | 4159 | 2 and 2 is in the list and we are done so we need an end condition
 //minimum number of spaces was 2 for 3141592 but 1 for 41592 and 0 for just 0 we will store all these values
 //now restart with the prefixes --> 314 | 1592 nope 314 does not exist but 3141 does
-//now we look at 3141| 592 --> 5 is in there so now its --> 3141 | 5 | 92 and 9 is in there so 3141 | 5 | 9 | 2
-
-
+//now we look at 3141| 592 --> 5 is in there so now its --> 3141 | 5 | 92 and 9 is in there so 3141 | 5 | 9 | 2 --> 3 spaces but we dont store it cause 2 < 3
+//we iterate through all of the main numbers, we call the main method on the remaining number 
 
 //time complexity 
 //O(n^3 + m)
