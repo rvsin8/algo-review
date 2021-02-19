@@ -8,6 +8,10 @@
 //start by putting space on prefixes --> 3 | 141592 now check if 3 is in the array, it is not so move on
 //31 | 41592 --> 31 is in there 
 //now lets do the same for 41592 --> 4 | 1592 but 4 is not there --> 41 | 592 but 41 is not there and neither is 415 but 4159 is 
+// 31 | 4159 | 2 and 2 is in the list and we are done so we need an end condition
+//minimum number of spaces was 2 for 3141592 but 1 for 41592 and 0 for just 0 we will store all these values
+//now restart with the prefixes --> 314 | 1592 nope 314 does not exist but 3141 does
+//now we look at 3141| 592 --> 5 is in there so now its --> 3141 | 5 | 92 and 9 is in there so 3141 | 5 | 9 | 2
 
 
 
