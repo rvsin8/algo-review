@@ -2,6 +2,14 @@
 //Linked List
 
 //my understanding
+//classic linked list questions
+//tricky when you don't want to overwrite a certain pointer or lose references
+//we are given a linked list, head node is 0 and tail node is 5 and it is single linked list
+//integer k represents the number of positions you want to shift the integers by position
+//if k is neg you have to move them backwards
+//forget about edge cases first, and solve it for the most basic case first
+
+//my solution
 
 
 //time complexity 
