@@ -10,7 +10,12 @@
 //forget about edge cases first, and solve it for the most basic case first
 
 //my solution
-
+//O --> 1 --> 2 --> 3 --> 4 --> 5 k=2
+//4 --> 5 --> 0 --> 1 --> 2 --> 3
+//what exactly what we just did entails ? we made 3 into a tail node and 5 a regular node with a pointer
+//we care about four nodes - tail node, middle node that will be the new tail node, original head of the node and the new head node
+//calculate the length of the linked list via a counter and once we have it - 6 - we do 6 - k which is 2 = 4, our new tail will be in pos 4
+//
 
 //time complexity 
 //O(n)
