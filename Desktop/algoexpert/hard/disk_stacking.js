@@ -27,7 +27,7 @@
 //O(n^2) we iterate through it once when we keep updating our current disk and again to update our other disk
 
 //space complexity 
-//O(n) 
+//O(n) we store the max height at idxs so we have a height array and sequence array
 
 function diskStacking(disks) {
     disks.sort((a,b) => a[2] - b[2]);
