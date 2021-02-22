@@ -9,3 +9,8 @@
 //space complexity
 //O(h)
 
+function heightBalancedBinaryTree(tree) {
+    const treeInfo = getTreeInfo(tree);
+    return treeInfo.isBalanced;
+}
+
