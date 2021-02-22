@@ -35,3 +35,11 @@ function areValidDimensions(o, c) {
     return o[0] < c[0] && o[1] < c[1] && o[2] < c[2];
 }
 
+function buildSequence(array, sequences, currentIdx) {
+    const sequence = [];
+    while (currentIdx !== undefined) {
+        sequence.unshift(array[currentIdx]);
+        currentIdx = sequences[currentIdx];
+    }
+    return sequence;
+}
