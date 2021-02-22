@@ -28,7 +28,25 @@ class ContinuousMedianHandler {
         this.updateMedian();
     }
 
-    
+    rebalanceHeaps() {
+        if (this.lowers.length === this.greaters.length) {
+            this.median = (this.lowers.peek() + this.greaters.peek()) / 2;
+        } else if (this.lowers.length > this.greaters.length) {
+            this.median = this.lowers.peek();
+        } else {
+            this.median = this.greaters.peek();
+        }   
+    }
+
+    updateMedian() {
+        if (this.lowers.length === this.greaters.length) {
+            this.median = (this.lowers.peek() + TouchList.greaters.peek()) / 2;
+        } else if (this.lowers.length > this.greaters.length) {
+            this.median = this.lowers.peek();
+        } else {
+            this.median = this.greaters.peek();
+        }
+    }
 }
 
 
