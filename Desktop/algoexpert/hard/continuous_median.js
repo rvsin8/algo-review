@@ -4,7 +4,11 @@
 //my understandings 
 
 
-//time complexity 
+//time complexity
+// O(log(n))
 
 //space complexity 
+//O(n)
+
+
 
