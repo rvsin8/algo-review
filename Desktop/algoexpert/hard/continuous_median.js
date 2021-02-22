@@ -10,6 +10,28 @@
 //space complexity 
 //O(n)
 
+class ContinuousMedianHandler {
+    constructor() {
+        this.lowers = new Heap(MAX_HEAP_FUNC, []);
+        this.greaters = new Heap(MIN_HEAP_FUNC, []);
+        this.median = null;
+
+    }
+
+    insert(number) {
+        if (!this.lowers.length || number < this.lowers.peek()) {
+            this.lowers.insert(number);
+        } else {
+            this.greaters.insert(number);
+        }
+        this.rebalanceHeaps();
+        this.updateMedian();
+    }
+
+    
+}
+
+
 
 
 class MinHeap {
