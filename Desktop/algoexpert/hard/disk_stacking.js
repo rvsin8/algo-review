@@ -30,3 +30,8 @@ function diskStacking(disks) {
     }
     return buildSequence(disks, sequences, maxHeightIdx);
 }
+
+function areValidDimensions(o, c) {
+    return o[0] < c[0] && o[1] < c[1] && o[2] < c[2];
+}
+
