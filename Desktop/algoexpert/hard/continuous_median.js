@@ -36,20 +36,20 @@
 
 class ContinuousMedianHandler {
     constructor() {
-        this.lowers = new Heap(MAX_HEAP_FUNC, []);
-        this.greaters = new Heap(MIN_HEAP_FUNC, []);
-        this.median = null;
+        this.lowers = new Heap(MAX_HEAP_FUNC, []); //lower values initialized
+        this.greaters = new Heap(MIN_HEAP_FUNC, []); //higher value initialized
+        this.median = null; //median value null
 
     }
 
     insert(number) {
-        if (!this.lowers.length || number < this.lowers.peek()) {
-            this.lowers.insert(number);
+        if (!this.lowers.length || number < this.lowers.peek()) { //if we do not have in the lower half or is lower than the max value in the lower max
+            this.lowers.insert(number); //we insert it in the lower half
         } else {
-            this.greaters.insert(number);
+            this.greaters.insert(number); //if not than we insert it in the higher half
         }
         this.rebalanceHeaps();
-        this.updateMedian();
+        this.updateMedian(); //after every insertion we want to update the median
     }
 
     rebalanceHeaps() {
@@ -63,8 +63,8 @@ class ContinuousMedianHandler {
     }
 
     updateMedian() {
-        if (this.lowers.length === this.greaters.length) {
-            this.median = (this.lowers.peek() + TouchList.greaters.peek()) / 2;
+        if (this.lowers.length === this.greaters.length) { //if the two heaps have the same length
+            this.median = (this.lowers.peek() + TouchList.greaters.peek()) / 2; //we will get the top/min values and just get their average
         } else if (this.lowers.length > this.greaters.length) {
             this.median = this.lowers.peek();
         } else {
@@ -128,14 +128,14 @@ class MinHeap {
         return this.heap[0];
     }
 
-    remove() { 
+    remove() { //we use this
         this.swap(0, this.heap.length - 1; this.heap);
         const valueToRemove = this.heap.pop();
         this.siftDown(0, this.heap.length - 1, this.heap);
         return valueToRemove;
     }
 
-    insert(value) {
+    insert(value) { //we use this
         this.heap.push(value);
         this.siftUp(this.heap.length - 1, this.heap);
     }
