@@ -39,25 +39,25 @@ function diskStacking(disks) {
         for (let j = 0; j < i; j++) {
             const otherDisk = disks[j];
             if (AreValidDimensions(otherDisk, currentDisk)) { //call on a helper
-                if (heights[i] <= currentDisk[2] + height[j]) { //
-                    heights[i] = currentDisk[2] + height[j];
+                if (heights[i] <= currentDisk[2] + height[j]) { //if heights at idx[i] is less than or equal too a new height then we update it
+                    heights[i] = currentDisk[2] + height[j]; //updating 
                     sequences[i] = j;
                 }
             }
         }
         if (heights[i] >= heights[maxHeightIdx]) maxHeightIdx = i;
     }
-    return buildSequence(disks, sequences, maxHeightIdx);
+    return buildSequence(disks, sequences, maxHeightIdx);//helper
 }
 
 function areValidDimensions(o, c) { //helper
     return o[0] < c[0] && o[1] < c[1] && o[2] < c[2]; //boolean for all dimensions being strictly smaller
 }
 
-function buildSequence(array, sequences, currentIdx) { //
-    const sequence = [];
-    while (currentIdx !== undefined) {
-        sequence.unshift(array[currentIdx]);
+function buildSequence(array, sequences, currentIdx) { //helper but im lost
+    const sequence = [];//initialize an array
+    while (currentIdx !== undefined) { //
+        sequence.unshift(array[currentIdx]); 
         currentIdx = sequences[currentIdx];
     }
     return sequence;
