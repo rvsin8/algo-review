@@ -14,11 +14,16 @@
 //heaps is a ds that allows us to keep track of the min or max val of a set
 //every time we insert a number we can keep track of the min heap of the higher values and the max heap of the lower values
 //whenever we insert a num itll be in the lower half or the greater half and then compute the average of that set instantly
-//insertion in heaps is quicker
+//insertion in heaps is quicker - we add the num to the end of the heap and so the min val of the high numbers is on top
 
 //my solution
 //5, 10, 100, 200, 6, 13, 14
 //5, 7.5, 10, 55, 10, 11.5, 13
+//lower half aka max heap - 5
+//greater half aka min heap - 10, 100, 200
+//median - 5, 7.5, 10, 55
+//we will remove the top value of the higher half and bring it to th lower half bc both buckets carry an uneven amount of numbers
+//
 
 //time complexity
 // O(log(n))
