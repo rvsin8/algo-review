@@ -19,11 +19,14 @@
 //my solution
 //5, 10, 100, 200, 6, 13, 14
 //5, 7.5, 10, 55, 10, 11.5, 13
-//lower half aka max heap - 5
-//greater half aka min heap - 10, 100, 200
-//median - 5, 7.5, 10, 55
-//we will remove the top value of the higher half and bring it to th lower half bc both buckets carry an uneven amount of numbers
-//
+//lower half aka max heap - 5, 6, 10
+//greater half aka min heap - 100, 200
+//median - 5, 7.5, 10, 55, 10
+//we will remove the top value of the higher half and bring it to th lower half bc both buckets carry an uneven amount of numbers, this happens in constant time bc of heaps
+//10 got moved to the lower half so 10 + 100 = 110 / 2 = 55 median
+//when 6 is added its an odd num, lower half has more nums than higher half so we pick lower half max value which is 10
+//we add 13 which goes to the higher half since it is greater than the lower half max which is 10 and we compute 
+//so on ...
 
 //time complexity
 // O(log(n))
