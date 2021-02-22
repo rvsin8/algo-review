@@ -2,7 +2,14 @@
 //Heaps
 
 //my understandings 
-
+//wants us to build a continuous median handler class to receives continuous stream of numbers and return the median of all those numbers in constant number
+//running the insertion function 
+//the median is the num in the middle of a set of numbers
+//even #s the avg of the middle of two nums in the middle, odd it is just the middle num
+//every time we insert a num, we input it in its correct sorted position
+//insertion method runs in O(n) time - there is a better way to do this which is using heaps
+//we want to keep track of those middle numbers 
+//maybe have two buckets thar represent the lower half and greater half of numbers while also having the min num in the greater half and the max num in the lower half bc we can use these two nums to always compute the median
 
 //time complexity
 // O(log(n))
@@ -52,8 +59,6 @@ class ContinuousMedianHandler {
         return this.median;
     }
 }
-
-
 
 
 class MinHeap {
