@@ -11,6 +11,7 @@
 //O(n)
 
 
+
 class MinHeap {
     constructor(array) { 
         this.heap = this.buildHeap(array);
@@ -79,5 +80,13 @@ class MinHeap {
         heap[i] = temp;
     }
 
+}
+
+function MAX_HEAP_FUNC(a,b) {
+    return a > b;
+}
+
+function MIN_HEAP_FUNC(a,b) {
+    return a < b;
 }
 
