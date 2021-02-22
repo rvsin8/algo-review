@@ -24,10 +24,10 @@
 
 
 //time complexity
-//O(n^2)
+//O(n^2) we iterate through it once when we keep updating our current disk and again to update our other disk
 
 //space complexity 
-//O(n)
+//O(n) 
 
 function diskStacking(disks) {
     disks.sort((a,b) => a[2] - b[2]);
