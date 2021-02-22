@@ -10,6 +10,15 @@
 //insertion method runs in O(n) time - there is a better way to do this which is using heaps
 //we want to keep track of those middle numbers 
 //maybe have two buckets thar represent the lower half and greater half of numbers while also having the min num in the greater half and the max num in the lower half bc we can use these two nums to always compute the median
+//if its an odd num and the lower half has more nums then the higher half than lower half max will be the median and vice versa
+//heaps is a ds that allows us to keep track of the min or max val of a set
+//every time we insert a number we can keep track of the min heap of the higher values and the max heap of the lower values
+//whenever we insert a num itll be in the lower half or the greater half and then compute the average of that set instantly
+//insertion in heaps is quicker
+
+//my solution
+//5, 10, 100, 200, 6, 13, 14
+//5, 7.5, 10, 55, 10, 11.5, 13
 
 //time complexity
 // O(log(n))
