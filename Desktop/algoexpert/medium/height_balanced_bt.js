@@ -11,13 +11,13 @@
 //determine the height of the left subtree and right subtree
 //we use recursion 
 //when we check each subtree we return to the parent node and depending on how many traversals were done we know the height
-
+//we take the max height from each node and add 1 to is whenever we are making our way up
 
 //time complexity
-//O(n)
+//O(n) we need to look through all the nodes in our binary tree
 
 //space complexity
-//O(h)
+//O(h) for height bc the height will determine how many recursive call we need to keep track of in our stack
 
 function heightBalancedBinaryTree(tree) {
     const treeInfo = getTreeInfo(tree);
