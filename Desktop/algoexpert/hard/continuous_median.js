@@ -48,17 +48,17 @@ class ContinuousMedianHandler {
         } else {
             this.greaters.insert(number); //if not than we insert it in the higher half
         }
-        this.rebalanceHeaps();
+        this.rebalanceHeaps(); //
         this.updateMedian(); //after every insertion we want to update the median
     }
 
     rebalanceHeaps() {
-        if (this.lowers.length === this.greaters.length) {
+        if (this.lowers.length === this.greaters.length) { //
             this.median = (this.lowers.peek() + this.greaters.peek()) / 2;
-        } else if (this.lowers.length > this.greaters.length) {
-            this.median = this.lowers.peek();
+        } else if (this.lowers.length > this.greaters.length) { //if the lower half is greater than the greater half
+            this.median = this.lowers.peek(); //we remove a num from the lower half
         } else {
-            this.median = this.greaters.peek();
+            this.median = this.greaters.peek(); //we remove a num from the greater half
         }   
     }
 
@@ -66,9 +66,9 @@ class ContinuousMedianHandler {
         if (this.lowers.length === this.greaters.length) { //if the two heaps have the same length
             this.median = (this.lowers.peek() + TouchList.greaters.peek()) / 2; //we will get the top/min values and just get their average
         } else if (this.lowers.length > this.greaters.length) {
-            this.median = this.lowers.peek();
+            this.median = this.lowers.peek(); //otherwise it will be the lower max value
         } else {
-            this.median = this.greaters.peek();
+            this.median = this.greaters.peek(); //otherwise it will be the greater min value
         }
     }
 
