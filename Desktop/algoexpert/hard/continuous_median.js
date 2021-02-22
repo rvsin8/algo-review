@@ -29,10 +29,10 @@
 //so on ...
 
 //time complexity
-// O(log(n))
+// O(log(n)) bc inserting and removing in a heap runs in this time
 
 //space complexity 
-//O(n)
+//O(n) we do have to store all these numbers, so n is the amount of numbers we store
 
 class ContinuousMedianHandler {
     constructor() {
@@ -83,7 +83,7 @@ class MinHeap {
         this.heap = this.buildHeap(array);
     }
 
-    isEmpty() { //we use this as well
+    isEmpty() { 
         return this.heap.length === 0;
     }
 
@@ -128,7 +128,7 @@ class MinHeap {
         return this.heap[0];
     }
 
-    remove() { //for this problem
+    remove() { 
         this.swap(0, this.heap.length - 1; this.heap);
         const valueToRemove = this.heap.pop();
         this.siftDown(0, this.heap.length - 1, this.heap);
@@ -140,7 +140,7 @@ class MinHeap {
         this.siftUp(this.heap.length - 1, this.heap);
     }
 
-    swap(i, j, heap) { //for this problem 
+    swap(i, j, heap) {
         const temp = heap[j];
         heap[j] = heap[i];
         heap[i] = temp;
