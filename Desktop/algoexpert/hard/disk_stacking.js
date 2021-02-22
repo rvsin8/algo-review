@@ -30,16 +30,16 @@
 //O(n) we store the max height at idxs so we have a height array and sequence array
 
 function diskStacking(disks) {
-    disks.sort((a,b) => a[2] - b[2]);
-    const heights = disks.map(disk => disk[2]);
-    const sequences = new Array(this.length);
-    let maxHeightIdx = 0;
-    for (let i = 1; i < disk.length; i++) {
+    disks.sort((a,b) => a[2] - b[2]);//make sure we have our arrays sorted by height
+    const heights = disks.map(disk => disk[2]); //heights array where we ascend by idx
+    const sequences = new Array(this.length); //sequence array, tracks previous idx for stacking purposes
+    let maxHeightIdx = 0;//
+    for (let i = 1; i < disk.length; i++) {//we start at one bc it cannot be stacked on anything its the lowest height
         const currentDisk = disks[i];
         for (let j = 0; j < i; j++) {
             const otherDisk = disks[j];
-            if (AreValidDimensions(otherDisk, currentDisk)) {
-                if (heights[i] <= currentDisk[2] + height[j]) {
+            if (AreValidDimensions(otherDisk, currentDisk)) { //call on a helper
+                if (heights[i] <= currentDisk[2] + height[j]) { //
                     heights[i] = currentDisk[2] + height[j];
                     sequences[i] = j;
                 }
@@ -50,11 +50,11 @@ function diskStacking(disks) {
     return buildSequence(disks, sequences, maxHeightIdx);
 }
 
-function areValidDimensions(o, c) {
-    return o[0] < c[0] && o[1] < c[1] && o[2] < c[2];
+function areValidDimensions(o, c) { //helper
+    return o[0] < c[0] && o[1] < c[1] && o[2] < c[2]; //boolean for all dimensions being strictly smaller
 }
 
-function buildSequence(array, sequences, currentIdx) {
+function buildSequence(array, sequences, currentIdx) { //
     const sequence = [];
     while (currentIdx !== undefined) {
         sequence.unshift(array[currentIdx]);
