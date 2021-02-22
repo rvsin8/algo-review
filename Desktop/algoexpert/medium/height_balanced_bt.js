@@ -14,3 +14,11 @@ function heightBalancedBinaryTree(tree) {
     return treeInfo.isBalanced;
 }
 
+function getTreeInfo(node) {
+    if (node === null) return new TreeInfo(true, -1);
+
+    const leftSubTreeInfo = getTreeInfo(node.left);
+    const rightSubtree = getTreeInfo(node.right);
+
+    
+}
