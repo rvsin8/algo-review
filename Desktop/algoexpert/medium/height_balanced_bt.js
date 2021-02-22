@@ -20,5 +20,11 @@ function getTreeInfo(node) {
     const leftSubTreeInfo = getTreeInfo(node.left);
     const rightSubtree = getTreeInfo(node.right);
 
-    
+    const isBalanced = 
+        leftSubtreeInfo.isBalanced &&
+        rightSubtreeInfo.isBalanced &&
+        Math.abs(leftSubTreeInfo.height - rightSubtreeInfo.height) <= 1;
+    const height = Math.max(leftSubTreeInfo.height, rightSubtreeInfo.height) + 1;
+    return new TreeInfo(isBalanced, height);
+
 }
