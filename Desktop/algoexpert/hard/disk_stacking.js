@@ -18,6 +18,9 @@
 //currentDisk = array[i] for o < i < length
 //otherDisk = array[j] for o < j < i
 //if w0 < wc and d0 < dc and h0 < hc : height[i] = max heights[i] or hc +heights[j]
+//now we are at [2,3,4], this width is less than or equal to all the disks before it so we cannot stack this and 4 is not > 5 so we do not update
+//[4,4,5] this can be stacked bc all these values are greater than the previous stacks //at idx1 max height is 6 //at idx2 max height is 7 //at idx3 max height 10 bc 5 + 5 bc the max height at idx2 is 5 bc it can stack on idx1 and this is our answer
+//fyi at idx3 max height would be 9 and that is still less than 10
 
 
 //time complexity
