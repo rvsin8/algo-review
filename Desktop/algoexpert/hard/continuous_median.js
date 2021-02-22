@@ -47,6 +47,10 @@ class ContinuousMedianHandler {
             this.median = this.greaters.peek();
         }
     }
+
+    getMedian() {
+        return this.median;
+    }
 }
 
 
