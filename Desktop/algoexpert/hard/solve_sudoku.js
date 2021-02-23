@@ -2,6 +2,11 @@
 //Recursion
 
 //my understanding 
+//we are given a 2D array that will have 9 subarrays that will contain 9 elements from a range 0-9
+//0 will be an empty digit
+//a sudoku puzzle contains 9 subgrids that can only contain 1-9 integers 
+//we cannot have the same digits in the same grid, col or row
+//
 
 
 //time complexity 
