@@ -33,6 +33,17 @@ function solvePartialSudoku(row, col, board) {
     return solvePartialSudoku(currentRow, currentCol + 1, board);
 }
 
+function tryDigitsAtPosition(row, col, board) {
+    for (let digit = 1; digit < 10; digit++) {
+        if (isValidAtPosition(digit, row, col, board)) {
+            board[row][col] = digit;
+            if (solvePartialSudoku(row, col + 1, board)) return true;
+        }
+    }
+    board[row][col] = 0;
+    return false;
+}
+
 function isValidAtPosition(value, row, col, board) {
     const rowIsValid = !board[row].includes(value);
     const colIsValid = !board.map(r => r[col]).includes(value);
