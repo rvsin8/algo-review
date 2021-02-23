@@ -44,14 +44,14 @@ function solvePartialSudoku(row, col, board) { //helper method that will look at
 }
 
 function tryDigitsAtPosition(row, col, board) { //try all of the digits at this position
-    for (let digit = 1; digit < 10; digit++) {
-        if (isValidAtPosition(digit, row, col, board)) {
-            board[row][col] = digit;
-            if (solvePartialSudoku(row, col + 1, board)) return true;
+    for (let digit = 1; digit < 10; digit++) { //this is the range we need to view 1-9
+        if (isValidAtPosition(digit, row, col, board)) { //if this this digit is valid at the position 
+            board[row][col] = digit; //replace that position with that digits
+            if (solvePartialSudoku(row, col + 1, board)) return true; //we inserted this digit at that very moment so we need to know if it will true throughout the board
         }
     }
-    board[row][col] = 0;
-    return false;
+    board[row][col] = 0; //if not true then reset it to 0
+    return false; //and return false which says we did not solve this board yet
 }
 
 function isValidAtPosition(value, row, col, board) { //helper method will tell us if a value is valid in the sudoku board
