@@ -16,3 +16,19 @@ function solveSudoku(board) {
     return board;
 }
 
+function solvePartialSudoku(row, col, board) {
+    let currentRow = row;
+    let currentCol = col;
+
+    if (currentCol === board[currentRow].length) {
+        currentRow++;
+        currentCol = 0;
+        if (currentRow === board.length) return true;
+    }
+
+    if (board[currentRow][currentCol] === 0) {
+        return tryDigitsAtPosition(currentRow, currentCol, board);
+    }
+    
+    return solvePartialSudoku(currentRow, currentCol + 1, board);
+}
