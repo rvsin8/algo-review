@@ -32,3 +32,10 @@ function solvePartialSudoku(row, col, board) {
     
     return solvePartialSudoku(currentRow, currentCol + 1, board);
 }
+
+function isValidAtPosition(value, row, col, board) {
+    const rowIsValid = !board[row].includes(value);
+    const colIsValid = !board.map(r => r[col]).includes(value);
+
+    if (!rowIsValid || !colIsValid) return false;
+}
