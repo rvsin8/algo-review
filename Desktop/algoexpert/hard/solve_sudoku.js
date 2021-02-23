@@ -38,4 +38,18 @@ function isValidAtPosition(value, row, col, board) {
     const colIsValid = !board.map(r => r[col]).includes(value);
 
     if (!rowIsValid || !colIsValid) return false;
+
+    const subgridRowStart = Math.floor(row / 3) * 3;
+    const subgridColStart = Math.floor(col / 3) * 3;
+    for (let rowIdx = 0; rowIdx < 3; rowIdx++) {
+        for (let colIdx = 0; colIdx < 3; colIdx++) {
+            const rowToCheck = subgridRowStart + rowIdx;
+            const colToCheck = subgridColStart + colIdx;
+            const existingValue = board[rowToCheck][colToCheck];
+
+            if (existingValue === value) return false;
+        }
+    }
+    return true;
+
 }
