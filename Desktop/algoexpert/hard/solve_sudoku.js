@@ -21,7 +21,7 @@
 //O(1) we are going to modify the input array
 
 
-function solveSudoku(board) {
+function solveSudoku(board) { //solve the board
     solvePartialSudoku(0, 0, board);
     return board;
 }
@@ -51,7 +51,7 @@ function tryDigitsAtPosition(row, col, board) { //try all of the digits at this 
         }
     }
     board[row][col] = 0; //if not true then reset it to 0
-    return false; //and return false which says we did not solve this board yet
+    return false; //and return false which says we did not solve this board yet //this helper is the back tracking step
 }
 
 function isValidAtPosition(value, row, col, board) { //helper method will tell us if a value is valid in the sudoku board
