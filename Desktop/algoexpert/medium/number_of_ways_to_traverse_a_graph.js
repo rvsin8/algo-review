@@ -39,6 +39,8 @@
 //(3 + 2)! / 3! * 2!
 //so 3! is basically 3 * 2 * 1
 //5! / 3! * 2! --> 120 / (6 * 2) --> 120 / 12 --> 10
+//O(n + m) time bc we need a factorial for n + m
+//O(1) space we store nothing bc its an equation
 
 
 //time complexity 
