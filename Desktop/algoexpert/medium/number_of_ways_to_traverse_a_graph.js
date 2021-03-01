@@ -20,11 +20,19 @@
 //6 + 4 = 10
 //recursive --> time is O)2^(n + m) n is the width and m is the height, we make 2 recursive calls one up and one left and space is O(n + m) bc we will reach a base case after n + m calls, we will go all the way until we hit a base case, we will never have more than the height of the recursive stack
 
+//more optimal solution via dynamic programming
+//in this solution we will start at the start pos
+//fill in the border the bottom and right border
+//have j and i pointers for this, j goes downwards and i goes to the right 
+//when we hit a border we know it will always be equal to 1
+//we traverse down first and then right going down
+
+
 //time complexity 
-//O(n + m)
+//O(n * m)
 
 //space complexity 
-//O(1)
+//O(n * m)
 
 //trick solution 
 function numberOfWaysToTraverseGraph(width, height) {
