@@ -51,7 +51,7 @@
 
 //trick solution 
 function numberOfWaysToTraverseGraph(width, height) {
-    const xDistanceToCorner = width - 1;
+    const xDistanceToCorner = width - 1; //
     const yDistanceToCorner = height - 1;
 
     const numerator = factorial(xDistanceToCorner + yDistanceToCorner);
@@ -72,26 +72,26 @@ function factorial(num) {
 
 //dynamic programming solution and the correct one to do
 function numberOfWaysToTraverseGraph(width, height) {
-    const numberOfWays = [];
-    for (let i = 0; i < height + 1; i++) {
-        numberOfWays.push([]);
-        for (let j = 0; j < width + 1; j++) {
-            numberOfWays[i].push(0);
+    const numberOfWays = []; //list comprehension  and creates a 2D grid
+    for (let i = 0; i < height + 1; i++) { //range and plus 1 is to include the width
+        numberOfWays.push([]); //why
+        for (let j = 0; j < width + 1; j++) { //iterate down
+            numberOfWays[i].push(0); //why ?
         }
     }
 
-    for (let widthIdx = 1; widthIdx < width + 1; widthIdx++) {
-        for (let heightIdx = 1; heightIdx < height + 1; heightIdx++) {
-            if (widthIdx === 1 || heightIdx === 1) {
-                numberOfWays[heightIdx][widthIdx] = 1;
-            } else {
-                const waysLeft = numberOfWays[heightIdx][widthIdx - 1];
-                const waysUp = numberOfWays[heightIdx - 1][widthIdx];
-                numberOfWays[heightIdx][widthIdx] = waysLeft + waysUp;
+    for (let widthIdx = 1; widthIdx < width + 1; widthIdx++) { //go through col 
+        for (let heightIdx = 1; heightIdx < height + 1; heightIdx++) { //go through the row
+            if (widthIdx === 1 || heightIdx === 1) { //for the borders 
+                numberOfWays[heightIdx][widthIdx] = 1;//is 1
+            } else { //if not on the border
+                const waysLeft = numberOfWays[heightIdx][widthIdx - 1]; //we want left idx
+                const waysUp = numberOfWays[heightIdx - 1][widthIdx]; //we want up idx
+                numberOfWays[heightIdx][widthIdx] = waysLeft + waysUp; // we want to get the sum of left and above for each square
             }
         }
     }
 
-    return numberOfWays[height][width];
+    return numberOfWays[height][width]; //return the num of ways in the height and width
 
 }
