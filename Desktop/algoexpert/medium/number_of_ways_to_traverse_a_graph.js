@@ -46,3 +46,15 @@ function factorial(num) {
 
     return result;
 }
+
+//dynamic programming solution and the correct one to do
+function numberOfWaysToTraverseGraph(width, height) {
+    const numberOfWays = [];
+    for (let i = 0; i < height + 1; i++) {
+        numberOfWays.push([]);
+        for (let j = 0; j < width + 1; j++) {
+            numberOfWays[i].push(0);
+        }
+    }
+    
+}
