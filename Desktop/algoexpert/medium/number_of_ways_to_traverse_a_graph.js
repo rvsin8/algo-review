@@ -15,7 +15,10 @@
 //you can do it recursive, trick and dynamic programming 
 //recursive way --> if we can find the num of ways to get to the position to the left or above the end point we essentially have figured this out
 //sum the top and left of each position to see how to get to each square left or above the end
-//
+//base case is if the height or width is equal to 1, that means theres only 1 way to get to the end
+//we need the number of ways to get to each square 
+//6 + 4 = 10
+//recursive --> time is O)2^(n + m) n is the width and m is the height, we make 2 recursive calls one up and one left and space is O(n + m) bc we will reach a base case after n + m calls, we will go all the way until we hit a base case, we will never have more than the height of the recursive stack
 
 //time complexity 
 //O(n + m)
