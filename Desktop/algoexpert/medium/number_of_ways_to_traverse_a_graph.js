@@ -51,23 +51,23 @@
 
 //trick solution 
 function numberOfWaysToTraverseGraph(width, height) {
-    const xDistanceToCorner = width - 1; //
-    const yDistanceToCorner = height - 1;
+    const xDistanceToCorner = width - 1; //num of times we need to move right
+    const yDistanceToCorner = height - 1; //num of times we need to move down
 
-    const numerator = factorial(xDistanceToCorner + yDistanceToCorner);
-    const denominator = factorial(xDistanceToCorner) * factorial(yDistanceToCorner);
-    return Math.floor(numerator / denominator);
+    const numerator = factorial(xDistanceToCorner + yDistanceToCorner); //get the numerator of the equation which is factorial of x + y distance
+    const denominator = factorial(xDistanceToCorner) * factorial(yDistanceToCorner); //denominators of equation is x! + y !
+    return Math.floor(numerator / denominator); //evaluate 
 
 }
 
-function factorial(num) {
-    let result = 1;
+function factorial(num) { //define factorial
+    let result = 1; //we use 1 as the value to manipulate 
 
-    for (let n = 2; n < num + 1; n++) {
-        result *= n;
+    for (let n = 2; n < num + 1; n++) { //we start from 2 and iterate 
+        result *= n;//get the factorial which is like 3! = 3 * 2 * 1
     }
 
-    return result;
+    return result; //get the result of that factorial which is 6
 }
 
 //dynamic programming solution and the correct one to do
