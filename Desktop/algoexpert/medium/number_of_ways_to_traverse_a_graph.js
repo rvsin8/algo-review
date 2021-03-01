@@ -28,6 +28,17 @@
 //we traverse down first via j pointer and then right via i pointer and go down via j pointer
 //now we calc the left and up values to get the ways on each squares 
 
+//trick solution 
+//permutation - unique ordering of ele in a set
+//{1,3,4} --> [1,3,4] [1,4,3] [3,4,1]
+//total permutation is the num of ways you get unique orderings 
+//right movement = width - 1 so 3
+//down movement = height - 1 so 2
+//{R,R,R,D,D} --> IN ANY ORDER THIS WILL GET US THE SOLUTION
+//formula (R + D)! / R! * D! is equal to the num of permutations that is unique in this set
+//
+
+
 //time complexity 
 //O(n * m) we have to do n times m operations, thats how many times we need to loop
 
