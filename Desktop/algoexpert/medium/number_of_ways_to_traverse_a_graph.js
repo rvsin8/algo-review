@@ -36,7 +36,9 @@
 //down movement = height - 1 so 2
 //{R,R,R,D,D} --> IN ANY ORDER THIS WILL GET US THE SOLUTION
 //formula (R + D)! / R! * D! is equal to the num of permutations that is unique in this set
-//
+//(3 + 2)! / 3! * 2!
+//so 3! is basically 3 * 2 * 1
+//5! / 3! * 2! --> 120 / (6 * 2) --> 120 / 12 --> 10
 
 
 //time complexity 
