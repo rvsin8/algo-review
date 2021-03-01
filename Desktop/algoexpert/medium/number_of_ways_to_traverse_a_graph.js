@@ -25,14 +25,14 @@
 //fill in the border the bottom and right border
 //have j and i pointers for this, j goes downwards and i goes to the right 
 //when we hit a border we know it will always be equal to 1
-//we traverse down first and then right going down
-
+//we traverse down first via j pointer and then right via i pointer and go down via j pointer
+//now we calc the left and up values to get the ways on each squares 
 
 //time complexity 
-//O(n * m)
+//O(n * m) we have to do n times m operations, thats how many times we need to loop
 
 //space complexity 
-//O(n * m)
+//O(n * m) we need to use a ds that will store our intermediate values 
 
 //trick solution 
 function numberOfWaysToTraverseGraph(width, height) {
