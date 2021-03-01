@@ -56,5 +56,13 @@ function numberOfWaysToTraverseGraph(width, height) {
             numberOfWays[i].push(0);
         }
     }
-    
+
+    for (let widthIdx = 1; widthIdx < width + 1; widthIdx++) {
+        for (let heightIdx = 1; heightIdx < height + 1; heightIdx++) {
+            if (widthIdx === 1 || heightIdx === 1) {
+                numberOfWays[heightIdx][widthIdx] = 1;
+            }
+        }
+    }
+
 }
