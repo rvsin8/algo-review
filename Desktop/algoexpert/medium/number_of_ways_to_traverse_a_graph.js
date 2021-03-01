@@ -61,8 +61,14 @@ function numberOfWaysToTraverseGraph(width, height) {
         for (let heightIdx = 1; heightIdx < height + 1; heightIdx++) {
             if (widthIdx === 1 || heightIdx === 1) {
                 numberOfWays[heightIdx][widthIdx] = 1;
+            } else {
+                const waysLeft = numberOfWays[heightIdx][widthIdx - 1];
+                const waysUp = numberOfWays[heightIdx - 1][widthIdx];
+                numberOfWays[heightIdx][widthIdx] = waysLeft + waysUp;
             }
         }
     }
+
+    return numberOfWays[height][width];
 
 }
