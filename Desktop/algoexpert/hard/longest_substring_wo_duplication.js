@@ -33,10 +33,10 @@ function longestSubstringWithoutDuplication(string) {
         if (char in lastSeen) { //if the char is seen before
             startIdx = Math.max(startIdx, lastSeen[char] + 1); //we update it and incoporate out formula ss well 
         }
-        if (longest[1] - longest[0] < i + 1 - startIdx) {
-            longest = [startIdx, i + 1];
+        if (longest[1] - longest[0] < i + 1 - startIdx) { //if that position difference is less than i + 1 - startidx //we do i + 1 the position where our substr ends
+            longest = [startIdx, i + 1]; //we update the longest
         }
-        lastSeen[char] = i;
+        lastSeen[char] = i; //update the hash table
     }
     return string.slice(longest[0], longest[1]);
 }
