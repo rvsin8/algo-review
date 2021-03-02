@@ -38,5 +38,5 @@ function longestSubstringWithoutDuplication(string) {
         }
         lastSeen[char] = i; //update the hash table
     }
-    return string.slice(longest[0], longest[1]);
+    return string.slice(longest[0], longest[1]); //we slice the substr
 }
