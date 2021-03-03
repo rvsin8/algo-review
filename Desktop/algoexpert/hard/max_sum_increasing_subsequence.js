@@ -26,3 +26,12 @@ function maxSumIncreasingSubsequence(array) {
     }
     return [sums[maxSumIdx], buildSequence(array, sequences, maxSumIdx)];
 }
+
+function buildSequence(array, sequences, currentIdx) {
+    const sequence = [];
+    while (currentIdx !== undefined) {
+        sequence.unshift(array[currentIdx]);
+        currentIdx = sequences[currentIdx];
+    }
+    return sequence;
+}
