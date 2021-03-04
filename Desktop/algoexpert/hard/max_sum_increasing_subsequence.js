@@ -28,13 +28,13 @@
 
 function maxSumIncreasingSubsequence(array) {
     const sequences = new Array(array.length); //declare an array and make it the same length as our input array
-    const sums = array.map(num => num); //
+    const sums = array.map(num => num); //declare another array where we store sums
     let maxSumIdx = 0;
-    for (let i = 0; i < array.length; i++) {
-        const currentNum = array[i];
-        for (let j = 0; j < i; j++) {
-            const otherNum = array[j];
-            if (otherNum < currentNum && sums[j] + currentNum >= sums[i]) {
+    for (let i = 0; i < array.length; i++) { //start iterating through the array
+        const currentNum = array[i]; //declare currentnum at idx 
+        for (let j = 0; j < i; j++) { //iterate 
+            const otherNum = array[j]; //
+            if (otherNum < currentNum && sums[j] + currentNum >= sums[i]) { //we are looking for strictly increasing subsequences
                 sums[i] = sums[j] + currentNum;
                 sequences[i] = j;
             }
