@@ -3,8 +3,13 @@
 
 //my understanding 
 //a subsequences is a set of ele that can derive from another set by removing / keeping remaining elements in order
-//[8,12,2,3,15,5,7]
+//[8,12,2,3,15,5,7] --> [8,12,15] = 35
 //find the greatest sum we can generate from an increasing subsequence 
+//cant have two num that are equal, strictly increasing 
+//solve via dynamic programming - create a new array and at each idx store the greatest sum poss up until that idx
+//need to give the sum and the subset that leads to that subset so we will need another array
+//sums --> []
+//we will traverse and imply intuition 
 //
 
 //time complexity 
