@@ -27,8 +27,8 @@
 //O(n) where n is the length of our input array
 
 function maxSumIncreasingSubsequence(array) {
-    const sequences = new Array(array.length);
-    const sums = array.map(num => num);
+    const sequences = new Array(array.length); //declare an array and make it the same length as our input array
+    const sums = array.map(num => num); //
     let maxSumIdx = 0;
     for (let i = 0; i < array.length; i++) {
         const currentNum = array[i];
