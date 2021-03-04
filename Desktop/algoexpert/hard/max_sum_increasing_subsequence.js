@@ -8,9 +8,15 @@
 //cant have two num that are equal, strictly increasing 
 //solve via dynamic programming - create a new array and at each idx store the greatest sum poss up until that idx
 //need to give the sum and the subset that leads to that subset so we will need another array
-//sums --> []
-//we will traverse and imply intuition 
-//
+//sums --> [8, 20, 2, 5, 35]
+//we will traverse and imply intuition so at idx1 it will be 8 bc its 8
+//at idx1 it will be 8 + 12 = 20
+//at idx2 we have 2, we know 8 and 12 and > 2 an d they cannot be apart of 2's subsequence so it will be 2
+//at idx3 we have 3 and it can include 2 since it comes after 2 and is increasing so at idx the highest subset sum we can have is 5
+//at idx4 we have 15 and it can be included in the subset of all the previous nums such as 8 + 12 + 15 = 35 > 2 + 3 + 15 = 20
+//to keep track of the nums we use we build another array that will keep track of our sequences 
+//at each idx at that new seq array, we want to keep track of the previous idx --> [none, 0, none, 2, 1] // idx4 --> idx1 --> idx0 --> none; this is how we keep track
+
 
 //time complexity 
 //O(n^2)
