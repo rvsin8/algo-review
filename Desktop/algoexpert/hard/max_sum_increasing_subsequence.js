@@ -36,10 +36,10 @@ function maxSumIncreasingSubsequence(array) {
             const otherNum = array[j]; //
             if (otherNum < currentNum && sums[j] + currentNum >= sums[i]) { //we are looking for strictly increasing subsequences and the greatest sum we can generate at j + our sum at our current greatestSum is greater than our sum of i
                 sums[i] = sums[j] + currentNum; //update it
-                sequences[i] = j; //our sequences awrray, we store the idx of the last num
+                sequences[i] = j; //our sequences array, we store the idx of the last num
             }
         }
-        if (sums[i] >= sums[maxSumIdx]) maxSumIdx = i;
+        if (sums[i] >= sums[maxSumIdx]) maxSumIdx = i; //if sums of i > the greatest sum at our idx then just update the max sum to i
     }
     return [sums[maxSumIdx], buildSequence(array, sequences, maxSumIdx)]; //return of length 2 where we have the greatest sum and the subsequence 
 }
