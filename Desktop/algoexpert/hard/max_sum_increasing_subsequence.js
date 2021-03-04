@@ -45,8 +45,8 @@ function maxSumIncreasingSubsequence(array) {
 }
 
 function buildSequence(array, sequences, currentIdx) { //helper method
-    const sequence = [];
-    while (currentIdx !== undefined) {
+    const sequence = [];//we need an array to store our sequence
+    while (currentIdx !== undefined) { //
         sequence.unshift(array[currentIdx]);
         currentIdx = sequences[currentIdx];
     }
