@@ -21,10 +21,10 @@
 //if otherNum < currentNum AND if sums[j] + currentNum >= sums[i] then we UPDATE the sum
 
 //time complexity 
-//O(n^2)
+//O(n^2) where n is the length of our input array
 
 //space complexity
-//O(n)
+//O(n) where n is the length of our input array
 
 function maxSumIncreasingSubsequence(array) {
     const sequences = new Array(array.length);
