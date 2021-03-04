@@ -16,7 +16,9 @@
 //at idx4 we have 15 and it can be included in the subset of all the previous nums such as 8 + 12 + 15 = 35 > 2 + 3 + 15 = 20
 //to keep track of the nums we use we build another array that will keep track of our sequences 
 //at each idx at that new seq array, we want to keep track of the previous idx --> [none, 0, none, 2, 1] // idx4 --> idx1 --> idx0 --> none; this is how we keep track
-
+//currentNum = array[i] --> 5
+//otherNum = array[j]  --> 0 <= j < i
+//if otherNum < currentNum AND if sums[j] + currentNum >= sums[i] then we UPDATE the sum
 
 //time complexity 
 //O(n^2)
