@@ -2,6 +2,10 @@
 //Dynamic Programming 
 
 //my understanding 
+//a subsequences is a set of ele that can derive from another set by removing / keeping remaining elements in order
+//[8,12,2,3,15,5,7]
+//find the greatest sum we can generate from an increasing subsequence 
+//
 
 //time complexity 
 //O(n^2)
