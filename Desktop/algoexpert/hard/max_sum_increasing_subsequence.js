@@ -48,7 +48,7 @@ function buildSequence(array, sequences, currentIdx) { //helper method
     const sequence = [];//we need an array to store our sequence
     while (currentIdx !== undefined) { //while the currentidx isnt NONE bc this indicates when its done
         sequence.unshift(array[currentIdx]);//append 
-        currentIdx = sequences[currentIdx];//
+        currentIdx = sequences[currentIdx];//update currentIdx to ???? confused
     }
     return sequence;
 }
