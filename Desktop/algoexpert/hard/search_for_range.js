@@ -2,6 +2,10 @@
 //Searching
 
 //my understanding 
+//you get a sorted array of integers as well as a target number
+//it wants you to find the longest range in indices in the input array, where you can find the target num
+//[0,1,21,33,45,45,45,45,45,45,61,71,73], 45 --> [4,9]
+
 
 //time complexity 
 //O(long(n))
