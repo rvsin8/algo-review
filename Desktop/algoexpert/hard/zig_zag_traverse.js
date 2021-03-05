@@ -14,6 +14,14 @@
 //when we are in row 0 and we are going up then we go right
 //if we are in the last col, we cannot go right so we go down
 
+//my solution
+//start at top left and we always go down as our first move
+//keep track of direction 
+//bc we are at col0 we go down to 2
+//direction is now up to 3
+//now we are at row0 bc that is where 3 is so we move right 4
+//
+
 //time complexity 
 //O(n)
 
