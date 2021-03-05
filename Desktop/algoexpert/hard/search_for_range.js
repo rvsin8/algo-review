@@ -13,5 +13,10 @@ function searchForRange(array, target) {
     const finalRange = [-1, -1];
     alteredBinarySearch(array, target, 0, array.length - 1, finalRange, true);
     alteredBinarySearch(array, target, 0, array.length - 1, finalRange, false);
+    return finalRange;
 
+}
+
+function alteredBinarySearch(array, target, left, right, finalRange, goLeft) {
+    
 }
