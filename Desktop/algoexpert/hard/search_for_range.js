@@ -12,6 +12,11 @@
 //we compare the num we are at to the target num, 45 is in the idx6 aka middle num and we found it
 //we need to find the extremity however
 //to check if it is the left extremity we will check the idx
+//if its 0 we found the left extremity if not we check the left and it is we keep checking left if not we are at the left extremity 
+
+//my solution
+//bc the previous value does equal to our target as well, we will continue to apply bs on the left part of the array
+//
 
 //time complexity 
 //O(long(n))
