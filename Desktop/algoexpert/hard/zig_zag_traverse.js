@@ -41,11 +41,11 @@
 //O(n) we have to store all the elements in an array like the question says - we don't need any extra space beyond that 
 
 function zigzagTraverse(array) {
-    const height = array.length - 1;
-    const width = array[0].length - 1;
-    const result = [];
-    let row = 0;
-    let col = 0;
+    const height = array.length - 1;//we are going to be checking multiple times if we are in the perimeters so we keep track of the height
+    const width = array[0].length - 1; //we are going to be checking multiple times if we are in the perimeters we keep track of the width which is the length of the furst subarray - 1
+    const result = [];//return for our answer
+    let row = 0;//
+    let col = 0;//
     let goingDown = true;
     while (!isOutOfBounds(row, col, height, width)) {
         result.push(array[row][col]);
