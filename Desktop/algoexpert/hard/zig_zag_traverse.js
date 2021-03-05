@@ -9,6 +9,10 @@
 //2-3 7-10 14-15 you are going up
 //3-4 13-14 you are going to the right
 //we always go down at the parameters 
+//when we go 4-6 we know once we reach the first col we need to go down 
+//if we are in the last row and we are still going down ? we should actually go right
+//when we are in row 0 and we are going up then we go right
+//if we are in the last col, we cannot go right so we go down
 
 //time complexity 
 //O(n)
