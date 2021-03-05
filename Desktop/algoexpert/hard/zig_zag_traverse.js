@@ -20,7 +20,10 @@
 //bc we are at col0 we go down to 2
 //direction is now up to 3
 //now we are at row0 bc that is where 3 is so we move right 4
-//
+//update direction to be going down
+//4-5 we are not in the perimeter so we can keep going diag down to 6
+//6 is at col0 so we go down to 7
+//now direction goes up
 
 //time complexity 
 //O(n)
