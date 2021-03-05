@@ -32,13 +32,18 @@ function zigzagTraverse(array) {
             }
         } else {
             if (row === 0 || col === width) {
-                row++;
-            } else {
-                row--;
+                goingDown = true;
+                if (col === width) {
+                    row++;
+                } else {
                 col++;
             }
+        } else {
+            row--;
+            col++;
         }
     }
+}
     return result;
 }
 
