@@ -2,6 +2,10 @@
 //Arrays
 
 //my understanding 
+//given a 2D array and we need to traverse it in a zig zag order
+//this question is easier in face value than actual implementation 
+//there are only two directions you are going in which is down or up
+
 
 //time complexity 
 //O(n)
