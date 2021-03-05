@@ -31,12 +31,14 @@
 //we change direction up to 15 
 //15 is in the last col so we go down updating our direction to down to 16 our last num
 //validate the final num so we know to be done
+//the code will be majority if and statements 
+//
 
 //time complexity 
-//O(n)
+//O(n) where n is the total num of ele in the 2d array bc we are just traversing all elements once
 
 //space complexity
-//O(n)
+//O(n) we have to store all the elements in an array like the question says - we don't need any extra space beyond that 
 
 function zigzagTraverse(array) {
     const height = array.length - 1;
