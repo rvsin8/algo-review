@@ -48,36 +48,36 @@ function zigzagTraverse(array) {
     let col = 0;//we start at 0
     let goingDown = true;//we always start going down
     while (!isOutOfBounds(row, col, height, width)) {//aslong as we are inside the 2d array we can keep traversing
-        result.push(array[row][col]);
-        if (goingDown) {
-            if (col === 0 || row === height) {
-                goingDown = false;
-                if (row === height) {
-                    col++;
+        result.push(array[row][col]);//bc we are inbounds we will push current value to our results array at row and col
+        if (goingDown) { //if we are going down
+            if (col === 0 || row === height) { //first col and the bottom row we need to change direction
+                goingDown = false; //we are going up
+                if (row === height) { //if we are at the very bottom, we wont go further down 
+                    col++; //we will go right
                 } else {
-                    row++;
+                    row++; //we keep going down 
                 }
-            } else {
-                row++;
-                col--;
+            } else { //if we are not in the first row or last col 
+                row++; //we just keep on going diag down
+                col--; //diag down
             }
-        } else {
-            if (row === 0 || col === width) {
-                goingDown = true;
-                if (col === width) {
-                    row++;
+        } else { //handle reverse case - when we go up
+            if (row === 0 || col === width) { //top row or last col
+                goingDown = true; //now we are going down
+                if (col === width) { //are we in the final col
+                    row++; //lets go down
                 } else {
-                col++;
+                col++; //otherwise we are in the first row and we just want to go right
             }
         } else {
-            row--;
-            col++;
+            row--;//go diag up
+            col++;// go diag up
         }
     }
 }
-    return result;
+    return result;//answer
 }
 
-function isOutOfBounds(row, col, height, width) { //helper
+function isOutOfBounds(row, col, height, width) { //helper O(1) function cause all we are doing is checking 
     return row < 0 || row > height || col < 0 || col > width; //we are too high up; too far down; too far left or too far right
 }
