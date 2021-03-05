@@ -16,7 +16,16 @@
 
 //my solution
 //bc the previous value does equal to our target as well, we will continue to apply bs on the left part of the array
-//
+//now our right idx moves from idx12 to idx5
+//left idx at 0 and right at 5 so our middle idx is at 2 which is 21
+//we move out left pointer now to idx3 and remove the left part
+//lp is at 3 and rp is at 5
+//3+5 = 8 --> idx4 which is 45 our target num and to the left is 33 so we now know we are at the left extremity 
+//now we have [4, ?]
+//we must look for the highest extremity 
+//there is a 45 to the left so we must keep the bs algo going
+//so at middle idx we have 45 and will do the opposite as above so 6 + 12 = 18 / 2 = 9
+
 
 //time complexity 
 //O(long(n))
