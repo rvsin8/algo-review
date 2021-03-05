@@ -18,5 +18,18 @@ function searchForRange(array, target) {
 }
 
 function alteredBinarySearch(array, target, left, right, finalRange, goLeft) {
-    
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (array[mid] < target) {
+            left = mid + 1;
+        } else if (array[mid] > target) {
+            right = mid - 1;
+        } else {
+            if (goLeft) {
+                if (mid === 0 || array[mid - 1] !== target) {
+                    finalRange[0] = mid;
+                }
+            }
+        }
+    }
 }
