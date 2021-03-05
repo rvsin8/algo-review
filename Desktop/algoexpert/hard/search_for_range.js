@@ -24,14 +24,17 @@
 //now we have [4, ?]
 //we must look for the highest extremity 
 //there is a 45 to the left so we must keep the bs algo going
-//so at middle idx we have 45 and will do the opposite as above so 6 + 12 = 18 / 2 = 9
+//so at middle idx we have 45 and will do the opposite as above so 6 + 12 = 18 / 2 = 9 which has 45
+//to the right of idx9 is idx10 holding a value of 61 so we know we found the highest right extremity at idx 9
+//[4,9] is our answer 
+//we apply bs twice
 
 
 //time complexity 
-//O(long(n))
+//O(long(n)) where n is the num of ele in our array, wheneevr we apply bs we get this time complexity bc we eliminate half the array every time we us bs and we use it twice technicalled itll be O of 2 * log of n
 
 //space complexity 
-//O(1)
+//O(1) if you are using it iteratively 
 
 function searchForRange(array, target) {
     const finalRange = [-1, -1];
