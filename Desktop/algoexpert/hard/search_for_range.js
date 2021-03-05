@@ -8,6 +8,10 @@
 //when you apply binary search, once you find the number you are done but in this case we want the indices of the range
 //we want the left extremity and the right extremity 
 //we will hae a left and right pointer that will start on opposite sides
+//we have 12 indices so we do (0 + 12) / 2 = 6 which will be our middle pointer at idx6
+//we compare the num we are at to the target num, 45 is in the idx6 aka middle num and we found it
+//we need to find the extremity however
+//to check if it is the left extremity we will check the idx
 
 //time complexity 
 //O(long(n))
