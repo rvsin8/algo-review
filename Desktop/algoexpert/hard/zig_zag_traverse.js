@@ -44,10 +44,10 @@ function zigzagTraverse(array) {
     const height = array.length - 1;//we are going to be checking multiple times if we are in the perimeters so we keep track of the height
     const width = array[0].length - 1; //we are going to be checking multiple times if we are in the perimeters we keep track of the width which is the length of the furst subarray - 1
     const result = [];//return for our answer
-    let row = 0;//
-    let col = 0;//
-    let goingDown = true;
-    while (!isOutOfBounds(row, col, height, width)) {
+    let row = 0;//we start at 0
+    let col = 0;//we start at 0
+    let goingDown = true;//we always start going down
+    while (!isOutOfBounds(row, col, height, width)) {//aslong as we are inside the 2d array we can keep traversing
         result.push(array[row][col]);
         if (goingDown) {
             if (col === 0 || row === height) {
