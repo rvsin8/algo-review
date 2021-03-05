@@ -24,6 +24,13 @@
 //4-5 we are not in the perimeter so we can keep going diag down to 6
 //6 is at col0 so we go down to 7
 //now direction goes up
+//the 8 and 9 are not in perimeter 
+//10 is in the first row and last col so we go down direction change to 11
+//12 is not in the perimeter
+//at 13 we are at the last row so we move right to 14 
+//we change direction up to 15 
+//15 is in the last col so we go down updating our direction to down to 16 our last num
+//validate the final num so we know to be done
 
 //time complexity 
 //O(n)
