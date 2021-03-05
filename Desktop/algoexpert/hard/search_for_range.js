@@ -28,6 +28,16 @@ function alteredBinarySearch(array, target, left, right, finalRange, goLeft) {
             if (goLeft) {
                 if (mid === 0 || array[mid - 1] !== target) {
                     finalRange[0] = mid;
+                    return;
+                } else {
+                    right = mid - 1;
+                }
+            } else {
+                if (mid === array.length - 1 || array[mid + 1] !== target) {
+                    finalRange[1] = mid;
+                    return;
+                } else {
+                    left = mid + 1;
                 }
             }
         }
