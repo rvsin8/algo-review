@@ -5,7 +5,9 @@
 //you get a sorted array of integers as well as a target number
 //it wants you to find the longest range in indices in the input array, where you can find the target num
 //[0,1,21,33,45,45,45,45,45,45,61,71,73], 45 --> [4,9]
-
+//when you apply binary search, once you find the number you are done but in this case we want the indices of the range
+//we want the left extremity and the right extremity 
+//we will hae a left and right pointer that will start on opposite sides
 
 //time complexity 
 //O(long(n))
