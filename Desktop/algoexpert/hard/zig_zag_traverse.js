@@ -78,6 +78,6 @@ function zigzagTraverse(array) {
     return result;
 }
 
-function isOutOfBounds(row, col, height, width) {
-    return row < 0 || row > height || col < 0 || col > width;
+function isOutOfBounds(row, col, height, width) { //helper
+    return row < 0 || row > height || col < 0 || col > width; //we are too high up; too far down; too far left or too far right
 }
