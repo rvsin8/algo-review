@@ -45,7 +45,7 @@ function runLengthEncoding(string) {
     encodedStringCharacters.push(currentRunLength.toString()); //handle all of the runs for us
     encodedStringCharacters.push(string[string.length - 1]); //append the last char in our string
 
-    return encodedStringCharacters.join(''); //join and answer
+    return encodedStringCharacters.join(''); //join into a string and answer
 
 
 }
