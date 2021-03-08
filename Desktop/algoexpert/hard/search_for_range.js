@@ -37,18 +37,17 @@
 //O(1) if you are using it iteratively 
 
 function searchForRange(array, target) {
-    const finalRange = [-1, -1];//initialize our final  srray, we can set it up -1,-1 if we cannot find it
-    alteredBinarySearch(array, target, 0, array.length - 1, finalRange, true);//binary search left
-    alteredBinarySearch(array, target, 0, array.length - 1, finalRange, false);//binary search right
+    const finalRange = [-1, -1];//initialize our final  srray, we can set it up -1,-1 if we cannot find it bc its true
+    alteredBinarySearch(array, target, 0, array.length - 1, finalRange, false);//binary search right bc ots false
     return finalRange; //return the final range
 
 }
 
 function alteredBinarySearch(array, target, left, right, finalRange, goLeft) {
-    while (left <= right) {
-        const mid = Math.floor((left + right) / 2);
-        if (array[mid] < target) {
-            left = mid + 1;
+    while (left <= right) { //if left is > right we can return, this is the base case
+        const mid = Math.floor((left + right) / 2); //middle point rounded off via math.floor
+        if (array[mid] < target) { //if the value at the middle pointer is smaller than the taeget we need too 
+            left = mid + 1; //explore the right
         } else if (array[mid] > target) {
             right = mid - 1;
         } else {
