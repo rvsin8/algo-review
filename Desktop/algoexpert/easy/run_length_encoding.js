@@ -32,20 +32,20 @@ function runLengthEncoding(string) {
         const currentCharacter = string[i]; //track current char
         const previousCharacter = string[i - 1]; //track previous char
 
-        if (currentCharacter !== previousCharacter || currentRunLength === 9) {
-            encodedStringCharacters.push(currentRunLength.toString());
-            encodedStringCharacters.push(previousCharacter);
-            currentRunLength = 0;
+        if (currentCharacter !== previousCharacter || currentRunLength === 9) { //if the run length surpasses 9 and the current and previous length are diff
+            encodedStringCharacters.push(currentRunLength.toString()); //push the length to the array
+            encodedStringCharacters.push(previousCharacter); //push the char to the array
+            currentRunLength = 0; //reset run length
         }
 
-        currentRunLength++;
+        currentRunLength++;//if not then keep incrementing 
 
     }
 
-    encodedStringCharacters.push(currentRunLength.toString());
-    encodedStringCharacters.push(string[string.length - 1]);
+    encodedStringCharacters.push(currentRunLength.toString()); //handle all of the runs for us
+    encodedStringCharacters.push(string[string.length - 1]); //append the last char in our string
 
-    return encodedStringCharacters.join('');
+    return encodedStringCharacters.join(''); //join and answer
 
 
 }
