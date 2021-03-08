@@ -21,7 +21,11 @@
 //we would check out the left side of our array bc the left side is where things come first
 //we do another bs and we find that 2 is at idx2
 //we know the previous value is not equal to its idx so we know the answer is 2
-
+//how do we know what side to check when we come to a num that is not equal to its idx
+//if the value is > than the idx then we want to search the left side bc the values have to keep increases by 1 or more while the idx can only increase by 1 so we erase the right side
+//if the middle is > than its idx then we know all the values to the right will probably be bigger than their idx bc all the values must keep increasing
+//now we are at idx1 where the value is 0 and 0 < -1 so we erase the left bc we know the value will be less than the idx for all value to the right so we erase the left side
+//now we are at idx2 and the value is 2 ! our answer.
 
 //time complexity 
 //O(log(n))
