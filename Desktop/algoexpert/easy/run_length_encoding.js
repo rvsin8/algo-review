@@ -14,6 +14,9 @@
 //then we hit B so we add the last 4 As --> [9,A,4,A]
 //once we hit C the length is [9,A,4,A,2,B]
 //[9,A,4,A,2,B,4,C]
+//after our for loop we have to automatically add whatever our run counter is 
+//we have to turn the character list to a string
+//if we have a situation where we have one character, we wont get to loop so we will just append the length and the last eel which is A to the list
 
 //time complexity 
 //O(n)
