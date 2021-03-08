@@ -15,6 +15,13 @@
 //building5 can and 7 can 
 //direction matters, keep this in mind bc if we did it in reverse the answer changes 
 
+//solution
+//loop from opposite direction the buildings  are facing
+//create a variable called max height = the max height of the building we have already seen - bc if we can store the max height of a building in the direction we are facing
+//if we are at building 3 with sz 4 and we know the max height on every building to the right is 3 we know building 3 can see the sunset
+//example we are going east
+//so we start at the last idx which is 7
+
 //time complexity 
 //O(n)
 
