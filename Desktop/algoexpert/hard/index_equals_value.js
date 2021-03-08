@@ -16,5 +16,16 @@ function indexEqualsValue(array) {
     while (leftIndex <= rightIndex) {
         const middleIndex = leftIndex + Math.floor((rightIndex - leftIndex) / 2);
         const middleValue = array[middleIndex];
-    }
+
+        if (middleValue < middleIndex) {
+            leftIndex = middleIndex + 1;
+        } else if (middleValue === middleIndex && middleIndex === 0) {
+            return middleIndex;
+        } else if (middleValue === middleIndex && array[middleIndex - 1] < middleIndex - 1 ) {
+            return middleIndex;
+        } else {
+            rightIndex = middleIndex - 1;
+        }
+    } 
+    return -1;
 }
