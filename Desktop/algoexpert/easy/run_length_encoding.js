@@ -27,5 +27,10 @@ function runLengthEncoding(string) {
 
     }
 
-    
+    encodedStringCharacters.push(currentRunLength.toString());
+    encodedStringCharacters.push(string[string.length - 1]);
+
+    return encodedStringCharacters.join('');
+
+
 }
