@@ -55,3 +55,5 @@ function sunsetViews(buildings, direction) {
 
     return candidateBuildings;
 }
+
+//there is another solution that deals with stacks check it out when you have time
