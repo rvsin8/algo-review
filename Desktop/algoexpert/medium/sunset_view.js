@@ -69,5 +69,17 @@ function sunsetViews(buildings, direction) {
     let idx = startIdx;
     let runningMaxHeight = 0;
 
-    while
+    while (idx >= 0 && idx < buildings.length) {
+        const buildingHeight = buildings[idx];
+        
+        if (buildingHeight > runningMaxHeight) buildingWithSunsetViews.push(idx);
+
+        runningMaxHeight = Math.max(runningMaxHeight, buildingHeight);
+
+        idx = idx + step;
+
+    }
+
+    if (direction === "EAST") buildingWithSunsetViews.reverse();
+    return buildingWithSunsetViews;
 }
