@@ -20,7 +20,11 @@
 //create a variable called max height = the max height of the building we have already seen - bc if we can store the max height of a building in the direction we are facing
 //if we are at building 3 with sz 4 and we know the max height on every building to the right is 3 we know building 3 can see the sunset
 //example we are going east
-//so we start at the last idx which is 7
+//so we start at the last idx which is 7 and no building is to the right of 7 so we add it to our array --> [7] with the max height being 2
+//now we go to idx6 and the building has a height of 3 so we now update the max height since its > 2 and we add this building to our array as well --> [6,7]
+//building 5 and 4 all are below height 3 so we skip them
+//building3 has a height of 4 so we add it to the array and update our max height --> [7,6,3]
+//same for building one with a height 5 and we update and add as well --> [7,6,3,1]
 
 //time complexity 
 //O(n)
