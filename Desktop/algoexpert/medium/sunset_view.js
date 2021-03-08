@@ -13,6 +13,7 @@
 //building3 can bc it is now the tallest
 //building4 and 5 are both blocked
 //building5 can and 7 can 
+//direction matters, keep this in mind bc if we did it in reverse the answer changes 
 
 //time complexity 
 //O(n)
