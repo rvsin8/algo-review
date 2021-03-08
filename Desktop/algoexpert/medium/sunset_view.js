@@ -80,6 +80,6 @@ function sunsetViews(buildings, direction) {
 
     }
 
-    if (direction === "EAST") buildingWithSunsetViews.reverse();
-    return buildingWithSunsetViews;
+    if (direction === "EAST") buildingWithSunsetViews.reverse(); //reverse the output array if it is for the EAST direction
+    return buildingWithSunsetViews; //the answer
 }
