@@ -9,3 +9,10 @@
 //space complexity 
 //O(1)
 
+function isPalindrome(string) {
+    let leftIdx = 0;
+    let rightIdx = string.length - 1;
+    while (leftIdx < rightIdx) {
+        
+    }
+}
