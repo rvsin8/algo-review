@@ -26,6 +26,7 @@
 //if the middle is > than its idx then we know all the values to the right will probably be bigger than their idx bc all the values must keep increasing
 //now we are at idx1 where the value is 0 and 0 < -1 so we erase the left bc we know the value will be less than the idx for all value to the right so we erase the left side
 //now we are at idx2 and the value is 2 ! our answer.
+//recursively its space would be log(n) but iteratively it will be O(1)
 
 //time complexity 
 //O(log(n))
@@ -34,22 +35,22 @@
 //O(1)
 
 function indexEqualsValue(array) {
-    let leftIndex = 0;
-    let rightIndex = array.length - 1;
+    let leftIndex = 0; //initialize the leftidx at 0
+    let rightIndex = array.length - 1; //initialize rightidx at the end
 
-    while (leftIndex <= rightIndex) {
-        const middleIndex = leftIndex + Math.floor((rightIndex - leftIndex) / 2);
-        const middleValue = array[middleIndex];
+    while (leftIndex <= rightIndex) { //while the left idx and right idx dont overlap 
+        const middleIndex = leftIndex + Math.floor((rightIndex - leftIndex) / 2); //we find the middle value but first we ge the middle idx
+        const middleValue = array[middleIndex]; //now we have the middle value to compare 
 
-        if (middleValue < middleIndex) {
-            leftIndex = middleIndex + 1;
-        } else if (middleValue === middleIndex && middleIndex === 0) {
-            return middleIndex;
-        } else if (middleValue === middleIndex && array[middleIndex - 1] < middleIndex - 1 ) {
-            return middleIndex;
+        if (middleValue < middleIndex) { //if the middle value is less than the idx
+            leftIndex = middleIndex + 1; //we want to look to the right
+        } else if (middleValue === middleIndex && middleIndex === 0) { //potential match at the first idx
+            return middleIndex; //potential match return
+        } else if (middleValue === middleIndex && array[middleIndex - 1] < middleIndex - 1 ) { //and wif it isnt the first ele 
+            return middleIndex; //relook into this logic
         } else {
-            rightIndex = middleIndex - 1;
+            rightIndex = middleIndex - 1; //we want to look the left if it is >
         }
     } 
-    return -1;
+    return -1; //found nothing
 }
