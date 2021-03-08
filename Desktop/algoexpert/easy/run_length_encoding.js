@@ -19,10 +19,10 @@
 //if we have a situation where we have one character, we wont get to loop so we will just append the length and the last eel which is A to the list
 
 //time complexity 
-//O(n)
+//O(n) we are creating our list, we have a for loop and n is the length od the string and in the for loop we are performing constant time operations O(n)
 
 //space complexity 
-//O(n)
+//O(n) we have a list and we are adding PAIRS to it 
 
 function runLengthEncoding(string) {
     const encodedStringCharacters = [];
