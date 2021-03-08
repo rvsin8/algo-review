@@ -9,7 +9,7 @@
 //a list is mutable ^ so any change will be O(1) time
 //length = 1, we start at 1 bc we take in a nonempty string so we will always have atleast a string of length 1
 //we start at the second letter from there we can check the previous letter and see if we continue the run or make a new run
-//
+//if string[i] == string[i-1] we can do length += 1 else add run to chars
 //
 
 //time complexity 
