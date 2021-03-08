@@ -4,7 +4,15 @@
 //my understandings 
 //given an array of building heights and the direction of where these buildings are facing
 //height goes according to idx position, east is right and west is left
-//
+//[3,5,4,4,3,1,3,2] --> [1,3,6,7]
+//return answer in ascending order
+//a building can see a sunset if it is there is no building same height or above it in the direction in which it is facing
+//building0 cannot bc its blocked
+//building1 can bc its the tallest
+//building2 cannot it is blocked by same height
+//building3 can bc it is now the tallest
+//building4 and 5 are both blocked
+//building5 can and 7 can 
 
 //time complexity 
 //O(n)
