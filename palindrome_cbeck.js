@@ -2,6 +2,10 @@
 //Strings
 
 //my understanding
+//a palindrome is a string written the same forward as backwards
+//can solve it in a lot of ways
+//straightforward way - create a new string going backwards and compare it to the original string 
+//
 
 //time complexity 
 //O(n)
