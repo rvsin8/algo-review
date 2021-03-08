@@ -10,7 +10,10 @@
 //length = 1, we start at 1 bc we take in a nonempty string so we will always have atleast a string of length 1
 //we start at the second letter from there we can check the previous letter and see if we continue the run or make a new run
 //if string[i] == string[i-1] we can do length += 1 else add run to chars
-//
+//once we hit the 9th A we reset the length --> [9,A]
+//then we hit B so we add the last 4 As --> [9,A,4,A]
+//once we hit C the length is [9,A,4,A,2,B]
+//[9,A,4,A,2,B,4,C]
 
 //time complexity 
 //O(n)
