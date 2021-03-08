@@ -61,13 +61,13 @@ function sunsetViews(buildings, direction) {
 //this is the one you wrote your my understanding for 
 
 function sunsetViews(buildings, direction) {
-    const buildingWithSunsetViews = [];
+    const buildingWithSunsetViews = []; //the array we will return in the end with the buildings that can view the sunset
 
-    const startIdx = direction === 'WEST' ? 0 : buildings.length - 1;
-    const step = direction === 'WEST' ? 1 : -1;
+    const startIdx = direction === 'WEST' ? 0 : buildings.length - 1; //if the direction is west we start at idx 0 or else it is last if its east
+    const step = direction === 'WEST' ? 1 : -1; //1 if it is equal to west if its east then -1
 
-    let idx = startIdx;
-    let runningMaxHeight = 0;
+    let idx = startIdx; //where we start
+    let runningMaxHeight = 0; //update whenever we find a bigger height 
 
     while (idx >= 0 && idx < buildings.length) {
         const buildingHeight = buildings[idx];
