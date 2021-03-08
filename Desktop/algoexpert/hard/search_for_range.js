@@ -60,10 +60,10 @@ function alteredBinarySearch(array, target, left, right, finalRange, goLeft) {
                 }
             } else { //if we are going right
                 if (mid === array.length - 1 || array[mid + 1] !== target) { //compare it to the final idx of the array
-                    finalRange[1] = mid; //
+                    finalRange[1] = mid; //right extremity 
                     return;
                 } else {
-                    left = mid + 1;
+                    left = mid + 1; //update left variable 
                 }
             }
         }
