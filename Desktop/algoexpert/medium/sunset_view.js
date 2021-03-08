@@ -32,6 +32,8 @@
 //space complexity 
 //O(n) n elements in this array
 
+//there is another solution that deals with stacks check it out when you have time
+
 function sunsetViews(buildings, direction) {
     const candidateBuildings = [];
 
@@ -56,7 +58,6 @@ function sunsetViews(buildings, direction) {
     return candidateBuildings;
 }
 
-//there is another solution that deals with stacks check it out when you have time
 
 //this is the one you wrote your my understanding for 
 
