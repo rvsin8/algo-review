@@ -48,19 +48,19 @@ function alteredBinarySearch(array, target, left, right, finalRange, goLeft) {
         const mid = Math.floor((left + right) / 2); //middle point rounded off via math.floor
         if (array[mid] < target) { //if the value at the middle pointer is smaller than the taeget we need too 
             left = mid + 1; //explore the right
-        } else if (array[mid] > target) {
-            right = mid - 1;
-        } else {
-            if (goLeft) {
-                if (mid === 0 || array[mid - 1] !== target) {
-                    finalRange[0] = mid;
+        } else if (array[mid] > target) { //if its larger 
+            right = mid - 1; //go to the left
+        } else { //if the middle value is = to the target num
+            if (goLeft) { //we want to keep gping left to check 
+                if (mid === 0 || array[mid - 1] !== target) { //the target num we are at is the lefrmost
+                    finalRange[0] = mid; //final range of idx at 0 will be our range
                     return;
                 } else {
-                    right = mid - 1;
+                    right = mid - 1; //or we further explore to the left
                 }
-            } else {
-                if (mid === array.length - 1 || array[mid + 1] !== target) {
-                    finalRange[1] = mid;
+            } else { //if we are going right
+                if (mid === array.length - 1 || array[mid + 1] !== target) { //compare it to the final idx of the array
+                    finalRange[1] = mid; //
                     return;
                 } else {
                     left = mid + 1;
