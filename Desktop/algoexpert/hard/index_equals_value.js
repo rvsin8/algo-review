@@ -13,6 +13,15 @@
 //my solution 
 //binary search bc we have a sorted array and we are searching
 //it is faster than searching element bu element 
+//we will check the middle and cut half of a search space each time
+//we dont have a search value
+//when we check the middle value we will check its idx
+//[-2,0,2,3,6,8,10] the middle value is 3 and we possibly found our answer but we need to check cause there can be multiple indices to their array
+//to the left of 3 it can only be equal to less than 3
+//we would check out the left side of our array bc the left side is where things come first
+//we do another bs and we find that 2 is at idx2
+//we know the previous value is not equal to its idx so we know the answer is 2
+
 
 //time complexity 
 //O(log(n))
