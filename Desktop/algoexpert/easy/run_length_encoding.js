@@ -25,12 +25,12 @@
 //O(n) we have a list and we are adding PAIRS to it 
 
 function runLengthEncoding(string) {
-    const encodedStringCharacters = [];
-    let currentRunLength = 1;
+    const encodedStringCharacters = []; //returning this as output
+    let currentRunLength = 1; //keep track of current run length
 
-    for (let i = 1; i < string.length; i++) {
-        const currentCharacter = string[i];
-        const previousCharacter = string[i - 1];
+    for (let i = 1; i < string.length; i++) { //iterate
+        const currentCharacter = string[i]; //track current char
+        const previousCharacter = string[i - 1]; //track previous char
 
         if (currentCharacter !== previousCharacter || currentRunLength === 9) {
             encodedStringCharacters.push(currentRunLength.toString());
