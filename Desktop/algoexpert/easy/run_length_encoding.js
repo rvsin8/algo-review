@@ -9,3 +9,7 @@
 //space complexity 
 //O(n)
 
+function runLengthEncoding(string) {
+    const encodedStringCharacters = [];
+    let currentRunLength = 1;
+}
