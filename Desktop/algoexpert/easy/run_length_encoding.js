@@ -12,4 +12,8 @@
 function runLengthEncoding(string) {
     const encodedStringCharacters = [];
     let currentRunLength = 1;
+
+    for (let i = 1; i < string.length; i++) {
+        
+    }
 }
