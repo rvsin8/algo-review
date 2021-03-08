@@ -6,8 +6,7 @@
 //"13A" is confusing bc how do we know thr 1 and 3 are separate so we say 9A4A this is why its important to split it up
 //our goal to to take this input AAAAAAAAAAAAABBCCCCDD --> and get this output 9A4A2B4C2D
 //chars = [] we dont use a string bc it is immutable which means anything to change it will require an O(N)
-//
-//
+//a list is mutable ^ so any change will be O(1) time
 
 //time complexity 
 //O(n)
