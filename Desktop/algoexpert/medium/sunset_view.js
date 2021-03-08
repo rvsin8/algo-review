@@ -69,14 +69,14 @@ function sunsetViews(buildings, direction) {
     let idx = startIdx; //where we start
     let runningMaxHeight = 0; //update whenever we find a bigger height 
 
-    while (idx >= 0 && idx < buildings.length) {
-        const buildingHeight = buildings[idx];
+    while (idx >= 0 && idx < buildings.length) { //iterate 
+        const buildingHeight = buildings[idx]; //get the current height of the building
         
-        if (buildingHeight > runningMaxHeight) buildingWithSunsetViews.push(idx);
+        if (buildingHeight > runningMaxHeight) buildingWithSunsetViews.push(idx); //if the building height is taller than the current max height we can add it to our final array
 
-        runningMaxHeight = Math.max(runningMaxHeight, buildingHeight);
+        runningMaxHeight = Math.max(runningMaxHeight, buildingHeight); //update the max if we can
 
-        idx = idx + step;
+        idx = idx + step; //increment whether its forward or backward depending on the fdirection 
 
     }
 
