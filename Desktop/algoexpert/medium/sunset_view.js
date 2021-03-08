@@ -2,6 +2,9 @@
 //Stacks
 
 //my understandings 
+//given an array of building heights and the direction of where these buildings are facing
+//height goes according to idx position, east is right and west is left
+//
 
 //time complexity 
 //O(n)
