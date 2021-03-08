@@ -57,3 +57,17 @@ function sunsetViews(buildings, direction) {
 }
 
 //there is another solution that deals with stacks check it out when you have time
+
+//this is the one you wrote your my understanding for 
+
+function sunsetViews(buildings, direction) {
+    const buildingWithSunsetViews = [];
+
+    const startIdx = direction === 'WEST' ? 0 : buildings.length - 1;
+    const step = direction === 'WEST' ? 1 : -1;
+
+    let idx = startIdx;
+    let runningMaxHeight = 0;
+
+    while
+}
