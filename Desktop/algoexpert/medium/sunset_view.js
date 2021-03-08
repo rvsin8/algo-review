@@ -27,10 +27,10 @@
 //same for building one with a height 5 and we update and add as well --> [7,6,3,1]
 
 //time complexity 
-//O(n)
+//O(n) 
 
 //space complexity 
-//O(n)
+//O(n) n elements in this array
 
 function sunsetViews(buildings, direction) {
     const candidateBuildings = [];
