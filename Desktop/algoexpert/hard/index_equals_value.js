@@ -2,6 +2,12 @@
 //Searching 
 
 //my understanding 
+//an array where we have int in increasing order and no repeats all are distinct
+//take this array as an input 
+//when the idx is = to the value at that value
+//[-5,-3,0,3,4,5,9] --> 3=3
+//if we cannot find an idx value that corresponds to the value at that given idx we return -1
+//
 
 //time complexity 
 //O(log(n))
