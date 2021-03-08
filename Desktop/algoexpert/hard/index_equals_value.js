@@ -7,7 +7,12 @@
 //when the idx is = to the value at that value
 //[-5,-3,0,3,4,5,9] --> 3=3
 //if we cannot find an idx value that corresponds to the value at that given idx we return -1
-//
+//brute force would be simply traverse left to right and see if an index = array[index] and if so then return that index
+//that time complexity would be o(n) but it can be done better
+
+//my solution 
+//binary search bc we have a sorted array and we are searching
+//it is faster than searching element bu element 
 
 //time complexity 
 //O(log(n))
