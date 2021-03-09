@@ -14,3 +14,10 @@ class BST {
         this.right = null;
     }
 }
+
+class TreeInfo {
+    constructor(numbeOfNodesVisited, latestVisitedNodeValue) {
+        this.numbeOfNodesVisited = numbeOfNodesVisited;
+        this.latestVisitedNodeValue = latestVisitedNodeValue;
+    }
+}
