@@ -38,11 +38,11 @@ function shiftedBinarySearchHelper(array, target, left, right) { //helper method
     const potentialMatch = array[middle]; //number of the middle idx
     const leftNum = array[left]; //left num 
     const rightNum = array[right]; //right num
-    if (taeget === potentialMatch) { //if target is equal to the middle value
+    if (target === potentialMatch) { //if target is equal to the middle value
         return middle; //return middle
     } else if (leftNum <= potentialMatch) { //if the left num smaller than or equal to the potenital match that means the left side of array is sorted and if the target is >= left num that means the target has to be in the left side
         if (target < potentialMatch && target >= leftNum) { //if the tagret is < potential match if the target is >= left num that means the target has to be in the left side
-            return shiftedBinarySearchHelper(array, tagret, left, middle - 1); //explore left half
+            return shiftedBinarySearchHelper(array, target, left, middle - 1); //explore left half
         } else {
             return shiftedBinarySearchHelper(array, target, middle + 1, right); //explore right half
         }
