@@ -21,3 +21,10 @@ class TreeInfo {
         this.latestVisitedNodeValue = latestVisitedNodeValue;
     }
 }
+
+function findKthLargestValueInBst(tree, k) {
+    const treeInfo = new TreeInfo(0, -1);
+    reverseInOrderTraverse(tree, k, treeInfo);
+    return treeInfo.latestVisitedNodeValue;
+}
+
