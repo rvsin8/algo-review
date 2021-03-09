@@ -37,8 +37,9 @@
 //O(1) if you are using it iteratively 
 
 function searchForRange(array, target) {
-    const finalRange = [-1, -1];//initialize our final  srray, we can set it up -1,-1 if we cannot find it bc its true
-    alteredBinarySearch(array, target, 0, array.length - 1, finalRange, false);//binary search right bc ots false
+    const finalRange = [-1, -1];//initialize our final  array, we can set it up -1,-1 if we cannot find it bc its true
+    alteredBinarySearch(array, target, 0, array.length - 1, finalRange, true);//binary search right bc ots false
+    alteredBinarySearch(array, target, 0, array.length - 1, finalRange, false);
     return finalRange; //return the final range
 
 }
