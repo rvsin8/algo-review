@@ -32,15 +32,15 @@
 function diskStacking(disks) {
     disks.sort((a,b) => a[2] - b[2]);//make sure we have our arrays sorted by height
     const heights = disks.map(disk => disk[2]); //heights array where we ascend by idx
-    const sequences = new Array(this.length); //sequence array, tracks previous idx for stacking purposes
+    const sequences = new Array(disks.length); //sequence array, tracks previous idx for stacking purposes
     let maxHeightIdx = 0;//
-    for (let i = 1; i < disk.length; i++) {//we start at one bc it cannot be stacked on anything its the lowest height
+    for (let i = 1; i < disks.length; i++) {//we start at one bc it cannot be stacked on anything its the lowest height
         const currentDisk = disks[i];
         for (let j = 0; j < i; j++) {
             const otherDisk = disks[j];
-            if (AreValidDimensions(otherDisk, currentDisk)) { //call on a helper
-                if (heights[i] <= currentDisk[2] + height[j]) { //if heights at idx[i] is less than or equal too a new height then we update it
-                    heights[i] = currentDisk[2] + height[j]; //updating 
+            if (areValidDimensions(otherDisk, currentDisk)) { //call on a helper
+                if (heights[i] <= currentDisk[2] + heights[j]) { //if heights at idx[i] is less than or equal too a new height then we update it
+                    heights[i] = currentDisk[2] + heights[j]; //updating 
                     sequences[i] = j;
                 }
             }
