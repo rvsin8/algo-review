@@ -4,8 +4,10 @@
 //my understanding 
 
 //time complexity 
+//O(h + k)
 
 //space complexity 
+//O(h)
 
 class BST {
     constructor(value) {
