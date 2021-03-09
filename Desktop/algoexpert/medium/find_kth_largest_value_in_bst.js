@@ -30,7 +30,7 @@
 
 //time complexity 
 //O(h + k) even tho we may visit a few nodes or a lot of nodes we have to visit "h" amount of nodes
-//h is for height and k is for 
+//h is for height and k is for the value
 
 //space complexity 
 //O(h) this is a recursive algo and we will have a stack that will keep track of all of the recrusive calls
@@ -45,21 +45,21 @@ class BST {
 
 }
 
-class TreeInfo {
+class TreeInfo { //keep track of the numbers or nodes visited and our most recent node visited 
     constructor(numberOfNodesVisited, latestVisitedNodeValue) {
-        this.numberOfNodesVisited = numberOfNodesVisited;
-        this.latestVisitedNodeValue = latestVisitedNodeValue;
+        this.numberOfNodesVisited = numberOfNodesVisited; //num of nodes visited 
+        this.latestVisitedNodeValue = latestVisitedNodeValue; //latest visited node value
     }
 }
 
 function findKthLargestValueInBst(tree, k) {
-    const treeInfo = new TreeInfo(0, -1);
-    reverseInOrderTraverse(tree, k, treeInfo);
-    return treeInfo.latestVisitedNodeValue;
+    const treeInfo = new TreeInfo(0, -1); //instance of a class we will define
+    reverseInOrderTraverse(tree, k, treeInfo); //will modify our class
+    return treeInfo.latestVisitedNodeValue; //return the latest visited node aka our answer 
 }
 
 function reverseInOrderTraverse(node, k, treeInfo) {
-    if (node === null || treeInfo.numbeOfNodesVisited >= k) return;
+    if (node === null || treeInfo.numbeOfNodesVisited >= k) return; //
 
     reverseInOrderTraverse(node.right, k, treeInfo);
     if (treeInfo.numberOfNodesVisited < k) {
