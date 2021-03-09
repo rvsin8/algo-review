@@ -24,7 +24,8 @@
 //then go to the left and add 17 --> [22,20,17] our k=3 and we have found the third largest node
 //when we find the kth node we return that value
 //instead of keeping it stored in a list or array we want to just keep track of the num of nodes we visited and the value of the last node we visited 
-
+//we will update these two variables --> visited, lastvalue
+//#visited = 1 / lastvalue = 22 ; #visited = 2 / lastvalue = 20 ; visited = 3 / lastvalue = 17
 
 
 //time complexity 
