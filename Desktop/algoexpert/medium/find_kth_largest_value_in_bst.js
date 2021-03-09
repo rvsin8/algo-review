@@ -22,6 +22,8 @@
 //we start at 15 go to the right to 20 then to 22 and add 22 to our list --> [22]
 //then go revisit 20 and add it --> [22,20]
 //then go to the left and add 17 --> [22,20,17] our k=3 and we have found the third largest node
+//when we find the kth node we return that value
+//instead of keeping it stored in a list or array we want to just keep track of the num of nodes we visited and the value of the last node we visited 
 
 
 
