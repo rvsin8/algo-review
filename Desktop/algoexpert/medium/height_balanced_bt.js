@@ -27,14 +27,14 @@ function heightBalancedBinaryTree(tree) {
 function getTreeInfo(node) { //helper method - we want know if the height is balanced and its height
     if (node === null) return new TreeInfo(true, -1); //if the node is none, we return true and -1 we have hit a base case, the node is balanced but the height is -1 (not important)
 
-    const leftSubTreeInfo = getTreeInfo(node.left); //check the left subtree
+    const leftSubtreeInfo = getTreeInfo(node.left); //check the left subtree
     const rightSubtreeInfo = getTreeInfo(node.right); //check the right subtree
 
     const isBalanced = 
         leftSubtreeInfo.isBalanced && //is the left balanced
         rightSubtreeInfo.isBalanced && //is the right balanced 
-        Math.abs(leftSubTreeInfo.height - rightSubtreeInfo.height) <= 1; //if we subtract the two subtrees they must be less than or equal to 1 for it to be balanced
-    const height = Math.max(leftSubTreeInfo.height, rightSubtreeInfo.height) + 1; //max height of the left and right subtree
+        Math.abs(leftSubtreeInfo.height - rightSubtreeInfo.height) <= 1; //if we subtract the two subtrees they must be less than or equal to 1 for it to be balanced
+    const height = Math.max(leftSubtreeInfo.height, rightSubtreeInfo.height) + 1; //max height of the left and right subtree
     return new TreeInfo(isBalanced, height); //return the height and boolean
 
 }
