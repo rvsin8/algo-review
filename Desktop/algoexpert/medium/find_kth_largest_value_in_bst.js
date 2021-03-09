@@ -16,8 +16,8 @@ class BST {
 }
 
 class TreeInfo {
-    constructor(numbeOfNodesVisited, latestVisitedNodeValue) {
-        this.numbeOfNodesVisited = numbeOfNodesVisited;
+    constructor(numberOfNodesVisited, latestVisitedNodeValue) {
+        this.numberOfNodesVisited = numberOfNodesVisited;
         this.latestVisitedNodeValue = latestVisitedNodeValue;
     }
 }
@@ -28,3 +28,13 @@ function findKthLargestValueInBst(tree, k) {
     return treeInfo.latestVisitedNodeValue;
 }
 
+function reverseInOrderTraverse(node, k, treeInfo) {
+    if (node === null || treeInfo.numbeOfNodesVisited >= k) return;
+
+    reverseInOrderTraverse(node.right, k, treeInfo);
+    if (treeInfo.numberOfNodesVisited < k) {
+        treeInfo.numberOfNodesVisited++;
+        treeInfo.latestVisitedNodeValue = node.value;
+        reverseInOrderTraverse(node.left, k, treeInfo);
+    }
+}
