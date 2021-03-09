@@ -29,10 +29,12 @@
 
 
 //time complexity 
-//O(h + k)
+//O(h + k) even tho we may visit a few nodes or a lot of nodes we have to visit "h" amount of nodes
+//h is for height and k is for 
 
 //space complexity 
-//O(h)
+//O(h) this is a recursive algo and we will have a stack that will keep track of all of the recrusive calls
+//we will never have more than h recursive stacks bc thats the height of the bst
 
 class BST {
     constructor(value) {
