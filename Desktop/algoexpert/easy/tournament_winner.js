@@ -42,7 +42,7 @@ function tournamentWinner(competitions, results) { //takes in two parameters
 
     for (let idx = 0; idx < competitions.length; idx++) { //access to the value and ele in our competition array with its indices 
         const result = results[idx]; //our corresponding index
-        const [homeTeam, awayTeam] = competitons[idx]; //splits it into 2 components
+        const [homeTeam, awayTeam] = competitions[idx]; //splits it into 2 components
 
         const winningTeam = result === HOME_TEAM_WON ? homeTeam : awayTeam; //the winning team is equal to the home team if the result if equal to the home team won else it is the away team
 
