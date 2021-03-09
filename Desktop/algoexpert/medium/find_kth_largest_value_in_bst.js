@@ -64,7 +64,7 @@ function reverseInOrderTraverse(node, k, treeInfo) {
     reverseInOrderTraverse(node.right, k, treeInfo);
     if (treeInfo.numberOfNodesVisited < k) { //check if we have not visited k nodes
         treeInfo.numberOfNodesVisited++; //iterate
-        treeInfo.latestVisitedNodeValue = node.value; 
-        reverseInOrderTraverse(node.left, k, treeInfo);
+        treeInfo.latestVisitedNodeValue = node.value; //once found the value at the kth node
+        reverseInOrderTraverse(node.left, k, treeInfo); //we found our answer
     }
 }
