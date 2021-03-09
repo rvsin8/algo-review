@@ -27,7 +27,7 @@
 //space complexity 
 //O(1) no extra storage, everything is in place
 
-function shifLinkedList(head, k) {
+function shiftLinkedList(head, k) {
     let listLength = 1; //our counter
     let listTail = head; //our current node
     while (listTail.next !== null) { //aslong as the list tail is not none
