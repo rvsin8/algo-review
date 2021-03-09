@@ -59,12 +59,12 @@ function findKthLargestValueInBst(tree, k) {
 }
 
 function reverseInOrderTraverse(node, k, treeInfo) {
-    if (node === null || treeInfo.numbeOfNodesVisited >= k) return; //
+    if (node === null || treeInfo.numbeOfNodesVisited >= k) return; //base case 
 
     reverseInOrderTraverse(node.right, k, treeInfo);
-    if (treeInfo.numberOfNodesVisited < k) {
-        treeInfo.numberOfNodesVisited++;
-        treeInfo.latestVisitedNodeValue = node.value;
+    if (treeInfo.numberOfNodesVisited < k) { //check if we have not visited k nodes
+        treeInfo.numberOfNodesVisited++; //iterate
+        treeInfo.latestVisitedNodeValue = node.value; 
         reverseInOrderTraverse(node.left, k, treeInfo);
     }
 }
