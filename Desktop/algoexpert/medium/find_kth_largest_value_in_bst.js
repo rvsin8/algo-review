@@ -2,6 +2,11 @@
 //Binary Search Tree
 
 //my understanding 
+//we get two inputs, the first one is the root node of our bt and another integer k
+//k=3 --> 17 bc its the third largest value
+//all our nodes in our binary search tree will be represented by a class and our nodes will have a left and right node and a value
+//K will always be <= to the total nodes
+//
 
 //time complexity 
 //O(h + k)
@@ -15,6 +20,7 @@ class BST {
         this.left = null;
         this.right = null;
     }
+
 }
 
 class TreeInfo {
