@@ -17,6 +17,12 @@
 //this solution is O(N) space and time bc we need to traverse through every node in our bst
 
 //my solution 
+//we should go the opposite way --> right visit left
+//we will get an ordered that is in descending order 
+//we start at 15 go to the right to 20 then to 22 and add 22 to our list --> [22]
+//then go revisit 20 and add it --> [22,20]
+//then go to the left and add 17 --> [22,20,17] our k=3 and we have found the third largest node
+
 
 
 //time complexity 
