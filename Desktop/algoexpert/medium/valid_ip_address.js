@@ -25,9 +25,21 @@ function validIPAddresses(string) {
             for (let k = j + 1; k < j + Math.min(string.length - j, 4); k++) {
                 currentIPAddressParts[2] = string.slice(j,k);
                 currentIPAddressParts[3] = string.slice(k);
+
+                if (isValidAtPosition(currentIPAddressParts[2]) && isValidPart(currentIPAddressParts[3])) {
+                    ipAddressesFound.push(currentIPAddressParts.join('.'));
+                }
             }
         }
 
 
     }
+    return ipAddressesFound;
+}
+
+function isValidPart(string) {
+    const stringAsInt = parseInt(string);
+    if (stringAsInt > 255) return false;
+
+    return string.length === stringAsInt.toString().length;
 }
