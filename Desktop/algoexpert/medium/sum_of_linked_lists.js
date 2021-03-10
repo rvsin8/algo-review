@@ -16,4 +16,7 @@ function sumOfLinkedLists(linkedListOne, linkedListTwo) {
 
     let nodeOne = linkedListOne;
     let nodeTwo = linkedListTwo;
+    while (nodeOne !== null || nodeTwo !== null || carry !== 0) {
+        
+    }
 }
