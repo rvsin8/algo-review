@@ -20,7 +20,10 @@
 //2 + 9 = 1 and a carry of 1 to the next column 
 //4 + 4 + 1 = 9
 //we will keep track of the carry
-//
+//have a linked list node like dummy = Node(0) to point to the head of our linked list 
+//currentNode = dummy
+//we need to keep track of the nodes we have added
+//we will loop through both linked lists via two pointers.
 
 
 //time complexity
