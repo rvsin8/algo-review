@@ -28,6 +28,12 @@
 //dummy.next will lead us to the next head
 //value --> 4 + 4 % 10 = 8 + 1 = 9
 //carry --> 4 + 4 % 10 = 0
+//update this --> dummy = Node(0) currentNode = Node(9) and carry = 0
+//value = 7 + 5 % 10 = 2 
+//carry = 7 + 5 % 10 = 1
+//dummy = Node(0) currentNode = Node(2) and carry = 1
+//no more linked list 2 we hit null 
+//we assume the rest of linked list 2 is 0
 //
 
 
