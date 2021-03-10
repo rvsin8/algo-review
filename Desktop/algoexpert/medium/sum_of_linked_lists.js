@@ -4,6 +4,11 @@
 //my understandings 
 //we are given two linked lists that represent positive values and add them together
 //out output will be a new linked list of the sum 
+//range of integers 0-9
+//the first digit of our linked list the least significant and the last digit is the most so 2 --> 4 --> 7 --> 1 is 1742
+//9 --> 4 --> 5 is 549
+//output linked list 549 + 1742 = 2291 which will look like 1 --> 9 --> 2 --> 2
+
 
 //time complexity
 //O(max(n,m))
