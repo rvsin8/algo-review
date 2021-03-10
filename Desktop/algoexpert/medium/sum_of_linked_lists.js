@@ -34,11 +34,17 @@
 //dummy = Node(0) currentNode = Node(2) and carry = 1
 //no more linked list 2 we hit null 
 //we assume the rest of linked list 2 is 0
+//value = 1 + 0 + 1 = 2 % 10 = 2
+//carry = 1 + 0 % 10 = 0
+//dummy = Node(0) currentNode = Node(2) and carry = 0
+//we need to return this linked list from the dummy node 
+//LL1: 9
+//LL2: 7
 //
 
 
 //time complexity
-//O(max(n,m))
+//O(max(n,m)) bc the longest linked list dictates this where n is linked list 1 and m is linked list 2
 
 //space complexity 
 //O(max(n,m))
