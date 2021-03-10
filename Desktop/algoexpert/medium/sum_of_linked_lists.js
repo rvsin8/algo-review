@@ -2,6 +2,8 @@
 //Linked Lists
 
 //my understandings 
+//we are given two linked lists that represent positive values and add them together
+//out output will be a new linked list of the sum 
 
 //time complexity
 //O(max(n,m))
