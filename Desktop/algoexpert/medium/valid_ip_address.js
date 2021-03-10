@@ -23,7 +23,8 @@ function validIPAddresses(string) {
             if (!isValidPart(currentIPAddressParts[1])) continue;
 
             for (let k = j + 1; k < j + Math.min(string.length - j, 4); k++) {
-                
+                currentIPAddressParts[2] = string.slice(j,k);
+                currentIPAddressParts[3] = string.slice(k);
             }
         }
 
