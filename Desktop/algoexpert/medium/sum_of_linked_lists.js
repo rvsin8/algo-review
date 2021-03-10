@@ -26,6 +26,10 @@ function sumOfLinkedLists(linkedListOne, linkedListTwo) {
         currentNode.next = newNode;
         currentNode = newNode;
 
-        
+        carry = Math.floor(sumofValues / 10);
+        nodeOne = nodeOne !== null ? nodeOne.next : null;
+        nodeTwo = nodeTwo !== null ? nodeTwo.next : null;
     }
+
+    return newLinkedListHeadPointer.next;
 }
