@@ -12,6 +12,10 @@
 //every linked list will have a next and value attribute 
 //next attribute points to another linked list node or none/null
 //value attribute will be between 0-9 and always positive 
+//this is an O(m + n) m is the first ll and n is the second ll and maybe have the same space complexity by keeping tracking of all of the digits
+
+//my solution
+//
 
 
 //time complexity
