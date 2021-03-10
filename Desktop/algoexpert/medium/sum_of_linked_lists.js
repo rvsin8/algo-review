@@ -9,3 +9,6 @@
 //space complexity 
 //O(max(n,m))
 
+function sumOfLinkedLists(linkedListOne, linkedListTwo) {
+    
+}
