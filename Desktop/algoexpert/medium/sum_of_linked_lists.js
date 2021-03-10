@@ -24,7 +24,9 @@
 //currentNode = dummy
 //we need to keep track of the nodes we have added
 //we will loop through both linked lists via two pointers
-//
+//value = (2+9) % 10 = 1
+//carry = (2+9) % 10 = 1
+
 
 
 //time complexity
