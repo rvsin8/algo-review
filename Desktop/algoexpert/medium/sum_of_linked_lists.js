@@ -15,6 +15,11 @@
 //this is an O(m + n) m is the first ll and n is the second ll and maybe have the same space complexity by keeping tracking of all of the digits
 
 //my solution
+//we will create the output before we figure out what the input is 
+//we add numbers via ones columns, then tens then thousands and etc
+//2 + 9 = 1 and a carry of 1 to the next column 
+//4 + 4 + 1 = 9
+//we will keep track of the carry
 //
 
 
