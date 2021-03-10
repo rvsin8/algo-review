@@ -8,6 +8,10 @@
 //the first digit of our linked list the least significant and the last digit is the most so 2 --> 4 --> 7 --> 1 is 1742
 //9 --> 4 --> 5 is 549
 //output linked list 549 + 1742 = 2291 which will look like 1 --> 9 --> 2 --> 2
+//it needs to be a brand new linked list and that we are not modifying any linked list we have already 
+//every linked list will have a next and value attribute 
+//next attribute points to another linked list node or none/null
+//value attribute will be between 0-9 and always positive 
 
 
 //time complexity
