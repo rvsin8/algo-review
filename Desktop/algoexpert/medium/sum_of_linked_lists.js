@@ -56,8 +56,8 @@ function sumOfLinkedLists(linkedListOne, linkedListTwo) {
     let nodeOne = linkedListOne; // going to be a head node
     let nodeTwo = linkedListTwo; // going to be a head node
     while (nodeOne !== null || nodeTwo !== null || carry !== 0) { //if we have a carry, node1 or node 2 - keep looping
-        const valueOne = nodeOne !== null ? nodeOne.value : 0;
-        const valueTwo = nodeTwo !== null ? nodeTwo.value : 0;
+        const valueOne = nodeOne !== null ? nodeOne.value : 0; //make sure we have a node to grab a value from even if its 0
+        const valueTwo = nodeTwo !== null ? nodeTwo.value : 0; //make sure we have a node to grab a value from even if its 0
         const sumofValues = valueOne + valueTwo + carry;
 
         const newValue = sumofValues % 10;
