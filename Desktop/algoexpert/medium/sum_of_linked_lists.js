@@ -17,6 +17,15 @@ function sumOfLinkedLists(linkedListOne, linkedListTwo) {
     let nodeOne = linkedListOne;
     let nodeTwo = linkedListTwo;
     while (nodeOne !== null || nodeTwo !== null || carry !== 0) {
+        const valueOne = nodeOne !== null ? nodeOne.value : 0;
+        const valueTwo = nodeTwo !== null ? nodeTwo.value : 0;
+        const sumofValues = valueOne + valueTwo + carry;
+
+        const newValue = sumofValues % 10;
+        const newNode = new LinkedList(newValue);
+        currentNode.next = newNode;
+        currentNode = newNode;
+
         
     }
 }
