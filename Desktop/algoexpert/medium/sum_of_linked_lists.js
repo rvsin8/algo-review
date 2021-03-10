@@ -40,14 +40,13 @@
 //we need to return this linked list from the dummy node 
 //LL1: 9
 //LL2: 7
-//
 
 
 //time complexity
 //O(max(n,m)) bc the longest linked list dictates this where n is linked list 1 and m is linked list 2
 
 //space complexity 
-//O(max(n,m))
+//O(max(n,m)) 
 
 function sumOfLinkedLists(linkedListOne, linkedListTwo) {
     const newLinkedListHeadPointer = new linkedListOne(0);
