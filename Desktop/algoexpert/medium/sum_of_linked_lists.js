@@ -49,13 +49,13 @@
 //O(max(n,m)) 
 
 function sumOfLinkedLists(linkedListOne, linkedListTwo) {
-    const newLinkedListHeadPointer = new linkedListOne(0);
-    let currentNode = newLinkedListHeadPointer;
-    let carry = 0;
+    const newLinkedListHeadPointer = new linkedListOne(0); //dummy node, where we can access the head of our linked list
+    let currentNode = newLinkedListHeadPointer; //so we can set the next node to the head node
+    let carry = 0; //initialize 
 
-    let nodeOne = linkedListOne;
-    let nodeTwo = linkedListTwo;
-    while (nodeOne !== null || nodeTwo !== null || carry !== 0) {
+    let nodeOne = linkedListOne; // going to be a head node
+    let nodeTwo = linkedListTwo; // going to be a head node
+    while (nodeOne !== null || nodeTwo !== null || carry !== 0) { //if we have a carry, node1 or node 2 - keep looping
         const valueOne = nodeOne !== null ? nodeOne.value : 0;
         const valueTwo = nodeTwo !== null ? nodeTwo.value : 0;
         const sumofValues = valueOne + valueTwo + carry;
