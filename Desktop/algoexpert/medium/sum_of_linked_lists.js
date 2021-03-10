@@ -18,7 +18,6 @@
 //we will create the output before we figure out what the input is 
 //we add numbers via ones columns, then tens then thousands and etc
 //2 + 9 % 10 = 1 and a carry of 1 to the next column we mod it so we can carry it over
-//4 + 4 + 1 = 9
 //we will keep track of the carry
 //have a linked list node like dummy = Node(0) to point to the head of our linked list 
 //currentNode = dummy
@@ -26,7 +25,10 @@
 //we will loop through both linked lists via two pointers
 //value = (2+9) % 10 = 1
 //carry = (2+9) % 10 = 1
-
+//dummy.next will lead us to the next head
+//value --> 4 + 4 % 10 = 8 + 1 = 9
+//carry --> 4 + 4 % 10 = 0
+//
 
 
 //time complexity
