@@ -48,8 +48,8 @@
 //space complexity 
 //O(max(n,m)) 
 
-function sumOfLinkedLists(linkedListOne, linkedListTwo) {
-    const newLinkedListHeadPointer = new linkedListOne(0); //dummy node, where we can access the head of our linked list
+function sumOfLinkedLists(linkedListOne, inkedListTwo) {
+    const newLinkedListHeadPointer = new LinkedList(0); //dummy node, where we can access the head of our linked list
     let currentNode = newLinkedListHeadPointer; //so we can set the next node to the head node
     let carry = 0; //initialize 
 
