@@ -61,9 +61,9 @@ function sumOfLinkedLists(linkedListOne, linkedListTwo) {
         const sumofValues = valueOne + valueTwo + carry; //we need to get the sum of every digit in ll1 and ll2 plus a carry if there is any
 
         const newValue = sumofValues % 10; //our new value in our new ll, mod 10 to handle the carry
-        const newNode = new LinkedList(newValue);//
-        currentNode.next = newNode;
-        currentNode = newNode;
+        const newNode = new LinkedList(newValue);//added to our ll
+        currentNode.next = newNode; //whatever the current node is will be linked to the next node
+        currentNode = newNode; //update 
 
         carry = Math.floor(sumofValues / 10);
         nodeOne = nodeOne !== null ? nodeOne.next : null;
