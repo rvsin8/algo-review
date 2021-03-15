@@ -9,8 +9,17 @@
 //we can use two for loops but its not optimal for a time point of view
 //a better way may be a hash table, may cost extra space but will make our time complexity better 
 //we can create a hash table and traverse our array and at each number we stop at see if it equals our target num
-//we can have targetSum = 10, and have currentNum = x and find y, where x + y = 10
-//
+//we can have targetSum = 10, and have currentNum = x and find y, where x + y = 10 or y = 10 - x
+//if y is in our hash table, we return x and y.
+//we start at 3, y = 10 - 3 --> 7
+//then 5, 10 - 5 --> y = 5
+//next is 10 - (-4) = 14
+//hash table right now --> {3 = true, 5 = true, 4 = true}
+//10 - 8 = 2
+//10 - 11 = -1 
+//10 - 1 = 9
+//10 - (-1) = 11 it is in our hash table so return [11, -1]
+//hashtable = {3 = true, 5 = true, -4 = true, 8 = true, 11 = true, 1 = true}
 
 //time complexity 
 //O(nlog(n))
