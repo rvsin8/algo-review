@@ -20,6 +20,8 @@
 //10 - 1 = 9
 //10 - (-1) = 11 it is in our hash table so return [11, -1]
 //hashtable = {3 = true, 5 = true, -4 = true, 8 = true, 11 = true, 1 = true}
+//O(n) time bc we traverse our array once and calculate for y
+//O(n) space bc we are adding values to our hash table 
 
 //time complexity 
 //O(nlog(n))
