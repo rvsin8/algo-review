@@ -37,9 +37,9 @@
 //O(1)
 
 function twoNumberSum(array, targetSum) {
-    array.sort((a,b) => a - b);
-    let left = 0;
-    let right = array.length - 1;
+    array.sort((a,b) => a - b);//sort the array in ascending order 
+    let left = 0;//declare left pointer to our first idx
+    let right = array.length - 1; //right pointer in our last idx
     while (left < right) {
         const currentSum = array[left] + array[right];
         if (currentSum === targetSum) {
