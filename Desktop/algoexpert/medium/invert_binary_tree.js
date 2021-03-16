@@ -16,11 +16,12 @@
 //space O(N) we add every node to our queue 
 
 //time complexity
-//O(n)
+//O(n) n is the nodes in our tree, we explore every node 
 
 //space complexity 
-//O(d)
+//O(d) d for the depth of our tree can also be log(n) //look into more details
 
+//recursive solution
 function invertBinaryTree(tree) {
     if (tree === null) return;
     swapLeftAndRight(tree);
