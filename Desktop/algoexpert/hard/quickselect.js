@@ -15,6 +15,12 @@
 //9 is > 8 and we can swap that with 3 where our right pointer is
 //[8,5,2,3,7,6,9], 3
 //now our left pointer is at 7 and right pointer is at 6 which are both smaller than 9
+//now the left pointer is at 9 our final num in the array
+//swap the pivot with the right idx and we get
+//[6,5,2,3,7,8,9], 3
+//with quickselect we don't care about sorting the array we just care about the kth smallest num
+//since our pivot num was 8 and it is at idx 5 we know its not our third smallest number bc it is not in idx 3
+//since idx5 is > idx2 so we can disregard idx5 and idx6 bc they are > 8 and it is not our kth smallest num
 //
 
 
