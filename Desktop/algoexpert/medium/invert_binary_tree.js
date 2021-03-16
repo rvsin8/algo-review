@@ -23,13 +23,13 @@
 
 //recursive solution
 function invertBinaryTree(tree) {
-    if (tree === null) return;
-    swapLeftAndRight(tree);
-    invertBinaryTree(tree.left);
-    invertBinaryTree(tree.right);
+    if (tree === null) return; //base case if the tree is none then just return
+    swapLeftAndRight(tree); //other call our helper function 
+    invertBinaryTree(tree.left); //make first recursive call
+    invertBinaryTree(tree.right); //make second recursive call
 }
 
-function swapLeftAndRight(tree) {
+function swapLeftAndRight(tree) { //swap helper function
     const left = tree.left;
     tree.left = tree.right;
     tree.right = left;
