@@ -56,11 +56,11 @@ function twoNumberSum(array, targetSum) {
 //space O(n)
 
 function twoNumberSum(array, targetSum) {
-    const nums = {};
-    for (const num of array) {
-        const potentialMatch = targetSum - num;
-        if (potentialMatch in nums) {
-            return [potentialMatch, num];
+    const nums = {}; //initialize hash table
+    for (const num of array) { //iterate through our array
+        const potentialMatch = targetSum - num; //the difference will be our potential match
+        if (potentialMatch in nums) { //if our potential match is found in our hash table
+            return [potentialMatch, num]; //then return the num and the potential match we found the answer
         } else {
             nums[num] = true;
         }
