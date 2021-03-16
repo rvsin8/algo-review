@@ -24,7 +24,9 @@
 //so on 
 
 //time complexity 
-//O(1)
+//O(1) the size will be at most 12 and our cpu takes 32 bits so we will only generate 2^32 --> O(2^32) will be O(1)
+//we can only represent 0-255 --> 256 which is 8 bits and 8 * 4periods = 32 bits
+//idk if i chatted just now
 
 //space complexity 
 //O(1)
