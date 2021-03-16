@@ -62,8 +62,8 @@ function twoNumberSum(array, targetSum) {
         if (potentialMatch in nums) { //if our potential match is found in our hash table
             return [potentialMatch, num]; //then return the num and the potential match we found the answer
         } else {
-            nums[num] = true;
+            nums[num] = true; //else add the num to our hash table and set it to true
         }
     }
-    return [];
+    return []; //if nothing is found just return an empty array
 }
