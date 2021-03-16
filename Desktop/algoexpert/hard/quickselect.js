@@ -8,6 +8,13 @@
 //all the nums less than the pivot num would be to the left and greater than would be to its right
 //since the nums in the array are randomized we usually just use the first num as a pivot in this case its 8
 //[8,5,2,9,7,6,3], 3
+//8 is our pivot, L idx will be one position to the right and the right pointer to the end
+//if the left pointer is smaller we leave it at its position and move on
+//then look at the right pointer and if it smaller than 8 then we need to swap it so we leave it there for now
+//back to left pointer we are 2 which is less than 8 so we move on to 9
+//9 is > 8 and we can swap that with 3 where our right pointer is
+//[8,5,2,3,7,6,9], 3
+//now our left pointer is at 7 and right pointer is at 6 which are both smaller than 9
 //
 
 
