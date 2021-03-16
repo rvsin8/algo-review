@@ -8,6 +8,11 @@
 //space complexity 
 //O(1)
 
+function quickselect(array, k) {
+    const position = k - 1;
+    return quickselectHelper(array, 0, array.length - 1, position);
+}
+
 function quickselectHelper(array, startIdx, endIdx, position) {
     while (true) {
         if (startIdx > endIdx) {
