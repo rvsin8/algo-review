@@ -26,6 +26,11 @@
 //so we look at our left pointer which is 5 and it is < 6 so we move to the next ele which is 2
 //we look at our right pointer which is 7 and it is > 6 so we move the right pointer to 3
 //2 is also smaller than 6 so now it overlaps with the right pointer
+//3 is smaller than 6 so we need to swap 3 bc its above the right pointer and < 3
+//move the left to the right as it passes the right pointer so a swap happens
+//[3,5,2,6,7,8,9], 3 --> 6 is now in its proper place and so is 7 so we discard this and everything to the right
+//now try again via [3,5,2]
+//
 
 
 
