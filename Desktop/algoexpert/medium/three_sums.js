@@ -8,3 +8,7 @@
 
 //space complexity 
 //O(n)
+
+function threeNumberSum(array, targetSum) {
+    
+}
