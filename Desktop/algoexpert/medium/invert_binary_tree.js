@@ -37,17 +37,17 @@ function swapLeftAndRight(tree) {
 
 //iterative solution 
 function invertBinaryTree(tree) {
-    const queue = [tree];
-    while (queue.length) {
-        const current = queue.shift();
-        if (current === null) continue;
-        swapLeftAndRight(current);
-        queue.push(current.left);
-        queue.push(current.right);
+    const queue = [tree]; //an array that holds our root node
+    while (queue.length) { //as long as the queue is not empty
+        const current = queue.shift();  //our current node will be the first node in the queue which follows a first in first out rule
+        if (current === null) continue; //if our current node is none aka leaf node
+        swapLeftAndRight(current); //otherwise call our helper function 
+        queue.push(current.left); //we want to add its children nodes to the queue
+        queue.push(current.right); //we want to add its children nodes to the queue
     }
 }
 
-function swapLeftAndRight(tree) {
+function swapLeftAndRight(tree) { //swap helper function
     const left = tree.left;
     tree.left = tree.right;
     tree.right = left;
