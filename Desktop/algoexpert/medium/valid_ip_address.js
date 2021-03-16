@@ -2,6 +2,10 @@
 //Strings
 
 //my understanding 
+//given a input string that contains digits and be at most length 12
+//we need to see how many IP address we can create with the string 
+//a valid IP address is one where we can insert any three periods in the string
+//
 
 //time complexity 
 //O(1)
