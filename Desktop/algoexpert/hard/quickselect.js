@@ -37,10 +37,9 @@
 //base case is when we have one ele and we have 5 in position idx2 and we found out answer
 
 
-
 //time complexity 
-//O(n) best and avg
-//O(n^2) worst 
+//O(n) best and avg --> where n is the length of the input array
+//O(n^2) worst  --> the pivot will divide our array into one tiny subarray and one huge subarray
 
 //space complexity 
 //O(1)
