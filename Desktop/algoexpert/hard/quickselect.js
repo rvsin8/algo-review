@@ -52,12 +52,12 @@ function quickselect(array, k) {
 function quickselectHelper(array, startIdx, endIdx, position) { //helper method 
     while (true) { //use a while loop bc this is a iterative solution that uses constant space
         if (startIdx > endIdx) { //if at any point our startidx is > our ending idx then something has gone wrong
-            throw new Error('Your algorithm should never arrive here!');
+            throw new Error('Your algorithm should never arrive here!'); //raise an exception
         }
 
-        const pivotIdx = startIdx;
-        let leftIdx = startIdx + 1;
-        let rightIdx = endIdx;
+        const pivotIdx = startIdx; //our pivot is our first idx
+        let leftIdx = startIdx + 1; //left would begin one ele after our pivot 
+        let rightIdx = endIdx; //last num in the array
         while (leftIdx <= rightIdx) {
             if (array[leftIdx] > array[pivotIdx] && array[rightIdx] < array[pivotIdx]) {
                 swap(leftIdx, rightIdx, array);
