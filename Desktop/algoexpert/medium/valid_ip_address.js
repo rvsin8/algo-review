@@ -8,6 +8,10 @@
 //has to have 3 periods
 //create 4 sections and must be num values btw 0-255
 //cannot lead with 0 for example no 192.168.00.1 but can have 192.168.0.1
+//has to have at-least 4 digits and cannot pass 12 digits
+//return an empty list if criteria is not met
+//solution is easy to come up with but hard to code
+
 
 //time complexity 
 //O(1)
