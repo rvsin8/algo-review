@@ -10,7 +10,10 @@
 //we can also do it recursively 
 //we want to initialize a queue bc we want to traverse it level by level from root to the children - level by level 
 //traverse in breadth first search manner
-//
+//we start at 1 and we will swap the two child nodes 
+//need to watch video for visuals
+//time O(N) n id the nodes in our tree, we explore every node 
+//space O(N) we add every node to our queue 
 
 //time complexity
 //O(n)
