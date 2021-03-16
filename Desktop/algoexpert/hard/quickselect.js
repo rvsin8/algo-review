@@ -13,5 +13,20 @@ function quickselectHelper(array, startIdx, endIdx, position) {
         if (startIdx > endIdx) {
             throw new Error('Your algorithm should never arrive here!');
         }
+
+        const pivotIdx = startIdx;
+        let leftIdx = startIdx + 1;
+        let rightIdx = endIdx;
+        while (leftIdx <= rightIdx) {
+            if (array[leftIdx] > array[pivotIdx] && array[rightIdx] < array[pivotIdx]) {
+                swap(leftIdx, rightIdx, array);
+            }
+            if (array[leftIdx] <= array[pivotIdx]) {
+                leftIdx++;
+            }
+            if (array[rightIdx] >= array[pivotIdx]) {
+                rightIdx--;
+            }
+        }
     }
 }
