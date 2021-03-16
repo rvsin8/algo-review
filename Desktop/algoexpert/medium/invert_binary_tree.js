@@ -4,8 +4,10 @@
 //my understanding
 
 //time complexity
+//O(n)
 
 //space complexity 
+//O(d)
 
 function invertBinaryTree(tree) {
     if (tree === null) return;
