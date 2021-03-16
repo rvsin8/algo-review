@@ -39,19 +39,19 @@
 
 //time complexity 
 //O(n) best and avg --> where n is the length of the input array
-//O(n^2) worst  --> the pivot will divide our array into one tiny subarray and one huge subarray
+//O(n^2) worst  --> the pivot will divide our array into one tiny subarray and one huge subarray //look into this in details 
 
 //space complexity 
 //O(1)
 
 function quickselect(array, k) {
-    const position = k - 1;
-    return quickselectHelper(array, 0, array.length - 1, position);
+    const position = k - 1; //handle off by one errors
+    return quickselectHelper(array, 0, array.length - 1, position); //just call our helper
 }
 
-function quickselectHelper(array, startIdx, endIdx, position) {
-    while (true) {
-        if (startIdx > endIdx) {
+function quickselectHelper(array, startIdx, endIdx, position) { //helper method 
+    while (true) { //use a while loop bc this is a iterative solution that uses constant space
+        if (startIdx > endIdx) { //if at any point our startidx is > our ending idx then something has gone wrong
             throw new Error('Your algorithm should never arrive here!');
         }
 
