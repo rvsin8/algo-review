@@ -70,12 +70,12 @@ function quickselectHelper(array, startIdx, endIdx, position) { //helper method
             }
         }
         swap(pivotIdx, rightIdx, array); //we can swap the pivot num and the right num
-        if (rightIdx === position) {
-            return array[rightIdx];
-        } else if (rightIdx < position) {
-            startIdx = rightIdx + 1;
+        if (rightIdx === position) { //if right idx == position
+            return array[rightIdx]; //we are done we have found the kth smallest num
+        } else if (rightIdx < position) { //otherwise if the right pointer is < pos
+            startIdx = rightIdx + 1; //we update our starting idx to be right idx + 1
         } else {
-            endIdx = rightIdx - 1;
+            endIdx = rightIdx - 1; //update our ending idx
         }
     }
 }
