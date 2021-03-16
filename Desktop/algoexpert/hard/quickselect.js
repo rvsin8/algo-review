@@ -30,7 +30,11 @@
 //move the left to the right as it passes the right pointer so a swap happens
 //[3,5,2,6,7,8,9], 3 --> 6 is now in its proper place and so is 7 so we discard this and everything to the right
 //now try again via [3,5,2]
-//
+//pivot is 3, left is 5 and right is 2
+//5 > 3 left and 2 < 3 right so we swap --> [3,2,5] 
+//now the two pointer pass each other and we do a final pivot --> [2,3,5,6,7,8,9]
+//is 3 the 3rd smallest number, it is not but its pos 2 is less than pos 3 so now we completely eliminate the left side --> [5]
+//base case is when we have one ele and we have 5 in position idx2 and we found out answer
 
 
 
