@@ -18,7 +18,10 @@
 //1.9.216.80 is valid so we got one valid IP address
 //we need to move the first two periods bc they can be in other positions
 //1.92.16.80 is a valid IP address
-//
+//now we got every possible options for 1.
+//no we try 19.21.6.80 is a valid option 
+//19.21.68.0 is also valid 
+//so on 
 
 //time complexity 
 //O(1)
