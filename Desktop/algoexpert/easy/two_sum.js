@@ -23,6 +23,9 @@
 //O(n) time bc we traverse our array once and calculate for y
 //O(n) space bc we are adding values to our hash table 
 
+//optimal solution 
+//
+
 //time complexity 
 //O(nlog(n))
 
