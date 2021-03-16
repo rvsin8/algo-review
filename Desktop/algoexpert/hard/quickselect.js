@@ -58,18 +58,18 @@ function quickselectHelper(array, startIdx, endIdx, position) { //helper method
         const pivotIdx = startIdx; //our pivot is our first idx
         let leftIdx = startIdx + 1; //left would begin one ele after our pivot 
         let rightIdx = endIdx; //last num in the array
-        while (leftIdx <= rightIdx) {
-            if (array[leftIdx] > array[pivotIdx] && array[rightIdx] < array[pivotIdx]) {
-                swap(leftIdx, rightIdx, array);
+        while (leftIdx <= rightIdx) { //while the left is smaller and equal to the right idx
+            if (array[leftIdx] > array[pivotIdx] && array[rightIdx] < array[pivotIdx]) { //if the left pointer is > pivot and the right pointer is < pivot
+                swap(leftIdx, rightIdx, array); //then its time to swap values 
             }
-            if (array[leftIdx] <= array[pivotIdx]) {
-                leftIdx++;
+            if (array[leftIdx] <= array[pivotIdx]) { //if at any time the value of the left pointer is <= to our pivot
+                leftIdx++; //keep iterating 
             }
-            if (array[rightIdx] >= array[pivotIdx]) {
-                rightIdx--;
+            if (array[rightIdx] >= array[pivotIdx]) { //if at any time the value of the right pointer is greater /equal to our array we iterate backwards 
+                rightIdx--; //backwards 
             }
         }
-        swap(pivotIdx, rightIdx, array);
+        swap(pivotIdx, rightIdx, array); //we can swap the pivot num and the right num
         if (rightIdx === position) {
             return array[rightIdx];
         } else if (rightIdx < position) {
@@ -80,7 +80,7 @@ function quickselectHelper(array, startIdx, endIdx, position) { //helper method
     }
 }
 
-function swap(i, j, array) {
+function swap(i, j, array) { //regular swap method 
     const temp = array[j];
     array[j] = array[i];
     array[i] = temp;
