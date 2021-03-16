@@ -32,12 +32,12 @@
 //O(1)
 
 function validIPAddresses(string) {
-    const ipAddressesFound = [];
+    const ipAddressesFound = []; //our array we store our valid IP address in
 
-    for (let i = 0; i < Math.min(string.length, 4); i++) {
-        const currentIPAddressParts = ['', '', '', ''];
+    for (let i = 0; i < Math.min(string.length, 4); i++) { //we use 4 as the minimum so we can see 1-4 pos and we have math.min for idx error
+        const currentIPAddressParts = ['', '', '', '']; //stores an empty list, it has 4 strings in it - keeps track our ip address
 
-        currentIPAddressParts[0] = string.slice(0,i);
+        currentIPAddressParts[0] = string.slice(0,i); //define first part of our IP Address
         if (!isValidPart(currentIPAddressParts[0])) continue;
 
         for (let j = i + 1; j < i + Math.min(string.length - i, 4); j++) {
@@ -59,9 +59,9 @@ function validIPAddresses(string) {
     return ipAddressesFound;
 }
 
-function isValidPart(string) {
-    const stringAsInt = parseInt(string);
-    if (stringAsInt > 255) return false;
+function isValidPart(string) { //helper method for valid ip addresses
+    const stringAsInt = parseInt(string); //convert it as a int so we know if its btw 0-255
+    if (stringAsInt > 255) return false; //if is greater than 255 return false
 
-    return string.length === stringAsInt.toString().length;
+    return string.length === stringAsInt.toString().length; //return the string version and get rid of any leading 0's when we do this conversion
 }
