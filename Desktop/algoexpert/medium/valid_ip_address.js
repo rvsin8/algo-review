@@ -14,7 +14,11 @@
 //we see where we cna put periods and see if the string is valid afterwards
 //we need to check first section and see if its valid and in the range and then we store it and continue on
 //we can only place these periods in specific places bc we dont want it to be too many or too less
-
+//so 1.9.21.680 is invalid bc 680 > 255
+//1.9.216.80 is valid so we got one valid IP address
+//we need to move the first two periods bc they can be in other positions
+//1.92.16.80 is a valid IP address
+//
 
 //time complexity 
 //O(1)
