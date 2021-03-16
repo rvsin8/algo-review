@@ -1,8 +1,18 @@
 //Quick Select
 //Searching 
 
+//my understanding 
+//very similar to quicksort 
+//we get an array of integers and a kth value, we need to find the kth smallest value
+//quicksort - at random we pick a pivot and then have the rest of the arrays in order
+//all the nums less than the pivot num would be to the left and greater than would be to its right
+//since the nums in the array are randomized we usually just use the first num as a pivot in this case its 8
+//[8,5,2,9,7,6,3], 3
+//
+
+
 //time complexity 
-//O(n) best
+//O(n) best and avg
 //O(n^2) worst 
 
 //space complexity 
