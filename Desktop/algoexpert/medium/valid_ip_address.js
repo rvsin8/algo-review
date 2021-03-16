@@ -38,13 +38,13 @@ function validIPAddresses(string) {
         const currentIPAddressParts = ['', '', '', '']; //stores an empty list, it has 4 strings in it - keeps track our ip address
 
         currentIPAddressParts[0] = string.slice(0,i); //define first part of our IP Address
-        if (!isValidPart(currentIPAddressParts[0])) continue;
+        if (!isValidPart(currentIPAddressParts[0])) continue; //if it not valid then we continue 
 
-        for (let j = i + 1; j < i + Math.min(string.length - i, 4); j++) {
-            currentIPAddressParts[1] = string.slice(i,j);
-            if (!isValidPart(currentIPAddressParts[1])) continue;
+        for (let j = i + 1; j < i + Math.min(string.length - i, 4); j++) { //second period with another for loop, we put the period one position after the first one and we have math.min for idx error
+            currentIPAddressParts[1] = string.slice(i,j); //second part of our ip address, idx i is our first period and j is our second period
+            if (!isValidPart(currentIPAddressParts[1])) continue; //if it is not valid then continue 
 
-            for (let k = j + 1; k < j + Math.min(string.length - j, 4); k++) {
+            for (let k = j + 1; k < j + Math.min(string.length - j, 4); k++) { //period 3 same as above
                 currentIPAddressParts[2] = string.slice(j,k);
                 currentIPAddressParts[3] = string.slice(k);
 
