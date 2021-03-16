@@ -40,15 +40,17 @@ function twoNumberSum(array, targetSum) {
     array.sort((a,b) => a - b);//sort the array in ascending order 
     let left = 0;//declare left pointer to our first idx
     let right = array.length - 1; //right pointer in our last idx
-    while (left < right) {
-        const currentSum = array[left] + array[right];
-        if (currentSum === targetSum) {
-            return [array[left], array[right]];
-    } else if (currentSum < targetSum) {
-        left++;
-    } else if (currentSum > targetSum) {
-        right--;
-    } }
+    while (left < right) { //aslong as the pointers do not overlap
+        const currentSum = array[left] + array[right]; //the current sum will be the sum of the left and right pointers 
+        if (currentSum === targetSum) { //if the current sum is our target sum
+            return [array[left], array[right]]; //then we found our answer
+        } else if (currentSum < targetSum) { //otherwise if our current sum is less than our target then we iterate left
+            left++;
+        } else if (currentSum > targetSum) { //if the current sum is greater than the target sum then we iterate right
+            right--;
+        } 
+    }
+    return [];
 }
 
 //more optimal
