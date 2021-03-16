@@ -5,7 +5,9 @@
 //given a input string that contains digits and be at most length 12
 //we need to see how many IP address we can create with the string 
 //a valid IP address is one where we can insert any three periods in the string
-//
+//has to have 3 periods
+//create 4 sections and must be num values btw 0-255
+//cannot lead with 0 for example no 192.168.00.1 but can have 192.168.0.1
 
 //time complexity 
 //O(1)
