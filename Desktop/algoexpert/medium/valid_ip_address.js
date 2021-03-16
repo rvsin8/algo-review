@@ -45,18 +45,18 @@ function validIPAddresses(string) {
             if (!isValidPart(currentIPAddressParts[1])) continue; //if it is not valid then continue 
 
             for (let k = j + 1; k < j + Math.min(string.length - j, 4); k++) { //period 3 same as above
-                currentIPAddressParts[2] = string.slice(j,k);
-                currentIPAddressParts[3] = string.slice(k);
+                currentIPAddressParts[2] = string.slice(j,k);//these define our third and fourth section
+                currentIPAddressParts[3] = string.slice(k); //recheck this
 
-                if (isValidAtPosition(currentIPAddressParts[2]) && isValidPart(currentIPAddressParts[3])) {
-                    ipAddressesFound.push(currentIPAddressParts.join('.'));
+                if (isValidAtPosition(currentIPAddressParts[2]) && isValidPart(currentIPAddressParts[3])) { //if period 3 and 4 are valid
+                    ipAddressesFound.push(currentIPAddressParts.join('.')); //add this to our solutions array
                 }
             }
         }
 
 
     }
-    return ipAddressesFound;
+    return ipAddressesFound; //return our final answer
 }
 
 function isValidPart(string) { //helper method for valid ip addresses
