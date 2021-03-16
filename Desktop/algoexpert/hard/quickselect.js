@@ -38,3 +38,9 @@ function quickselectHelper(array, startIdx, endIdx, position) {
         }
     }
 }
+
+function swap(i, j, array) {
+    const temp = array[j];
+    array[j] = array[i];
+    array[i] = temp;
+}
