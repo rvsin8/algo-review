@@ -11,6 +11,9 @@
 //has to have at-least 4 digits and cannot pass 12 digits
 //return an empty list if criteria is not met
 //solution is easy to come up with but hard to code
+//we see where we cna put periods and see if the string is valid afterwards
+//we need to check first section and see if its valid and in the range and then we store it and continue on
+//we can only place these periods in specific places bc we dont want it to be too many or too less
 
 
 //time complexity 
