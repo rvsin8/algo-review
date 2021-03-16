@@ -21,7 +21,12 @@
 //with quickselect we don't care about sorting the array we just care about the kth smallest num
 //since our pivot num was 8 and it is at idx 5 we know its not our third smallest number bc it is not in idx 3
 //since idx5 is > idx2 so we can disregard idx5 and idx6 bc they are > 8 and it is not our kth smallest num
-//
+//we move our right pointer to the left to 7 and left pointer to the right of the first num which is 5 bc our pivot is 0
+//[6,5,2,3,7], 3
+//so we look at our left pointer which is 5 and it is < 6 so we move to the next ele which is 2
+//we look at our right pointer which is 7 and it is > 6 so we move the right pointer to 3
+//2 is also smaller than 6 so now it overlaps with the right pointer
+
 
 
 //time complexity 
