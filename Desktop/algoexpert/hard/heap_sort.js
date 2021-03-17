@@ -2,6 +2,9 @@
 //Sorting
 
 //my understandings
+//you are given an array of nums and the goal is to sort it in ascending order
+//divide your array into 2 subarrays, one will be unsorted and the other subarray will be sorted
+//
 
 //time complexity 
 //O(nlog(n))
