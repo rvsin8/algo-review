@@ -2,6 +2,9 @@
 //Arrays
 
 //my understandings 
+//find all the possible triplets that sum up to the target sum
+//[12,3,1,2,-6,5,-8,6], 0
+//
 
 //time complexity 
 //O(n^2)
