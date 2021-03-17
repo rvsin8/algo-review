@@ -42,14 +42,14 @@ function threeNumberSort(array, order) {
     let secondIdx = 0; //second pointer to keep track of the indices where the values are stored
     let thirdIdx = array.length - 1; //third pointer to keep track of the indices where the values are stored
 
-    while (secondIdx <= thirdIdx) {
-        const value = array[secondIdx];
+    while (secondIdx <= thirdIdx) { //while the sec idx does not overlap the third
+        const value = array[secondIdx]; //capture the value of our array to the second idx
 
-        if (value === firstValue) {
-            swap(firstIdx, secondIdx, array);
-            firstIdx++;
-            secondIdx++;
-        } else if (value === secondValue) {
+        if (value === firstValue) { //if the value equals the firstvalue 
+            swap(firstIdx, secondIdx, array); //then swap values at first and second idx
+            firstIdx++; //keep going right
+            secondIdx++; //keep going right 
+        } else if (value === secondValue) { //
             secondIdx++;
         } else {
             swap(secondIdx, thirdIdx, array);
@@ -59,7 +59,7 @@ function threeNumberSort(array, order) {
     return array;
 }
 
-function swap(i, j, array) {
+function swap(i, j, array) { //helper methods for swapping
     const temp = array[j];
     array[j] = array[i];
     array[i] = temp;
