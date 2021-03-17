@@ -7,7 +7,10 @@
 //[1,0,0,-1,-1,0,1,1]
 //order = [0,1,-1]
 //must not use any auxillary space so mutate the original input array
-
+//naive approach using bucket sort 
+//we will keep track of how mnay 0,1 and -1 we see
+//3 O's, 3 1's, 2 -1's
+//
 
 //time complexity 
 //O(n)
@@ -15,6 +18,7 @@
 //space complexity 
 //O(1)
 
+//naive approach 
 function threeNumberSort(array, order) {
     const valueCounts = [0,0,0];
 
