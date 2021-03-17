@@ -4,8 +4,11 @@
 //my understanding 
 //we will build a suffix trie through "babc"
 //mark every end of a suffix of a tree via "*"
-//
-//
+//need to implement a search to find a string in the suffix trie
+//every node at the suffix trie will be a key in a hash table
+//we will start with a branch coming off our root node to another node labeled b
+//move to another node after our 'b' node with letter a
+
 
 //time complexity 
 //O(n^2)
