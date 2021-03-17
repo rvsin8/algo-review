@@ -9,3 +9,10 @@
 //space complexity 
 //O(n^2)
 
+class SuffixTrie {
+    constructor(string) {
+        this.root = {};
+        this.endSymbol = '*';
+        this.populateSuffixTrieFrom(string);
+    }
+}
