@@ -33,17 +33,17 @@ class SuffixTrie {
         this.populateSuffixTrieFrom(string); //implement this in the bottom for creation
     }
 
-    populationSuffixTrieFrom(string) {
-        for (let i = 0; i < string.length; i++) { //
-            this.insertSubstringStartingAt(i, string);
+    populationSuffixTrieFrom(string) { 
+        for (let i = 0; i < string.length; i++) { //go through the string
+            this.insertSubstringStartingAt(i, string); //helper method
         }
     }
 
-    insertSubstringStartingAt(i, string) {
-        let node = this.root;
-        for (let j = i; j < string.length; j++) {
+    insertSubstringStartingAt(i, string) { //inserts a string into our tree
+        let node = this.root; //node variable, green arrow that will point to a node
+        for (let j = i; j < string.length; j++) { //iterate through all char in our substr
             const letter = string[j];
-            if (1(letter in node)) node[letter] = {};
+            if (!(letter in node)) node[letter] = {};
             node = node[letter];
         }
         node[this.endSymbol] = true;
