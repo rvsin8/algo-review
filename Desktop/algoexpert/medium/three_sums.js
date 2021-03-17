@@ -20,10 +20,10 @@
 //so on
 
 //time complexity 
-//O(n^2)
+//O(n^2) where n is the length of our input array, we iterate through and we do things with each num whether its adding or comparing
 
 //space complexity 
-//O(n)
+//O(n) we store the triplets 
 
 function threeNumberSum(array, targetSum) {
     array.sort((a,b) => a - b);
