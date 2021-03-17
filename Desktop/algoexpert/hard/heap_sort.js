@@ -17,3 +17,10 @@ function heapSort(array) {
     }
     return array;
 }
+
+function buildMaxHeap(array) {
+    const firstParentIdx = Math.floor((array.length - 2) / 2);
+    for (let currentIdx = firstParentIdx; currentIdx >= 0; currentIdx--) {
+        siftDown(currentIdx, array.length - 1, array);
+    }
+}
