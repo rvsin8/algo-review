@@ -10,6 +10,10 @@
 //we start with -8
 //have a left pointer one ele ahead of -8 at -6
 //have a right pointer at the end of the array at 12
+//currentSum = currentNum + leftNum + rightNum
+//CS = CN + L + R
+//CS = -8 + -6 + 12 = -2 nope, since it less than our target num 0 so if we move our left pointer by 1 we are guaranteed to have a bigger sum
+//CS = 
 
 //time complexity 
 //O(n^2)
