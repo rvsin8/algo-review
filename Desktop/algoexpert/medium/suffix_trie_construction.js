@@ -10,9 +10,14 @@
 //move to another node after our 'b' node with letter a until we get a branch like b-a-b-c-*
 //go back to the root node, is a in the root node ? no just b so now we add a new branch start with the node 'a
 //then we continue building that tree; a-b-c-*
-//the next letter is b and we alreayd have a b from the root node so now go down back to the b branch 
+//the next letter is b and we already have a b from the root node so now go down back to the b branch 
 //next letter is c, does this b branch have a child ndoe c ? no so we add --> b-c-*
 //lastly we arrive at c and our root node does not have a c --> c-*
+//imagine we add a suffix "abd" we would just add d to a-b and get a-b-d-*
+//"abdf" --> a-b-d-f-*
+//if we are looking for babc is a suffix of our original string
+//what about bab ? --> its a prefix not a suffix so we should not find it bc we can find bab but it has no asterik after
+
 
 //time complexity 
 //O(n^2)
