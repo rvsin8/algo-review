@@ -31,4 +31,14 @@ class SuffixTrie {
         }
         node[this.endSymbol] = true;
     }
+
+    //O(m) time | O(1) space
+    contains(string) {
+        let node = this.root;
+        for (const letter of string) {
+            if (!(letter in node)) return false;
+            node = node[letter];
+        }
+        return this.endSymbol in node;
+    }
 }
