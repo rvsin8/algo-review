@@ -16,4 +16,11 @@ function threeNumberSort(array, order) {
         const orderIdx = prder.indexOf(element);
         valueCounts[orderIdx]++;
     }
+
+    for (let idx = 0; idx < 3; idx++) {
+        const value = order[idx];
+        const count = valueCounts[idx];
+
+        
+    }
 }
