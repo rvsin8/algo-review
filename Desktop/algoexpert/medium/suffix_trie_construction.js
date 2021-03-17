@@ -42,9 +42,9 @@ class SuffixTrie {
     insertSubstringStartingAt(i, string) { //inserts a string into our tree
         let node = this.root; //node variable, green arrow that will point to a node
         for (let j = i; j < string.length; j++) { //iterate through all char in our substr
-            const letter = string[j];
-            if (!(letter in node)) node[letter] = {};
-            node = node[letter];
+            const letter = string[j]; //represent our second green arrow
+            if (!(letter in node)) node[letter] = {}; //if the letter is not in the current node
+            node = node[letter]; //
         }
         node[this.endSymbol] = true;
     }
