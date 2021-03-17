@@ -26,9 +26,9 @@
 //O(n) we store the triplets 
 
 function threeNumberSum(array, targetSum) {
-    array.sort((a,b) => a - b);
-    const triplets = [];
-    for (let i = 0; i < array.length - 2; i++) {
+    array.sort((a,b) => a - b); //we want to sort the array in ascending order
+    const triplets = []; //where we store our triplets 
+    for (let i = 0; i < array.length - 2; i++) { //iterate 
         let left = i + 1;
         let right = array.length - 1;
         while (left < right) {
