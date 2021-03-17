@@ -28,13 +28,13 @@
 
 class SuffixTrie {
     constructor(string) {
-        this.root = {};
-        this.endSymbol = '*';
-        this.populateSuffixTrieFrom(string);
+        this.root = {}; //hash table
+        this.endSymbol = '*'; //asteriks at the end of every suffix
+        this.populateSuffixTrieFrom(string); //implement this in the bottom for creation
     }
 
     populationSuffixTrieFrom(string) {
-        for (let i = 0; i < string.length; i++) {
+        for (let i = 0; i < string.length; i++) { //
             this.insertSubstringStartingAt(i, string);
         }
     }
