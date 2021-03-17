@@ -33,14 +33,14 @@
 //space complexity 
 //O(1)
 
-
+//most optimal solution
 function threeNumberSort(array, order) {
-    const firstValue = order[0];
-    const secondValue = order[1];
+    const firstValue = order[0]; //define first value
+    const secondValue = order[1]; //define second value 
 
-    let firstIdx = 0;
-    let secondIdx = 0;
-    let thirdIdx = array.length - 1;
+    let firstIdx = 0; //first pointer to keep track of the indices where the values are stored
+    let secondIdx = 0; //second pointer to keep track of the indices where the values are stored
+    let thirdIdx = array.length - 1; //third pointer to keep track of the indices where the values are stored
 
     while (secondIdx <= thirdIdx) {
         const value = array[secondIdx];
