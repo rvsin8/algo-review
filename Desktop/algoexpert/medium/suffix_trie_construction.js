@@ -7,8 +7,12 @@
 //need to implement a search to find a string in the suffix trie
 //every node at the suffix trie will be a key in a hash table
 //we will start with a branch coming off our root node to another node labeled b
-//move to another node after our 'b' node with letter a
-
+//move to another node after our 'b' node with letter a until we get a branch like b-a-b-c-*
+//go back to the root node, is a in the root node ? no just b so now we add a new branch start with the node 'a
+//then we continue building that tree; a-b-c-*
+//the next letter is b and we alreayd have a b from the root node so now go down back to the b branch 
+//next letter is c, does this b branch have a child ndoe c ? no so we add --> b-c-*
+//lastly we arrive at c and our root node does not have a c
 
 //time complexity 
 //O(n^2)
