@@ -41,4 +41,14 @@ function threeNumberSort(array, order) {
     let firstIdx = 0;
     let secondIdx = 0;
     let thirdIdx = array.length - 1;
+
+    while (secondIdx <= thirdIdx) {
+        const value = array[secondIdx];
+
+        if (value === firstValue) {
+            swap(firstIdx, secondIdx, array);
+            firstIdx++;
+            secondIdx++;
+        }
+    }
 }
