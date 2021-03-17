@@ -8,6 +8,8 @@
 //a heap is not a sorted ds, but it has a root value must be the greatest value in the entire value same goes for min heap
 //heaps can be represented as arrays
 //max heap --> [9,8,6,5,5,2,3]
+//swap the 9 with the final value of the array which is 3
+//
 
 //time complexity 
 //O(nlog(n))
