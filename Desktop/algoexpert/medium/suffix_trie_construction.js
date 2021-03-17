@@ -21,4 +21,14 @@ class SuffixTrie {
             this.insertSubstringStartingAt(i, string);
         }
     }
+
+    insertSubstringStartingAt(i, string) {
+        let node = this.root;
+        for (let j = i; j < string.length; j++) {
+            const letter = string[j];
+            if (1(letter in node)) node[letter] = {};
+            node = node[letter];
+        }
+        node[this.endSymbol] = true;
+    }
 }
