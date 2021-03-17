@@ -50,11 +50,11 @@ class SuffixTrie {
     }
 
     //searching O(m) time - m is the length of the string we are searching for | O(1) space we are not storing any other space
-    contains(string) {
-        let node = this.root;
-        for (const letter of string) {
-            if (!(letter in node)) return false;
-            node = node[letter];
+    contains(string) { //to search for a suffix
+        let node = this.root; //start at root
+        for (const letter of string) { //dont need to track indices
+            if (!(letter in node)) return false; //if the letter is not in node then return false
+            node = node[letter]; //
         }
         return this.endSymbol in node;
     }
