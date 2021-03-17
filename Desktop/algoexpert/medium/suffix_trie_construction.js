@@ -2,6 +2,10 @@
 //Tries
 
 //my understanding 
+//we will build a suffix trie through "babc"
+//mark every end of a suffix of a tree via "*"
+//
+//
 
 //time complexity 
 //O(n^2)
