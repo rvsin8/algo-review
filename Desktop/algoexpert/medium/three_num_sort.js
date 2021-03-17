@@ -21,6 +21,9 @@
 //where we should insert our elements 
 //f/s are at idx1 and t is at last idx
 //we start wt the first idx which is 1 and since it is not in order we move the second pointer to the right
+//s is now at 0 and we swap f and s --> [0,1,0,-1,-1,0,1,1]
+//we move s again to 0 and f is now at 1 and we do another swap --> [0,0,1,-1,-1,0,1,1]
+//s is at -1 which belongs to our third pointer so swap it with t --> [0,0,1,1,-1,0,1,-1]
 
 
 //time complexity 
