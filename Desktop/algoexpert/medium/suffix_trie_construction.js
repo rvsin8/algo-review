@@ -21,9 +21,10 @@
 
 //time complexity for creation
 //O(n^2) n is the length of the input string we do a double for loop bc we iterate through the suffix's and then their characters
+//we are performing constant time operations
 
 //space complexity for creation
-//O(n^2)
+//O(n^2) 
 
 class SuffixTrie {
     constructor(string) {
