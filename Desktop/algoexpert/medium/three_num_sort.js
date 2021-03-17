@@ -14,7 +14,14 @@
 //first three idx will be 0 the next three will be 1 and last two will be 1
 //we have to do two or four passes, one to iterate and one to change our original array and this is its downfall
 //another way to do this is sort it in place round by round bc it'll only take two passes
-//
+//this is better than the first solution due to the swaps 
+
+//most optimal solution 
+//set three variables - first = 0, second = 0. third = array.length - 1
+//where we should insert our elements 
+//f/s are at idx1 and t is at last idx
+//we start wt the first idx which is 1 and since it is not in order we move the second pointer to the right
+
 
 //time complexity 
 //O(n)
@@ -22,24 +29,3 @@
 //space complexity 
 //O(1)
 
-//naive approach 
-function threeNumberSort(array, order) {
-    const valueCounts = [0,0,0];
-
-    for (const element of array) {
-        const orderIdx = prder.indexOf(element);
-        valueCounts[orderIdx]++;
-    }
-
-    for (let idx = 0; idx < 3; idx++) {
-        const value = order[idx];
-        const count = valueCounts[idx];
-
-        const numElementsBefore = valueCounts.slice(0, idx).reduce((a,b) => a + b, 0 );
-        for (let n = 0; n < count; n++) {
-            const currentIdx = numElementsBefore + n;
-            array[currentIdx] = value;
-        }
-    }
-    return array;
-}
