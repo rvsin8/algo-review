@@ -4,7 +4,10 @@
 //my understandings
 //you are given an array of nums and the goal is to sort it in ascending order
 //divide your array into 2 subarrays, one will be unsorted and the other subarray will be sorted
-//
+//the unsorted subarray will be a max heap
+//a heap is not a sorted ds, but it has a root value must be the greatest value in the entire value same goes for min heap
+//heaps can be represented as arrays
+//max heap --> [9,8,6,5,5,2,3]
 
 //time complexity 
 //O(nlog(n))
