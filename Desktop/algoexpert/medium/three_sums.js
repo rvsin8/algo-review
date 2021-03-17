@@ -28,10 +28,10 @@
 function threeNumberSum(array, targetSum) {
     array.sort((a,b) => a - b); //we want to sort the array in ascending order
     const triplets = []; //where we store our triplets 
-    for (let i = 0; i < array.length - 2; i++) { //iterate 
-        let left = i + 1;
-        let right = array.length - 1;
-        while (left < right) {
+    for (let i = 0; i < array.length - 2; i++) { //iterate //-2 bc we are looking for triplets and our last current number aka first num has to be third last since we have two others
+        let left = i + 1; //the idx to the rigth of i
+        let right = array.length - 1; //final idx of the array 
+        while (left < right) { //while they do not overlap 
             const currentSum = array[i] + array[left] + array[right];
             if (currentSum === targetSum) {
                 triplets.push([array[i], array[left], array[right]]);
