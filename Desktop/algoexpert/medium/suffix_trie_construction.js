@@ -15,4 +15,10 @@ class SuffixTrie {
         this.endSymbol = '*';
         this.populateSuffixTrieFrom(string);
     }
+
+    populationSuffixTrieFrom(string) {
+        for (let i = 0; i < string.length; i++) {
+            this.insertSubstringStartingAt(i, string);
+        }
+    }
 }
