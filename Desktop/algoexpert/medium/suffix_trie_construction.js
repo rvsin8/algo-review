@@ -19,10 +19,10 @@
 //what about bab ? --> its a prefix not a suffix so we should not find it bc we can find bab but it has no asterik after
 
 
-//time complexity 
-//O(n^2)
+//time complexity for creation
+//O(n^2) n is the length of the input string we do a double for loop bc we iterate through the suffix's and then their characters
 
-//space complexity 
+//space complexity for creation
 //O(n^2)
 
 class SuffixTrie {
@@ -48,7 +48,7 @@ class SuffixTrie {
         node[this.endSymbol] = true;
     }
 
-    //O(m) time | O(1) space
+    //searching O(m) time - m is the length of the string we are searching for | O(1) space we are not storing any other space
     contains(string) {
         let node = this.root;
         for (const letter of string) {
