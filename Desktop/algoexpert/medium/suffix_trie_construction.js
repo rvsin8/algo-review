@@ -43,10 +43,10 @@ class SuffixTrie {
         let node = this.root; //node variable, green arrow that will point to a node
         for (let j = i; j < string.length; j++) { //iterate through all char in our substr
             const letter = string[j]; //represent our second green arrow
-            if (!(letter in node)) node[letter] = {}; //if the letter is not in the current node
-            node = node[letter]; //
+            if (!(letter in node)) node[letter] = {}; //if the letter is not in the current node then we have an empty hash
+            node = node[letter]; //can be an existing node or one we just created
         }
-        node[this.endSymbol] = true;
+        node[this.endSymbol] = true; //end of a string is true
     }
 
     //searching O(m) time - m is the length of the string we are searching for | O(1) space we are not storing any other space
