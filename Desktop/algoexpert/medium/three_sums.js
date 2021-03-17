@@ -16,6 +16,8 @@
 //CS = -8 + 1 + 12 = 5 nope, since it is greater than our target num we need to move our right pointer to the left by 1
 //CS = -8 + 1 + 6 = -1 nope, we move our left pointer to the right 
 //CS = -8 + 2 + 6 = 0 yes !
+//when they overlap we are done with this round of iteration
+//so on
 
 //time complexity 
 //O(n^2)
