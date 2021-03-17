@@ -33,7 +33,7 @@ class SuffixTrie {
         this.populateSuffixTrieFrom(string); //implement this in the bottom for creation
     }
 
-    populationSuffixTrieFrom(string) { 
+    populateSuffixTrieFrom(string) { 
         for (let i = 0; i < string.length; i++) { //go through the string
             this.insertSubstringStartingAt(i, string); //helper method
         }
