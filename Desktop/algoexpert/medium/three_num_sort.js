@@ -49,6 +49,12 @@ function threeNumberSort(array, order) {
             swap(firstIdx, secondIdx, array);
             firstIdx++;
             secondIdx++;
+        } else if (value === secondValue) {
+            secondIdx++;
+        } else {
+            swap(secondIdx, thirdIdx, array);
+            thirdIdx -= 1;
         }
     }
+    return array;
 }
