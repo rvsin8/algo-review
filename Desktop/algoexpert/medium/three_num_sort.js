@@ -2,6 +2,8 @@
 //Sorting
 
 //my understanding 
+//given an input array that contains integers
+//another array that contains three unique values
 
 //time complexity 
 //O(n)
