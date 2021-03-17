@@ -25,7 +25,7 @@
 //we move s again to 0 and f is now at 1 and we do another swap --> [0,0,1,-1,-1,0,1,1]
 //s is at -1 which belongs to our third pointer so swap it with t --> [0,0,1,1,-1,0,1,-1], while moving t back
 //s moves to another -1 and we do the same thing and swap with t
-//so on until we have the solution
+//so on until we have the solution and that happens when s surpasses t
 
 //time complexity 
 //O(n)
@@ -33,3 +33,12 @@
 //space complexity 
 //O(1)
 
+
+function threeNumberSort(array, order) {
+    const firstValue = order[0];
+    const secondValue = order[1];
+
+    let firstIdx = 0;
+    let secondIdx = 0;
+    let thirdIdx = array.length - 1;
+}
