@@ -4,6 +4,8 @@
 //my understandings
 
 //time complexity 
+//O(nlog(n))
 
 //space complexity 
+//O(nlog(n))
 
