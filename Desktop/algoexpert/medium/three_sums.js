@@ -32,18 +32,18 @@ function threeNumberSum(array, targetSum) {
         let left = i + 1; //the idx to the rigth of i
         let right = array.length - 1; //final idx of the array 
         while (left < right) { //while they do not overlap 
-            const currentSum = array[i] + array[left] + array[right];
-            if (currentSum === targetSum) {
-                triplets.push([array[i], array[left], array[right]]);
-                left++;
-                right--;
-            } else if (currentSum < targetSum) {
-                left++;
-            } else if (currentSum > targetSum) {
-                right--;
+            const currentSum = array[i] + array[left] + array[right]; //add our three integers to get current sum
+            if (currentSum === targetSum) { //if it equals our target sum
+                triplets.push([array[i], array[left], array[right]]); //then add this to our triplets array
+                left++; //increment left
+                right--; //decrement right
+            } else if (currentSum < targetSum) { //if the current sum is less than the target
+                left++; //move left pointer to the right 
+            } else if (currentSum > targetSum) { //if the current sum is greater than the target sum
+                right--; //decrement right pointer to the left
             }
         }
     }
-    return triplets;
+    return triplets; //return the triplets 
 
 }
