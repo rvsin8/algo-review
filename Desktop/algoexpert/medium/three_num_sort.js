@@ -10,6 +10,10 @@
 //naive approach using bucket sort 
 //we will keep track of how mnay 0,1 and -1 we see
 //3 O's, 3 1's, 2 -1's
+//0,0,0,1,1,1,-1,-1
+//first three idx will be 0 the next three will be 1 and last two will be 1
+//we have to do two or four passes, one to iterate and one to change our original array and this is its downfall
+//another way to do this is sort it in place round by round bc it'll only take two passes
 //
 
 //time complexity 
