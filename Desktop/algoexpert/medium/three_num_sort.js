@@ -4,6 +4,10 @@
 //my understanding 
 //given an input array that contains integers
 //another array that contains three unique values
+//[1,0,0,-1,-1,0,1,1]
+//order = [0,1,-1]
+//must not use any auxillary space so mutate the original input array
+
 
 //time complexity 
 //O(n)
