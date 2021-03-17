@@ -12,7 +12,7 @@
 //then we continue building that tree; a-b-c-*
 //the next letter is b and we alreayd have a b from the root node so now go down back to the b branch 
 //next letter is c, does this b branch have a child ndoe c ? no so we add --> b-c-*
-//lastly we arrive at c and our root node does not have a c
+//lastly we arrive at c and our root node does not have a c --> c-*
 
 //time complexity 
 //O(n^2)
