@@ -49,14 +49,14 @@ function threeNumberSort(array, order) {
             swap(firstIdx, secondIdx, array); //then swap values at first and second idx
             firstIdx++; //keep going right
             secondIdx++; //keep going right 
-        } else if (value === secondValue) { //
-            secondIdx++;
+        } else if (value === secondValue) { //if the value is equal to the second value
+            secondIdx++; //keep going right bc it is in the correct place 
         } else {
-            swap(secondIdx, thirdIdx, array);
-            thirdIdx -= 1;
+            swap(secondIdx, thirdIdx, array); //swap second and third value at the pointers
+            thirdIdx -= 1; //keep left 
         }
     }
-    return array;
+    return array; //return our sorted array
 }
 
 function swap(i, j, array) { //helper methods for swapping
