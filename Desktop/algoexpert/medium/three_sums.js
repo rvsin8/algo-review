@@ -3,7 +3,7 @@
 
 //my understandings 
 //find all the possible triplets that sum up to the target sum
-//[12,3,1,2,-6,5,-8,6], 0
+//[12,3,1,2,-6,5,-8,6], 0 --> [[-8,2,6], [-8,3,5], [-6,1,5]]
 //
 
 //time complexity 
@@ -24,7 +24,7 @@ function threeNumberSum(array, targetSum) {
                 triplets.push([array[i], array[left], array[right]]);
                 left++;
                 right--;
-            } else if (currentSum < taegetSum) {
+            } else if (currentSum < targetSum) {
                 left++;
             } else if (currentSum > targetSum) {
                 right--;
