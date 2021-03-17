@@ -13,7 +13,9 @@
 //currentSum = currentNum + leftNum + rightNum
 //CS = CN + L + R
 //CS = -8 + -6 + 12 = -2 nope, since it less than our target num 0 so if we move our left pointer by 1 we are guaranteed to have a bigger sum
-//CS = 
+//CS = -8 + 1 + 12 = 5 nope, since it is greater than our target num we need to move our right pointer to the left by 1
+//CS = -8 + 1 + 6 = -1 nope, we move our left pointer to the right 
+//CS = -8 + 2 + 6 = 0 yes !
 
 //time complexity 
 //O(n^2)
