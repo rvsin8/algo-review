@@ -54,8 +54,8 @@ class SuffixTrie {
         let node = this.root; //start at root
         for (const letter of string) { //dont need to track indices
             if (!(letter in node)) return false; //if the letter is not in node then return false
-            node = node[letter]; //
+            node = node[letter]; //update the node and keep traversing down
         }
-        return this.endSymbol in node;
+        return this.endSymbol in node; //to make sure we are dealing with a string in the suffix tree and see if the asteriks is in that suffix to make sure it is a valid string we found
     }
 }
