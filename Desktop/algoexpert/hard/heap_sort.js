@@ -24,3 +24,23 @@ function buildMaxHeap(array) {
         siftDown(currentIdx, array.length - 1, array);
     }
 }
+
+function siftDown(currentIdx, endIdx, heap) {
+    let childOneIdx = currentIdx * 2 + 1;
+    while (childOneIdx <= endIdx) {
+        const childTwoIdx = currentIdx * 2 + 2 <= endIdx ? currentIdx * 2 + 2 : -1;
+        let idxToSwap;
+        if (childTwoIdx !== -1 && heap[childTwoIdx] > heap[childOneIdx]) {
+            idxToSwap = childTwoIdx;
+        } else {
+            idxToSwap = childOneIdx;
+        }
+        if (heap[idxToSwap] > heap[currentIdx]) {
+            swap(currentIdx, idxToSwap, heap);
+            currentIdx = idxToSwap;
+            childOneIdx = currentIdx * 2 + 1;
+        } else {
+            return;
+        }
+    }
+}
