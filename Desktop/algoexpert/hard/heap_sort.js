@@ -16,7 +16,8 @@
 //the logic is that you begin by building a max heap with the array you have and then you continually swap the greatest value of the max heap with last value and then you reposition the new root value via sifting it down
 //sifting --> [6,5,2,3,5,8,9] and swap 6 with 5 --> [5,5,2,3,6,8,9]
 //5 is the largest and swap it with 3 --> [3,5,2,5,6,8,9]
-//reposition the 3 --> [3,5,2,5,6,8,9]
+//reposition the 3 --> [5,3,2,5,6,8,9]
+//swap 5 and 2 --> [2,3,5,5,6,8,9]
 
 //time complexity 
 //O(nlog(n))
