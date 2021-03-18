@@ -35,9 +35,9 @@ function heapSort(array) {
 }
 
 function buildMaxHeap(array) {
-    const firstParentIdx = Math.floor((array.length - 2) / 2);
-    for (let currentIdx = firstParentIdx; currentIdx >= 0; currentIdx--) {
-        siftDown(currentIdx, array.length - 1, array);
+    const firstParentIdx = Math.floor((array.length - 2) / 2);//find the first value that is not a leaf, so a parent node by rounding down
+    for (let currentIdx = firstParentIdx; currentIdx >= 0; currentIdx--) { //in reverse range
+        siftDown(currentIdx, array.length - 1, array); //
     }
 }
 
