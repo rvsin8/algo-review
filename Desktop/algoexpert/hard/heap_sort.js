@@ -26,10 +26,10 @@
 //O(1) we are not storing anything we are doing everything in place
 
 function heapSort(array) {
-    buildMaxHeap(array);
-    for (let endIdx = array.length - 1; endIdx > 0; endIdx--) {
-        swap(0, endIdx, array);
-        siftDown(0, endIdx - 1, array);
+    buildMaxHeap(array); //build a max heap out of this array
+    for (let endIdx = array.length - 1; endIdx > 0; endIdx--) { //for the ending idx of the max heap, reverse order
+        swap(0, endIdx, array); //swap the root and endidx
+        siftDown(0, endIdx - 1, array); //then sift down the array after
     }
     return array;
 }
