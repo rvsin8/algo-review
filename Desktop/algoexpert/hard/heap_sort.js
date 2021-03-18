@@ -20,10 +20,10 @@
 //swap 5 and 2 --> [2,3,5,5,6,8,9]
 
 //time complexity 
-//O(nlog(n))
+//O(nlog(n)) where n is the length of our array 
 
 //space complexity 
-//O(nlog(n))
+//O(1) we are not storing anything we are doing everything in place
 
 function heapSort(array) {
     buildMaxHeap(array);
