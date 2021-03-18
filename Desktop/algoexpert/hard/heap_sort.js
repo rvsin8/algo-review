@@ -51,12 +51,12 @@ function siftDown(currentIdx, endIdx, heap) {
         } else {
             idxToSwap = childOneIdx; //otherwise we can swap idx2
         }
-        if (heap[idxToSwap] > heap[currentIdx]) {
-            swap(currentIdx, idxToSwap, heap);
-            currentIdx = idxToSwap;
-            childOneIdx = currentIdx * 2 + 1;
+        if (heap[idxToSwap] > heap[currentIdx]) { //if our currentNode is out of place bc it is smaller than one of our children node then we will swap them
+            swap(currentIdx, idxToSwap, heap);//idk
+            currentIdx = idxToSwap;//idk
+            childOneIdx = currentIdx * 2 + 1; //idk
         } else {
-            return;
+            return;//idk
         }
     }
 }
@@ -66,3 +66,5 @@ function swap(i, j, array) { //helper swap function
     array[j] = array[i];
     array[i] = temp;
 }
+
+//confused on sifting
