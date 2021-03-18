@@ -61,7 +61,7 @@ function siftDown(currentIdx, endIdx, heap) {
     }
 }
 
-function swap(i, j, array) {
+function swap(i, j, array) { //helper swap function
     const temp = array[j];
     array[j] = array[i];
     array[i] = temp;
