@@ -29,5 +29,12 @@ function sortedSquaredArray(array) {
     let smallerValueIdx = 0;
     let largerValueIdx = array.length - 1;
 
-    
+    for (let idx = array.length - 1; idx >= 0; idx--) {
+        const smallerValue = array[smallerValueIdx];
+        const largerValue = array[largerValueIdx];
+
+        if (Math.abs(smallerValue) > Math.abs(largerValue)) {
+            sort
+        }
+    }
 }
