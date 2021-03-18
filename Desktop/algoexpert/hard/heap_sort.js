@@ -31,7 +31,7 @@ function heapSort(array) {
         swap(0, endIdx, array); //swap the root and endidx
         siftDown(0, endIdx - 1, array); //then sift down the array after
     }
-    return array;
+    return array;//answer
 }
 
 function buildMaxHeap(array) {
