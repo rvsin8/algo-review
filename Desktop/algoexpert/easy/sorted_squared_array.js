@@ -16,5 +16,8 @@ function sortedSquaredArray(array) {
         const value = array[idx];
         sortedSquares[idx] = value * value;
     }
+
+    sortedSquares.sort((a,b) => a - b);
+    return sortedSquares;
 }
 
