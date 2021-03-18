@@ -37,19 +37,19 @@ function heapSort(array) {
 function buildMaxHeap(array) {
     const firstParentIdx = Math.floor((array.length - 2) / 2);//find the first value that is not a leaf, so a parent node by rounding down
     for (let currentIdx = firstParentIdx; currentIdx >= 0; currentIdx--) { //in reverse range
-        siftDown(currentIdx, array.length - 1, array); //
+        siftDown(currentIdx, array.length - 1, array); //we will sift down from currentidx to the final value of the heap/array
     }
 }
 
 function siftDown(currentIdx, endIdx, heap) {
-    let childOneIdx = currentIdx * 2 + 1;
-    while (childOneIdx <= endIdx) {
-        const childTwoIdx = currentIdx * 2 + 2 <= endIdx ? currentIdx * 2 + 2 : -1;
+    let childOneIdx = currentIdx * 2 + 1; //grab the two children nodes and pick the one that should be swapped
+    while (childOneIdx <= endIdx) { //while our first child node is in the heap 
+        const childTwoIdx = currentIdx * 2 + 2 <= endIdx ? currentIdx * 2 + 2 : -1; //we can calculate child2node
         let idxToSwap;
-        if (childTwoIdx !== -1 && heap[childTwoIdx] > heap[childOneIdx]) {
-            idxToSwap = childTwoIdx;
+        if (childTwoIdx !== -1 && heap[childTwoIdx] > heap[childOneIdx]) { //if our second child node exists and is > our first child node
+            idxToSwap = childTwoIdx; //we can swap child2
         } else {
-            idxToSwap = childOneIdx;
+            idxToSwap = childOneIdx; //otherwise we can swap idx2
         }
         if (heap[idxToSwap] > heap[currentIdx]) {
             swap(currentIdx, idxToSwap, heap);
