@@ -19,8 +19,11 @@ function minNumberOfJumps(array) {
         steps--;
         if (steps === 0) {
             jumps++;
+            steps = maxReach - i;
+
         }
     }
+    return jumps + 1;
 }
 
 
