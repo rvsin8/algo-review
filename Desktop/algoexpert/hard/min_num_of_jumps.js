@@ -41,16 +41,16 @@ function minNumberOfJumps(array) {
     let jumps = 0; //set jumps to 0
     let maxReach = array[0]; //set maxreach at idx0 
     let steps = array[0]; //steps begin at idx0
-    for (let i = 1; i < array.length - 1; i++) { //range 
-        maxReach = Math.max(maxReach, i + array[i]); //
-        steps--;
-        if (steps === 0) {
-            jumps++;
-            steps = maxReach - i;
+    for (let i = 1; i < array.length - 1; i++) { //range, we do - 1 bc once we hit the final idx we are done and forget about the last idx
+        maxReach = Math.max(maxReach, i + array[i]); //max value of the current maxreach and i + array[i] idk ??
+        steps--; //reduce steps by 1
+        if (steps === 0) { //if we are out of jumps
+            jumps++; //we add a jump
+            steps = maxReach - i; //how many steps we have until we consume another jump
 
         }
     }
-    return jumps + 1;
+    return jumps + 1; //return our answer 
 }
 
 
