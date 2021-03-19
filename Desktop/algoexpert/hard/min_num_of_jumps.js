@@ -14,6 +14,13 @@ function minNumberOfJumps(array) {
     let jumps = 0;
     let maxReach = array[0];
     let steps = array[0];
+    for (let i = 1; i < array.length - 1; i++) {
+        maxReach = Math.max(maxReach, i + array[i]);
+        steps--;
+        if (steps === 0) {
+            jumps++;
+        }
+    }
 }
 
 
