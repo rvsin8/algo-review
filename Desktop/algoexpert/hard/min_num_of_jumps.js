@@ -25,6 +25,9 @@
 //at each idx we know what the max reach is
 //whenever we iterate through our array we update our maxreach and steps
 //for i in range (1, length of array): we update our maxReach = max (maxReach, array[i] + i) and then steps -= 1 whenever we iterate out array, we update our maxreach but reduce the num of steps we have every time we update
+//if steps == 0 --> add a jumps variable += 1 
+//steps = maxreach - i 
+
 
 //time complexity 
 //O(n)
