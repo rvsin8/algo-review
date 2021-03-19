@@ -13,7 +13,14 @@
 //no sorting algorithm
 //we know the numbers closest to 0 will be the smallest values and those furthest away will be larger values
 //so our largest number can either be our smallest value or our largest for example --> -3,-2,-1,0,1,2,3
-//
+//create a new array and initialize it to the same length of our original array and fill it up with 0
+//we can set pointers to the smallest and largest value 
+//we can take abs value of the smallest and the largest array and compare
+//abs(-9) = 81, abs(12) = 144, 12 > -9 -->[0,0,0,0,0,144]
+//we use these pointers to compare our smallest and largest values
+//abs(-9) > abs(4) --> [0,0,0,0,81,144]
+//so on until we get our sorted array
+
 
 //time complexity 
 //O(nlogn) bc our sorting //n is the num of ele in the input array
