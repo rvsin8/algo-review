@@ -29,15 +29,15 @@
 //O(n) and bc we have a separate array
 
 function sortedSquaredArray(array) {
-    const sortedSquares = new Array(array.length).fill(0);
+    const sortedSquares = new Array(array.length).fill(0); //initialize the array we will return and fill it with 0 
 
-    for (let idx = 0; idx < array.length; idx++) {
-        const value = array[idx];
-        sortedSquares[idx] = value * value;
+    for (let idx = 0; idx < array.length; idx++) { //range
+        const value = array[idx]; //extract the value
+        sortedSquares[idx] = value * value; //square the value
     }
 
-    sortedSquares.sort((a,b) => a - b);
-    return sortedSquares;
+    sortedSquares.sort((a,b) => a - b); //sort the array in sorted order after we square every array
+    return sortedSquares; //return our sorted array
 }
 
 // O(n) time bc we did one traversal
