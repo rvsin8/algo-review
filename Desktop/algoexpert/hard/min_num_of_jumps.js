@@ -23,6 +23,8 @@
 //at each point we know what the max reach is 3
 //at idx1 which is 4 so we know the maxreach is 5 aka 1 + 4
 //at each idx we know what the max reach is
+//whenever we iterate through our array we update our maxreach and steps
+//for i in range (1, length of array): we update our maxReach = max (maxReach, array[i] + i) and then steps -= 1 whenever we iterate out array, we update our maxreach but reduce the num of steps we have every time we update
 
 //time complexity 
 //O(n)
