@@ -27,13 +27,14 @@
 //for i in range (1, length of array): we update our maxReach = max (maxReach, array[i] + i) and then steps -= 1 whenever we iterate out array, we update our maxreach but reduce the num of steps we have every time we update
 //if steps == 0 --> add a jumps variable += 1 
 //steps = maxreach - i 
+//once we hit our final idx return the jumps + 1
 
 
 //time complexity 
-//O(n)
+//O(n) we are iterating once through our array
 
 //space complexity 
-//O(1)
+//O(1) we are not storing anything we are doing everything in place 
 
 function minNumberOfJumps(array) {
     if (array.length === 1) return 0;
