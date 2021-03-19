@@ -12,6 +12,8 @@
 //idx1 which is 4, can we jump from idx j aka first idx to i
 //if array[j] + j >= i we can jump from j to i
 //jumps[i] = minimum { jumps[i] or jumps[j] + 1}
+//j = 0; array[j] = 3, i = 1 --> o + 3 >= 1 and 0 + 1 < infinity so we update the array --> [0,1,inf,inf,inf,inf,inf,inf,inf,inf,inf]
+//
 
 
 
