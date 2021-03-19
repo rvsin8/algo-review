@@ -40,8 +40,8 @@ function sortedSquaredArray(array) {
     return sortedSquares;
 }
 
-// O(n) time 
-// O(n) space 
+// O(n) time bc we did one traversal
+// O(n) space bc we are using a separate array of squared values
 
 function sortedSquaredArray(array) {
     const sortedSquares = new Array(array.length).fill(0);
