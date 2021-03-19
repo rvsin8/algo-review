@@ -44,13 +44,13 @@ function sortedSquaredArray(array) {
 // O(n) space bc we are using a separate array of squared values
 
 function sortedSquaredArray(array) {
-    const sortedSquares = new Array(array.length).fill(0);
-    let smallerValueIdx = 0;
-    let largerValueIdx = array.length - 1;
+    const sortedSquares = new Array(array.length).fill(0); //initialize the array we will return and fill it with 0 
+    let smallerValueIdx = 0; //left pointer
+    let largerValueIdx = array.length - 1; //right pointer
 
-    for (let idx = array.length - 1; idx >= 0; idx--) {
-        const smallerValue = array[smallerValueIdx];
-        const largerValue = array[largerValueIdx];
+    for (let idx = array.length - 1; idx >= 0; idx--) { //range 
+        const smallerValue = array[smallerValueIdx]; //the value at that idx
+        const largerValue = array[largerValueIdx]; //the value at that idx
 
         if (Math.abs(smallerValue) > Math.abs(largerValue)) {
             sortedSquares[idx] = smallerValue + smallerValue;
