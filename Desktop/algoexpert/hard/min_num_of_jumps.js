@@ -8,7 +8,11 @@
 //each integers represent the number of steps you can take forward from that idx
 //given this array, what is the minimum amount of steps we need to take to go from the first idx to the last idx
 //build an array of the same length as our input array and it will represent the minimum num of jumps we'll take from the first idx to that idx
-//
+//idx0 --> 0
+//idx1 which is 4, can we jump from idx j aka first idx to i
+//if array[j] + j >= i we can jump from j to i
+//jumps[i] = minimum { jumps[i] or jumps[j] + 1}
+
 
 
 //time complexity 
