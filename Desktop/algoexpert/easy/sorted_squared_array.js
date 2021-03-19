@@ -11,6 +11,9 @@
 
 //optimal solution
 //no sorting algorithm
+//we know the numbers closest to 0 will be the smallest values and those furthest away will be larger values
+//so our largest number can either be our smallest value or our largest for example --> -3,-2,-1,0,1,2,3
+//
 
 //time complexity 
 //O(nlogn) bc our sorting //n is the num of ele in the input array
