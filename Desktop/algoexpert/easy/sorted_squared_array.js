@@ -6,13 +6,17 @@
 //[1,2,3,5,6,8,9] --> [1,4,9,25,36,64,81]
 //if an array had both negative and positive integers we cannot just traverse and add bc it would not be in order
 //[-3,-1,2,5,10] --> [9,1,4,25,100] the array is NOT sorted
-//
+//the brute force approach we can use is to traverse and compute the values and then sort it and this will always work
+
+
+//optimal solution
+//no sorting algorithm
 
 //time complexity 
-//O(nlogn)
+//O(nlogn) bc our sorting //n is the num of ele in the input array
 
 //space complexity 
-//O(n)
+//O(n) and bc we have a separate array
 
 function sortedSquaredArray(array) {
     const sortedSquares = new Array(array.length).fill(0);
