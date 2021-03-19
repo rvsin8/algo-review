@@ -19,6 +19,10 @@
 //this was O(N) space and O(N^2) time
 
 //optimal solution
+//[3,4,2,1,2,3,7,1,1,1,3] --> 4 jumps
+//at each point we know what the max reach is 3
+//at idx1 which is 4 so we know the maxreach is 5 aka 1 + 4
+//at each idx we know what the max reach is
 
 //time complexity 
 //O(n)
