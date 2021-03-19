@@ -2,6 +2,11 @@
 //Arrays
 
 //my understandings 
+//takes as input of integers in increasing order and give you an output of an array of integers squared in increasing order
+//[1,2,3,5,6,8,9] --> [1,4,9,25,36,64,81]
+//if an array had both negative and positive integers we cannot just traverse and add bc it would not be in order
+//[-3,-1,2,5,10] --> [9,1,4,25,100] the array is NOT sorted
+//
 
 //time complexity 
 //O(nlogn)
