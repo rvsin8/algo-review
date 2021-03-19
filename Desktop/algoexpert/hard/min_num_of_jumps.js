@@ -13,9 +13,9 @@
 //if array[j] + j >= i we can jump from j to i
 //jumps[i] = minimum { jumps[i] or jumps[j] + 1}
 //j = 0; array[j] = 3, i = 1 --> o + 3 >= 1 and 0 + 1 < infinity so we update the array --> [0,1,inf,inf,inf,inf,inf,inf,inf,inf,inf]
-//
-
-
+//j = 1; array[j] = 3, i = 2 --> o + 3 >= 2 and 0 + 1 < infinity so we update the array --> [0,1,1,inf,inf,inf,inf,inf,inf,inf,inf]
+//[0,1,1,2,2,3,inf,inf,inf,inf,inf]
+//im lost 
 
 //time complexity 
 //O(n)
