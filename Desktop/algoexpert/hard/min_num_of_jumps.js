@@ -37,12 +37,12 @@
 //O(1) we are not storing anything we are doing everything in place 
 
 function minNumberOfJumps(array) {
-    if (array.length === 1) return 0;
-    let jumps = 0;
-    let maxReach = array[0];
-    let steps = array[0];
-    for (let i = 1; i < array.length - 1; i++) {
-        maxReach = Math.max(maxReach, i + array[i]);
+    if (array.length === 1) return 0; //one value in the array we return 0
+    let jumps = 0; //set jumps to 0
+    let maxReach = array[0]; //set maxreach at idx0 
+    let steps = array[0]; //steps begin at idx0
+    for (let i = 1; i < array.length - 1; i++) { //range 
+        maxReach = Math.max(maxReach, i + array[i]); //
         steps--;
         if (steps === 0) {
             jumps++;
