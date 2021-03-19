@@ -3,9 +3,13 @@
 
 //my understandings
 //famous interview question
-//[3,4,2,1,2,3,7,1,1,1,3]
+//[3,4,2,1,2,3,7,1,1,1,3] --> 4 jumps
 //give us an array of integers 
 //each integers represent the number of steps you can take forward from that idx
+//given this array, what is the minimum amount of steps we need to take to go from the first idx to the last idx
+//build an array of the same length as our input array and it will represent the minimum num of jumps we'll take from the first idx to that idx
+//
+
 
 //time complexity 
 //O(n)
