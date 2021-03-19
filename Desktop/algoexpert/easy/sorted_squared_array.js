@@ -52,13 +52,13 @@ function sortedSquaredArray(array) {
         const smallerValue = array[smallerValueIdx]; //the value at that idx
         const largerValue = array[largerValueIdx]; //the value at that idx
 
-        if (Math.abs(smallerValue) > Math.abs(largerValue)) {
-            sortedSquares[idx] = smallerValue + smallerValue;
-            smallerValueIdx++;
+        if (Math.abs(smallerValue) > Math.abs(largerValue)) { //if the smaller value abs value squared is larger than the larger value
+            sortedSquares[idx] = smallerValue + smallerValue; //the smaller value goes to the next largest available idx
+            smallerValueIdx++; //move the smallest value aka left pointer right 
         } else {
-            sortedSquares[idx] = largerValue * largerValue;
-            largerValueIdx--;
+            sortedSquares[idx] = largerValue * largerValue; //if not the larger value will take the next available larger value
+            largerValueIdx--;//right pointer moves left
         }
     }
-    return sortedSquares;
+    return sortedSquares; //return our answer
 }
