@@ -2,6 +2,10 @@
 //Dynamic Programming 
 
 //my understandings
+//famous interview question
+//[3,4,2,1,2,3,7,1,1,1,3]
+//give us an array of integers 
+//each integers represent the number of steps you can take forward from that idx
 
 //time complexity 
 //O(n)
