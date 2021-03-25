@@ -15,3 +15,7 @@ function generateDivTags(numberOfTags) {
     generateDivTagsFromPrefix(numberOfTags, numberOfTags, '', matchedDivTags);
     return matchedDivTags;
 }
+
+function generateDivTagsFromPrefix(openingTagsNeeded, closingTagsNeeded, prefix, result) {
+    
+}
