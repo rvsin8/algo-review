@@ -10,7 +10,11 @@
 //we will recursively generate all of the strings
 //we need to start by defining our recursive algo --> rec(prefix, opening, closing)
 //prefix can be anything, opening and closing will tell us how much more we need
-//
+//we will start with our prefix = ", closing is 3, opening is 3"
+//prefix --> "<div<div>", opening -> 1, closing -> 3
+//you can add another opening but now we hav e to add three closing in a row
+//rec(prefix + "<div>", opening - 1, closing)
+//rec(",3,3") --> rec("<div>", 2, 3) --> rec("<div><div>", 1, 3), if opening is less than closed we make another recursive call rec("<div></div>", 1, 3)
 
 //time complexity 
 //O(2n)!/((n!(n+1)))
