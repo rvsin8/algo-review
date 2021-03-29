@@ -28,6 +28,14 @@ function areInterwoven(one, two, three, i, j, cache) {
         cache[i][j] = areInterwoven(one, two, three, i + 1, j, cache);
         if (cache[i][j]) return true;
     }
+
+    if (j < two.length && two[j] === three[k]) {
+        cache[i][j] = areInterwoven(one, two, three, i, j+1, cache);
+        return cache[i][j];
+    }
+
+    cache[i][j] = false;
+    return false;
 }
 
 
