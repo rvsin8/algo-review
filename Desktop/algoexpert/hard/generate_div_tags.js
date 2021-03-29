@@ -6,8 +6,11 @@
 //a div tag is an opening tag and closing tag
 //so if numberoftags = 3, we need three opening and three closing tags
 //we need match tags as well, with every opening tag we need a closing tag to come right after, no two consecutive opening / closing tags
+//more tags more arrangements more hard it gets
+//we will recursively generate all of the strings
+//we need to start by defining our recursive algo --> rec(prefix, opening, closing)
+//prefix can be anything, opening and closing will tell us how much more we need
 //
-
 
 //time complexity 
 //O(2n)!/((n!(n+1)))
