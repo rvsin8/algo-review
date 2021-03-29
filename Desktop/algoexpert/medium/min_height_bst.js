@@ -8,7 +8,9 @@
 //we have an insert method for free
 //height is the length of the longest branch or depth of the deepest node 
 //remember our array is sorted
-//what does it mean for a tree to have minimal height?
+//what does it mean for a tree to have minimal height? means the bst must be as balanced as possible, we need as many nodes in the left as the right
+//we need every node that follows the bst property - for any node, every node to its left that is smaller to its right node, so we need num of greater and number of less than equal to our root node
+//the array being in sorted order tells us which values are smaller or greater than some values
 //
 
 //time complexity 
