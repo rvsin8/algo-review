@@ -14,6 +14,8 @@
 //the middle num in the array will have the same number of greater nums and smaller numbs
 //distinct values help bc dups can make a tree unbalanced bc they can only go on one side
 //insert the middle num which is 10 -->[1,2,5,7,10,13,14,15,22]
+//okay now 10 is our root, what is our left root ? to the left of 10 we have [1,2,5,7] so its either 2 or 5 --> can go either way just keep picking the mid value
+//okay now 10 is our root, what is our right root ? to the left of 10 we have [1,2,5,7] so its either 14 or 15 --> can go either way just keep picking the mid value
 
 //time complexity 
 //O(n)
