@@ -35,16 +35,16 @@ function generateDivTags(numberOfTags) {
 }
 
 function generateDivTagsFromPrefix(openingTagsNeeded, closingTagsNeeded, prefix, result) { //recursive function 
-    if (openingTagesNeeded > 0) { //
-        const newPrefix = prefix + '<div>';
-        generateDivTagsFromPrefix(openingTagsNeeded - 1, closingTagsNeeded - 1, newPrefix, result);
+    if (openingTagesNeeded > 0) { //if the opening tag is still available 
+        const newPrefix = prefix + '<div>'; //we can add an opening tag
+        generateDivTagsFromPrefix(openingTagsNeeded - 1, closingTagsNeeded - 1, newPrefix, result); //recursively call this function with one less opening tag
     }
 
-    if (openingTagsNeeded < closingTagsNeeded) {
-        const newPrefix = prefix + '<div>';
-        generateDivTagsFromPrefix(openingTagsNeeded, closingTagsNeeded - 1, newPrefix, result);
+    if (openingTagsNeeded < closingTagsNeeded) { //if opening tags are less than closoing tags
+        const newPrefix = prefix + '<div>'; //add a closing tag
+        generateDivTagsFromPrefix(openingTagsNeeded, closingTagsNeeded - 1, newPrefix, result); //recursively call this
     }
 
-    if (closingTagsNeeded === 0) result.push(prefix);
+    if (closingTagsNeeded === 0) result.push(prefix); //base case bc if its == 0 we have the entire string
 
 }
