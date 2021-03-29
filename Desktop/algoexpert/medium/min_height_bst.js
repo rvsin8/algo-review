@@ -6,6 +6,10 @@
 //write a function that will return a built bst from the array of integers returning the root of the bst
 //we want to minimize the height of the bst
 //we have an insert method for free
+//height is the length of the longest branch or depth of the deepest node 
+//remember our array is sorted
+//what does it mean for a tree to have minimal height?
+//
 
 //time complexity 
 //O(n)
