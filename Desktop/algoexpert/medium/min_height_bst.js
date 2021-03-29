@@ -11,7 +11,9 @@
 //what does it mean for a tree to have minimal height? means the bst must be as balanced as possible, we need as many nodes in the left as the right
 //we need every node that follows the bst property - for any node, every node to its left that is smaller to its right node, so we need num of greater and number of less than equal to our root node
 //the array being in sorted order tells us which values are smaller or greater than some values
-//
+//the middle num in the array will have the same number of greater nums and smaller numbs
+//distinct values help bc dups can make a tree unbalanced bc they can only go on one side
+//insert the middle num which is 10 -->[1,2,5,7,10,13,14,15,22]
 
 //time complexity 
 //O(n)
