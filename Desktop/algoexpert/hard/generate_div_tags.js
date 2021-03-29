@@ -5,7 +5,8 @@
 //we are going to get one input this input is going to represent how many div tags all our outputs strings must contain
 //a div tag is an opening tag and closing tag
 //so if numberoftags = 3, we need three opening and three closing tags
-//we need match tags as well, with every opening tag we need a closing tag to come right after
+//we need match tags as well, with every opening tag we need a closing tag to come right after, no two consecutive opening / closing tags
+//
 
 
 //time complexity 
