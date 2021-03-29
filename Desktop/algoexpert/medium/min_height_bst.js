@@ -18,20 +18,20 @@
 //okay now 10 is our root, what is our right root ? to the left of 10 we have [1,2,5,7] so its either 14 or 15 --> can go either way just keep picking the mid value
 
 //time complexity 
-//O(n)
+//O(n) pass down the current node we are at and we are manually going to insert the nodes without using the insert method
 
 //space complexity
-//O(n)
+//O(n) n is the length of the array and we will have a bst of length n
 
 function minHeightBst(array) {
-    return constructMinHeightBst(array, 0, array.length - 1);
+    return constructMinHeightBst(array, 0, array.length - 1); //helper
 }
 
-function constructMinHeightBst(array, startIdx, endIdx) {
-    if (endIdx < startIdx) return null;
-    const midIdx = Math.floor((startIdx + endIdx) / 2);
-    const bst = new BST(array[midIdx]);
-    bst.left = constructMinHeightBst(array, startIdx, midIdx - 1);
-    bst.right = constructMinHeightBst(array, midIdx + 1, endIdx);
+function constructMinHeightBst(array, startIdx, endIdx) { //helper function
+    if (endIdx < startIdx) return null; //when the ending idx gets smaller than the starting then we want to break out
+    const midIdx = Math.floor((startIdx + endIdx) / 2); //how to find the middle idx
+    const bst = new BST(array[midIdx]); //creating a new bst starting with the mid idx as the root node
+    bst.left = constructMinHeightBst(array, startIdx, midIdx - 1); //construct the left side
+    bst.right = constructMinHeightBst(array, midIdx + 1, endIdx); //construct the right side
     return bst;
 }
