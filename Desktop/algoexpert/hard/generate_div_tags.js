@@ -17,13 +17,15 @@
 //rec(",3,3") --> rec("<div>", 2, 3) --> rec("<div><div>", 1, 3), if opening is less than closed we make another recursive call rec("<div></div>", 2, 2)
 //rec("<div><div>", 1, 3) --> rec("<div><div><div", 0, 3) 
 //rec("<div><div>", 1, 3) --> rec("<div><div><div></div", 0, 2)
-//so on 
+//so on until we add all the lines in our code
+//we always have to add the opening tags first
+//check if the n um of opening is les than the closing tag that means we must have an opening tag that needs to be matched so we add a closing tag
 
 //time complexity 
-//O(2n)!/((n!(n+1)))
+//O(2n)!/((n!(n+1))) //
 
 //space complexity 
-//O(2n)!/((n!(n+1)))s
+//O(2n)!/((n!(n+1))) //
 
 
 function generateDivTags(numberOfTags) {
