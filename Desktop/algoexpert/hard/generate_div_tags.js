@@ -22,10 +22,10 @@
 //check if the n um of opening is les than the closing tag that means we must have an opening tag that needs to be matched so we add a closing tag
 
 //time complexity 
-//O(2n)!/((n!(n+1))) //
+//O(2n)!/((n!(n+1))) //n is equal to our num of tags //catalan number formula
 
 //space complexity 
-//O(2n)!/((n!(n+1))) //
+//O(2n)!/((n!(n+1))) //catalan number formula
 
 
 function generateDivTags(numberOfTags) {
