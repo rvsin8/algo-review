@@ -14,7 +14,10 @@
 //prefix --> "<div<div>", opening -> 1, closing -> 3
 //you can add another opening but now we hav e to add three closing in a row
 //rec(prefix + "<div>", opening - 1, closing)
-//rec(",3,3") --> rec("<div>", 2, 3) --> rec("<div><div>", 1, 3), if opening is less than closed we make another recursive call rec("<div></div>", 1, 3)
+//rec(",3,3") --> rec("<div>", 2, 3) --> rec("<div><div>", 1, 3), if opening is less than closed we make another recursive call rec("<div></div>", 2, 2)
+//rec("<div><div>", 1, 3) --> rec("<div><div><div", 0, 3) 
+//rec("<div><div>", 1, 3) --> rec("<div><div><div></div", 0, 2)
+//so on 
 
 //time complexity 
 //O(2n)!/((n!(n+1)))
