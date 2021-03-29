@@ -2,6 +2,8 @@
 //Recursion
 
 //my understanding
+//we get three strings and we need to write a function whether the first two strings can be interwoven to be the third string
+
 
 //time complexity
 //O(nm)
