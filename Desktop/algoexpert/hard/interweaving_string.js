@@ -21,7 +21,13 @@ function interweavingStrings(one, two, three) {
 function areInterwoven(one, two, three, i, j, cache) {
     if (cache[i][j] !== null) return cache[i][j];
 
-    
+    const k = i + j;
+    if (k === three.length) return true;
+
+    if (i < one.length && one[i] === three[k]) {
+        cache[i][j] = areInterwoven(one, two, three, i + 1, j, cache);
+        if (cache[i][j]) return true;
+    }
 }
 
 
