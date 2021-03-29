@@ -2,6 +2,10 @@
 //Binary Search Tree
 
 //my understanding 
+//classic bst question
+//write a function that will return a built bst from the array of integers returning the root of the bst
+//we want to minimize the height of the bst
+//we have an insert method for free
 
 //time complexity 
 //O(n)
