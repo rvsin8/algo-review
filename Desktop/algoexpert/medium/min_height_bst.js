@@ -9,3 +9,8 @@
 //space complexity
 //O(n)
 
+function minHeightBst(array) {
+    return constructMinHeightBst(array, 0, array.length - 1);
+}
+
+
