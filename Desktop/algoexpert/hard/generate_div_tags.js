@@ -29,13 +29,13 @@
 
 
 function generateDivTags(numberOfTags) {
-    const matchedDivTags = [];
-    generateDivTagsFromPrefix(numberOfTags, numberOfTags, '', matchedDivTags);
-    return matchedDivTags;
+    const matchedDivTags = []; //empty array
+    generateDivTagsFromPrefix(numberOfTags, numberOfTags, '', matchedDivTags); //helper function
+    return matchedDivTags; //return answer 
 }
 
-function generateDivTagsFromPrefix(openingTagsNeeded, closingTagsNeeded, prefix, result) {
-    if (openingTagesNeeded > 0) {
+function generateDivTagsFromPrefix(openingTagsNeeded, closingTagsNeeded, prefix, result) { //recursive function 
+    if (openingTagesNeeded > 0) { //
         const newPrefix = prefix + '<div>';
         generateDivTagsFromPrefix(openingTagsNeeded - 1, closingTagsNeeded - 1, newPrefix, result);
     }
