@@ -36,5 +36,9 @@ function areInterwoven(one, two, three, i, j, cache) {
         return cache[i][j];
     }
 
+    cache[i][j] = false;
+    return false;
+}
+
 
 
