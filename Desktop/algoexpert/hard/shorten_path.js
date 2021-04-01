@@ -31,3 +31,7 @@ function shortenPath(path) {
     return stack.join('/');
 }
 
+function isImportantToken(token) {
+    return token.length > 0 && token !== '.';
+}
+
