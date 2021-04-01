@@ -34,13 +34,13 @@ function areInterwoven(one, two, three, i, j, cache) { //helper method
     const k = i + j; //k is the position we are at in the third string
     if (k === three.length) return true; //base case, we are done we have effectively brought i and j to their respective strings
 
-    if (i < one.length && one[i] === three[k]) {
-        cache[i][j] = areInterwoven(one, two, three, i + 1, j, cache);
-        if (cache[i][j]) return true;
+    if (i < one.length && one[i] === three[k]) {  //do a recursive call
+        cache[i][j] = areInterwoven(one, two, three, i + 1, j, cache); //if we are interwoven
+        if (cache[i][j]) return true; //return true
     }
 
-    if (j < two.length && two[j] === three[k]) {
-        cache[i][j] = areInterwoven(one, two, three, i, j+1, cache);
+    if (j < two.length && two[j] === three[k]) { //do a recursive call
+        cache[i][j] = areInterwoven(one, two, three, i, j+1, cache); //if not interwoven we try the second cache
         return cache[i][j];
     }
 
