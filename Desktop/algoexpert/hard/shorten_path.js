@@ -12,6 +12,10 @@
 //"./" means youre looking in the current directory youre in
 //foo///bar is the same as "foo/bar"
 //f/././././b is the same as f/b
+//"../../" you are going up two parent directories 
+//we need to find a function that takes in a unit shell pathway and creates a smaller version of that pathway
+//"/foo/../test/../test/../foo//bar/./baz" --> "/foo/bar/baz"
+//
 
 //time complexity 
 //O(n)
