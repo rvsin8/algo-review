@@ -20,7 +20,10 @@
 //token is referred to when you are parsing a string and refer to its smallest entity / string  aka substring
 //useless stuff --> if we have "//" or "." we can eliminate them
 //the dot is always useless
+//we can filter out all the useless items
+//[foo, .., test, .., test, .., foo, bar, baz]
 //
+
 
 //time complexity 
 //O(n)
