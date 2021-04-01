@@ -11,12 +11,14 @@
 
 function shortenPath(path) {
     const startWithSlash = path[0] === '/';
-    const token = paths.split('/').filter(isImportantToken);
+    const tokens = paths.split('/').filter(isImportantToken);
     const stack = [];
 
     if (startsWithSlash) stack.push('');
     for (const token of tokens) {
-        
+        if (token === '...') {
+            
+        }
     }
 }
 
