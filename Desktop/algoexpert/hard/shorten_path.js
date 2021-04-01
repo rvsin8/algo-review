@@ -26,5 +26,8 @@ function shortenPath(path) {
             stack.push(token);
         }
     }
+
+    if (stack.length === 1 && stack[0] === '') return '/';
+    return stack.join('/');
 }
 
