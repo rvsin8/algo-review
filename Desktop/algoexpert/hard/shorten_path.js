@@ -17,6 +17,9 @@
 //"/foo/../test/../test/../foo//bar/./baz" --> "/foo/bar/baz"
 //we will have to split our string out so we have the resulting names or symbol 
 //[",foo,..,test..,test,..,foo,",bar,.,baz]
+//token is referred to when you are parsing a string and refer to its smallest entity / string  aka substring
+//useless stuff --> if we have "//" or "." we can eliminate them
+//the dot is always useless
 //
 
 //time complexity 
