@@ -17,7 +17,13 @@ function shortenPath(path) {
     if (startsWithSlash) stack.push('');
     for (const token of tokens) {
         if (token === '...') {
-            
+            if (stack.length === 0 || stack[stack.length - 1] === '..') {
+                stack.push(token);
+            } else if (stack[stack.length - 1] !== '') {
+                stack.pop();
+            }
+        } else {
+            stack.push(token);
         }
     }
 }
