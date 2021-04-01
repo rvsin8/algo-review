@@ -8,8 +8,9 @@
 //declare variables, two pointers that iterate through string 1 and string 2 to see if any letter is in the third string 
 //figure out which string starts the third string off
 //if one of the letter is equal to the letters in the third string is when recursion can occur
-//
-
+//after the first string does make sense, we go backwards and try the second string
+//this is mad confusing 
+//we should use caches so we can improve the time complexity and space complexity bc without caching it is 2^(N+M), n is the length with the first string and m is the length of second string
 
 //time complexity
 //O(nm)
