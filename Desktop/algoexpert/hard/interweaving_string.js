@@ -10,13 +10,14 @@
 //if one of the letter is equal to the letters in the third string is when recursion can occur
 //after the first string does make sense, we go backwards and try the second string
 //this is mad confusing 
-//we should use caches so we can improve the time complexity and space complexity bc without caching it is 2^(N+M), n is the length with the first string and m is the length of second string
+//we should use caches so we can improve the time complexity and space complexity bc without caching it is 2^(N+M), n is the length with the first string and m is the length of second string  //its 2^ bc we always have two paths 
+//space complexity is O(n+m) at most you will have n + m calls 
 
 //time complexity
-//O(nm)
+//O(nm) a cache will lead to this
 
 //space complexity 
-//O(nm)
+//O(nm) a cache will lead to this
 
 function interweavingStrings(one, two, three) {
     if (three.length !== one.length + two.length) {
