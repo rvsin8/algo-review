@@ -3,6 +3,11 @@
 
 //my understanding
 //we get three strings and we need to write a function whether the first two strings can be interwoven to be the third string
+//edge case --> cancatonate which is also interweaving 
+//grab the first and second string and put them one top of each other
+//declare variables, two pointers that iterate through string 1 and string 2 to see if any letter is in the third string 
+//figure out which string starts the third string off
+
 
 
 //time complexity
