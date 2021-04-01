@@ -7,7 +7,8 @@
 //grab the first and second string and put them one top of each other
 //declare variables, two pointers that iterate through string 1 and string 2 to see if any letter is in the third string 
 //figure out which string starts the third string off
-
+//if one of the letter is equal to the letters in the third string is when recursion can occur
+//
 
 
 //time complexity
