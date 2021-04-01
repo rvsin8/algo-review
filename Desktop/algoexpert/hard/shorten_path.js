@@ -15,6 +15,8 @@
 //"../../" you are going up two parent directories 
 //we need to find a function that takes in a unit shell pathway and creates a smaller version of that pathway
 //"/foo/../test/../test/../foo//bar/./baz" --> "/foo/bar/baz"
+//we will have to split our string out so we have the resulting names or symbol 
+//[",foo,..,test..,test,..,foo,",bar,.,baz]
 //
 
 //time complexity 
