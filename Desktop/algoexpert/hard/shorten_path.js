@@ -5,7 +5,10 @@
 //a lot of edge cases
 //wants us to write a function that takes a nonempty string and represents a valid shell path
 //a path is notation that represents the location of a file / directory in a file system it can be absolute or relative
-
+//the root directory is represented by a forward "/" 
+//relative path is without the "/" in the beginning 
+//"/" that comes represents the directory separator 
+//
 
 //time complexity 
 //O(n)
