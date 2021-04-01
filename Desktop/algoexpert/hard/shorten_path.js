@@ -8,7 +8,10 @@
 //the root directory is represented by a forward "/" 
 //relative path is without the "/" in the beginning 
 //"/" that comes represents the directory separator 
-//
+//".." represents the parent directory 
+//"./" means youre looking in the current directory youre in
+//foo///bar is the same as "foo/bar"
+//f/././././b is the same as f/b
 
 //time complexity 
 //O(n)
