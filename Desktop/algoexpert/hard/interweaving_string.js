@@ -28,11 +28,11 @@ function interweavingStrings(one, two, three) {
     return areInterwoven(one, two, three, 0, 0, cache);
 }
 
-function areInterwoven(one, two, three, i, j, cache) {
+function areInterwoven(one, two, three, i, j, cache) { //helper method
     if (cache[i][j] !== null) return cache[i][j];
 
-    const k = i + j;
-    if (k === three.length) return true;
+    const k = i + j; //k is the position we are at in the third string
+    if (k === three.length) return true; //base case, we are done we have effectively brought i and j to their respective strings
 
     if (i < one.length && one[i] === three[k]) {
         cache[i][j] = areInterwoven(one, two, three, i + 1, j, cache);
