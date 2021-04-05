@@ -45,7 +45,7 @@
 
 function shortenPath(path) {
     const startWithSlash = path[0] === '/'; //declare the variable that shows us whether we start with a slash or not
-    const tokens = paths.split('/').filter(isImportantToken); //split up our tokens and filter the resulting tokens by removing the unimportant ones
+    const tokens = paths.split('/').filter(isImportantToken); //split up our tokens aty the forward slash and filter the resulting tokens by removing the unimportant ones via helper method
     const stack = []; //create a stack
 
     if (startWithSlash) stack.push('');
