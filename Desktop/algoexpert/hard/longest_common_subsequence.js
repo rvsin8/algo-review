@@ -4,8 +4,10 @@
 //my understanding
 
 //time complexity
+//O(nm)
 
 //space complexity 
+//O(nm)
 
 function longestCommonSubsequence(str1, str2) {
     const lengths = [];
