@@ -21,4 +21,5 @@ function longestCommonSubsequence(str1, str2) {
             }
         }
     }
+    return buildSequence(lengths, str1);
 }
