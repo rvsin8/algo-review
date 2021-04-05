@@ -61,8 +61,8 @@ function shortenPath(path) {
         }
     }
 
-    if (stack.length === 1 && stack[0] === '') return '/';
-    return stack.join('/');
+    if (stack.length === 1 && stack[0] === '') return '/'; //if the length of stack = 1 and the first ele is an empty string
+    return stack.join('/'); //join it on the forward slash
 }
 
 function isImportantToken(token) {
