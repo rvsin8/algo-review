@@ -44,13 +44,13 @@
 //O(n) where n is the length of the input string, we are creating a list of tokens which will be the same length ass the input string and in the end our shorten path cannot be more than N numbers
 
 function shortenPath(path) {
-    const startWithSlash = path[0] === '/'; //declare the variable that shows us whether we start with a slash or not
-    const tokens = paths.split('/').filter(isImportantToken); //split up our tokens aty the forward slash and filter the resulting tokens by removing the unimportant ones via helper method
+    const startsWithSlash = path[0] === '/'; //declare the variable that shows us whether we start with a slash or not
+    const tokens = path.split('/').filter(isImportantToken); //split up our tokens aty the forward slash and filter the resulting tokens by removing the unimportant ones via helper method
     const stack = []; //create a stack that is an empty array
 
-    if (startWithSlash) stack.push(''); //if we start with a stack and we push an empty string
+    if (startsWithSlash) stack.push(''); //if we start with a stack and we push an empty string
     for (const token of tokens) { //iterate token in tokens
-        if (token === '...') { //we can either have the double dots 
+        if (token === '..') { //we can either have the double dots 
             if (stack.length === 0 || stack[stack.length - 1] === '..') { //either we had am empty stack or one with double dots
                 stack.push(token); //we want to add the double dots to our stack bc its important for this case 
             } else if (stack[stack.length - 1] !== '') { // if the last ele does not equal to an empty string then you are dealing with something else and not the root directory like "foo"
