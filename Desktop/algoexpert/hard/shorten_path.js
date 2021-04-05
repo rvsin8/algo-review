@@ -65,7 +65,7 @@ function shortenPath(path) {
     return stack.join('/'); //join it on the forward slash
 }
 
-function isImportantToken(token) {
+function isImportantToken(token) { //helper method
     return token.length > 0 && token !== '.'; //it is important is the length of the token is greater than zero and not be the single dot 
 }
 
