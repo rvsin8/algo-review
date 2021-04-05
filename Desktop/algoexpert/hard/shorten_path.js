@@ -44,9 +44,9 @@
 //O(n) where n is the length of the input string, we are creating a list of tokens which will be the same length ass the input string and in the end our shorten path cannot be more than N numbers
 
 function shortenPath(path) {
-    const startWithSlash = path[0] === '/';
-    const tokens = paths.split('/').filter(isImportantToken);
-    const stack = [];
+    const startWithSlash = path[0] === '/'; //declare the variable that shows us whether we start with a slash or not
+    const tokens = paths.split('/').filter(isImportantToken); //split up our tokens and filter the resulting tokens by removing the unimportant ones
+    const stack = []; //create a stack
 
     if (startWithSlash) stack.push('');
     for (const token of tokens) {
