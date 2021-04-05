@@ -31,7 +31,9 @@
 //when you have a bunch of double dots that want to go back up through the root directory they are meaningless 
 //we need to handle the case where we have the double dots going past the root directory 
 //we need to handle the cases where the double dots want to go back to the root directory and in those cases we want to do absolutely nothing to the double dots
-
+//we need the root directory to get rid of useless double dots 
+//another edge case - when we have a relative path which starts with double dots 
+//  ../../foo --> [..,..,foo] --> ../../foo  we will add the double dots
 
 
 
