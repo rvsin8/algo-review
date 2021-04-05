@@ -38,10 +38,10 @@
 
 
 //time complexity 
-//O(n)
+//O(n) splitting the string is an O(N) operation and then filtering the tokens is also an O(N) operation bc we are iterating through N ele and its constant time operations bc we are checking 
 
 //space complexity 
-//O(n)
+//O(n) where n is the length of the input string, we are creating a list of tokens which will be the same length ass the input string and in the end our shorten path cannot be more than N numbers
 
 function shortenPath(path) {
     const startWithSlash = path[0] === '/';
