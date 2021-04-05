@@ -22,7 +22,13 @@
 //the dot is always useless
 //we can filter out all the useless items
 //[foo, .., test, .., test, .., foo, bar, baz]
-//
+//[foo, bar, baz], we still need to handle the root directory path
+//maybe we readd an empty string bc we will have to rejoin in the end
+//[""",foo,bar,baz] --> /foo/bar/baz
+//we can put a boolean to make sure the first ele is a slash
+//we are mishandling the double dots still 
+//we need to handle it better after our root directory 
+
 
 
 //time complexity 
