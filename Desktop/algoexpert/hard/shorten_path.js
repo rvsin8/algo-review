@@ -28,6 +28,10 @@
 //we can put a boolean to make sure the first ele is a slash
 //we are mishandling the double dots still 
 //we need to handle it better after our root directory 
+//when you have a bunch of double dots that want to go back up through the root directory they are meaningless 
+//we need to handle the case where we have the double dots going past the root directory 
+//we need to handle the cases where the double dots want to go back to the root directory and in those cases we want to do absolutely nothing to the double dots
+
 
 
 
