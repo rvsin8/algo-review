@@ -2,6 +2,9 @@
 //Dynamic Programming 
 
 //my understanding
+//a subsequence is defined as a set of char in the case of a string that is obtained by removing other char in the string and keeping the remaining characters in their order
+//the question gives you two strings and asks you to find the longest subsequence that is common to both strings
+//
 
 //time complexity
 //O(nm)
