@@ -4,7 +4,12 @@
 //my understanding
 //a subsequence is defined as a set of char in the case of a string that is obtained by removing other char in the string and keeping the remaining characters in their order
 //the question gives you two strings and asks you to find the longest subsequence that is common to both strings
-//
+//use dynamic programming, we will use a 2D array to help us solve this problem
+//str1: zxvvyzw
+//str2: xkykzpw
+//solution: xyzw
+//str1:abc str2:ac
+
 
 //time complexity
 //O(nm)
