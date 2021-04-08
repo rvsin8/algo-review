@@ -11,7 +11,12 @@
 //str1:abc str2:ac //longest substring is AC
 //we have to build an LCS string - we start by looking at the last letter and both end with C
 //we know the LCS is going to end with C since they both end with C
-//
+//take out the C and now find the LCS of AB / A
+//we compare the last two letter which is B and A and they do not equal to each other
+//so we remove one of them and then compare 
+//if we remove A then we compare an empty string with AB
+//if we remove B we compare A to A
+
 
 
 //time complexity
