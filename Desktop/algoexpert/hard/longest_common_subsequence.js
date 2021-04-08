@@ -16,6 +16,8 @@
 //so we remove one of them and then compare 
 //if we remove A then we compare an empty string with AB
 //if we remove B we compare A to A
+//so we get AC and its better than ""C
+//we can remove the two A's and now we are left with two empty strings and that tells us we are done
 
 
 
