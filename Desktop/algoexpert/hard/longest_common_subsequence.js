@@ -8,7 +8,10 @@
 //str1: zxvvyzw
 //str2: xkykzpw
 //solution: xyzw
-//str1:abc str2:ac
+//str1:abc str2:ac //longest substring is AC
+//we have to build an LCS string - we start by looking at the last letter and both end with C
+//we know the LCS is going to end with C since they both end with C
+//
 
 
 //time complexity
