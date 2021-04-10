@@ -27,6 +27,8 @@
 //eventually we compare y and y, so we append y to x and we have xy so the remainder of that row is xy bc it is larger than just x
 //eventually then we will hit z and z so we get xyz
 //the final idx we hit xyzw
+//time and space complexity for this is O(NM * min(N,M))
+//
 
 //time complexity
 //O(nm) where n and m represent our two strings and we iterate through two strings
