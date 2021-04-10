@@ -41,11 +41,11 @@
 //O(nm) where n and m represent our two strings and we iterate through two strings
 
 function longestCommonSubsequence(str1, str2) {
-    const lengths = [];
-    for (let i = 0; i < str2.length + 1; i++) {
-        lengths.push(new Array(str1.length + 1).fill(0));
+    const lengths = []; //set the lengths to an empty array
+    for (let i = 0; i < str2.length + 1; i++) { //iterate through the array
+        lengths.push(new Array(str1.length + 1).fill(0)); //set up an new empty array
     }
-    for (let i = 1; i < str2.length + 1; i++) {
+    for (let i = 1; i < str2.length + 1; i++) { //
         for (let j = 1; j < str1.length + 1; j++) {
             if (str2[i - 1] === str1[j - 1]) {
                 lengths[i][j] = lengths[i - 1][j - 1] + 1;
