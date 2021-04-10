@@ -19,7 +19,10 @@
 //so we get AC and its better than ""C
 //we can remove the two A's and now we are left with two empty strings and that tells us we are done
 //the empty string serves as our base case
-//we can initialize the first row and col as a bunch of empty strings
+//we can initialize the first row and col as a bunch of empty strings and the lcs is an empty string
+//when we compare to letters and they do not equal each other we go with the lcs
+//finally when we arrive to z and z = z, we remove z and add it to our lcs which would be z
+
 
 
 //time complexity
