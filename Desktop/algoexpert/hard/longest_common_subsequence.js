@@ -28,7 +28,8 @@
 //eventually then we will hit z and z so we get xyz
 //the final idx we hit xyzw
 //time and space complexity for this is O(NM * min(N,M))
-//
+//we can get a O(nm) space and time complexity by not storing the lcs and concatonating things
+//we can use pointers and booleans to see if at a certain index whether or not we need to store it
 
 //time complexity
 //O(nm) where n and m represent our two strings and we iterate through two strings
