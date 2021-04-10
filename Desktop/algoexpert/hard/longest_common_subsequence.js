@@ -43,10 +43,10 @@
 function longestCommonSubsequence(str1, str2) {
     const lengths = []; //set the lengths to an empty array
     for (let i = 0; i < str2.length + 1; i++) { //iterate through the array
-        lengths.push(new Array(str1.length + 1).fill(0)); //set up an new empty array
+        lengths.push(new Array(str1.length + 1).fill(0)); //set up an new empty array, the 0 values represent if the letter is not being used
     }
-    for (let i = 1; i < str2.length + 1; i++) { //
-        for (let j = 1; j < str1.length + 1; j++) {
+    for (let i = 1; i < str2.length + 1; i++) { //iterate through the array
+        for (let j = 1; j < str1.length + 1; j++) { //
             if (str2[i - 1] === str1[j - 1]) {
                 lengths[i][j] = lengths[i - 1][j - 1] + 1;
             } else {
@@ -57,7 +57,7 @@ function longestCommonSubsequence(str1, str2) {
     return buildSequence(lengths, str1);
 }
 
-function buildSequence(lengths, string) {
+function buildSequence(lengths, string) { //helper method 
     const sequence = [];
     let i = lengths.length - 1;
     let j = lengths[0].length - 1;
