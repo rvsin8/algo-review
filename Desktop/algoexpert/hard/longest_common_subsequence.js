@@ -29,7 +29,9 @@
 //the final idx we hit xyzw
 //time and space complexity for this is O(NM * min(N,M))
 //we can get a O(nm) space and time complexity by not storing the lcs and concatonating things
-//we can use pointers and booleans to see if at a certain index whether or not we need to store it
+//we can use pointers and booleans to see if at a certain index whether or not we need to store it 
+//have a pointer to the diagonal when we do comparisons 
+//
 
 //time complexity
 //O(nm) where n and m represent our two strings and we iterate through two strings
