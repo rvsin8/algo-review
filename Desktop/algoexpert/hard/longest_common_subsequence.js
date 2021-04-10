@@ -28,13 +28,12 @@
 //eventually then we will hit z and z so we get xyz
 //the final idx we hit xyzw
 
-
-
 //time complexity
-//O(nm)
+//O(nm) where n and m represent our two strings and we iterate through two strings
+
 
 //space complexity 
-//O(nm)
+//O(nm) where n and m represent our two strings and we iterate through two strings
 
 function longestCommonSubsequence(str1, str2) {
     const lengths = [];
