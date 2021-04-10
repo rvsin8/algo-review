@@ -64,7 +64,7 @@ function buildSequence(lengths, string) {
     while (i !== 0 && j !== 0) {
         if (lengths[i][j] === lengths[i - 1][j]) {
             i--;
-        }
+    
     } else if (lengths[i][j] == lengths[i][j - 1]) {
         j--;
     } else {
