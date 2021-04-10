@@ -23,6 +23,10 @@
 //when we compare to letters and they do not equal each other we go with the lcs
 //finally when we arrive to z and z = z, we remove z and add it to our lcs which would be z, we append to the lcs that is diagonally from the string
 //the lcs of our "" and z with the entire second string is z
+//next we go to x and x, they equal to each other the lcs between the "" z x and the entire second string is x
+//eventually we compare y and y, so we append y to x and we have xy so the remainder of that row is xy bc it is larger than just x
+//eventually then we will hit z and z so we get xyz
+//the final idx we hit xyzw
 
 
 
