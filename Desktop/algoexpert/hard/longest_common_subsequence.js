@@ -45,12 +45,12 @@ function longestCommonSubsequence(str1, str2) {
     for (let i = 0; i < str2.length + 1; i++) { //iterate through the array
         lengths.push(new Array(str1.length + 1).fill(0)); //set up an new empty array, the 0 values represent if the letter is not being used
     }
-    for (let i = 1; i < str2.length + 1; i++) { //iterate through the array
-        for (let j = 1; j < str1.length + 1; j++) { //
-            if (str2[i - 1] === str1[j - 1]) {
-                lengths[i][j] = lengths[i - 1][j - 1] + 1;
+    for (let i = 1; i < str2.length + 1; i++) { //iterate through the string
+        for (let j = 1; j < str1.length + 1; j++) { //iterate through the string
+            if (str2[i - 1] === str1[j - 1]) { //are the two letters equal to each other
+                lengths[i][j] = lengths[i - 1][j - 1] + 1; //lcs of i and j we will store it in our first value
             } else {
-                lengths[i][j] = Math.max(lengths[i - 1][j], lengths[i][j - 1]);
+                lengths[i][j] = Math.max(lengths[i - 1][j], lengths[i][j - 1]); //if they are not equal 
             }
         }
     }
@@ -73,4 +73,5 @@ function buildSequence(lengths, string) { //helper method
         j--;
     }
     return sequence;
+}
 }
