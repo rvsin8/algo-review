@@ -18,7 +18,8 @@
 //if we remove B we compare A to A
 //so we get AC and its better than ""C
 //we can remove the two A's and now we are left with two empty strings and that tells us we are done
-
+//the empty string serves as our base case
+//we can initialize the first row and col as a bunch of empty strings
 
 
 //time complexity
