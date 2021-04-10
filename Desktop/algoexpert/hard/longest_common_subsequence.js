@@ -58,10 +58,10 @@ function longestCommonSubsequence(str1, str2) {
 }
 
 function buildSequence(lengths, string) { //helper method 
-    const sequence = [];
-    let i = lengths.length - 1;
-    let j = lengths[0].length - 1;
-    while (i !== 0 && j !== 0) {
+    const sequence = []; //empty array
+    let i = lengths.length - 1; //starting i idx
+    let j = lengths[0].length - 1; //starting j idx
+    while (i !== 0 && j !== 0) { //while i and j are not none
         if (lengths[i][j] === lengths[i - 1][j]) {
             i--;
     
@@ -75,3 +75,5 @@ function buildSequence(lengths, string) { //helper method
     return sequence;
 }
 }
+
+//relook at this i gave up
