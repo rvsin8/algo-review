@@ -12,6 +12,8 @@
 //we move on to idx1 bc our substring may overlap and keep doing this until we find test again
 //we find test again in idx "10" --< locations [[0,4], [10,14]]
 //move on to idx 11 and keep going until idx14 --> locations [[0,4], [10,14], [14,18]]
+//collapseLocations [[0,4], [10,14], [14,18]] we need to collapse the last two array so [10,18] is what we get bc we had 2 14's which is 2 same idx so we know to combine those arrays
+//so on until we hit the underscorify where we will insert the underscores into our string
 //
 
 //time complexity
