@@ -7,6 +7,10 @@
 //getLocations to find the substring on our string
 //collapseLocation get the location and collapse them
 //underscorify will add the underscores to our substring
+//traverse main string and each idx find ths substring
+//if we cannot find the substring then we return --> locations [[0,4]]
+//
+
 
 //time complexity
 //O(n + m)
