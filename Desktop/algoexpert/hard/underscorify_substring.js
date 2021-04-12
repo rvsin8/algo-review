@@ -44,3 +44,10 @@ function collapse(locations) {
     }
     return newLocations;
 }
+
+function underscorify(string, location) {
+    let locationsIdx = 0;
+    let stringIdx = 0;
+    let inBetweenUnderScores = false;
+    const finalChars = [];
+}
