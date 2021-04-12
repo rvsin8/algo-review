@@ -2,6 +2,11 @@
 //Strings
 
 //my understanding 
+//we are given a string and a substring and we must wrap the substring in the original string in underscore
+//"testthis is a testtest to see if testesttest it works", "test --> "_test_this is a _testtest_ to see if _testesttest_ it works",
+//getLocations to find the substring on our string
+//collapseLocation get the location and collapse them
+//underscorify will add the underscores to our substring
 
 //time complexity
 //O(n + m)
@@ -18,7 +23,7 @@ function getLocations(string, substring) {
     const locations = [];
     let startIdx = 0;
     while (startIdx < string.length) {
-        const nextIdx = string.indexof(substring, startIdx);
+        const nextIdx = string.indexOf(substring, startIdx);
         if (nextIdx !== -1) {
             locations.push([nextIdx, nextIdx + substring.length]);
             startIdx = nextIdx + 1;
