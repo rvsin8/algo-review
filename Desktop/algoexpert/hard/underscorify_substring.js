@@ -20,7 +20,11 @@ function getLocations(string, substring) {
     while (startIdx < string.length) {
         const nextIdx = string.indexof(substring, startIdx);
         if (nextIdx !== -1) {
-            
+            locations.push([nextIdx, nextIdx + substring.length]);
+            startIdx = nextIdx + 1;
+        } else {
+            break;
         }
     }
+    return locations;
 }
