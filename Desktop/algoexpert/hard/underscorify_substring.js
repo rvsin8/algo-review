@@ -9,3 +9,7 @@
 //space complexity 
 //O(n)
 
+function underscorfiySubstring(string, substring) {
+    const locations = collapse(getLocations(strings, substring));
+    return underscorify(string, locations);
+}
