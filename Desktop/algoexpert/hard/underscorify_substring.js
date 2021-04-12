@@ -9,8 +9,10 @@
 //underscorify will add the underscores to our substring
 //traverse main string and each idx find ths substring
 //if we cannot find the substring then we return --> locations [[0,4]]
+//we move on to idx1 bc our substring may overlap and keep doing this until we find test again
+//we find test again in idx "10" --< locations [[0,4], [10,14]]
+//move on to idx 11 and keep going until idx14 --> locations [[0,4], [10,14], [14,18]]
 //
-
 
 //time complexity
 //O(n + m)
