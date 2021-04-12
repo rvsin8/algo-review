@@ -28,3 +28,19 @@ function getLocations(string, substring) {
     }
     return locations;
 }
+
+function collapse(locations) {
+    if (!locations.length) return locations;
+    const newLocations = [locations[0]];
+    let previous = newLocations[0];
+    for (let i = 1; i < locations.length; i++) {
+        const current = locations[i];
+        if (current[0] <= previous[1]) {
+            previous[1] = current[1];
+        } else {
+            newLocations.push(current);
+            previous = current;
+        }
+    }
+    return newLocations;
+}
