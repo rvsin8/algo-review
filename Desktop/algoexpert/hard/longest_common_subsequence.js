@@ -72,8 +72,9 @@ function buildSequence(lengths, string) { //helper method
         i--;
         j--;
     }
+}
     return sequence;
 }
-}
+
 
 //relook at this i gave up
