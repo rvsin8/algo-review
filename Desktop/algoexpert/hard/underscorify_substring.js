@@ -45,7 +45,7 @@ function collapse(locations) {
     return newLocations;
 }
 
-function underscorify(string, location) {
+function underscorify(string, locations) {
     let locationsIdx = 0;
     let stringIdx = 0;
     let inBetweenUnderScores = false;
