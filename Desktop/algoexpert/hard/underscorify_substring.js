@@ -50,4 +50,16 @@ function underscorify(string, location) {
     let stringIdx = 0;
     let inBetweenUnderScores = false;
     const finalChars = [];
+    let i = 0;
+    while (stringIdx < string.length && locationsIdx < locations.length) {
+        if (stringIdx === locations[locationsIdx][i]) {
+            finalChars.push('_');
+            inBetweenUnderScores = !inBetweenUnderScores;
+            if (!inBetweenUnderScores) locationsIdx++;
+            i = i === 1 ? 0 : 1;
+        }
+        finalChars.push(string[stringIdx]);
+        stringIdx++;
+    }
+
 }
