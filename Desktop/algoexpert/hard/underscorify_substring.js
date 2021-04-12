@@ -61,5 +61,11 @@ function underscorify(string, location) {
         finalChars.push(string[stringIdx]);
         stringIdx++;
     }
+    if (locationsIdx < locations.length) {
+        finalChars.push('_');
+    } else if (stringIdx < string.length) {
+        finalChars.push(string.slice(stringIdx));
+    }
+    return finalChars.join('');
 
 }
