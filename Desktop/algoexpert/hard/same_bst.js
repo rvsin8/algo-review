@@ -10,3 +10,11 @@
 function sameBsts(arrayOne, arrayTwo) {
     return areSameBsts(arrayOne, arrayTwo, 0, 0, -Infinity, Infinity);
 }
+
+function areSameBsts(arrayOne, arrayTwo, rootIdxOne, rootIdxTwo, minVal, maxVal) {
+    if (rootIdxOne === -1 || rootIdxTwo === -1) return rootIdxOne === rootIdxTwo;
+
+    if (arrayOne[rootIdxOne] !== arrayTwo[rootIdxTwo]) return false;
+
+    
+}
