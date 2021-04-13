@@ -12,7 +12,9 @@
 //[8,5,2] and [8,5,2] are both the same values less than the root node in both arrays
 //check for the left subtree and if none are there than we look for the values less than 8 --> [5,2]
 //do the same thing --> [2] and [2]
-
+//greater than our root node aka 10 --> [15,12,94,81,11] and [15,12,11,94,81], these arrays are not the same so we cannot compare them
+//grab the left and right subtrees --> left subtree [12,11] and [12,11] and further apply this logic [11] and [11]
+//right subtree --> [94, 81] and [94, 81]
 
 //time complexity
 //O(n^2)
