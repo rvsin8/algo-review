@@ -28,19 +28,19 @@ function underscorfiySubstring(string, substring) {
     return underscorify(string, locations); //answer
 }
 
-function getLocations(string, substring) {
-    const locations = [];
-    let startIdx = 0;
-    while (startIdx < string.length) {
-        const nextIdx = string.indexOf(substring, startIdx);
-        if (nextIdx !== -1) {
-            locations.push([nextIdx, nextIdx + substring.length]);
-            startIdx = nextIdx + 1;
+function getLocations(string, substring) {//helper methid
+    const locations = [];//locations array
+    let startIdx = 0; //start at idx0
+    while (startIdx < string.length) { //while we are still in the string
+        const nextIdx = string.indexOf(substring, startIdx); //find an instance of the substring in the string 
+        if (nextIdx !== -1) { //the substring has been found
+            locations.push([nextIdx, nextIdx + substring.length]); //we append the array that has the nextidx 
+            startIdx = nextIdx + 1; //update the start idx
         } else {
-            break;
+            break; //or else we break
         }
     }
-    return locations;
+    return locations; //return the location
 }
 
 function collapse(locations) {
