@@ -28,22 +28,22 @@ function underscorfiySubstring(string, substring) {
     return underscorify(string, locations); //answer
 }
 
-function getLocations(string, substring) {//helper methid
+function getLocations(string, substring) {//helper method
     const locations = [];//locations array
     let startIdx = 0; //start at idx0
     while (startIdx < string.length) { //while we are still in the string
         const nextIdx = string.indexOf(substring, startIdx); //find an instance of the substring in the string 
         if (nextIdx !== -1) { //the substring has been found
-            locations.push([nextIdx, nextIdx + substring.length]); //we append the array that has the nextidx 
+            locations.push([nextIdx, nextIdx + substring.length]); //we append the array that has the nextidx and where it ends bc thats where we put the underscore
             startIdx = nextIdx + 1; //update the start idx
         } else {
-            break; //or else we break
+            break; //or else we break bc the substring was not found
         }
     }
-    return locations; //return the location
+    return locations; //return the locations
 }
 
-function collapse(locations) {
+function collapse(locations) { //helper function #2
     if (!locations.length) return locations;
     const newLocations = [locations[0]];   
     let previous = newLocations[0];
