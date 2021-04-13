@@ -40,7 +40,7 @@ function getIdxOfFirstSmaller(array, startingIdx, minVal) {
 
 function getIdxOfFirstBiggerOrEqual(array, startingIdx, maxVal) {
     for (let i = startingIdx + 1; i < array.length; i++) {
-        if (array[i] >= array[startingIdx] && array[i] >= minVal) return i;
+        if (array[i] >= array[startingIdx] && array[i] >= maxVal) return i;
     }
     return -1;
 }
