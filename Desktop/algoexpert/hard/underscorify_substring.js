@@ -14,17 +14,18 @@
 //move on to idx 11 and keep going until idx14 --> locations [[0,4], [10,14], [14,18]]
 //collapseLocations [[0,4], [10,14], [14,18]] we need to collapse the last two array so [10,18] is what we get bc we had 2 14's which is 2 same idx so we know to combine those arrays
 //so on until we hit the underscorify where we will insert the underscores into our string
+//underscorify --> [_,t,e,s,t,_ ... so on] then return our aray then concatonate it and we are done
 //
 
 //time complexity
-//O(n + m)
+//O(n + m) where n is the string and m is the substring
 
 //space complexity 
-//O(n)
+//O(n) where n is the length of our input string
 
 function underscorfiySubstring(string, substring) {
-    const locations = collapse(getLocations(strings, substring));
-    return underscorify(string, locations);
+    const locations = collapse(getLocations(strings, substring)); //we get the locations from the string and substring and whatever our collapse location returns is our final locations
+    return underscorify(string, locations); //answer
 }
 
 function getLocations(string, substring) {
@@ -44,7 +45,7 @@ function getLocations(string, substring) {
 
 function collapse(locations) {
     if (!locations.length) return locations;
-    const newLocations = [locations[0]];
+    const newLocations = [locations[0]];   
     let previous = newLocations[0];
     for (let i = 1; i < locations.length; i++) {
         const current = locations[i];
