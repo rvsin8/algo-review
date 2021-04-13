@@ -7,3 +7,6 @@
 
 //space complexity 
 
+function sameBsts(arrayOne, arrayTwo) {
+    return areSameBsts(arrayOne, arrayTwo, 0, 0, -Infinity, Infinity);
+}
