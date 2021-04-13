@@ -15,12 +15,13 @@
 //greater than our root node aka 10 --> [15,12,94,81,11] and [15,12,11,94,81], these arrays are not the same so we cannot compare them
 //grab the left and right subtrees --> left subtree [12,11] and [12,11] and further apply this logic [11] and [11]
 //right subtree --> [94, 81] and [94, 81]
+//space complexity - O(n^2) we are creating a lot of extra arrays
 
 //time complexity
-//O(n^2)
+//O(n^2) start at length N, you iterate through it twice to find values less and greater than the root node
 
 //space complexity
-//O(d) 
+//O(d) d is the depth of the bst represented via no extra space 
 
 function sameBsts(arrayOne, arrayTwo) {
     return areSameBsts(arrayOne, arrayTwo, 0, 0, -Infinity, Infinity);
