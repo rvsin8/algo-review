@@ -4,8 +4,10 @@
 //my understandings
 
 //time complexity
+//O(n^2)
 
-//space complexity 
+//space complexity
+//O(d) 
 
 function sameBsts(arrayOne, arrayTwo) {
     return areSameBsts(arrayOne, arrayTwo, 0, 0, -Infinity, Infinity);
