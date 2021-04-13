@@ -44,19 +44,19 @@ function getLocations(string, substring) {//helper method
 }
 
 function collapse(locations) { //helper function #2
-    if (!locations.length) return locations;
-    const newLocations = [locations[0]];   
-    let previous = newLocations[0];
-    for (let i = 1; i < locations.length; i++) {
-        const current = locations[i];
-        if (current[0] <= previous[1]) {
-            previous[1] = current[1];
+    if (!locations.length) return locations; //if we dont have locations and its empty then return locations
+    const newLocations = [locations[0]]; //hold the first subarray of locations
+    let previous = newLocations[0]; //previous initializes to the first location in the subarray
+    for (let i = 1; i < locations.length; i++) { //in range 
+        const current = locations[i]; //
+        if (current[0] <= previous[1]) { //if the starting idx is less than or equal to the previous idx, our current substring overlaps or sits next too
+            previous[1] = current[1]; //we update the ending idx of the previous to be the ending of the current idx
         } else {
-            newLocations.push(current);
-            previous = current;
+            newLocations.push(current); //append to new locations
+            previous = current; //we set the previous to current
         }
     }
-    return newLocations;
+    return newLocations; //return new locations 
 }
 
 function underscorify(string, locations) {
