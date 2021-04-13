@@ -2,6 +2,12 @@
 //Binary Search Trees
 
 //my understandings
+//a bst is a binary tree where every node in the bst satisfies the bst properties - every node that comes to the left subtree has to have a value less, right subtree has to have a value greater than the parent node
+//we get two arrays of integers and write a function that lets us know if the two arrays represent the same bst tree
+//array1: [10,15,8,12,94,81,5,2,11]
+//array2: [10,8,5,15,2,12,11,94,81]
+//true is the answer
+//
 
 //time complexity
 //O(n^2)
