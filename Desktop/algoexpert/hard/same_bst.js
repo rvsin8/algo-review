@@ -7,7 +7,12 @@
 //array1: [10,15,8,12,94,81,5,2,11]
 //array2: [10,8,5,15,2,12,11,94,81]
 //true is the answer
-//
+//if the first value is not the same then it does not represent the same bst bc they are root values
+//we separate the values greater / less our root node
+//[8,5,2] and [8,5,2] are both the same values less than the root node in both arrays
+//check for the left subtree and if none are there than we look for the values less than 8 --> [5,2]
+//do the same thing --> [2] and [2]
+
 
 //time complexity
 //O(n^2)
