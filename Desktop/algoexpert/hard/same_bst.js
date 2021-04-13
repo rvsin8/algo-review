@@ -35,3 +35,10 @@ function getIdxOfFirstSmaller(array, startingIdx, minVal) {
     }
     return -1;
 }
+
+function getIdxOfFirstBiggerOrEqual(array, startingIdx, maxVal) {
+    for (let i = startingIdx + 1; i < array.length; i++) {
+        if (array[i] >= array[startingIdx] && array[i] >= minVal) return i;
+    }
+    return -1;
+}
