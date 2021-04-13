@@ -16,6 +16,9 @@
 //grab the left and right subtrees --> left subtree [12,11] and [12,11] and further apply this logic [11] and [11]
 //right subtree --> [94, 81] and [94, 81]
 //space complexity - O(n^2) we are creating a lot of extra arrays
+//better way in space complexity bc we don't have to store the array via O(d) via recursion
+//we pass in a pointer with the roots we are asked at 10,8,5,2 and same for greater
+//
 
 //time complexity
 //O(n^2) start at length N, you iterate through it twice to find values less and greater than the root node
