@@ -59,27 +59,27 @@ function collapse(locations) { //helper function #2
     return newLocations; //return new locations 
 }
 
-function underscorify(string, locations) {
-    let locationsIdx = 0;
-    let stringIdx = 0;
-    let inBetweenUnderScores = false;
-    const finalChars = [];
-    let i = 0;
-    while (stringIdx < string.length && locationsIdx < locations.length) {
+function underscorify(string, locations) { //third helper, add all the underscores
+    let locationsIdx = 0; //pointer one
+    let stringIdx = 0; //pointer two
+    let inBetweenUnderScores = false; //lets us know if we in btw underscores, at the beginning we are not in btw underscores so we are at false
+    const finalChars = []; //empty array
+    let i = 0; //initialize it to i
+    while (stringIdx < string.length && locationsIdx < locations.length) { //while we are in the string and locations
         if (stringIdx === locations[locationsIdx][i]) {
-            finalChars.push('_');
-            inBetweenUnderScores = !inBetweenUnderScores;
-            if (!inBetweenUnderScores) locationsIdx++;
-            i = i === 1 ? 0 : 1;
+            finalChars.push('_'); //add the underscore
+            inBetweenUnderScores = !inBetweenUnderScores; //not false == true
+            if (!inBetweenUnderScores) locationsIdx++; //if we are not in btw underscores //we want to move in our locations array by 1
+            i = i === 1 ? 0 : 1; //
         }
-        finalChars.push(string[stringIdx]);
-        stringIdx++;
+        finalChars.push(string[stringIdx]); //add the final letter
+        stringIdx++; //keep traversing
     }
-    if (locationsIdx < locations.length) {
+    if (locationsIdx < locations.length) { //to add the final underscores
         finalChars.push('_');
-    } else if (stringIdx < string.length) {
+    } else if (stringIdx < string.length) { //to add the strings together
         finalChars.push(string.slice(stringIdx));
     }
-    return finalChars.join('');
+    return finalChars.join(''); //join it into a string
 
 }
