@@ -28,3 +28,10 @@ function areSameBsts(arrayOne, arrayTwo, rootIdxOne, rootIdxTwo, minVal, maxVal)
     return leftAreSame && rightAreSame;
 
 }
+
+function getIdxOfFirstSmaller(array, startingIdx, minVal) {
+    for (let i = startingIdx + 1; i < array.length; i++) {
+        if (array[i] < array[startingIdx] && array[i] >= minVal) return i;
+    }
+    return -1;
+}
