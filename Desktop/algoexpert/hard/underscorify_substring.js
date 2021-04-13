@@ -23,8 +23,8 @@
 //space complexity 
 //O(n) where n is the length of our input string
 
-function underscorfiySubstring(string, substring) {
-    const locations = collapse(getLocations(strings, substring)); //we get the locations from the string and substring and whatever our collapse location returns is our final locations
+function underscorifySubstring(string, substring) {
+    const locations = collapse(getLocations(string, substring)); //we get the locations from the string and substring and whatever our collapse location returns is our final locations
     return underscorify(string, locations); //answer
 }
 
