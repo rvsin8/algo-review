@@ -6,6 +6,11 @@
 //second string is the main string "gogopowerrangergogopowerranger"
 //does our main string match our pattern and what is the value of x and y
 //answer is x = go and y = powerranger
+//first thing we would do, is find how many instances of x or y appear in our pattern
+//we generate a new pattern which will simplify our algorithm a lot
+//we have to see if it starts with an x or a y
+//to simplify our logic is to turn any pattern that starts with y and turn it to x
+//getNewPattern will be a function that will create or return an array of our pattern, this is to check or do the switch
 
 //time complexity 
 //O(n^2 + m)
