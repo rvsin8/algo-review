@@ -28,5 +28,15 @@ function patternMatch(pattern, string) {
                 return !didSwitch ? [x,y] : [y,x];
             }
         }
+    } else {
+        const lenOfX = string.length / counts['x'];
+        if (lenOfX % 1 === 0) {
+            const x = string.slice(0, lenOfX);
+            const potentialMatch = newPattern.map(char => (char === 'x' ? x : y));
+            if (string === potentialMatch.join('')) {
+                return !didSwitch ? [x, ''] : ['', x];
+            }
+        }
     }
+    return [];
 }
