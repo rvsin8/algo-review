@@ -35,7 +35,7 @@ function patternMatch(pattern, string) {
     const didSwitch = newPattern[0] !== pattern[0]; //if the first letter is not equal to the first letter in pattern that means we did do that swap
     const counts = {x: 0, y: 0}; //initialize the count to 0
     const firstYPos = getCountsAndFirstYPos(newPattern, counts); //the first y position is equal to our helper will return a num that will return the idx of our first y position 
-    if (counts['y'] !== 0) {
+    if (counts['y'] !== 0) { //
         for (let lenOfX = 1; lenOfX < string.length; lenOfX++) {
             const lenOfY = (string.length - lenOfX * counts['x']) / counts['y'];
             if (lenOfY <= 0 || lenOfY % 1 !== 0) continue;
@@ -71,11 +71,11 @@ function getNewPattern(pattern) { //helper method
 }
 
 function getCountsAndFirstYPos(pattern, counts) { //helper method
-    let firstYPos = null;
-    for (let i = 0; i < pattern.length; i++) {
+    let firstYPos = null; //first y position is equal to none
+    for (let i = 0; i < pattern.length; i++) { //in range
         const char = pattern[i];
         counts[char]++;
-        if (char === 'y' && firstYPos === null) firstYPos = i;
+        if (char === 'y' && firstYPos === null) firstYPos = i; //if we still dont have a y then update it to i
     }
-    return firstYPos;
+    return firstYPos; //return first y position
 }
