@@ -49,3 +49,13 @@ function getNewPattern(pattern) {
         return patternLetters.map(char => (char === 'y' ? 'x' : 'y'));
     }
 }
+
+function getCountsAndFirstYPos(pattern, counts) {
+    let firstYPos = null;
+    for (let i = 0; i < pattern.length; i++) {
+        const char = pattern[i];
+        counts[char]++;
+        if (char === 'y' && firstYPos === null) firstYPos = i;
+    }
+    return firstYPos;
+}
