@@ -39,13 +39,13 @@ function patternMatch(pattern, string) {
         for (let lenOfX = 1; lenOfX < string.length; lenOfX++) { //range, iterate through our entire main string 
             const lenOfY = (string.length - lenOfX * counts['x']) / counts['y']; //formula to figure out the length of y
             if (lenOfY <= 0 || lenOfY % 1 !== 0) continue; //if our y has a negative length or a decimal num there is not point of continuing 
-            const yIdx = firstYPos * lenOfX; 
-            const x = string.slice(0, lenOfX);
-            const y = string.slice(yIdx, yIdx + lenOfY);
-            const potentialMatch = newPattern.map(char => (char === 'x' ? x : y));
-            if (string === potentialMatch.join('')) {
+            const yIdx = firstYPos * lenOfX; //the first y pos at idx
+            const x = string.slice(0, lenOfX); //slice from the beginning to len of x //potential substring x
+            const y = string.slice(yIdx, yIdx + lenOfY); //slice yidx until yidx + i //for potential y substring
+            const potentialMatch = newPattern.map(char => (char === 'x' ? x : y)); //map the new pattern for every char, mao accordingly via replacing x and y
+            if (string === potentialMatch.join('')) { //if our main string is equal to the potential match then 
 
-                return !didSwitch ? [x,y] : [y,x];
+                return !didSwitch ? [x,y] : [y,x]; //return our match if we did not switch else y,x
             }
         }
     } else {
