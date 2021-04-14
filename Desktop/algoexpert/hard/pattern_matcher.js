@@ -24,17 +24,17 @@
 //this is correct once we replace them in our pattern
 
 //time complexity 
-//O(n^2 + m) where n is the length of our input string and m is the length of the pattern 
+//O(n^2 + m) where n is the length of our input string and m is the length of the pattern bc the main function we iterating through the entire main string and at each point we are generating strings x and y, we are transforming our getnewpattern and we are comparing it
 
 //space complexity
-//O(n + m) where n is the length of our input string and m is the length of the pattern
+//O(n + m) where n is the length of our input string and m is the length of the pattern, when we replace all the x and y thus generating a string
 
 function patternMatch(pattern, string) {
-    if (pattern.length > string.length) return [];
-    const newPattern = getNewPattern(pattern);
-    const didSwitch = newPattern[0] !== pattern[0];
-    const counts = {x: 0, y: 0};
-    const firstYPos = getCountsAndFirstYPos(newPattern, counts);
+    if (pattern.length > string.length) return []; //if the pattern is longer than the string we return an empty array this is an edge case
+    const newPattern = getNewPattern(pattern); //generate a new pattern
+    const didSwitch = newPattern[0] !== pattern[0]; //if the first letter is not equal to the first letter in pattern that means we did do that swap
+    const counts = {x: 0, y: 0}; //initialize the count to 0
+    const firstYPos = getCountsAndFirstYPos(newPattern, counts); //the first y position is equal to our helper will return a num that will return the idx of our first y position 
     if (counts['y'] !== 0) {
         for (let lenOfX = 1; lenOfX < string.length; lenOfX++) {
             const lenOfY = (string.length - lenOfX * counts['x']) / counts['y'];
@@ -61,16 +61,16 @@ function patternMatch(pattern, string) {
     return [];
 }
 
-function getNewPattern(pattern) {
-    const patternLetters = pattern.split('');
-    if (pattern[0] === 'x') {
-        return patternLetters;
-    } else {
-        return patternLetters.map(char => (char === 'y' ? 'x' : 'y'));
+function getNewPattern(pattern) { //helper method
+    const patternLetters = pattern.split(''); //split our patterns individually into a list
+    if (pattern[0] === 'x') { //if the first idx is x
+        return patternLetters; //then return them as they are
+    } else { //if x is not the first ele
+        return patternLetters.map(char => (char === 'y' ? 'x' : 'y')); //then swap x and y
     }
 }
 
-function getCountsAndFirstYPos(pattern, counts) {
+function getCountsAndFirstYPos(pattern, counts) { //helper method
     let firstYPos = null;
     for (let i = 0; i < pattern.length; i++) {
         const char = pattern[i];
