@@ -36,10 +36,10 @@ function areSameBsts(arrayOne, arrayTwo, rootIdxOne, rootIdxTwo, minVal, maxVal)
 
     if (arrayOne[rootIdxOne] !== arrayTwo[rootIdxTwo]) return false; //if the root do no match up return false
 
-    const leftRootIdxOne = getIdxOfFirstSmaller(arrayOne, rootIdxOne, minVal); //
-    const leftRootIdxTwo = getIdxOfFirstSmaller(arrayTwo, rootIdxTwo, minVal); //
-    const rightRootIdxOne = getIdxOfBiggerOrEqual(arrayOne, rootIdxOne, maxVal); //
-    const rightRootIdxTwo = getIdxOfFirstBiggerOrEqual(arrayTwo, rootIdxTwo, maxVal); //
+    const leftRootIdxOne = getIdxOfFirstSmaller(arrayOne, rootIdxOne, minVal); //get small values of array1
+    const leftRootIdxTwo = getIdxOfFirstSmaller(arrayTwo, rootIdxTwo, minVal); //get small values of array2
+    const rightRootIdxOne = getIdxOfBiggerOrEqual(arrayOne, rootIdxOne, maxVal); //get values bigger or equal to array1
+    const rightRootIdxTwo = getIdxOfFirstBiggerOrEqual(arrayTwo, rootIdxTwo, maxVal); //get values bigger or equal to array2
 
     const currentValue = arrayOne[rootIdxOne];
     const leftAreSame = areSameBsts(arrayOne, arrayTwo, leftRootIdxOne, leftRootIdxTwo, minVal, currentValue);
