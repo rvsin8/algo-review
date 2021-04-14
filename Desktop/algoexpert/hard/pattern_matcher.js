@@ -15,7 +15,11 @@
 //main function where we will do most logic
 //lenofY will be the total string length - length of x and how many times they appear and divide it by 2 --> (30 - (1*4))/2
 //firstYPos = 2, yIdx = firstYPos x lenofX --> 2 * 1 = 2
-//
+//x = "g" 
+//y = "gopowerranger"
+//we replace every x with g and every y with gopowerranger
+//gggopowerrangergggopowerranger and this is not correct
+//now we update lenofX to 2 and lenofY = (30 - 2 * 4) / 2 = 11
 
 //time complexity 
 //O(n^2 + m)
