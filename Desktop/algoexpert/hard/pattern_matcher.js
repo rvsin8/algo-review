@@ -2,6 +2,10 @@
 //Strings
 
 //my understanding
+//given two strings, first one is a patterns that consists of x's and y's --> "xxyxxy"
+//second string is the main string "gogopowerrangergogopowerranger"
+//does our main string match our pattern and what is the value of x and y
+//answer is x = go and y = powerranger
 
 //time complexity 
 //O(n^2 + m)
