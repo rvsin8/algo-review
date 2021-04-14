@@ -38,7 +38,7 @@ function areSameBsts(arrayOne, arrayTwo, rootIdxOne, rootIdxTwo, minVal, maxVal)
 
     const leftRootIdxOne = getIdxOfFirstSmaller(arrayOne, rootIdxOne, minVal); //get small values of array1
     const leftRootIdxTwo = getIdxOfFirstSmaller(arrayTwo, rootIdxTwo, minVal); //get small values of array2
-    const rightRootIdxOne = getIdxOfBiggerOrEqual(arrayOne, rootIdxOne, maxVal); //get values bigger or equal to array1
+    const rightRootIdxOne = getIdxOfFirstBiggerOrEqual(arrayOne, rootIdxOne, maxVal); //get values bigger or equal to array1
     const rightRootIdxTwo = getIdxOfFirstBiggerOrEqual(arrayTwo, rootIdxTwo, maxVal); //get values bigger or equal to array2
 
     const currentValue = arrayOne[rootIdxOne];
@@ -58,7 +58,7 @@ function getIdxOfFirstSmaller(array, startingIdx, minVal) { //helper two
 
 function getIdxOfFirstBiggerOrEqual(array, startingIdx, maxVal) { //helper three
     for (let i = startingIdx + 1; i < array.length; i++) { //in range
-        if (array[i] >= array[startingIdx] && array[i] >= maxVal) return i; //we need a num that is in the subtree and it needs to be greater than or equal to the max value
+        if (array[i] >= array[startingIdx] && array[i] < maxVal) return i; //we need a num that is in the subtree and it needs to be greater than or equal to the max value
     }
     return -1; //if we break out we get -1
 }
