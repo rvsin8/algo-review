@@ -11,6 +11,11 @@
 //we have to see if it starts with an x or a y
 //to simplify our logic is to turn any pattern that starts with y and turn it to x
 //getNewPattern will be a function that will create or return an array of our pattern, this is to check or do the switch
+//getCountsandFirstYPos is a function is going to count the x's and y's and tell us where our first y is at after we iterate through our pattern in getNewPattern
+//main function where we will do most logic
+//lenofY will be the total string length - length of x and how many times they appear and divide it by 2 --> (30 - (1*4))/2
+//firstYPos = 2, yIdx = firstYPos x lenofX --> 2 * 1 = 2
+//
 
 //time complexity 
 //O(n^2 + m)
