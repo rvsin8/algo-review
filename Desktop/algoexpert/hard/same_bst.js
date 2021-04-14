@@ -32,14 +32,14 @@ function sameBsts(arrayOne, arrayTwo) {
 }
 
 function areSameBsts(arrayOne, arrayTwo, rootIdxOne, rootIdxTwo, minVal, maxVal) { //helper method
-    if (rootIdxOne === -1 || rootIdxTwo === -1) return rootIdxOne === rootIdxTwo;
+    if (rootIdxOne === -1 || rootIdxTwo === -1) return rootIdxOne === rootIdxTwo; //if they are ever equal to -1 they are equal distance  so return the fact they are equal to each other
 
     if (arrayOne[rootIdxOne] !== arrayTwo[rootIdxTwo]) return false; //if the root do no match up return false
 
-    const leftRootIdxOne = getIdxOfFirstSmaller(arrayOne, rootIdxOne, minVal);
-    const leftRootIdxTwo = getIdxOfFirstSmaller(arrayTwo, rootIdxTwo, minVal);
-    const rightRootIdxOne = getIdxOfBiggerOrEqual(arrayOne, rootIdxOne, maxVal);
-    const rightRootIdxTwo = getIdxOfFirstBiggerOrEqual(arrayTwo, rootIdxTwo, maxVal);
+    const leftRootIdxOne = getIdxOfFirstSmaller(arrayOne, rootIdxOne, minVal); //
+    const leftRootIdxTwo = getIdxOfFirstSmaller(arrayTwo, rootIdxTwo, minVal); //
+    const rightRootIdxOne = getIdxOfBiggerOrEqual(arrayOne, rootIdxOne, maxVal); //
+    const rightRootIdxTwo = getIdxOfFirstBiggerOrEqual(arrayTwo, rootIdxTwo, maxVal); //
 
     const currentValue = arrayOne[rootIdxOne];
     const leftAreSame = areSameBsts(arrayOne, arrayTwo, leftRootIdxOne, leftRootIdxTwo, minVal, currentValue);
@@ -49,16 +49,16 @@ function areSameBsts(arrayOne, arrayTwo, rootIdxOne, rootIdxTwo, minVal, maxVal)
 
 }
 
-function getIdxOfFirstSmaller(array, startingIdx, minVal) {
-    for (let i = startingIdx + 1; i < array.length; i++) {
-        if (array[i] < array[startingIdx] && array[i] >= minVal) return i;
+function getIdxOfFirstSmaller(array, startingIdx, minVal) { //helper two
+    for (let i = startingIdx + 1; i < array.length; i++) { //in range
+        if (array[i] < array[startingIdx] && array[i] >= minVal) return i; //we need a num that is in the subtree and it needs to be greater than or equal to the min value
     }
-    return -1;
+    return -1; //if we break out we get -1
 }
 
-function getIdxOfFirstBiggerOrEqual(array, startingIdx, maxVal) {
-    for (let i = startingIdx + 1; i < array.length; i++) {
-        if (array[i] >= array[startingIdx] && array[i] >= maxVal) return i;
+function getIdxOfFirstBiggerOrEqual(array, startingIdx, maxVal) { //helper three
+    for (let i = startingIdx + 1; i < array.length; i++) { //in range
+        if (array[i] >= array[startingIdx] && array[i] >= maxVal) return i; //we need a num that is in the subtree and it needs to be greater than or equal to the max value
     }
-    return -1;
+    return -1; //if we break out we get -1
 }
