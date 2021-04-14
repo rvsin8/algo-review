@@ -24,10 +24,10 @@
 //this is correct once we replace them in our pattern
 
 //time complexity 
-//O(n^2 + m)
+//O(n^2 + m) where n is the length of our input string and m is the length of the pattern 
 
 //space complexity
-//O(n + m)
+//O(n + m) where n is the length of our input string and m is the length of the pattern
 
 function patternMatch(pattern, string) {
     if (pattern.length > string.length) return [];
