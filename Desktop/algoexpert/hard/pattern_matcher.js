@@ -40,3 +40,12 @@ function patternMatch(pattern, string) {
     }
     return [];
 }
+
+function getNewPattern(pattern) {
+    const patternLetters = pattern.split('');
+    if (pattern[0] === 'x') {
+        return patternLetters;
+    } else {
+        return patternLetters.map(char => (char === 'y' ? 'x' : 'y'));
+    }
+}
