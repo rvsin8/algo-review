@@ -26,14 +26,15 @@
 //space complexity
 //O(d) d is the depth of the bst represented via no extra space 
 
+//more complicated but better space solution
 function sameBsts(arrayOne, arrayTwo) {
-    return areSameBsts(arrayOne, arrayTwo, 0, 0, -Infinity, Infinity);
+    return areSameBsts(arrayOne, arrayTwo, 0, 0, -Infinity, Infinity); //0 and 0 are the root where we start and the min max are -infinity and infinity
 }
 
-function areSameBsts(arrayOne, arrayTwo, rootIdxOne, rootIdxTwo, minVal, maxVal) {
+function areSameBsts(arrayOne, arrayTwo, rootIdxOne, rootIdxTwo, minVal, maxVal) { //helper method
     if (rootIdxOne === -1 || rootIdxTwo === -1) return rootIdxOne === rootIdxTwo;
 
-    if (arrayOne[rootIdxOne] !== arrayTwo[rootIdxTwo]) return false;
+    if (arrayOne[rootIdxOne] !== arrayTwo[rootIdxTwo]) return false; //if the root do no match up return false
 
     const leftRootIdxOne = getIdxOfFirstSmaller(arrayOne, rootIdxOne, minVal);
     const leftRootIdxTwo = getIdxOfFirstSmaller(arrayTwo, rootIdxTwo, minVal);
