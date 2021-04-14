@@ -20,6 +20,8 @@
 //we replace every x with g and every y with gopowerranger
 //gggopowerrangergggopowerranger and this is not correct
 //now we update lenofX to 2 and lenofY = (30 - 2 * 4) / 2 = 11
+//yIdx = 2 * 2 = 4 this is where the y starts --> x = go and y = powerranger
+//this is correct once we replace them in our pattern
 
 //time complexity 
 //O(n^2 + m)
