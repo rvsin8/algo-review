@@ -35,11 +35,11 @@ function patternMatch(pattern, string) {
     const didSwitch = newPattern[0] !== pattern[0]; //if the first letter is not equal to the first letter in pattern that means we did do that swap
     const counts = {x: 0, y: 0}; //initialize the count to 0
     const firstYPos = getCountsAndFirstYPos(newPattern, counts); //the first y position is equal to our helper will return a num that will return the idx of our first y position 
-    if (counts['y'] !== 0) { //
-        for (let lenOfX = 1; lenOfX < string.length; lenOfX++) {
-            const lenOfY = (string.length - lenOfX * counts['x']) / counts['y'];
-            if (lenOfY <= 0 || lenOfY % 1 !== 0) continue;
-            const yIdx = firstYPos * lenOfX;
+    if (counts['y'] !== 0) { //if the count of y is not equal to 0 and we have y's in the pattern
+        for (let lenOfX = 1; lenOfX < string.length; lenOfX++) { //range, iterate through our entire main string 
+            const lenOfY = (string.length - lenOfX * counts['x']) / counts['y']; //formula to figure out the length of y
+            if (lenOfY <= 0 || lenOfY % 1 !== 0) continue; //if our y has a negative length or a decimal num there is not point of continuing 
+            const yIdx = firstYPos * lenOfX; 
             const x = string.slice(0, lenOfX);
             const y = string.slice(yIdx, yIdx + lenOfY);
             const potentialMatch = newPattern.map(char => (char === 'x' ? x : y));
