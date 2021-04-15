@@ -15,5 +15,8 @@ function maxPathSum(tree) {
 }
 
 function findMaxSum(tree) {
-    
+    if (tree === null) return [0, -Infinity];
+
+    const [leftMaxSumAsBranch, leftMaxPathSum] = findMaxSum(tree.left);
+    const [rightMaxSumAsBranch, rightMaxPathSum] = findMaxSum(tree.right);
 }
