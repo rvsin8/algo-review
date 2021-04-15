@@ -18,6 +18,9 @@
 //RSB, RS = mps(R) triangle 
 //MCSB = max(LSB, RSB) not triangle 
 //MSB = max (MCSB + V, V) not triangle 
+//MST = max (MSB, LSB + V + RSB)
+//we need the running max path sum as well RMPS = max(LS, RS, MST)
+//return a list of two values (MSB, RMPS)
 
 //time complexity 
 //O(n)
