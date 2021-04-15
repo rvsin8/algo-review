@@ -29,16 +29,16 @@
 //O(log(n)) where n is th total number of nodes bc we are dealing with a binary tree, when we call the recursive call aka log of n calls assuming we have a primarily balanced bt
 
 function maxPathSum(tree) {
-    const [_, maxSum] = findMaxSum(tree);
+    const [_, maxSum] = findMaxSum(tree); //recognize the recursive msp 
     return maxSum;
 }
 
-function findMaxSum(tree) {
-    if (tree === null) return [0, -Infinity];
+function findMaxSum(tree) { //helper method
+    if (tree === null) return [0, -Infinity]; //handle the base case, when our tree is none then return an object with two values
 
-    const [leftMaxSumAsBranch, leftMaxPathSum] = findMaxSum(tree.left);
-    const [rightMaxSumAsBranch, rightMaxPathSum] = findMaxSum(tree.right);
-    const maxChildSumAsBranch = Math.max(leftMaxSumAsBranch, rightMaxSumAsBranch);
+    const [leftMaxSumAsBranch, leftMaxPathSum] = findMaxSum(tree.left); //the left max sum and left max path sum will be one recursive call on the left
+    const [rightMaxSumAsBranch, rightMaxPathSum] = findMaxSum(tree.right);//the right max sum and right max path sum will be one recursive call on the right
+    const maxChildSumAsBranch = Math.max(leftMaxSumAsBranch, rightMaxSumAsBranch);//the value we use to compute the maximum sum branch of our current tree or triangle, we need it as a branch
 
     const {value} = tree;
     const maxSumAsBranch = Math.max(maxChildSumAsBranch + value, value);
