@@ -49,16 +49,16 @@ function patternMatch(pattern, string) {
             }
         }
     } else {
-        const lenOfX = string.length / counts['x'];
-        if (lenOfX % 1 === 0) {
-            const x = string.slice(0, lenOfX);
-            const potentialMatch = newPattern.map(char => (char === 'x' ? x : y));
-            if (string === potentialMatch.join('')) {
-                return !didSwitch ? [x, ''] : ['', x];
+        const lenOfX = string.length / counts['x']; //the length of x is calculated by the string length and the num of x's
+        if (lenOfX % 1 === 0) { //if we have a valid length, an actual integer not a decimal 
+            const x = string.slice(0, lenOfX); //
+            const potentialMatch = newPattern.map(char => (char === 'x' ? x : y)); //map every char to the x variable 
+            if (string === potentialMatch.join('')) { //if the string matches the match
+                return !didSwitch ? [x, ''] : ['', x]; //return the switch or swap if need be
             }
         }
     }
-    return [];
+    return []; //if all else false return an empty array if we never hit these if conditions 
 }
 
 function getNewPattern(pattern) { //helper method
