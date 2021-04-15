@@ -19,4 +19,9 @@ function findMaxSum(tree) {
 
     const [leftMaxSumAsBranch, leftMaxPathSum] = findMaxSum(tree.left);
     const [rightMaxSumAsBranch, rightMaxPathSum] = findMaxSum(tree.right);
+    const maxChildSumAsBranch = Math.max(leftMaxSumAsBranch, rightMaxSumAsBranch);
+
+    const {value} = tree;
+    const maxSumAsBranch = Math.max(maxChildSumAsBranch + value, value);
+    const maxSumAsRootNode = Math.max(leftMaxSumAsBranch + value + rightMaxSumAsBranch, maxSumAsBranch);
 }
