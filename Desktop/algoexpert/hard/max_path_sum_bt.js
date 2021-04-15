@@ -11,7 +11,13 @@
 //we shouldnt do LS + value + RS bc one of the left or right path sum can be negative 
 //temporary variable = max(LS + V, V)
 //temp2 var = max(temp + RS, temp) do we want to add the right paths sum ? maybe we will see
-//we are always 
+//we are always assuming our root node or current value will be in our sum but that assumption is wrong bc what if the root node o current value is negative 
+//for every node we will compute the max path sum and we will also compute the max path sum as a root node and a running path root sum
+//rewrite the algo 
+//mps(T): LSB, LS = mps(L)
+//RSB, RS = mps(R)
+//MCSB = max(LSB, RSB)
+//msb = max (MCSB + V, V)
 
 //time complexity 
 //O(n)
