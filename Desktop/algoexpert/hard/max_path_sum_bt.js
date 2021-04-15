@@ -6,7 +6,12 @@
 //a path is a collection of nodes in a bt that are connected, no single node can be connected to two other nodes
 //max path sum is 18 via 7 + 3 + 1 + 2 + 5
 //this will be a recursive function 
-
+//we can try to find the mps of the left subtree and then right subtree and do some computations to get the max
+//call the mps on a tree, so the left subtree = mps(l) and right subtree = mps(r)
+//we shouldnt do LS + value + RS bc one of the left or right path sum can be negative 
+//temporary variable = max(LS + V, V)
+//temp2 var = max(temp + RS, temp) do we want to add the right paths sum ? maybe we will see
+//we are always 
 
 //time complexity 
 //O(n)
