@@ -23,10 +23,10 @@
 //return a list of two values (MSB, RMPS)
 
 //time complexity 
-//O(n)
+//O(n) where n is the total number of nodes in a tree, so we traverse every node aka n nodes 
 
 //space complexity 
-//O(log(n))
+//O(log(n)) where n is th total number of nodes bc we are dealing with a binary tree, when we call the recursive call aka log of n calls
 
 function maxPathSum(tree) {
     const [_, maxSum] = findMaxSum(tree);
