@@ -41,10 +41,10 @@ function findMaxSum(tree) { //helper method
     const maxChildSumAsBranch = Math.max(leftMaxSumAsBranch, rightMaxSumAsBranch);//the value we use to compute the maximum sum branch of our current tree or triangle, we need it as a branch
 
     const {value} = tree;
-    const maxSumAsBranch = Math.max(maxChildSumAsBranch + value, value);
-    const maxSumAsRootNode = Math.max(leftMaxSumAsBranch + value + rightMaxSumAsBranch, maxSumAsBranch);
-    const maxPathSum = Math.max(leftMaxPathSum, rightMaxPathSum, maxSumAsRootNode);
+    const maxSumAsBranch = Math.max(maxChildSumAsBranch + value, value); //can be a negative so we want the max val
+    const maxSumAsRootNode = Math.max(leftMaxSumAsBranch + value + rightMaxSumAsBranch, maxSumAsBranch);//triangle, we need want to avoid negatives as well here
+    const maxPathSum = Math.max(leftMaxPathSum, rightMaxPathSum, maxSumAsRootNode); //the max of our three values aka our answer
 
-    return [maxSumAsBranch, maxPathSum];
+    return [maxSumAsBranch, maxPathSum]; //answer
 
 }
