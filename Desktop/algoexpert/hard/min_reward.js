@@ -2,9 +2,10 @@
 //Arrays
 
 //my understandings 
+//O(n)
 
 //time complexity 
-//
+//O(n)
 
 //space complexity 
 
