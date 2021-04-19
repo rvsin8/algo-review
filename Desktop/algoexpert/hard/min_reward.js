@@ -16,9 +16,12 @@
 //we will use a technique called peaks and values, local max's and local min's
 //we have trends in our scores as if we were to graph them going up and down
 //in that graph you can find local mins and maxs
-//if im a a local min, i will expand to the local max's on both sides
+//finda a local min, i will expand to the local max's on both sides
 //you just need to find the local mins and increment the rewards 
-//
+//you increment and stop when you hit peaks like 1, 2 3 4 and 2 3 4 5 until we hit the next local min
+//how do you know if youre at a local peak
+//it is an O(n) time and space 
+
 
 
 //time complexity 
