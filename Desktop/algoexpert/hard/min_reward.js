@@ -16,6 +16,8 @@
 //we will use a technique called peaks and values, local max's and local min's
 //we have trends in our scores as if we were to graph them going up and down
 //in that graph you can find local mins and maxs
+//if im a a local min, i will expand to the local max's on both sides
+//you just need to find the local mins and increment the rewards 
 //
 
 
