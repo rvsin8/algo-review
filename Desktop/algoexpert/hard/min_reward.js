@@ -37,12 +37,12 @@
 //O(n)
 
 function minRewards(scores) {
-    const rewards = scores.map(_ => 1);
-    for (let i = 1; i < scores.length; i++) {
-        if (scores[i] > scores[i - 1]) rewards[i] = rewards[i-1] + 1;
+    const rewards = scores.map(_ => 1); //initialize all scores to 1
+    for (let i = 1; i < scores.length; i++) { //iterate left to right
+        if (scores[i] > scores[i - 1]) rewards[i] = rewards[i-1] + 1; //compare scores to it previous scores, if we are in one of those upwards trend when we are expanding right then rewards of i is equal to rewards of the previous + 1
     }
-    for (let i = scores.length - 2; i >= 0; i--) {
-        if (scores[i] > scores[i+1]) rewards[i] = Math.max(rewards[i], rewards[i+1] + 1 );
+    for (let i = scores.length - 2; i >= 0; i--) { //right to left 
+        if (scores[i] > scores[i+1]) rewards[i] = Math.max(rewards[i], rewards[i+1] + 1 ); //if the score is greater than the score after it, then we do the max os the rewards or rewards + 1
     }
-    return rewards.reduce((a,b) => a + b);
+    return rewards.reduce((a,b) => a + b); //answer 
 }
