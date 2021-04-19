@@ -7,7 +7,8 @@
 //if a score is larger than another score next to it, it should have a higher reward and vice versa
 //[8,4,2,1,3,6,7,9,5]
 //[4,3,2,1,2,3,4,5,1], 25
-//
+//if we keep iterating through the array, we will probably need to iterate back to update some scores
+//when we are iterating back, the rewards array at idx j --> rewards[i] = max {rewards[j] pr rewards[j+1]+1}
 
 
 //time complexity 
