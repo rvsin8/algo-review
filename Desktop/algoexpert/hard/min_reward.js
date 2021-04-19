@@ -23,6 +23,12 @@
 //it is an O(n) time and space 
 
 
+//cleanest and optimal solution 
+//instead of finding the local min and expanding we can just iterate to the right and to the left
+//you can initialize all the scores to 1
+//if it is not greater than the num to the left then skip it, if it is then increase it by 1
+//1 1 1 1 2 3 4 5 1 left to right
+//4 3 2 1 2 3 4 5 1 right to left 
 
 //time complexity 
 //O(n)
