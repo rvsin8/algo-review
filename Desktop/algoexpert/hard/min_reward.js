@@ -1,13 +1,15 @@
 //Min Rewards
 //Arrays
 
-//my understandings 
-//O(n)
+//my understandings
+// 
+
 
 //time complexity 
 //O(n)
 
 //space complexity 
+//O(n)
 
 function minRewards(scores) {
     const rewards = scores.map(_ => 1);
