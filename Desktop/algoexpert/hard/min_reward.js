@@ -2,7 +2,9 @@
 //Arrays
 
 //my understandings
-// 
+//given a list of integers and it represents a score that the students got in the final exam
+//the order matters
+//if a score is larger than another score next to it, it should have a higher reward 
 
 
 //time complexity 
