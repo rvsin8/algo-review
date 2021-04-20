@@ -15,7 +15,10 @@ function largestRectangleUnderSkyline(buildings) {
 
     const extendedBuildings = buildings.concat([0]);
     for (let idx = 0; idx < extendedBuildings.length; idx++) {
-        
+        const height = extendedBuildings[idx];
+        while (pillarIndices.length !== 0 && extendedBuildings[pillarIndices[pillarIndices.length - 1]] >= height) {
+            
+        }
     }
 
 }
