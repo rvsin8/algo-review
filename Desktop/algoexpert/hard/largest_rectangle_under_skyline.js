@@ -10,5 +10,7 @@
 //O(n)
 
 function largestRectangleUnderSkyline(buildings) {
-    
+    const pillarIndices = [];
+    let maxArea = 0;
+
 }
