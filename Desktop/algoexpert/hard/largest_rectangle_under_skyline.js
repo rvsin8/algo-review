@@ -9,3 +9,6 @@
 //space complexity 
 //O(n)
 
+function largestRectangleUnderSkyline(buildings) {
+    
+}
