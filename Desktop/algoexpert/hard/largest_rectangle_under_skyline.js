@@ -34,6 +34,9 @@
 //we will find the left and right bound in a different way
 //we are using a stack 
 //it is LIFO and FILO
+//we will use the stack to save indices, go through each building and help us determine our furthest left and right points
+//we will compare the height of the buildings on top of the stack with our current building'
+
 
 
 //time complexity 
