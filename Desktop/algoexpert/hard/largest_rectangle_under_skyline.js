@@ -30,6 +30,10 @@
 //space complexity is O(1) we are storing nothing
 
 //optimal solution
+//will solve this with one pass
+//we will find the left and right bound in a different way
+//we are using a stack 
+//it is LIFO and FILO
 
 
 //time complexity 
