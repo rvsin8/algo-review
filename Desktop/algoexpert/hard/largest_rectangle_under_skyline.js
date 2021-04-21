@@ -19,7 +19,12 @@
 //loop through every building and figure out the height of the buildings and see what is the largest rectangle we can create
 //we expand to the left or right 
 //wt idx0 we have a height is 1, the farthest left we can go is the height itself and to the right it is all the way to the last building which is 9
+//maxArea = 9 
+//at idx1 height is 3, the left is 1 and right is 3 and the maxArea = 6
+//idx2, maxArea is 6 again
+//idx3, the farthest left we can go is idx1 and right until idx 4, maxArea = 8 bc 2 * 4 = 8
 //
+
 
 //time complexity 
 //O(n)
