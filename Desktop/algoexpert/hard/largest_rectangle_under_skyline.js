@@ -2,6 +2,10 @@
 //Stacks 
 
 //my understanding
+//we are given one input called buildings and it will be an array of integers that represent the height of buildings adjacent from each other
+//we have to look at the heights, we can assume they are the same width and we must find the largest area these adjacent buildings can form
+//we need to pick buildings right besides each other
+//
 
 //time complexity 
 //O(n)
