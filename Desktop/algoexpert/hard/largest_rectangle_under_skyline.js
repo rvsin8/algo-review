@@ -5,6 +5,9 @@
 //we are given one input called buildings and it will be an array of integers that represent the height of buildings adjacent from each other
 //we have to look at the heights, we can assume they are the same width and we must find the largest area these adjacent buildings can form
 //we need to pick buildings right besides each other
+//buildings = [1, 3, 3, 2, 4, 1, 5, 3, 2]
+//if we look at the first three buildings the area we can get will be 1 bc thats the minimum value of height btw the three buildings
+//if we look at building 2 and 3 we would get an area of 6 bc the two buildings height is 6
 //
 
 //time complexity 
