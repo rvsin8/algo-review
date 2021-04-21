@@ -23,6 +23,8 @@
 //at idx1 height is 3, the left is 1 and right is 3 and the maxArea = 6
 //idx2, maxArea is 6 again
 //idx3, the farthest left we can go is idx1 and right until idx 4, maxArea = 8 bc 2 * 4 = 8
+//so on
+//when we hit a building that is less than our height we stop at the idx before that height
 //
 
 
