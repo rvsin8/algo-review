@@ -15,7 +15,9 @@
 //non optimal solution 
 //two main factors that are influencing the area - the width and height
 //if we are given two large buildings we would probably use those two buildings
-
+//we need to find all rectangle combos 
+//loop through every building and figure out the height of the buildings and see what is the largest rectangle we can create
+//
 
 //time complexity 
 //O(n)
