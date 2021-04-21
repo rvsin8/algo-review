@@ -11,7 +11,11 @@
 //for building 2-5 we would get an area of 8 bc the lowest height is 2 and we have 4 buildings 
 //the answer is 9 by using all of the buildings the min height is 1 and we have 9 buildings so 1 * 9 = 9
 //if you have no buildings the largest rectangle is 0
-//
+
+//non optimal solution 
+//two main factors that are influencing the area - the width and height
+//if we are given two large buildings we would probably use those two buildings
+
 
 //time complexity 
 //O(n)
