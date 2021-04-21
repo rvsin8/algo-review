@@ -17,6 +17,8 @@
 //if we are given two large buildings we would probably use those two buildings
 //we need to find all rectangle combos 
 //loop through every building and figure out the height of the buildings and see what is the largest rectangle we can create
+//we expand to the left or right 
+//wt idx0 we have a height is 1, the farthest left we can go is the height itself and to the right it is all the way to the last building which is 9
 //
 
 //time complexity 
