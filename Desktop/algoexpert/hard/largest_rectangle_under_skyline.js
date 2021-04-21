@@ -8,6 +8,9 @@
 //buildings = [1, 3, 3, 2, 4, 1, 5, 3, 2]
 //if we look at the first three buildings the area we can get will be 1 bc thats the minimum value of height btw the three buildings
 //if we look at building 2 and 3 we would get an area of 6 bc the two buildings height is 6
+//for building 2-5 we would get an area of 8 bc the lowest height is 2 and we have 4 buildings 
+//the answer is 9 by using all of the buildings the min height is 1 and we have 9 buildings so 1 * 9 = 9
+//if you have no buildings the largest rectangle is 0
 //
 
 //time complexity 
