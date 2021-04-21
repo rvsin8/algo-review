@@ -25,7 +25,11 @@
 //idx3, the farthest left we can go is idx1 and right until idx 4, maxArea = 8 bc 2 * 4 = 8
 //so on
 //when we hit a building that is less than our height we stop at the idx before that height
-//
+//so on
+//time complexity is O(n^2) with every building we have to look all the way to the left and right
+//space complexity is O(1) we are storing nothing
+
+//optimal solution
 
 
 //time complexity 
