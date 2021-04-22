@@ -41,10 +41,10 @@
 //R-L-1 then multiply it by our height 
 
 //time complexity 
-//O(n)
+//O(n) bc we do one iteration n times --> n pop and n push
 
 //space complexity 
-//O(n)
+//O(n) because we have a stack holding n buildings 
 
 function largestRectangleUnderSkyline(buildings) {
     const pillarIndices = [];
