@@ -38,6 +38,7 @@
 //we will compare the height of the buildings on top of the stack with our current building'
 //we remove buildings from the stack once we find our bounds
 //this is mad confusing rewatch this 
+//R-L-1 then multiply it by our height 
 
 //time complexity 
 //O(n)
