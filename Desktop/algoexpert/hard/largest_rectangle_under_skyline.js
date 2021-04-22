@@ -36,8 +36,8 @@
 //it is LIFO and FILO
 //we will use the stack to save indices, go through each building and help us determine our furthest left and right points
 //we will compare the height of the buildings on top of the stack with our current building'
-
-
+//we remove buildings from the stack once we find our bounds
+//this is mad confusing rewatch this 
 
 //time complexity 
 //O(n)
