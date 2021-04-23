@@ -9,4 +9,7 @@
 //space complexity
 //O(low * high)
 
-
+function ambiguousMeasurements(measuringCups, low, high) {
+    const memoization = {};
+    return canMeasureInRange(measuringCups, low, high, memoization);
+}
