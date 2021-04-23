@@ -52,14 +52,14 @@ function largestRectangleUnderSkyline(buildings) {
 
     const extendedBuildings = buildings.concat([0]); //numerate building with a height of 0
     for (let idx = 0; idx < extendedBuildings.length; idx++) { //in range
-        const height = extendedBuildings[idx]; 
-        while (pillarIndices.length !== 0 && extendedBuildings[pillarIndices[pillarIndices.length - 1]] >= height) {
-            const pillarHeight = extendedBuildings[pillarIndices.pop()];
-            const width = pillarIndices.length === 0 ? idx : idx - pillarIndices[pillarIndices.length - 1] - 1;
-            maxArea = Math.max(width * pillarHeight, maxArea);
+        const height = extendedBuildings[idx]; //
+        while (pillarIndices.length !== 0 && extendedBuildings[pillarIndices[pillarIndices.length - 1]] >= height) { //if the ele in the top of the stack is greater than or equal to the height
+            const pillarHeight = extendedBuildings[pillarIndices.pop()]; //pop this ele off the stack
+            const width = pillarIndices.length === 0 ? idx : idx - pillarIndices[pillarIndices.length - 1] - 1; //itll be the last idx on the stack if theres nothing there otherwise we have to do the calculation
+            maxArea = Math.max(width * pillarHeight, maxArea); //we will calculate and decide the max btw the two
         }
-        pillarIndices.push(idx);
+        pillarIndices.push(idx); //push into the list 
     }
-    return maxArea;
+    return maxArea; //return answer
 
 }
