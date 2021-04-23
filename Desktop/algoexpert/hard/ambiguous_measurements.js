@@ -23,6 +23,11 @@
 //min = 2000, max = 2070 (1 time)
 //min = 2200, max = 2280 (2 times)
 //true bc its within 2100 - 2300
+//base case --> if low < 0 and high < 0; return false
+//if we never true, we are not able to solve this problem 
+//rec(cups, low, high) low = 2100, high = 2300
+//rec(cups, low = 1900, high = 2090)
+//
 
 //time complexity
 //O(low * high * n)
@@ -58,7 +63,7 @@ function canMeasureInRange(measuringCups, low, high, memoization) {
     return canMeasure;
 }
 
-function createHashableKey(Low, high) {
+function createHashableKey(low, high) {
     return low.toString() + ':' + high.toString();
 }
     
