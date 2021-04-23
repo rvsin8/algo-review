@@ -2,6 +2,12 @@
 //Recursion
 
 //my understanding
+//we are given three inputs, one will be an array of different measuring cups 
+//our goal is to measure out a certain volume of liquid, a low and high volume range which will be our other two input
+//it is difficult cause of measuring cups are not precise 
+//measuringcups = [[200, 210], [450, 465], [800, 850]]
+//low = 2100
+//high = 2300
 
 //time complexity
 //O(low * high * n)
@@ -9,7 +15,7 @@
 //space complexity
 //O(low * high)
 
-function ambiguousMeasurements(measuringCups, low, high) {
+function ambiguousMeasurements(measuringCups, low, high) { //
     const memoization = {};
     return canMeasureInRange(measuringCups, low, high, memoization);
 }
