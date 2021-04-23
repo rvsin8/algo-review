@@ -9,5 +9,7 @@
 
 function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
     if (isDescendant(nodeTwo, nodeOne)) return isDescendant(nodeThree, nodeTwo);
-    if (isDescendant(nodeTwo, nodeThree))
+    if (isDescendant(nodeTwo, nodeThree)) return isDescendant(nodeOne, nodeTwo);
+
+    return false;
 }
