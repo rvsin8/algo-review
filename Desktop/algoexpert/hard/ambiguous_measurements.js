@@ -36,4 +36,8 @@ function canMeasureInRange(measuringCups, low, high, memoization) {
     memoization[memoizeKey] = canMeasure;
     return canMeasure;
 }
+
+function createHashableKey(Low, high) {
+    return low.toString() + ':' + high.toString();
+}
     
