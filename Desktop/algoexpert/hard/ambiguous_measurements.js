@@ -35,7 +35,8 @@
 
 
 //time complexity
-//O(low * high * n)
+//O(low * high * n) where n is the number of cups we have, low and high reference the input parameters
+//we need to reduce the high or low to be in the negatives and we dont know how long this will take us
 
 //space complexity
 //O(low * high)
