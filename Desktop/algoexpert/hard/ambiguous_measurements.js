@@ -44,8 +44,8 @@
 //we have a cache that will tell us for the function calls we already made, the most amount we will have will be low times high
 
 function ambiguousMeasurements(measuringCups, low, high) { //
-    const memoization = {};
-    return canMeasureInRange(measuringCups, low, high, memoization);
+    const memoization = {}; //our cache that stores our answers
+    return canMeasureInRange(measuringCups, low, high, memoization); //return the helper function that gives us the boolean answer
 }
 
 function canMeasureInRange(measuringCups, low, high, memoization) {
