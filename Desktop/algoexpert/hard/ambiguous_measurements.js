@@ -67,8 +67,8 @@ function canMeasureInRange(measuringCups, low, high, memoization) { //helper met
         if (canMeasure) break; //if you can measure we break from the for loop
     }
 
-    memoization[memoizeKey] = canMeasure;
-    return canMeasure;
+    memoization[memoizeKey] = canMeasure; //store our answer in our table
+    return canMeasure; //return the result
 }
 
 function createHashableKey(low, high) { //helpers 2
