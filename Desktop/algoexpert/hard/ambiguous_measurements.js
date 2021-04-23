@@ -27,7 +27,8 @@
 //if we never true, we are not able to solve this problem 
 //rec(cups, low, high) low = 2100, high = 2300
 //rec(cups, low = 1900, high = 2090)
-//
+//rec(cups, low = 1650, high = 1835)
+//rec(cups, low = 1300, high = 1450)
 
 //time complexity
 //O(low * high * n)
