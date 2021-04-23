@@ -47,12 +47,12 @@
 //O(n) because we have a stack holding n buildings 
 
 function largestRectangleUnderSkyline(buildings) {
-    const pillarIndices = [];
-    let maxArea = 0;
+    const pillarIndices = []; //saved to an empty list
+    let maxArea = 0; //max area is 0
 
-    const extendedBuildings = buildings.concat([0]);
-    for (let idx = 0; idx < extendedBuildings.length; idx++) {
-        const height = extendedBuildings[idx];
+    const extendedBuildings = buildings.concat([0]); //numerate building with a height of 0
+    for (let idx = 0; idx < extendedBuildings.length; idx++) { //in range
+        const height = extendedBuildings[idx]; 
         while (pillarIndices.length !== 0 && extendedBuildings[pillarIndices[pillarIndices.length - 1]] >= height) {
             const pillarHeight = extendedBuildings[pillarIndices.pop()];
             const width = pillarIndices.length === 0 ? idx : idx - pillarIndices[pillarIndices.length - 1] - 1;
