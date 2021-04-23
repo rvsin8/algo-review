@@ -48,10 +48,10 @@ function ambiguousMeasurements(measuringCups, low, high) { //
     return canMeasureInRange(measuringCups, low, high, memoization); //return the helper function that gives us the boolean answer
 }
 
-function canMeasureInRange(measuringCups, low, high, memoization) {
-    const memoizeKey = createHashableKey(low, high);
-    if (memoizeKey in memoization) return memoization[memoizeKey];
-    if (low <= 0 && high <= 0) return false;
+function canMeasureInRange(measuringCups, low, high, memoization) { //helper method
+    const memoizeKey = createHashableKey(low, high); //another helper - combine both the high and low value to see if we can measure the range
+    if (memoizeKey in memoization) return memoization[memoizeKey]; //if the memoized key is in the cache then return its stored value
+    if (low <= 0 && high <= 0) return false; //base case if we hit the negatives 
 
     let canMeasure = false;
     for (const cup of measuringCups) {
@@ -71,7 +71,7 @@ function canMeasureInRange(measuringCups, low, high, memoization) {
     return canMeasure;
 }
 
-function createHashableKey(low, high) {
-    return low.toString() + ':' + high.toString();
+function createHashableKey(low, high) { //helpers 2
+    return low.toString() + ':' + high.toString(); //combine the two integers as a string
 }
     
