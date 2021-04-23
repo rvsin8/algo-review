@@ -19,6 +19,8 @@
 //high = 465
 //min = 900, max = 930 (2 times)
 //min = 1800, max = 1860 (4 times)
+//[200, 210]
+//min = 2000, max = 2070
 
 //time complexity
 //O(low * high * n)
