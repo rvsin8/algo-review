@@ -13,3 +13,10 @@ function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
 
     return false;
 }
+
+function isDescendant(node, target) {
+    if (node === null) return false;
+    if (node === target) return true;
+
+    return target.value < node.value ? isDescendant(node.left, target) : isDescendant(node.right, target);
+}
