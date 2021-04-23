@@ -29,6 +29,10 @@
 //rec(cups, low = 1900, high = 2090)
 //rec(cups, low = 1650, high = 1835)
 //rec(cups, low = 1300, high = 1450)
+//we will be doing a lot of unnecessary work and repeated recursive calls
+//we will use memoization to avoid calc the same range multiple times, we will cache our solutions 
+//we will store it in a hash table so whenever we see the range again, and we check it and just look at that result in the hash table
+
 
 //time complexity
 //O(low * high * n)
