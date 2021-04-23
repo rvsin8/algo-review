@@ -13,6 +13,12 @@
 //we have to figure out that if the measuring cups we have can measure within our two low and high volumes
 //we can measure whatever combo we find WITHIN 
 //we cannot remove any of it from the pool of water or put volume in another cup from another cup
+//O <= L <= H
+//[450, 465]
+//low = 450
+//high = 465
+//min = 900, max = 930 (2 times)
+//min = 1800, max = 1860 (4 times)
 
 //time complexity
 //O(low * high * n)
