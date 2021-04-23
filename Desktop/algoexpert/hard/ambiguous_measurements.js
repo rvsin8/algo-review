@@ -53,18 +53,18 @@ function canMeasureInRange(measuringCups, low, high, memoization) { //helper met
     if (memoizeKey in memoization) return memoization[memoizeKey]; //if the memoized key is in the cache then return its stored value
     if (low <= 0 && high <= 0) return false; //base case if we hit the negatives 
 
-    let canMeasure = false;
-    for (const cup of measuringCups) {
-        const [cupLow, cupHigh] = cup;
-        if (low <= cupLow && cupHigh <= high) {
-            canMeasure = true;
-            break;
+    let canMeasure = false; //if we can or cannot measure a specific range
+    for (const cup of measuringCups) { //for range
+        const [cupLow, cupHigh] = cup; //so we get the low and high value
+        if (low <= cupLow && cupHigh <= high) { //that means we are in the range
+            canMeasure = true; //can return true
+            break; //break out the for loop
         }
 
-        const newLow = Math.max(0, low - cupLow);
-        const newHigh = Math.mac(0, high - cupHigh);
-        canMeasure = canMeasureInRange(measuringCups, newLow, newHigh, memoization);
-        if (canMeasure) break;
+        const newLow = Math.max(0, low - cupLow); //we need to reduce the range 
+        const newHigh = Math.mac(0, high - cupHigh); //we need to reduce the range
+        canMeasure = canMeasureInRange(measuringCups, newLow, newHigh, memoization); //recursive call that reduces
+        if (canMeasure) break; //if you can measure we break from the for loop
     }
 
     memoization[memoizeKey] = canMeasure;
