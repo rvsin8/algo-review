@@ -8,6 +8,11 @@
 //measuringcups = [[200, 210], [450, 465], [800, 850]]
 //low = 2100
 //high = 2300
+//we have two measuring lines in our measuring cups pair --> first ele is the low line and the second is the high line
+//we have to make sure the volume is btw those two volumes 
+//we have to figure out that if the measuring cups we have can measure within our two low and high volumes
+//we can measure whatever combo we find WITHIN 
+//we cannot remove any of it from the pool of water or put volume in another cup from another cup
 
 //time complexity
 //O(low * high * n)
