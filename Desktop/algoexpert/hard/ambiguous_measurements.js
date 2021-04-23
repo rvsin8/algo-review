@@ -20,7 +20,9 @@
 //min = 900, max = 930 (2 times)
 //min = 1800, max = 1860 (4 times)
 //[200, 210]
-//min = 2000, max = 2070
+//min = 2000, max = 2070 (1 time)
+//min = 2200, max = 2280 (2 times)
+//true bc its within 2100 - 2300
 
 //time complexity
 //O(low * high * n)
