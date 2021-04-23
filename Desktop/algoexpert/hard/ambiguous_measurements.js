@@ -62,7 +62,7 @@ function canMeasureInRange(measuringCups, low, high, memoization) { //helper met
         }
 
         const newLow = Math.max(0, low - cupLow); //we need to reduce the range 
-        const newHigh = Math.mac(0, high - cupHigh); //we need to reduce the range
+        const newHigh = Math.max(0, high - cupHigh); //we need to reduce the range
         canMeasure = canMeasureInRange(measuringCups, newLow, newHigh, memoization); //recursive call that reduces
         if (canMeasure) break; //if you can measure we break from the for loop
     }
