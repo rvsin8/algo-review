@@ -7,6 +7,7 @@
 
 //space complexity
 
+
 function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
     if (isDescendant(nodeTwo, nodeOne)) return isDescendant(nodeThree, nodeTwo);
     if (isDescendant(nodeTwo, nodeThree)) return isDescendant(nodeOne, nodeTwo);
@@ -15,8 +16,8 @@ function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
 }
 
 function isDescendant(node, target) {
-    if (node === null) return false;
-    if (node === target) return true;
-
-    return target.value < node.value ? isDescendant(node.left, target) : isDescendant(node.right, target);
+    if (node !== null && node !== target) {
+        node = target.value < node.value ? node.left : node.right;\
+    }
+    return node === target;
 }
