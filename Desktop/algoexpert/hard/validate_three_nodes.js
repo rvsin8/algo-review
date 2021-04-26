@@ -35,9 +35,10 @@
 
 //time complexity 
 //O(d) it can be better or the same as O(h)
+//it can be worse but this is the avg time complexity 
 
 //space complexity
-//O(1)
+//O(1) there is no auxillary space we need
 
 //non optimal solution 
 function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
