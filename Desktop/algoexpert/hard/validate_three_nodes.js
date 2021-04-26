@@ -71,3 +71,9 @@ function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
     return searchForTarget(nodeTwo, searchOne === nodeTwo ? nodeThree : nodeOne);
 }
 
+function searchForTarget(node, target) {
+    while (node !== null && node !== target) {
+        node = target.value < node.value ? node.left : node.right;
+    }
+    return node === target;
+}
