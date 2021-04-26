@@ -25,6 +25,10 @@
 //if we find node1 or node3 before node 2 we can terminate 
 //as soon as we find node 2, and then we look for node 3 from node 2
 //if we ever find node 3 or node1 from each other we know we need to stop
+//search1 = 5
+//search2 = 3
+//we will check if search 1 has found search 3 or if search 2 have found search 1 and we stop
+//if search 1 or 3 = none we also stop
 
 //time complexity 
 //O(d) it can be better or the same as O(h)
