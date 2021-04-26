@@ -22,9 +22,12 @@
 //O(h) time | O(1) space
 
 //solve this optimal
+//if we find node1 or node3 before node 2 we can terminate 
+//as soon as we find node 2, and then we look for node 3 from node 2
+//if we ever find node 3 or node1 from each other we know we need to stop
 
 //time complexity 
-//O(d)
+//O(d) it can be better or the same as O(h)
 
 //space complexity
 //O(1)
