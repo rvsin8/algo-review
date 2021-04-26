@@ -48,11 +48,11 @@ function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
     return false; //if not return false
 }
 
-function isDescendant(node, target) {
+function isDescendant(node, target) { //iteratively
     if (node !== null && node !== target) {
-        node = target.value < node.value ? node.left : node.right;\
+        node = target.value < node.value ? node.left : node.right; //look to the left is node value > greater than target value
     }
-    return node === target;
+    return node === target; //we found the target node
 }
 
 //optimal solution 
