@@ -64,5 +64,10 @@ function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
             searchTwo = searchTwo.value > nodeTwo.value ? searchTwo.left : searchTwo.right;
         }
     }
-    
+    const foundNodeFromOther = searchOne === nodeThree || searchTwo === nodeOne;
+    const foundNodeTwo = searchOne === nodeTwo || searchTwo === nodeTwo;
+    if (!foundNodeTwo || foundNodeFromOther) return false;
+
+    return searchForTarget(nodeTwo, searchOne === nodeTwo ? nodeThree : nodeOne);
 }
+
