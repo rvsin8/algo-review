@@ -29,6 +29,9 @@
 //search2 = 3
 //we will check if search 1 has found search 3 or if search 2 have found search 1 and we stop
 //if search 1 or 3 = none we also stop
+//we compare each node to search 1 and search 3, we can look at node value = 2 and see it is less than search 1 which is 5 and we update search 1 to 2
+//we compare search 1 to node 3 which is search 3, the left child of search 2 is now none 
+//once we found node 2, we compare values until we hit node 3 and find out it is a descendant and we return true
 
 //time complexity 
 //O(d) it can be better or the same as O(h)
