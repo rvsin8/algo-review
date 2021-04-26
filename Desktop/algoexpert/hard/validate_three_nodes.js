@@ -18,7 +18,10 @@
 //we can start at our value aka node 2 and look for node 1 in O(h) time and then node 3
 //we find the descendant and then look for the ancestor 
 //we are checking multiple ways to do this bc we can check if node 1 is the anc or des and if node 3 is the anc or des
-//
+//based on those result we return true or false
+//O(h) time | O(1) space
+
+//solve this optimal
 
 //time complexity 
 
