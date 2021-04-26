@@ -12,6 +12,9 @@
 //a bst i ony valid if its left child is strictly less than its right child
 //a descendant is a node that is in the ame branch as another node but is below it
 //an ancestor is in the same branch but above it 
+
+//solve this
+//use the bst way to search for values bc it is faster
 //
 
 //time complexity 
