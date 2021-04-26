@@ -45,3 +45,7 @@ function isDescendant(node, target) {
 }
 
 //optimal solution 
+function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
+    let searchOne = nodeOne;
+    let searchTwo = nodeThree;
+}
