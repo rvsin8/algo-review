@@ -8,6 +8,10 @@
 //if one is the descendant we need to check if the other is an ancestor
 //return true if it is true
 //these nodes will be unique and not null
+//we have a bst which means that these nodes have a value, right, left property 
+//a bst i ony valid if its left child is strictly less than its right child
+//a descendant is a node that is in the ame branch as another node but is below it
+//an ancestor is in the same branch but above it 
 //
 
 //time complexity 
