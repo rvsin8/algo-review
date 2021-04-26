@@ -57,5 +57,12 @@ function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
         if (foundThreeFromOne || foundOneFromThree || foundNodeTwo || finishedSearching) {
             break;
         }
+        if (searchOne !== null) {
+            searchOne = searchOne.value > nodeTwo.value ? searchOne.left : searchOne.right;
+        }
+        if (searchTwo !== null) {
+            searchTwo = searchTwo.value > nodeTwo.value ? searchTwo.left : searchTwo.right;
+        }
     }
+    
 }
