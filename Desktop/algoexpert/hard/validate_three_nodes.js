@@ -24,10 +24,12 @@
 //solve this optimal
 
 //time complexity 
+//O(d)
 
 //space complexity
+//O(1)
 
-
+//non optimal solution 
 function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
     if (isDescendant(nodeTwo, nodeOne)) return isDescendant(nodeThree, nodeTwo);
     if (isDescendant(nodeTwo, nodeThree)) return isDescendant(nodeOne, nodeTwo);
@@ -41,3 +43,5 @@ function isDescendant(node, target) {
     }
     return node === target;
 }
+
+//optimal solution 
