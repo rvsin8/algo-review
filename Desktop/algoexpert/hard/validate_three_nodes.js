@@ -2,6 +2,10 @@
 //Binary Search Trees
 
 //my understanding
+//we are given three inputs and these inputs are individual nodes contained in the same binary search tree
+//these nodes are labeled node one, node two and node three 
+//what we need to try to find out is if node 2 is btw node 1 and 3
+
 
 //time complexity 
 
