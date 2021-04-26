@@ -48,4 +48,14 @@ function isDescendant(node, target) {
 function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
     let searchOne = nodeOne;
     let searchTwo = nodeThree;
+
+    while (true) {
+        const foundThreeFromOne = searchOne === nodeThree;
+        const foundOneFromThree = searchTwo === nodeOne;
+        const foundNodeTwo = searchOne === nodeTwo || searchTwo === nodeTwo;
+        const finishedSearching = searchOne === null && searchTwo === null;
+        if (foundThreeFromOne || foundOneFromThree || foundNodeTwo || finishedSearching) {
+            break;
+        }
+    }
 }
