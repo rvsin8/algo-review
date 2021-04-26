@@ -42,8 +42,8 @@
 
 //non optimal solution 
 function validateThreeNodes(nodeOne, nodeTwo, nodeThree) {
-    if (isDescendant(nodeTwo, nodeOne)) return isDescendant(nodeThree, nodeTwo);
-    if (isDescendant(nodeTwo, nodeThree)) return isDescendant(nodeOne, nodeTwo);
+    if (isDescendant(nodeTwo, nodeOne)) return isDescendant(nodeThree, nodeTwo); //if the second node pass is the descendant of the first and we will see if node 2 is a descendat of node 3
+    if (isDescendant(nodeTwo, nodeThree)) return isDescendant(nodeOne, nodeTwo); //if node 3 is a descendant of node 2 and check if node 1 is the ancestor
 
     return false;
 }
