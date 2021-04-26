@@ -13,8 +13,11 @@
 //a descendant is a node that is in the ame branch as another node but is below it
 //an ancestor is in the same branch but above it 
 
-//solve this
-//use the bst way to search for values bc it is faster
+//solve this non-optimal
+//use the bst way to search for values bc it is faster ypu can keep pruning half of a tree
+//we can start at our value aka node 2 and look for node 1 in O(h) time and then node 3
+//we find the descendant and then look for the ancestor 
+//we are checking multiple ways to do this bc we can check if node 1 is the anc or des and if node 3 is the anc or des
 //
 
 //time complexity 
