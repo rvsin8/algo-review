@@ -7,3 +7,7 @@
 
 //space complexity 
 
+function firstNonRepeatingCharacters(string){
+    const characterFrequencies = {};
+    
+}
