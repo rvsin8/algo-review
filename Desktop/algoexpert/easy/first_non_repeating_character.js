@@ -12,6 +12,7 @@ function firstNonRepeatingCharacters(string){
 
     for (const character of string) {
         if (!(character in characterFrequencies)) characterFrequencies[character] = 0; 
+        characterFrequencies[character]++;
     }
 
 }
