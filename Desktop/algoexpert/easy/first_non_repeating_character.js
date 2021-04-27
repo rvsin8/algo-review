@@ -15,4 +15,11 @@ function firstNonRepeatingCharacters(string){
         characterFrequencies[character]++;
     }
 
+    for (let idx = 0; idx < string.length; idx++) {
+        const character = string[idx];
+        if (characterFrequencies[character] === 1) return idx;
+    }
+
+    return -1;
+
 }
