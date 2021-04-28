@@ -43,9 +43,9 @@ function firstNonRepeatingCharacters(string){
         characterFrequencies[character]++; //we will add one to every time we see the char
     }
 
-    for (let idx = 0; idx < string.length; idx++) { //
-        const character = string[idx];
-        if (characterFrequencies[character] === 1) return idx;
+    for (let idx = 0; idx < string.length; idx++) { //idx traversal
+        const character = string[idx]; //get the char
+        if (characterFrequencies[character] === 1) return idx; //return the idx of the char that only occurs once
     }
 
     return -1;
