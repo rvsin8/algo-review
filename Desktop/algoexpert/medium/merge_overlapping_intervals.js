@@ -8,7 +8,11 @@
 //if they overlap then we merge
 //[1,4] [5,8] ---> [1,8]
 //[2,6] [6,8] --> [2,8]
-//interval overlap when the end of one interval is greater than or equal to the start of one interval
+//interval overlap when the end of one interval is greater than or equal to the start of one interval if SORTED
+//the first thing we will do is sort the input in order of increasing starting value 
+//append an interval and keep track of it as a reference, then traverse the intervals and compare them to our reference interval
+//if no overlap we change our reference and do this again 
+//if there is an interval. we will merge these intervals by updating the ending values
 
 //time complexity 
 //O(nlog(n))
