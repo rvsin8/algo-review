@@ -7,3 +7,7 @@
 
 //space complexity 
 
+function mergeOverlappingIntervals(intervals) {
+    const sortedIntervals = intervals.sort((a,b) => a[0] - b[0]);
+    
+}
