@@ -48,6 +48,6 @@ function firstNonRepeatingCharacters(string){
         if (characterFrequencies[character] === 1) return idx; //return the idx of the char that only occurs once
     }
 
-    return -1;
+    return -1; //if we do not find any nonrepeating char return -1
 
 }
