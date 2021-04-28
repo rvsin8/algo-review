@@ -23,7 +23,11 @@
 
 //optimal solution
 //use a data structure to help with time complexity 
-
+//use a HashMap <Char, Count>
+//initialize our hash map and then traverse through each letter in the string 
+//keep count of every time we hit our letters
+//{'c': 2, 'o': 3, 'l': 1, 'd': 1, 'e': 1} 
+//
 
 //time complexity 
 
