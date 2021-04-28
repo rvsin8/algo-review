@@ -19,8 +19,11 @@
 //and check the boolean
 //when we do find a dup, we update the foundDuplicate to False
 //we do this until we hit "l"
+//this takes O(n^2) time bc we traverse twice nested traverse but constant space we dont save anything O(1)
 
 //optimal solution
+//use a data structure to help with time complexity 
+
 
 //time complexity 
 
