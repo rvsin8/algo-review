@@ -2,6 +2,10 @@
 //Strings 
 
 //my understandings 
+//write a function that takes in a string of lower case letters and returns as an integer of the idx of the first non repeating letter
+//"abcdcaf" we would return 1 which is b 
+//non-repeating char - is a char that will not be repeated again in the string 
+//
 
 //time complexity 
 
