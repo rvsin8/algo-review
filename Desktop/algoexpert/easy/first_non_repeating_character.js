@@ -36,14 +36,14 @@
 //O(1) we are using constant space complexity and bc it is lower case it helps bc only 26 letters possible 
 
 function firstNonRepeatingCharacters(string){
-    const characterFrequencies = {};
+    const characterFrequencies = {}; //initialize our ash map
 
-    for (const character of string) {
-        if (!(character in characterFrequencies)) characterFrequencies[character] = 0; 
-        characterFrequencies[character]++;
+    for (const character of string) { //loop through the string char by char
+        if (!(character in characterFrequencies)) characterFrequencies[character] = 0; //if we have not seen this char in the hash map we will add it to our hash map
+        characterFrequencies[character]++; //we will add one to every time we see the char
     }
 
-    for (let idx = 0; idx < string.length; idx++) {
+    for (let idx = 0; idx < string.length; idx++) { //
         const character = string[idx];
         if (characterFrequencies[character] === 1) return idx;
     }
