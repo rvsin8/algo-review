@@ -21,9 +21,9 @@
 //O(n)
 
 function mergeOverlappingIntervals(intervals) {
-    const sortedIntervals = intervals.sort((a,b) => a[0] - b[0]);
+    const sortedIntervals = intervals.sort((a,b) => a[0] - b[0]); //sort the input 
 
-    const mergedIntervals = [];
+    const mergedIntervals = []; //new array where we add merged intervals
     let currentInterval = sortedIntervals[0];
     mergedIntervals.push(currentInterval);
 
