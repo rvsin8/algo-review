@@ -8,7 +8,12 @@
 //only b d and f occur once but b is the first left to right alphabetical letter
 //if the input string contains no nonrepeating letters we return -1
 //it has to be lower case
-//
+
+//brute force 
+//we can traver char by char until we find the nonrepeating letter
+//we traverse again looking for duplicates 
+
+//optimal solution
 
 //time complexity 
 
