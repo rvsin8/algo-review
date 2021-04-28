@@ -15,10 +15,10 @@
 //if there is an interval. we will merge these intervals by updating the ending values
 
 //time complexity 
-//O(nlog(n))
+//O(nlog(n)) bc we originally sort the array
 
 //space complexity 
-//O(n)
+//O(n) bc we store the merged intervals in a new array
 
 function mergeOverlappingIntervals(intervals) {
     const sortedIntervals = intervals.sort((a,b) => a[0] - b[0]); //sort the input 
