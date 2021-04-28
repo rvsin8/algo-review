@@ -2,10 +2,15 @@
 //Arrays
 
 //my understanding
+//you have to take in two non empty arrays
+//each array represents an interval that contains 2 values
+//start of the interval and the end of the interval
 
 //time complexity 
+//O(nlog(n))
 
 //space complexity 
+//O(n)
 
 function mergeOverlappingIntervals(intervals) {
     const sortedIntervals = intervals.sort((a,b) => a[0] - b[0]);
