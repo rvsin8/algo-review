@@ -17,6 +17,14 @@ function mergeOverlappingIntervals(intervals) {
     for (const nextInterval of sortedIntervals) {
         const [_, currentIntervalEnd] = currentInterval;
         const [nextIntervalStart, nextIntervalEnd] = nextInterval;
+
+        if (currentIntervalEnd >= nextIntervalStart) currentInterval[1] = Math.max(currentIntervalEnd, nextIntervalEnd);
+        else {
+            currentInterval = nextInterval;
+            mergedIntervals.push(currentInterval);
+        }
     }
+    return mergedIntervals;
+
 
 }
