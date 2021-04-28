@@ -4,7 +4,11 @@
 //my understanding
 //you have to take in two non empty arrays
 //each array represents an interval that contains 2 values
-//start of the interval and the end of the interval
+//start of the interval and the end of the interval 
+//if they overlap then we merge
+//[1,4] [5,8] ---> [1,8]
+//[2,6] [6,8] --> [2,8]
+//interval overlap when the end of one interval is greater than or equal to the start of one interval
 
 //time complexity 
 //O(nlog(n))
