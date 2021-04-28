@@ -27,17 +27,17 @@ function mergeOverlappingIntervals(intervals) {
     let currentInterval = sortedIntervals[0]; //we keep track of our first interval
     mergedIntervals.push(currentInterval); //we add our first interval to our merged array and use it as a reference
 
-    for (const nextInterval of sortedIntervals) {
-        const [_, currentIntervalEnd] = currentInterval;
-        const [nextIntervalStart, nextIntervalEnd] = nextInterval;
+    for (const nextInterval of sortedIntervals) { //for next interval
+        const [_, currentIntervalEnd] = currentInterval; //
+        const [nextIntervalStart, nextIntervalEnd] = nextInterval; //
 
-        if (currentIntervalEnd >= nextIntervalStart) currentInterval[1] = Math.max(currentIntervalEnd, nextIntervalEnd);
+        if (currentIntervalEnd >= nextIntervalStart) currentInterval[1] = Math.max(currentIntervalEnd, nextIntervalEnd); //if there is an overlap we find the max of the two intervals
         else {
-            currentInterval = nextInterval;
-            mergedIntervals.push(currentInterval);
+            currentInterval = nextInterval; //update our interval
+            mergedIntervals.push(currentInterval); //and push it in to our array
         }
     }
-    return mergedIntervals;
+    return mergedIntervals; //return our final array
 
 
 }
