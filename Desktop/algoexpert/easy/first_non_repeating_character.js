@@ -27,13 +27,13 @@
 //initialize our hash map and then traverse through each letter in the string 
 //keep count of every time we hit our letters
 //{'c': 2, 'o': 3, 'l': 1, 'd': 1, 'e': 1} 
-//
+//we will see the first letter that occurs once 
 
 //time complexity 
-//O(n)
+//O(n) we traverse n char and again to see the dups, 2N but we drop the constant so N
 
 //space complexity 
-//O(1)
+//O(1) we are using constant space complexity and bc it is lower case it helps bc only 26 letters possible 
 
 function firstNonRepeatingCharacters(string){
     const characterFrequencies = {};
