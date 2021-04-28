@@ -30,8 +30,10 @@
 //
 
 //time complexity 
+//O(n)
 
 //space complexity 
+//O(1)
 
 function firstNonRepeatingCharacters(string){
     const characterFrequencies = {};
