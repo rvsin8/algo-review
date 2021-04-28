@@ -35,7 +35,7 @@
 //space complexity 
 //O(1) we are using constant space complexity and bc it is lower case it helps bc only 26 letters possible 
 
-function firstNonRepeatingCharacters(string){
+function firstNonRepeatingCharacter(string) {
     const characterFrequencies = {}; //initialize our ash map
 
     for (const character of string) { //loop through the string char by char
