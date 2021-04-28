@@ -10,8 +10,13 @@
 //it has to be lower case
 
 //brute force 
-//we can traver char by char until we find the nonrepeating letter
+//we can traverse char by char until we find the nonrepeating letter
 //we traverse again looking for duplicates 
+//"coolcode"
+//foundDuplicate = False
+//outer traversal stays at c
+//inner traversal looks for dups
+//
 
 //optimal solution
 
