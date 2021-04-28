@@ -16,7 +16,9 @@
 //foundDuplicate = False
 //outer traversal stays at c
 //inner traversal looks for dups
-//
+//and check the boolean
+//when we do find a dup, we update the foundDuplicate to False
+//we do this until we hit "l"
 
 //optimal solution
 
