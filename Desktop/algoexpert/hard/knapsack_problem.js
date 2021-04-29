@@ -5,7 +5,10 @@
 //very famous problem 
 //youre given an array of arrays 
 //each subarray represents a item
-//each value represents 
+//each value represents the max capacity of the knapsack we have
+//the second represents the weight of a given problem and the first value represents the monetary value 
+//find the items that you have ti put in your bag to maximize its value without exceeding the capacity
+//
 
 
 //time complexity
