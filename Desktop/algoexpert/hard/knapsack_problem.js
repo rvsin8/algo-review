@@ -10,8 +10,9 @@
 //find the items that you have ti put in your bag to maximize its value without exceeding the capacity
 //[[1,2][4,3][5,6][6,7]] --> 10
 //build a 2D array and it will hold the greatest values we can put in a knapsack with specific restrictions
+//2D array called values, w is weight and d is dollars 
+//vales[i][j], where i and j are the rows and columns --> values[i][j] = max {values[i-1][j]; values[i-1][j-w] + value}, we pick the max of these two things
 //
-
 
 //time complexity
 //O(nc)
