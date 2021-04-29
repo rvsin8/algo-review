@@ -12,13 +12,14 @@
 //build a 2D array and it will hold the greatest values we can put in a knapsack with specific restrictions
 //2D array called values, w is weight and d is dollars 
 //vales[i][j], where i and j are the rows and columns --> values[i][j] = max {values[i-1][j]; values[i-1][j-w] + value}, we pick the max of these two things
+//if two values equal to each other deep in the subarray we need to back track bc we want the min capacity for max value
 //
 
 //time complexity
-//O(nc)
+//O(nc) where n and c are rows and columns or items and capacity with a constant time operation
 
 //space complexity 
-//O(nc)
+//O(nc) because we are building a 2D array
 
 function knapsackProblem(items, capacity) {
     const knapsackValues = [];
