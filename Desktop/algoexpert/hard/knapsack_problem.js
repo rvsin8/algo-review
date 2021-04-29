@@ -1,13 +1,15 @@
 //Knapsack Problem 
 //Dynamic Programming
 
-//my understandings
+//my understanding
 //very famous problem 
 //youre given an array of arrays 
 //each subarray represents a item
 //each value represents the max capacity of the knapsack we have
 //the second represents the weight of a given problem and the first value represents the monetary value 
 //find the items that you have ti put in your bag to maximize its value without exceeding the capacity
+//[[1,2][4,3][5,6][6,7]] --> 10
+//build a 2D array and it will hold the greatest values we can put in a knapsack with specific restrictions
 //
 
 
