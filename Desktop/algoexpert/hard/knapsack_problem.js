@@ -1,7 +1,12 @@
 //Knapsack Problem 
 //Dynamic Programming
 
-//my understandings 
+//my understandings
+//very famous problem 
+//youre given an array of arrays 
+//each subarray represents a item
+//each value represents 
+
 
 //time complexity
 //O(nc)
