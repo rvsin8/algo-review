@@ -39,6 +39,12 @@ function getKnapsackItems(knapsackValues, items) {
     while (i > 0){
         if (knapsackValues[i][c] === knapsackValues[i - 1][c]) {
             i -= 1;
+        } else {
+            sequence.unshift(i - 1);
+            c -= items[i - 1][1];
+            i -= 1;
         }
+        if (c === 0) break;
     }
+    return sequence;
 }
