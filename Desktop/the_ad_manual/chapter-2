@@ -1,0 +1,127 @@
+2 Data Structures 
+
+- Important classes of abstract data types such as containers, dictionaries and priority queues, have many different but functionally equivalent data structures that implement them. Changing the data structure does not change the correctness of the program, since presumably replace a correct implementation with a different correct implementation. However, the new implementation of the data type realizes different tradeoffs in the time to execute various operations, so the total performance can improve dramatically. 
+
+3.1 Contiguous vs. Linked Data Structures 
+- Data structures can be neatly classified as either contiguous or linked, depending upon whether they are based on arrays or pointers:
+	> contiguous-allocated structures are composed of single slabs of memory, and include arrays, matrices, heaps and hash tables. 
+	> linked data structures are composed of distinct chunks of memory bound together by pointers, and include lists, trees and graph 	adjacency lists. 
+
+3.1.1 Arrays
+- The array is the fundamental contiguously-allocated data structure. Arrays are structures of fixed-size data records such that each element can be efficiently located by its index or equivalently address. 
+- Advantages of contiguously-allocated arrays include:
+	> constant-time access given the index - because the index of each element maps directly to a particular memory address, we 		can access arbitrary data items instantly provided we know the index. 
+	> arrays consist purely of data, so no space is wasted with links or other formatting information. Further, end-of-record 			information is not needed because arrays are built from fixed-size records.
+	> memory locality - a common programming idiom involves iterating through all the elements of a data structure. Arrays are good 	for this because they exhibit excellent memory locality. Physical continuity between successive data accesses helps exploit the 		high-speed cache memory on modern computer architecture. 
+- The downside of arrays is that we cannot adjust their size in the middle of a programs execution. Ou program will fail soon as we try to add the (n+1)st customer, if we allocate room for n records. We can compensate by allocating extremely large arrays but this can waste space again restricting what our programs can actually do. 
+- Actually we can efficiently enlarge arrays as we need them, through the miracle of dynamic arrays. Suppose we start with an array of size 1, and double its size from m to 2m each time we run out of space. This doubling process involves allocating a new contiguous arrays of size 2mm copying the content of the old array to the lower half of the new one and returning the pace used by the old array to the storage allocation system. 
+- Explains how many times might an element have to be recopied after a total of n insertions, read it. Thus, each of the n elements move only two times on average and the total work of managing the dynamic array is the same as O(n) as it would have been if single array of sufficient size had been allocated in advance! 
+- The primary thing lost using dynamic arrays is the guarantee that each array access takes constant time in the worst case. Now all the queries will be fast, except for those relatively few queries triggering array doubling. What we get instead is a promise that the nth array access will be completed quickly enough that the total effort expended so far will still be O(n). Such amortized guarantees arise frequently in the analysis of data structures. 
+
+3.1.2 Pointers and Linked Structures 
+- Pointers are the connections that hold the pieces of linked structures together. Pointers represent the address of a location in memory. A variable storing a pointer to a given data item can provide more freedom than storing a copy of the item itself. 
+- A pointer p is assumed to give the address in memory where a particular chunk of data is located. Pointers in C have types declared at compile time, denoting the data type of the items they can point to. We use *p to denote the item that is pointed to by pointer p, and &x to denote the address of (I.e, pointer to) of a particular variable x. A special NULL pointer value is used to denote structure-terminating or unassigned pointers. 
+- All linked data structures share certain properties as revealed but the following linked like type declaration [code]. In particular:
+	> each node in our data structure (here list) contains one or more data fields (here item) that retain the data that we need to store. 
+	> each node contains a pointer field to at least one other node (here next). This means that much of the space used in linked data 	structures has to be devoted to pointers, not data.
+	> finally, we need a pointer to the head of the structure, so we know where to access it. 
+- The three basic operations supported by lists are searching, insertion and deletion. In doubly-linked lists, each node points to both its predecessor and its successor element. This simplifies certain operations at a cost of an extra pointer field per node. 
+- Searching a List: Searching for an item x in a linked list can be done iteratively or recursively. We opt for recursively in the implementation below. If x is in the list, it is either the first emmet or located in the smaller rest of the list. Eventually, we reduce the problem to be searching in an empt list, which clearly cannot contain x.
+- Insertion into a List: insertion into a singly-linked list is a nice exercise in pointer manipulation, as show below. Since we have no need to maintain the list in any particular order, we might as well insert each new item in the simplest place. Insertion at the beginning of the list avoids any need to traverse the list, but does require us to update the pointer (denoted 1) to the head of the data structure. 
+- Deletion from a List: deletion from a linked list is somewhat more complicated. First, we must find a pointer to the predecessor of the item to be deleted. We do this recursively: [code]. The predecessor is needed because it points to the doomed nose, so its next pointer must be changed. The actual deletion operation is simple, once ruling out the case that the to-be-deleted element does not exist. Special care must be taken to reset the pointer to the head of the list (1) when the first element is deleted: [code]. C language requires explicit deallocation of memory, so we must free the deleted node after we are finished with it to return the memory to the system. 
+
+3.1.3 Comparison 
+- The relative advantages of linked lists over static arrays include:
+	> overflow on linked structures can never occur unless the memory is actually full.
+	> insertion and deletion are simpler than for continuous (array) lists.
+	> with large records, moving pointers is easier and faster than moving the items themselves. 
+- While relative advantages of arrays include:
+	> linked structures require extra space for storing pointer fields. 
+	> linked lists do not allow efficient random access to items.
+	> arrays allow better memory locality and cache performance than random pointer jumping.
+- Dynamic memory allocation provides us with flexibility on how and where we use our limited storage resources. 
+- One final thought about tase fundamental structures is that they can be thought of as recursive objects:
+	> lists - chopping the first element off a linked list leaves a smaller linked list. This same argument works for strings, since 			removing characters from string leaves a string. Lists are like recursive objects. 
+	> arrays - splitting the first k elements off of an n element array gives two smaller arrays, the size k and n-k, respectively. Array 	are recursive objects. 
+- This insight leads to simpler list processing, and efficient divide-and-conquer algorithms such as quick sort and binary search. 
+
+3.2 Stacks and Queues 
+- We use the term container to denote a data structure that permits storage and retrieval of data items independent of context. By contrast, dictionaries are abstract data types that retrieve based on keys values or content. 
+- Containers are distinguished by the particular retrieval order they support. In the two most important types of containers, this retrieval order depends on the insertion order:
+	> Stacks - support retrieval by last-in, first-out (LIFO) order. Stacks are simple to implement and very efficient. For this reason, 		stacks are probably the right container to use when retrieval order doesn’t matter at all, such as when processing batch jobs. The 	put and get operations for stacks are usually called push and pop.
+	- push(x,s): insert item x at the top of the stack s.
+	- pop(s): return (and remove) the top item of the stack s.
+	> Queues - support retrieval in first in, first out (FIFO) order. This is surely the fairest way to control waiting times for services. You 	want the container holding jobs to be processed in FIFO order to minimize the maximum waiting time spent waiting. Note that the 	average waiting time will be the same regardless of whether FIFO or LIFO is used. Many computing applications involve data items 	with infinite patience, which renders the question of maximum waiting time moot. 
+	- queues are somewhat trickier to implement than stacks and thus are most appropriate for applications (like certain simulations) 	where the order is important. The put and get operations for queues are usually called enqueue and dequeue. 
+	- enqueue(x,q): insert item x at the back of queue q. 
+	- dequeue(q): return (and remove) the front item from queue q.
+	- we will see queues later as the fundamental data structure controlling breadth-first searches in graphs. 
+- Stacks and queues can be effectively implemented using either arrays or linked lists. The key issue is whether an upper bound on the size of the container is known is advance, thus permitting the use of a statically-allocated array. 
+
+3.3 Dictionaries 
+- The dictionary data type permits access to data items by content. You stick an item into a dictionary so you can find it when you need it. 
+- The primary operations of dictionary support are:
+	> Search(D, k) - Given a search key, return a pointer to the element in the dictionary D whose key value is k, if one exists. 
+`	> Insert(D, x) - Given a data item x, add it to the set in the dictionary D. 
+	> Delete(D, x) - Given a pointer to a given data item x in the dictionary D, remove it from D. 
+- Certain certain dictionary data structures also efficiently support other useful operations:
+	> Max(D) or Min(D) - retrieve the item with the largest (or smallest) key from D. This enables the dictionary to serve as a priority 	queue.
+	> Predecessor(D, x) or Successor(D, x) - retrieve the item from D whose key is immediately before (or after) x in sorted order. 		These enables us to iterate through the elements of the data structure. 
+- What are the asymptotic worst-case running times for each of the seven fundamental dictionary operations when the data is implemented as an unsorted array and a sorted array. Answer is on page 74, look through each explanation. 
+- What are the asymptotic worst-case running times for each of the seven fundamental dictionary operations when the data is implemented as a singly-linked unsorted list, a doubly-linked unsorted list, a singly-linked sorted list and a doubly-linked sorted list. Answer is on page 75-76, look through each explanation. 
+
+3.4 Binary Search Tree 
+- We have seen data structures that allow fast search or flexible update, but not fast search and flexible update. Unsorted, doubly-linked lists supported insertion and deletion in O(1) time but search took linear time in the worse case. Sorted arrays support binary search and logarithmic query times, but at the cost of linear-time update.
+- Binary search requires that we have fast access to two elements - specifically the median elements above and blow the given node. To combine these ideas, we need a “linked list” with two pointers per node. This is the basic idea behind binary search trees. 
+- A rooted binary tree is recursively defined as either being (1) empty, or (2) consisting of a node called the root. Together with two rooted binary tree called the left and right subtrees, respectively. The order among “brother” nodes matters in rooted trees, so left is different from right. 
+- A binary search tree labels each node in a binary tree with a single key such that for ant node labeled x, all nodes in the left subtree of x have keys < x while all nodes in the right subtree of x have keys > x. This search tree labeling scheme is very special. For any binary tree on n nodes, and any set of n keys, there is exactly one labeling that makes it a binary search tree. 
+
+3.4.1 Implementing Binary Search Trees
+- Binary tree have left and right pointer fields, an (optional) parent pointer, and a data field. The basic operations supported by binary trees are searching, traversal, insertion and deletion. 
+- Searching in a Tree: the binary search tree labeling uniquely identifies where each key is located. Start at the root. Unless it contains the query key x, proceed either left or right depending upon whether x occurs before or after the root key. This algorithm works because both the left and right subtrees of a binary search tree are themselves binary search trees. This recursive structure yields the recursive search algorithm below: [code]. This search algorithm runs in O(h) time, where h denotes the height of the tree.
+- Finding Minimum and Maximum Elements in a Tree: implementing the find-minimum operation requires knowing where the minimum element is in the tree. By definition, the smallest key must reside in the left subtree of the root, since all keys in the left subtree values less than that of the root.  The minimum element must be the leftmost descendent of the root. Similarly, the maximum element must be the rightmost descendant of the root. 
+- Traversal in a Tree: visiting all the nodes in a rooted binary tree proves to be an important component of many algorithms. It is a special case of traveling all the nodes and edges in a graph. A prime application of tree traversal is listing the labels of the tree nodes. Binary search trees make it easy to report the labels in sorted order. By definition, all the keys smaller than the root must lie in the left subtree, and all the keys bigger than the root in the right subtree. Thus, visiting the nodes recursively in accord with such a policy produces an in-order traversal of the search tree: [code]. Each item is processed once during the course of traversal, which runs in O(n) time, where n denotes the number of nodes in the tree. Alternate traverse orders come from changing the position of process_item relative to the traversals of the left and right subtrees. Processing the item first yields a pre-order traversal, while processing it last gives a post-order traversal. These make relatively little sense with search trees, but prove useful when the rooted tree represents arithmetic or logical expressions. 
+- Insertion in a Tree: there is only one place to insert an items x into a binary search tree T where we know we can find it again. We must replace the Null pointer found in T after an unsuccessful query for the key k. This implementation uses recursion to combine the search and node insertion stages of key insertion. The three arguments to insert_tree are (1) a pointer 1 to the pointer linking the search subtree to the rest of the tree, (2) the key x to be inserted, and (3) a parent pointer to the parent node containing 1. The node is allocated and linked in on hitting the NULL pointer. Note that we pass the pointer to the appropriate left/right pointer on the node during the search, so the assignment *1 = p; links the new node into the tree: [code]. Allocating the node and linking it in to the tree is a constant-time operation after the search has been performed in O(h) time. 
+- Deletion from a Tree: deletion is somewhat trickier than insertion, because removing a node means appropriately linking its two descendant subtrees back into the tree somewhere else. Leaf nodes have no children, and so may be deleted by simply clearing the pointer to a given node. The case of the doomed node having one child is also straightforward. There is one parent and one grandchild, and we can linked the grandchild directly to the parent without violating the in-order labeling property of the tree. But what of a to-be-deleted node with two children? Our solution is to relabel this node with the key of its immediate successor in sorted order. This successor must be the smallest value in the right subtree, specifically the leftmost descendant in the right subtree. Moving this to the point of deletion results in a properly-labeled binary search tree, and reduces our deletion problem to physically removing a node with at most one child - a case that has been resolved above. The worst-case complexity analysis is as follows. Every deletion requires the cost of at most two search operations, each taking O(h) time where h is he height of the tree, plus a constant amount of pointer manipulation. 
+
+3.4.2 How Good Are Binary Search Trees ?
+- When implemented using binary search trees, all three dictionary operations take O(h) time, where h is the height of the tree. The smallest height we can hope for occurs when the tree is perfectly balanced, where h = [log n]. This is very good, but the tree must be perfectly balanced. 
+- Our insertion algorithm puts each new item at a leaf node where it should have been found. This makes the share and more importantly the height of the tree a function of the order in which we insert keys. 
+- Unfortunately, bad things can happen when building trees through insertion. The data structures has no control over the order of insertion. Consider what happens if the user inserts the keys in sorted order. The operations insert(a), followed by insert(b), insert(c), insert(d) … will produce a skinny linear height tree where only right pointers are used. Thus, binary trees can have heights ranging fro, lg n to n. But how tall are they on average? The average case analysis of algorithm can be tricky because we must carefully specify what we mean by average. The question is well defined if we consider each oof the n! Possible insertion orderings equally likely and average over those. If so, we are in luck, because with high probability the resulting tree will have O(log n) height. This argument is an important example of the power of randomization. We can often develop simple algorithms that offer good performance with high probability. We will see that a similar idea underlies the fastest known sorting algorithm, quicksort.
+
+3.4.3 Balanced Search Trees
+- Random search trees are usually good. But if we get unlucky with our order of insertion we can end up with a linear-height tree in the worst case. What would be better is an insertion/deletion procedure which adjusts the tree a littler after each insertion, keeping it close enough to be balanced so the maximum height is logarithmic. Sophisticated balanced binary search tree data structure have been developed that guarantee the height of the tree to always be O(log n). Therefore, all dictionary operations take O(log n) time each. 
+- Picking the wrong data structure for the job can be disastrous in terms of performance. Identifying the very best data structure is usually not as critical because there can be several choices that perform similarly. 
+
+3.5 Priority Queues 
+- Many algorithms process items in a specific order. Priority queues are data structures that provide more flexibility than simple sorting, because they allow new elements to enter a system at arbitrary intervals. It is much more cost-effective to insert a new job into a priority queue than to re-sort everything on such arrival. The basic priority queue supports three primary operations:
+	> Insert(Q,x) - Given an item x with key k, insert it into the priority queue Q.
+	> Find-Minimum(Q) or Find-Maximum(Q) - return a pointer to the item whose key value is smaller (larger) than any other key in the 	priority queue Q.
+	> Delete-Minimum(Q) or Delete-Maximum(Q) - Remove the item from the priority queue Q whose key is minimum (maximum). 
+- Example of a naturally occurring process accurately modeled by priority queue - dating. 
+- What is the worst-case time complexity of the three basic priority queue operations (insert, find-minimum and delete-minimum) when the basic data structure is an unsorted array, a sorted array and a balanced binary search tree ? Solution is on page 84-85.
+
+3.7 Hashing and Strings 
+- Hash tables are a very practical way to maintain a dictionary. They exploit the fact that looking an item up in an array takes constant time once you have its index. A hash function is a mathematical function that maps keys to integers. We will use the value of our hash function as an index into an array and store our item at that position. 
+
+3.7.1 Collision Resolution
+- No matter how good our hash function is, we had better be prepared for collisions, because two distinct keys will occasionally hash to the same value. Chaining is the easiest approach to collision resolution. Represent the hash table as an array of m linked lists. The ith list will contain all items that hash to the value of i. Thus search, insertion and deletion reduce to the corresponding problem in linked lists. If the n keys are districted uniformly in a table, each list will contain roughly n/m elements, making them a constant size when m equals about n. 
+- Chaining is very natural, but devotes a considerable amount of memory to pointers. This is space that could be used to make the table larger and hence the “lists” smaller. 
+- The alternative is something called open addressing. The hash table is maintained as an array of elements (not buckets), each initialized to null. On an insertion, we check to see if the desired position is empty. If so, we insert it. If not, we must find some other place to insert it instead. The simplest possibility (called sequential probing) inserts the item in the next open spot in the table. If the table is not too full, the contiguous runs of items should be fairly small, hence this location should be only a few slots from its intended position.
+- Searching for a given key now involves going to the appropriate hash value and checking to see if the item there is the one we want. If so, return it. Otherwise we must keep checking through the length of the run. 
+- Deletion in an open addressing both require O(m) to initialize an m-element hash table to null elements prior to the first insertion. Traversing all the elements in the table takes O(n + m) time for chaining, because we have to scan all m buckets looking for elements, even if the actual number of inserted items is small. This reduces to O(m) time for open addressing, since n must be at most m. 
+- Chaining and open addressing both require O(m) to initialize an m-element hash table to null elements prior to the first insertion. Traversing all the elements in the table takes O(n + m) time for changing, because we have to scan all m buckets looking for elements, even if the actual number of inserted items is small. This reduces to O(m) time for open addressing, since n must be at most m. 
+- When using changing with doubly-linked lists to resolve collisions in an m-element hash table, the dictionary operations for n items can be implemented in the following expected and worst case times: [table].
+- Pragmatically, a has table is often the best data structure to maintain a dictionary. The application of hashing go far beyond dictionaries, however, as we will see below. 
+
+3.7.2 Efficient String Matching via Hashing 
+- Strings are sequences of characters where the order of the character matters, since ALGORITHM is different than LOGARITHM. Text strings are fundamental to a host of computing applications, from programming language parsing/compilation, to web search engines, to biological sequence analysis. 
+- The primary data structure for representing strings in an array of characters. This allows us constant-time access to the its character of the string. Some auxiliary information must be maintained to mark the end of the string - either a special end-of-string character or perhaps more usefully a count of the n characters in the string. 
+- Goes through time complexity of substring search. Look at this page 91-92.
+
+3.7.3 Duplicate Detection Via Hashing 
+- The key idea of hashing is to represent a large object (be it a key, a string, or a substring) using a single number. The goal is a representation of the large object by an entity that can be manipulated in constant time, such that is is relatively unlikely that two different large objects map to the same value. 
+- Consider the following problems with nice hashing solutions - check this out page 92-93. 
+
+3.8 Specialized Data Structures 
+- Come back to this first and re-write it. 
