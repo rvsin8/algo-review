@@ -23,3 +23,14 @@ function cycleInGraph(edges) {
 
     return false;
 }
+
+function isNodeInCycle(node, edges, visited, currentlyInStack) {
+    visited[node] = true;
+    currentlyInStack[node] = true;
+
+    const neighbors = edges[node];
+    for (const neighbor of neighbors) {
+        
+
+    }
+}
