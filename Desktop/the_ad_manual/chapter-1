@@ -1,0 +1,120 @@
+1 The Algorithm Design Manual 
+Second Edition 
+Steven S. Skiena
+
+Chapter 2 - Algorithm Analysis 
+- Algorithm are the most important and durable part of computer science because they can be studied in a language- and machine-independent way. This means that we need techniques that enable us to compare the efficiency of algorithms without implementing them. Our two important tools are (1) the RAM model of computation and (2) the asymptotic analysis of worst-case complexity. Assessing algorithmic performance makes the use of the “big Oh” notation that, proves essential to compare algorithms and design more efficient ones. 
+
+2.1 The RAM Mode of Computation 
+- Machine-independent algorithm design depends upon a hypothetical computer called the Random Access Machine or RAM. Under this model of computation, we are confronted with a computer where:
+	> each simple operation (+, *, -, =, if, call) takes exactly one time step.
+	> loops and subroutines are not considered simple operations. Instead they are the composition of many single-step operations. It makes sense for sort to be a single-step operation, since sorting 			1,000,000 items will certainly take much longer than sorting 10 items. The time it takes to run through a loop or execute a subprogram depends upon the number of loop iterations or the specific nature of 	the subprogram.
+	>each memory access takes exactly one time step. Further, we have as much memory as we need. The RAM model takes no notice of whether an item is in cache or on the disk. 
+- Under the RAM model, we measure run time by counting up the number of steps an algorithm takes on a given problem instance. If we assume that our RAM executes a given number of steps per second, this operation count converts naturally to the actual running time. The RAM is a simple model how computers perform. After all, multiplying two numbers take more time than adding two numbers on most processors, which violates the first assumption of the model. Fancy compiler loop unrolling and hyper-threading may well violate the second assumption. And certainly memory access time differ greatly depending on whether data sits in cache or on the disk. This makes us zero for three on the truth of our basic assumptions. And yet, despite these complaints, the RAM proves an excellent model for understanding how an algorithm will perform on a real computer. It strikes a fine balance by capturing the essential behavior of computers while being simple to work with. We use the RAM model because it is useful in practice. The robustness of the RAM enables us to analyze algorithm in machine-independent way. 
+
+2.1.1 Best, Worst, and Average-Case Complexity 
+- To understand how good or bad an algorithm in general, we must know how it works over all instances. To understand the notions of the best, worst and average-case complexity, think about running an algorithm over all possible instances of data that can be fed to it. We can define three interesting functions over the plot of these points:
+	> the worst-case complexity of the algorithm is the function defined by the maximum number of steps taken in any instance of size n. This represents the curve passing through the highest point in each 		column.
+	> the best-case complexity of the algorithm is the function defined by the minimum number of steps taken in any instance of size n. This represents the curve passing through the lowest point of each 		column.
+	> the average-case complexity of the algorithm, which is the function defined by the average number of steps over all instances of size n. 
+-  The worst case complexity proves to be the most useful of these three measures in practice. We obtain a useful a very useful result by just considering the worst case. The important thing to realize is that each of these time complexities define a numerical function, representing time versus problem size. 
+
+2.2 The Big Oh Notation 
+- The best, worst and average-case time complexities for any given algorithm are numerical functions over the size of possible problem instances. However, it is very difficult to work precisely with thee functions, because they tend to:
+	> have too many bumps - an algorithm such as binary search typically runs a bit faster for arrays of size 		exactly n = 2^k - 1 (where k is an integer), because the array partitions work out nicely. This detail is not 		particularly significant, but it warns us that the exact time complexity function for any algorithm is liable to 		be very complicated, with little up and down bumps. 
+	> require too much detail to specify precisely - counting the exact number of RAM instructions executed in 		the worst case requires the algorithm be specified to the detail of a complete computer program. Further, 		the precise answer depends upon interesting coding details (did he use nested ifs?). Performing a precise 		worst-case analysis like would clearly be very difficult work, but provides us little extra information than the 		observation that “the time grows quadratically n”.
+-  It proves to be much easier to talk in terms of simple upper and lower bounds of time-complexity functions using the Big Oh notation. The Big Oh simplifies our analysis by ignoring level of details that do not impact our comparison of algorithms. It also ignores the difference between multiplicative constants. This makes sense given our application. Suppose a given algorithm in (say) C language ran twice as fast as one with the same algorithm written in Java. This multiplicative factor of two tells us nothing about the algorithm itself, since both programs implement exactly the same algorithms. We ignore such constant factors when comparing two algorithm.
+- The formal definitions associated with the Big Oh notation are as follows:
+	> f(n) = 0(g(n)) means c * g(n) is an upper bound on f(n). Thus there exists some constant c that f(n) is always <= c * g(n), for large enough n. 
+	> f(n) = 0(g(n)) means c * g(n) is an lower bound on f(n). Thus there exists some constant c that f(n) is always >= c * g(n) for all n. 
+	> f(n) = 0(g(n)) means c1 * g(n) is an upper bound on f(n) and c2 * g(n) is a lower bound on f(n), for all n >= n0. Thus, there exist constants c1 and c2 such that f(n) <= c1 * g(n) and f(n) >= c2 * g(n). This means that g(n) provides a nice tight bound on f(n).
+- Each of these definitions assumes a constant n0 beyond which they are always satisfied. We are not concerned about small values of n (anything to the left of n), after all we don’t really care whether one sorting algorithm sorts six items faster than another but seek algorithm proves faster when sorting 10,000 or 1,000,000 items. 
+    - The Big Oh notation and worst-case analysis are tools that greatly simplify our ability to compare the efficiency of algorithms. 
+
+2.3 Growth Rates and Dominance Relations 
+- With Big Oh notation, we discard multiplicative constants. 
+- The following conclusions can be drawn from this table:
+	> all such algorithms take roughly the same time for n = 10.
+	> any algorithm with n! Running time becomes useless for n >= 20.
+	> algorithm whose running time is 2^n have a greater operating range, but become impractical for n > 40.
+	> quadratic-time algorithms whose running time is n^2 remain usable up to about n = 10,000, but quickly deteriorate with larger inputs. They are likely to be hopeless for n > 1,000,000.
+	> linear-time and n lg n algorithms remain practical on inputs of one billion items. 
+	> an O(lg n) algorithm hardly breaks a sweat for any imaginable value of n.
+- The bottom line is that even ignoring constant factors, we get an excellent idea whether a given algorithm is appropriate for a problem of a given size. 
+
+2.3.1 Dominance Relations 
+- The Big Oh notations group functions into a set of classes, such that all functions in a particular class are equivalent with respect to the Big Oh. We say that a faster-growing function dominates a slower-growing one, just as a faster-growing country eventually comes to dominate the laggard. The good news is that only a few function classes tend to occur in the course of basic algorithm analysis. Listed in order of increasing dominance:
+	> constant functions, f(n) = 1 - such functions might measure the cost of adding two numbers, printing out “The Star Spangled Banner,” or the growth realized by functions such as f(n) = min(n,100). In the 	big picture, there is no dependence on the parameter n.
+	> logarithmic functions, f(n) - log n - logarithmic time-complexity shows up in algorithms such as binary search. Such functions grow quite slowly as n gets big, but faster than the constant function (which 	is standing still, after all). 
+	> linear functions, f(n) = n - such functions measure the cost of looking at each item once (or twice, or ten times) in an n-element array, say to identify the biggest item, the smallest item or compute the 	average value.
+	> superlinear functions, f(n) = n lg n - this important class of function arises in such algorithms as Quicksort and Mergesort. They grow just a litter faster than linear, just to be a different dominant class. 
+	> quadratic functions, f(n) = n^2 - such functions measure the cost of looking at most or all pairs of items in an n-element universe. This arises in algorithms such as insertion sort and selection sort. 
+	> cubic functions, f(n) = n^3 - such functions enumerate through all tuples of items in an n-element universe. These also arise in certain dynamic programming algorithms. 
+	> exponential functions, f(n) = c^n for a given constant c > 1 - functions like 2^n arise when enumerating all subsets of n items. As we have seen, exponential algorithms become useless fast but not as fast 	as …
+	> factorial functions, f(n) = n! - functions like n! Arise when generating all permutations or ordering of n items. 
+- N! >> 2^n >> n^3 >> n^2 >> n log n >> n >> log n >> 1
+- Although esoteric functions arise in advanced algorithm analysis, a small variety of time complexities suffice and account for most algorithms that are widely used in practice. 
+
+2.4 - Working with the Big Oh
+
+2.4.1 - Adding Functions 
+- The sum of two functions is governed by the dominant one. The intuition is as follows. At least the bulk of f(n) + g(n) must come from the larger value. The dominant function will, by definition, provide the larger value as n approaches infinity. Thus, dropping the smaller function from consideration reduces the value by at most a factor of 1/2, which is just a multiplicative constant. Suppose f(n) = O(n^2) and g(n) = O(n^2). This implies that f(n) + g(n) = O(n^2) as well. 
+
+2.4.2 - Multiplying Functions 
+- Multiplication is liked repeated addition. Multiplying a function by a constant can not affect its asymptotic behavior because we can multiply the bounding constants in the Big Oh analysis of c * f(n) by 1/c to give appropriate constants for the Big Oh analysis of f(n). Of course, c must be strictly positive to avoid any funny business, since we can wipe our even the fastest growing functions by multiplying it by zero. On the other hand, when two functions in a product are increasing, both are important. The function O(n!logn) dominates n! just as much as long n dominates 1. 
+
+2.5 Reasoning About Efficiency 
+- Gross reasoning about an algorithm’s running time of is usually easy given a precise written description of the algorithm. 
+
+2.5.1 Selection Sort 
+- Here we analyze the selection sort algorithm, which repeatedly identifies the smallest remaining unsorted element and puts it at the end of the sorted portion of the array. 
+- How can we reason about such a formula? We must solve the summation formula using the techniques in Section 1.3.5 to get the exact value. But, with the Big Oh we are only interested in the order of expression. One way to think about it is that we are adding up n - 1 terms, whose average value is about n/2. 
+- Another way to think about it is in terms of upper and lower bounds. We have n terms at most, each of which is at most n-1. Thus S(n) <= n(n-1) = O(n^2). We have n/2 terms each that are bigger than n/2. Thus, S(n) >= (n/2) * n/2) = sigma(n^2). Together this tells us that the running time is something (n^2), meaning the selection sort is quadratic. 
+
+2.5.2 Insertion Sort
+- A basic rule of thumb in Big Oh analysis is that worst-case running time follows from multiplying the largest number of times each nested loop can iterate. How often does the inner while loop iterate? This is tricky because there are two different stopping conditions: one to prevent us from running off the bounds of the array (j > 0) and the other to mark when the element finds its proper place in sorted order (s[j] < s[j-1]). Since the worst-case analysis seeks an upper bound on the running time, we ignore the early termination and assume that this loop always goes around I times. In fact, we can assume it always goes around n times since I < n. Since the outer loop goes around n times, insertion sort must be a quadratic-time algorithm. O(n^2).
+
+2.5.3 String Pattern Match 
+- Pattern matching is the most fundamental algorithmic operation on text strings. This algorithm implements the find command available in any web browser or text editor.
+- What is the worst-case running time of these two nested loops? The inner while loop goes around at most m times, and potentially far less when the pattern match fails. This, plus two other statements, lies within the outer for loop.The outer loop goes around at most n-m times, since no complete alignment is possible once we get too far to the right of the text. The time complexity of nested loops multiplies so this gives a worst-case running time of O((n-m)(m+2)). They explain how it gets to O(nm) in great detail but I cannot understand it - go back to this. 
+
+2.5.4 Matrix Multiplication 
+- Nested summations often arise in the analysis of algorithms with nested loops. Matrix multiplication is a fundamental operation in linear algebra, presented in an example. That said the elementary algorithm for matrix multiplication is implemented as a tight product of three nested loops. How can we analyze the time complexity of this algorithm? The number of multiplications M(x,y,z) is given by the following. Thus the running of this matrix multiplication algorithm is O(xyz). If we consider the common case where all three dimensions are the same, this becomes O(n^3) - cubic algorithm.
+
+2.6 Logarithms and Their Applications
+- Logarithm is simply an inverse exponential functions. Saying b^x = y is equivalent to saying x = logby. Further, this definition is the same as saying b^logby = y. Logarithms growing refreshingly slowly nc they arise in any process where things are repeatedly halved. 
+
+2.6.1 Logarithms and Binary Search 
+- Binary search is a good example of an O(logn) algorithm. The number of steps the algorithm takes equals the number of times we halve n until only one name is left. O(logn) algorithms are fast enough to be used on problem instances of essentially unlimited size. 
+
+2.6.2 Logarithms and Trees 
+- A binary tree of height 1 can have up to 2 leaf nodes, while a tree of height two can have up to four leaves. What is the height h of a rooted binary tree with n leaf nodes? Note that the number of leaves doublers every time we increase the height by one. To account for n leaves, n = 2^h which implies h = log2n. They explain another scenario, look into it.
+- The punch line is that very short trees can have many leaves, which is the main reason why binary trees proves fundamental tot he design of fast data structures. 
+
+2.6.3 Logarithms and Bits
+- There are two bit patterns of length 1 (0 and 1)and four length 2 (00, 01, 10 and 11). How many bits w do we need to represent any one of n different possibilities, be it one of n items or the integers from 1 to n? They key observation is that there must be at least n different bit patterns of length w. Since the number of different bit patterns doubles as you add each bit, we need at least w bits where 2^w = n - i.e., we need we = log2n bits. 
+
+2.6.4 Logarithms and Multiplications 
+- Logarithms are still useful for multiplication, particularly for exponentiation. they explain how we get to exp(blna), so re-read this with the others. 
+
+2.6.5 Fast Exponentiation
+- The harmonic numbers arise as a special case of arithmetic progression, namely H(n) = S(n,-1). They reflect the sum of the progression of simple reciprocals, namely, formula inserted here. The Harmonic numbers prove important because they usually explain “where log comes from” when analyzing the average case complexity of Quicksort is the summation [formula]. Employing the Harmonic number identity immediately reduces this to O(n log n).
+
+2.6.7 Logarithms and Criminal Justice
+- Did not read this, if you have a chance go ahead and read it. 
+- Logarithms arise whenever things are repeatedly halved or doubled. 
+
+2.7 - Properties of Logarithms 
+- As we have seen, stating b^x = y is equivalent to saying that x = logby. The b term is known as the base of the logarithm. Three bases are of particular importance for mathematical and historical reasons. 
+	>	Base b = 2 - the binary logarithm, usually denoted lg x, is a base 2 logarithm. We have seen how this base arises whenever 		repeated halving (binary search) or doubling (nodes in trees) occurs. Most of logarithms imply binary logarithms. 
+	>	Base, b = e - the natural log, usually denoted ln x, is a base e = 2.71828 … logarithm. The inverse of ln x is the exponential 			function exp(x) = e^x on your calculator. Thus, composing these functions gives us exp(ln x) = x. 
+	> 	Base b = 10 - less common today is the base-10 or common logarithm, usually denoted as log x. This base was employed in 		slide rules and logarithm books in the days before pocket calculators. 
+- Thus, changing the base of log b from base-a to base-c simply involves multiplying by logca. It is easy to convert a common log function to natural log function and vice versa. Two implications of these properties of logarithms are important from an algorithmic perspective:
+ 	> the base of the logarithm has no real impact on growth rates - A big change in the base of the logarithm produces little 			difference in the value of the log. Changing the base of the log from a to c involves dividing by logca. This conversion factor is lost 	to the Big Oh notation whenever a and c are constants. Thus we are usually justified in ignoring the base of the logarithm when 		analyzing algorithms. 
+	> logarithms cut any function down to size - the growth rate of the logarithms of any polynomial function is O(lg n). This follows 		because [formula]. The power of binary search on a wide range of problems is a consequence of this observation. Note that doing 	a binary search on a sorted array of n^2 things require only twice as many comparisons as binary search on n things. Logarithms 	efficiently cut any function down to size. It is hard to do arithmetic on factorials except for logarithms since [formula] provides 		another way for logarithms to pop up in an algorithm analysis. 
+
+2.9 Advanced Analysis (*)
+- Survey the the major techniques and functions employed in advanced algorithm analysis. 
+
+2.9.1 - Esoteric Functions 
+
