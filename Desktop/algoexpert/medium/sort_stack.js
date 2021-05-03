@@ -20,3 +20,10 @@ function sortStack(stack) {
 
     return stack;
 }
+
+function insertInSortedOrder(stack, value) {
+    if (stack.length === 0 || stack[stack.length - 1] <= value) {
+        stack,push(value);
+        return;
+    }
+}
