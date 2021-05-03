@@ -1,4 +1,5 @@
 Chapter 1 - Reliability, Scalable and Maintain Application 
+Martin Kleppmann
 
 - Todays apps are data intensive instead of compute intensive and not bc of the CPU but bc of the amount of data, the speed at which it is changing and the complexity of the data.
 - A data intensive app is typically built from the standard building blocks that provide common needed functionality such as :
