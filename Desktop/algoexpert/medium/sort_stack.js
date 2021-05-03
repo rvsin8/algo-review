@@ -26,4 +26,10 @@ function insertInSortedOrder(stack, value) {
         stack,push(value);
         return;
     }
+
+    const top = stack.pop();
+
+    insertInSortedOrder(stack, value);
+
+    stack.push(top);
 }
