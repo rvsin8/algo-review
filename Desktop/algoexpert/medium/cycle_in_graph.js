@@ -30,7 +30,14 @@ function isNodeInCycle(node, edges, visited, currentlyInStack) {
 
     const neighbors = edges[node];
     for (const neighbor of neighbors) {
-        
-
+        if (!visited[neightbor]) {
+            const containsCycle = isNodeInCycle(neighbor, edges, visited, currentlyInStack);
+            if (containsCycle) return true;
+        } else if (currentlyInStack[neighbor]) {
+            return true;
+        }
     }
+
+    currentlyInStack[node] = false;
+    return false;
 }
