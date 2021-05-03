@@ -15,4 +15,6 @@ function sortStack(stack) {
     const stop = stack.pop();
 
     sortStack(stack);
+
+    insertInSortedOrder(stack, top);
 }
