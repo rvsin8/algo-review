@@ -17,4 +17,6 @@ function sortStack(stack) {
     sortStack(stack);
 
     insertInSortedOrder(stack, top);
+
+    return stack;
 }
