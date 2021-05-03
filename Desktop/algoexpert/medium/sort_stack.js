@@ -12,7 +12,7 @@
 function sortStack(stack) {
     if (stack.length === 0) return stack;
 
-    const stop = stack.pop();
+    const top = stack.pop();
 
     sortStack(stack);
 
