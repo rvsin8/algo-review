@@ -32,9 +32,11 @@
 
 //time complexity 
 //O(n^2) not an efficiently algo bc we have to keep popping in and out
+//
 
 //space complexity 
-//O(n)
+//O(n) we have to have a recursive call stack so we have a lot of function that are being stored
+
 
 function sortStack(stack) {
     if (stack.length === 0) return stack;
