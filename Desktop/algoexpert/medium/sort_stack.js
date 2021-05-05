@@ -40,7 +40,7 @@
 
 
 function sortStack(stack) {
-    if (stack.length === 0) return stack;
+    if (stack.length === 0) return stack; //if the length of the stack is 0, then return the stack
 
     const top = stack.pop();
 
