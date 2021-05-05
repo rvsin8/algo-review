@@ -32,7 +32,8 @@
 
 //time complexity 
 //O(n^2) not an efficiently algo bc we have to keep popping in and out
-//
+//we remove all the ele which is O(n)
+//insertion may cause us O(n)
 
 //space complexity 
 //O(n) we have to have a recursive call stack so we have a lot of function that are being stored
