@@ -15,6 +15,10 @@
 //the first ele represents the vertex --> [1,3] 0 so it goes from 0 --> 3 and 0 --> 1
 //vertex 1 is 1 --> 2, 1 --> 3, 1 --> 4
 //and so on
+//using DFS may help bc we can find ancestors and descendants 
+//backedge - we already looked and discovered and is an ancestor which helps us know there is a cycle
+//whenever we have an edge of a descendant to an ancestor 
+//
 
 
 //time complexity 
