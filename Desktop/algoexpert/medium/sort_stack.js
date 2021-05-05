@@ -52,14 +52,14 @@ function sortStack(stack) {
 }
 
 function insertInSortedOrder(stack, value) {
-    if (stack.length === 0 || stack[stack.length - 1] <= value) {
-        stack,push(value);
+    if (stack.length === 0 || stack[stack.length - 1] <= value) { //this gives us the top of the stack, if it greater than  our value we
+        stack,push(value);//add it to our stack again
         return;
     }
 
-    const top = stack.pop();
+    const top = stack.pop(); //if not pop off the top ele 
 
-    insertInSortedOrder(stack, value);
+    insertInSortedOrder(stack, value); //pass the stack and same value
 
-    stack.push(top);
+    stack.push(top); //append the top ele
 }
