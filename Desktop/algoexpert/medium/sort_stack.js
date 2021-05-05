@@ -24,9 +24,11 @@
 //repeat this until we get --> [-5,-2,1,2,3,4]
 //we will use two recursive functions - sort() and insert()
 //sort() will find the correct place for ele
-//call sort first and pass in our input stack
-
-
+//call sort first and pass in our input stack and change in place
+//we do this until all the elements are popped off
+//then we use the insert function
+//we insert 5 and 2 like before
+//we do this until we inserted the sorted stack back on
 
 //time complexity 
 //O(n^2) not an efficiently algo bc we have to keep popping in and out
