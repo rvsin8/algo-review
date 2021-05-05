@@ -16,6 +16,13 @@
 //then we look at 2, is it greater than -5 ? yes so we add it back to the stack as well
 //now we are at -2, and it is not greater than the 2 we added so we pop off the 2 again
 //is the -2 greater to -5, yes so we can add it back now in -[-5,-2]
+//now we look at the 2 again and it is greater than -2 so we add it as well --> [-5,-2,2]
+//do the same with 4 --> [-5,-2,2,4]
+//now we are at 3 --> [-5,-2,2,3]
+//4 again --> [-5,-2,2,3,4]
+//now we are at 1 so we have to redo all of this --> [-5,-2,1]
+//repeat this until we get --> [-5,-2,1,2,3,4]
+
 
 
 //time complexity 
