@@ -10,8 +10,13 @@
 //we need to sort it in ascending order
 //we need to pop each element to know what ele needs to be in what order
 //[-5,2,-2,4,3,1] --> [-5,-2,1,2,3,4]
-//we need to pop everything off and readding them in order
-//
+//we need to pop everything off and readd them in order
+//so when all are popped off of the array, we begin adding the ele back
+//we add back -5
+//then we look at 2, is it greater than -5 ? yes so we add it back to the stack as well
+//now we are at -2, and it is not greater than the 2 we added so we pop off the 2 again
+//is the -2 greater to -5, yes so we can add it back now in -[-5,-2]
+
 
 //time complexity 
 //O(n^2)
