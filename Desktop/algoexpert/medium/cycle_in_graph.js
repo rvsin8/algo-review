@@ -63,5 +63,5 @@ function isNodeInCycle(node, edges, visited, currentlyInStack) { //helper for DF
     }
 
     currentlyInStack[node] = false; //making sure we ended the function call
-    return false;
+    return false; //if no cycles are found or backedges
 }
