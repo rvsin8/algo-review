@@ -10,7 +10,12 @@
 //no need to identify what cycle 
 //a cycle is a closed chain of vertices that are connected together, the first node being the last node as well
 //a self loop can be a cycle as well
-//
+//an adjaceny list is just the outbound edges in a list
+//[1,3],[2,3,4],[0],[],[2,5],[]]
+//the first ele represents the vertex --> [1,3] 0 so it goes from 0 --> 3 and 0 --> 1
+//vertex 1 is 1 --> 2, 1 --> 3, 1 --> 4
+//and so on
+
 
 //time complexity 
 //O(v + e)
