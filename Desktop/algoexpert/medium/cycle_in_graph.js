@@ -49,8 +49,8 @@ function cycleInGraph(edges) {
 }
 
 function isNodeInCycle(node, edges, visited, currentlyInStack) { //helper for DFS
-    visited[node] = true;
-    currentlyInStack[node] = true;
+    visited[node] = true; //mark the current node as visited 
+    currentlyInStack[node] = true; //currently in stack in idx node is true as well
 
     const neighbors = edges[node];
     for (const neighbor of neighbors) {
@@ -62,6 +62,6 @@ function isNodeInCycle(node, edges, visited, currentlyInStack) { //helper for DF
         }
     }
 
-    currentlyInStack[node] = false;
+    currentlyInStack[node] = false; //making sure we ended the function call
     return false;
 }
