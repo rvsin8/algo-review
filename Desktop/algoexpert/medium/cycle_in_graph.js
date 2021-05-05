@@ -9,6 +9,8 @@
 //if we find any cycles in the graph we return true if not then return false
 //no need to identify what cycle 
 //a cycle is a closed chain of vertices that are connected together, the first node being the last node as well
+//a self loop can be a cycle as well
+//
 
 //time complexity 
 //O(v + e)
