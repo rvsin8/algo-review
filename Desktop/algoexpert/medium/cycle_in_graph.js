@@ -18,7 +18,12 @@
 //using DFS may help bc we can find ancestors and descendants 
 //backedge - we already looked and discovered and is an ancestor which helps us know there is a cycle
 //whenever we have an edge of a descendant to an ancestor 
-//
+
+
+//solution
+//initialize two data structures --> 1. visited = [] 2. inStack = []
+//if a node is in the stack, if we reach it from another node then we have a backedge 
+
 
 
 //time complexity 
