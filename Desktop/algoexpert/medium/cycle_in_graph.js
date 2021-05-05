@@ -2,6 +2,10 @@
 //Graphs 
 
 //my understanding 
+//we are given an input graph and it is going to be represented by an adjacency list
+//our graph will be directed and unweighted 
+//you can only travel in one direction via edges for directed
+//unweighted means they are all the same distances
 
 //time complexity 
 //O(v + e)
