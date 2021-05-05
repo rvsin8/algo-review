@@ -26,7 +26,7 @@
 
 
 //time complexity 
-//O(n^2)
+//O(n^2) not an efficiently algo bc we have to keep popping in and off
 
 //space complexity 
 //O(n)
