@@ -42,13 +42,13 @@
 function sortStack(stack) {
     if (stack.length === 0) return stack; //if the length of the stack is 0, then return the stack
 
-    const top = stack.pop();
+    const top = stack.pop(); //treat the end of the array like the top of the stack
 
-    sortStack(stack);
+    sortStack(stack); //sorting the remainder of the stack
 
-    insertInSortedOrder(stack, top);
+    insertInSortedOrder(stack, top); //sort in order the ele we just popped off
 
-    return stack;
+    return stack; //return our stack
 }
 
 function insertInSortedOrder(stack, value) {
