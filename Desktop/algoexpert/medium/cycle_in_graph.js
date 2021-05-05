@@ -34,12 +34,12 @@
 //O(v) we hold our vertices in our two data structures 
 
 function cycleInGraph(edges) {
-    const numberOfNodes = edges.length;
-    const visited = new Array(numberOfNodes).fill(false);
-    const currentlyInStack = new Array(numberOfNodes).fill(false);
+    const numberOfNodes = edges.length; //length of our edges aka the number of our edges
+    const visited = new Array(numberOfNodes).fill(false); //ds initialize to false value
+    const currentlyInStack = new Array(numberOfNodes).fill(false); //ds initialize to false value
 
-    for (let node = 0; node < numberOfNodes; node++) {
-        if (visited[nodes]) continue;
+    for (let node = 0; node < numberOfNodes; node++) { //loop through all nodes
+        if (visited[nodes]) continue; //if the node is visited 
 
         const containsCycle = isNodeInCycle(node, edges, visited, currentlyInStack);
         if (containsCycle) return true;
