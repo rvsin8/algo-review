@@ -22,11 +22,14 @@
 //4 again --> [-5,-2,2,3,4]
 //now we are at 1 so we have to redo all of this --> [-5,-2,1]
 //repeat this until we get --> [-5,-2,1,2,3,4]
+//we will use two recursive functions - sort() and insert()
+//sort() will find the correct place for ele
+//call sort first and pass in our input stack
 
 
 
 //time complexity 
-//O(n^2) not an efficiently algo bc we have to keep popping in and off
+//O(n^2) not an efficiently algo bc we have to keep popping in and out
 
 //space complexity 
 //O(n)
