@@ -23,11 +23,11 @@
 //solution
 //initialize two data structures --> 1. visited = [] 2. inStack = []
 //if a node is in the stack, if we reach it from another node then we have a backedge 
-
+//we will use dfs will return a true or false on a value and see if we find an edge that leads to a node already visited 
 
 
 //time complexity 
-//O(v + e)
+//O(v + e) v for vertices and e for edges 
 
 //space complexity 
 //O(v)
