@@ -53,7 +53,7 @@ function sortStack(stack) {
 
 function insertInSortedOrder(stack, value) {
     if (stack.length === 0 || stack[stack.length - 1] <= value) { //this gives us the top of the stack, if it greater than  our value we
-        stack,push(value);//add it to our stack again
+        stack.push(value);//add it to our stack again
         return;
     }
 
