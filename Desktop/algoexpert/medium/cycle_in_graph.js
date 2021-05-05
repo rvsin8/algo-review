@@ -52,11 +52,11 @@ function isNodeInCycle(node, edges, visited, currentlyInStack) { //helper for DF
     visited[node] = true; //mark the current node as visited 
     currentlyInStack[node] = true; //currently in stack in idx node is true as well
 
-    const neighbors = edges[node];
-    for (const neighbor of neighbors) {
-        if (!visited[neightbor]) {
-            const containsCycle = isNodeInCycle(neighbor, edges, visited, currentlyInStack);
-            if (containsCycle) return true;
+    const neighbors = edges[node]; //look at the neighbors 
+    for (const neighbor of neighbors) { //loop through the neighbors 
+        if (!visited[neightbor]) { //if not visited neighbor 
+            const containsCycle = isNodeInCycle(neighbor, edges, visited, currentlyInStack); //run DFS
+            if (containsCycle) return true; //
         } else if (currentlyInStack[neighbor]) {
             return true;
         }
