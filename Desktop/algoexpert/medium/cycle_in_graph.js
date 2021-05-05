@@ -56,9 +56,9 @@ function isNodeInCycle(node, edges, visited, currentlyInStack) { //helper for DF
     for (const neighbor of neighbors) { //loop through the neighbors 
         if (!visited[neightbor]) { //if not visited neighbor 
             const containsCycle = isNodeInCycle(neighbor, edges, visited, currentlyInStack); //run DFS
-            if (containsCycle) return true; //
-        } else if (currentlyInStack[neighbor]) {
-            return true;
+            if (containsCycle) return true; //if it does contain cycle then return true 
+        } else if (currentlyInStack[neighbor]) { //else see if they are currently in the stack
+            return true; //we found a backedge so return true
         }
     }
 
