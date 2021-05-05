@@ -6,6 +6,9 @@
 //our graph will be directed and unweighted 
 //you can only travel in one direction via edges for directed
 //unweighted means they are all the same distances
+//if we find any cycles in the graph we return true if not then return false
+//no need to identify what cycle 
+//a cycle is a closed chain of vertices that are connected together, the first node being the last node as well
 
 //time complexity 
 //O(v + e)
