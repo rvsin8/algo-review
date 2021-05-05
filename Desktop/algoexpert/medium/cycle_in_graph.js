@@ -28,9 +28,10 @@
 
 //time complexity 
 //O(v + e) v for vertices and e for edges 
+//when we have to do a dfs we have to consider all the vertex and edges
 
 //space complexity 
-//O(v)
+//O(v) we hold our vertices in our two data structures 
 
 function cycleInGraph(edges) {
     const numberOfNodes = edges.length;
