@@ -7,6 +7,11 @@
 //you can only do these functions towards the end of the array aka the top of the stack
 //in place
 //we cant use sorting algorithms bc we cannot access indices 
+//we need to sort it in ascending order
+//we need to pop each element to know what ele needs to be in what order
+//[-5,2,-2,4,3,1] --> [-5,-2,1,2,3,4]
+//we need to pop everything off and readding them in order
+//
 
 //time complexity 
 //O(n^2)
