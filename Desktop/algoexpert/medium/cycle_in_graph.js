@@ -39,7 +39,7 @@ function cycleInGraph(edges) {
     const currentlyInStack = new Array(numberOfNodes).fill(false); //ds initialize to false value
 
     for (let node = 0; node < numberOfNodes; node++) { //loop through all nodes
-        if (visited[nodes]) continue; //if the node is visited 
+        if (visited[node]) continue; //if the node is visited 
 
         const containsCycle = isNodeInCycle(node, edges, visited, currentlyInStack); //if not visited we need to run a DFS, returns true/false
         if (containsCycle) return true; //if it contains a cycle we return true
@@ -54,7 +54,7 @@ function isNodeInCycle(node, edges, visited, currentlyInStack) { //helper for DF
 
     const neighbors = edges[node]; //look at the neighbors 
     for (const neighbor of neighbors) { //loop through the neighbors 
-        if (!visited[neightbor]) { //if not visited neighbor 
+        if (!visited[neighbor]) { //if not visited neighbor 
             const containsCycle = isNodeInCycle(neighbor, edges, visited, currentlyInStack); //run DFS
             if (containsCycle) return true; //if it does contain cycle then return true 
         } else if (currentlyInStack[neighbor]) { //else see if they are currently in the stack
