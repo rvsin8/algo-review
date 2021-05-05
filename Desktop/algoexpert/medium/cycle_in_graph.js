@@ -41,14 +41,14 @@ function cycleInGraph(edges) {
     for (let node = 0; node < numberOfNodes; node++) { //loop through all nodes
         if (visited[nodes]) continue; //if the node is visited 
 
-        const containsCycle = isNodeInCycle(node, edges, visited, currentlyInStack);
-        if (containsCycle) return true;
+        const containsCycle = isNodeInCycle(node, edges, visited, currentlyInStack); //if not visited we need to run a DFS, returns true/false
+        if (containsCycle) return true; //if it contains a cycle we return true
     }
 
-    return false;
+    return false; //if not then return false cause there was no cycles found
 }
 
-function isNodeInCycle(node, edges, visited, currentlyInStack) {
+function isNodeInCycle(node, edges, visited, currentlyInStack) { //helper for DFS
     visited[node] = true;
     currentlyInStack[node] = true;
 
