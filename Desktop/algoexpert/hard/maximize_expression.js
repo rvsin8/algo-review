@@ -47,9 +47,9 @@ function maximizeExpression(array) {
     const maxOfAMinusBPlusC = new Array(2).fill(-Infinity); //initialize ds 3
     const maxOfAMinusBPlusCMinusD = new Array(3).fill(-Infinity); //initialize ds 4
 
-    for (let idx = 1; idx < array.length; idx++) {
-        const currentMax = Math.max(maxOfA[idx - 1], maxofA[idx - 1] - array[idx]);
-        maxOfA.push(currentMax);
+    for (let idx = 1; idx < array.length; idx++) { //start at 1
+        const currentMax = Math.max(maxOfA[idx - 1], maxofA[idx - 1] - array[idx]); //max of A or the previous of A
+        maxOfA.push(currentMax); //APPEND THE MAX and fill our entire first DS
     }
 
     for (let idx = 1; idx < array.length; idx++) {
