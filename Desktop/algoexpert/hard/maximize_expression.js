@@ -2,6 +2,11 @@
 //Dynamic Programming 
 
 //my understanding 
+//given one input that is an array willed with integers 
+//determine the max value of the following expression 
+//[3,6,1,-3,2,7]
+//a,b,c,d // a < b < c < d
+//expression - array[a] - array[b] + array[c] - array[d]
 
 //time complexity 
 //O(n)
