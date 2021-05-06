@@ -23,7 +23,11 @@
 //add all the sums, 32 this works for fastest speed
 //how about minimum speed ?
 //we would want to pair the large values together for this 
-//
+//[9,7] = 9
+//[6,5] = 6
+//[5,3] = 5
+//[3,2] = 3
+//[2,1] = 2
 
 //time complexity
 
