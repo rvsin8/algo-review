@@ -21,6 +21,8 @@
 //at idx 1 the max value we can have is 6
 //at idx2 the max value we can have is 6
 //at idx3, it is again and so on 
+//at idx 5 the max value is 7 for a
+//
 
 
 //time complexity 
