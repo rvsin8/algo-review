@@ -13,6 +13,9 @@
 //once you declare a you can only pick the ele's after a
 
 //optimal solution 
+//a - b + c - d
+//we want to maximize a - b and c - d bc we want the largest value added
+//we want to minimize values b and d again to get the largest value
 //
 
 
