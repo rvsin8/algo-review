@@ -20,6 +20,7 @@
 //[3,6] = 6
 //[5,2] = 5
 //[5,3] = 5
+//add all the sums, 32
 
 //time complexity
 
