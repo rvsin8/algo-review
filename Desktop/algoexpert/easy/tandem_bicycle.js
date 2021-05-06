@@ -14,7 +14,12 @@
 //max speed would be 5, 2 + 3
 //redShirtSpeeds = [5,5,3,9,2]
 //blueShirtSpeeds = [3,6,7,2,1]
-//[9,7] = 9
+//[9,7] = 9 we should not pair two large numbers maybe the minimu n umber from the other shirt speed
+//[9,1] = 9, this is better
+//[2,7] = 7
+//[3,6] = 6
+//[5,2] = 5
+//[5,3] = 5
 
 //time complexity
 
