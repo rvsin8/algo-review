@@ -20,7 +20,10 @@
 //[3,6] = 6
 //[5,2] = 5
 //[5,3] = 5
-//add all the sums, 32
+//add all the sums, 32 this works for fastest speed
+//how about minimum speed ?
+//we would want to pair the large values together for this 
+//
 
 //time complexity
 
