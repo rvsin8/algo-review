@@ -35,4 +35,6 @@ function maximizeExpression(array) {
         const currentMax = Math.max(maxOfAMinusBPlusCMinusD[idx - 1], maxOfAMinusBPlusC[idx -1] - array[idx]);
         maxOfAMinusBPlusCMinusD.push(currentMax);
     }
+
+    return maxOfAMinusBPlusCMinusD[maxOfAMinusBPlusCMinusD.length -1];
 }
