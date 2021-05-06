@@ -9,6 +9,11 @@
 //expression - array[a] - array[b] + array[c] - array[d]
 //if we get an array with less than 4 ele then return an empty array
 //array[1] - array[3] + array[4] - array[5] = 6 - (-3) + 2 - 7 = 9 + (-5) = 4
+//a b c d must be unique 
+//once you declare a you can only pick the ele's after a
+
+//optimal solution 
+//
 
 
 //time complexity 
