@@ -2,6 +2,11 @@
 //Greedy Algorithm 
 
 //my understandings
+//we are given three inputs
+//the first input is a red shirt speeds that is an arryay with integers representing the speed of riders wearing red shirt
+//blue shirt speed is the second input and equals the lenght of riders wearing red shirts
+//last input is fastest which is a boolean that is true or false
+//each tandem bike must have a rider that is wearing a blue shirt and one wearing red shirt
 
 //time complexity
 
