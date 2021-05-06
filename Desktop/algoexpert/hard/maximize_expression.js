@@ -59,13 +59,13 @@ function maximizeExpression(array) {
 
     for (let idx = 2; idx < array.length; idx++) { //start at idx2
         const currentMax = Math.max(maxOfAMinusBPlusC[idx - 1], maxofAMinusB[idx - 1] + array[idx]); //max of A-B+C at idx - 1, or at idx + 1
-        maxOfAMinusBPlusC.push(currentMax);
+        maxOfAMinusBPlusC.push(currentMax); //APPEND MAX
     }
 
     for (let idx = 3; idx < array.length; idx++) {
-        const currentMax = Math.max(maxOfAMinusBPlusCMinusD[idx - 1], maxOfAMinusBPlusC[idx -1] - array[idx]);
-        maxOfAMinusBPlusCMinusD.push(currentMax);
+        const currentMax = Math.max(maxOfAMinusBPlusCMinusD[idx - 1], maxOfAMinusBPlusC[idx -1] - array[idx]); //max of A-B+C-D at idx - 1 or at idx
+        maxOfAMinusBPlusCMinusD.push(currentMax);//APPEND MAX
     }
 
-    return maxOfAMinusBPlusCMinusD[maxOfAMinusBPlusCMinusD.length -1];
+    return maxOfAMinusBPlusCMinusD[maxOfAMinusBPlusCMinusD.length -1]; //answer
 }
