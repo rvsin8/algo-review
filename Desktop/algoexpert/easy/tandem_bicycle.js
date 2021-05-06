@@ -12,4 +12,10 @@ function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
     blueShirtSpeeds.sort((a,b) => a - b);
 
     if (!fastest) reverseArrayInPlace(redShirtSpeeds);
+
+    let totalSpeed = 0;
+    for (let idx = 0; idx < redShirtSpeeds.length; idx++) {
+        const rider1 = redShirtsSpeeds[idx];
+        const rider2 = blueShirtSpeeds[blueShirtSpeeds.length - idx - 1];
+    }
 }
