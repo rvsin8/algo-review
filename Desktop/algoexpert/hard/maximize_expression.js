@@ -52,12 +52,12 @@ function maximizeExpression(array) {
         maxOfA.push(currentMax); //APPEND THE MAX and fill our entire first DS
     }
 
-    for (let idx = 1; idx < array.length; idx++) {
-        const currentMax = Math.max(maxOfAMinusB[idx - 1], maxOfA[idx - 1] - array[idx]);
-        maxOfAMinusB.push(currentMax);
+    for (let idx = 1; idx < array.length; idx++) { //idx1
+        const currentMax = Math.max(maxOfAMinusB[idx - 1], maxOfA[idx - 1] - array[idx]); //max of A-B at idx -1 or max of A-B at idx
+        maxOfAMinusB.push(currentMax); //append current max
     }
 
-    for (let idx = 2; idx < array.length; idx++) {
+    for (let idx = 2; idx < array.length; idx++) { //start at idx2
         const currentMax = Math.max(maxOfAMinusBPlusC[idx - 1], maxofAMinusB[idx - 1] + array[idx]);
     }
 
