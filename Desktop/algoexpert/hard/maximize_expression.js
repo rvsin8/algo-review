@@ -21,8 +21,12 @@
 //at idx 1 the max value we can have is 6
 //at idx2 the max value we can have is 6
 //at idx3, it is again and so on 
-//at idx 5 the max value is 7 for a
-//
+//at idx5 the max value is 7 for a
+//A [3,6,6,6,6,7]
+//we cannot go from idx0 so we start at idx1 and the max value we can have then is -3
+//at idx2 it will be 5
+//at idx3 it will be 3 and so on
+//A-B [-,-3,5,9,9,9]
 
 
 //time complexity 
