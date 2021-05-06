@@ -42,10 +42,10 @@
 function maximizeExpression(array) {
     if (array.length < 4) return 0; //if the length of the array is less than 4 then return 0
 
-    const maxOfA = new Array(1).fill(array[0]);
-    const maxOfAMinusB = new Array(1).fill(-Infinity);
-    const maxOfAMinusBPlusC = new Array(2).fill(-Infinity);
-    const maxOfAMinusBPlusCMinusD = new Array(3).fill(-Infinity);
+    const maxOfA = new Array(1).fill(array[0]); //initialize ds 1
+    const maxOfAMinusB = new Array(1).fill(-Infinity); //initialize ds 2
+    const maxOfAMinusBPlusC = new Array(2).fill(-Infinity); //initialize ds 3
+    const maxOfAMinusBPlusCMinusD = new Array(3).fill(-Infinity); //initialize ds 4
 
     for (let idx = 1; idx < array.length; idx++) {
         const currentMax = Math.max(maxOfA[idx - 1], maxofA[idx - 1] - array[idx]);
