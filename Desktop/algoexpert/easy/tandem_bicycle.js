@@ -28,6 +28,10 @@
 //[5,3] = 5
 //[3,2] = 3
 //[2,1] = 2
+//total speed of 25, this is the minimum possible speed we can have
+//sorting will help 
+//red = [2,3,5,5,9]
+//blue = [1,2,3,6,7]
 
 //time complexity
 
