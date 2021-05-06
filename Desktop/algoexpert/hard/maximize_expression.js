@@ -19,5 +19,11 @@ function maximizeExpression(array) {
 
     for (let idx = 1; idx < array.length; idx++) {
         const currentMax = Math.max(maxOfA[idx - 1], maxofA[idx - 1] - array[idx]);
+        maxOfA.push(currentMax);
+    }
+
+    for (let idx = 1; idx < array.length; idx++) {
+        const currentMax = Math.max(maxOfAMinusB[idx - 1], maxOfA[idx - 1] - array[idx]);
+        maxOfAMinusB.push(currentMax);
     }
 }
