@@ -29,8 +29,9 @@
 //A-B [-,-3,5,9,9,9]
 //next is A - B + C
 //[-,-,-2,-2,11,16]
-//
-
+//A - B + C - D
+//A - B + C - D [-,-,-,1,1,4]
+//look at the last ele in the DS and that is our answer = 4
 
 //time complexity 
 //O(n)
