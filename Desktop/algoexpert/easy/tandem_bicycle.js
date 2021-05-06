@@ -7,6 +7,12 @@
 //blue shirt speed is the second input and equals the lenght of riders wearing red shirts
 //last input is fastest which is a boolean that is true or false
 //each tandem bike must have a rider that is wearing a blue shirt and one wearing red shirt
+//you take the max speed of rider a or b, so if a = 3 and b = 4 the max is 4
+//is fastest = true, we want the fastest speed and if it equals false then we want the slowest speed
+//red = [1,3]
+//blue = [2,3]
+//max speed would be 5, 2 + 3
+//
 
 //time complexity
 
