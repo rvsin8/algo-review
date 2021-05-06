@@ -7,6 +7,9 @@
 //[3,6,1,-3,2,7]
 //a,b,c,d // a < b < c < d
 //expression - array[a] - array[b] + array[c] - array[d]
+//if we get an array with less than 4 ele then return an empty array
+//array[1] - array[3] + array[4] - array[5] = 6 - (-3) + 2 - 7 = 9 + (-5) = 4
+
 
 //time complexity 
 //O(n)
