@@ -16,7 +16,11 @@
 //a - b + c - d
 //we want to maximize a - b and c - d bc we want the largest value added
 //we want to minimize values b and d again to get the largest value
-//
+//maximize a - b then a - b  + c and then a - b + c - d
+//at idx the max value of a we can have is 3
+//at idx 1 the max value we can have is 6
+//at idx2 the max value we can have is 6
+//at idx3, it is again and so on 
 
 
 //time complexity 
