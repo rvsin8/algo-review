@@ -40,7 +40,7 @@
 //O(n)
 
 function maximizeExpression(array) {
-    if (array.length < 4) return 0;
+    if (array.length < 4) return 0; //if the length of the array is less than 4 then return 0
 
     const maxOfA = new Array(1).fill(array[0]);
     const maxOfAMinusB = new Array(1).fill(-Infinity);
