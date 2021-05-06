@@ -27,6 +27,9 @@
 //at idx2 it will be 5
 //at idx3 it will be 3 and so on
 //A-B [-,-3,5,9,9,9]
+//next is A - B + C
+//[-,-,-2,-2,11,16]
+//
 
 
 //time complexity 
