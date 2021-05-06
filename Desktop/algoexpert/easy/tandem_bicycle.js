@@ -17,5 +17,8 @@ function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
     for (let idx = 0; idx < redShirtSpeeds.length; idx++) {
         const rider1 = redShirtsSpeeds[idx];
         const rider2 = blueShirtSpeeds[blueShirtSpeeds.length - idx - 1];
+        totalSpeed += Math.max(rider1, rider2);
+
     }
+    return totalSpeed;
 }
