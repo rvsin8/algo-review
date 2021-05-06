@@ -26,4 +26,13 @@ function maximizeExpression(array) {
         const currentMax = Math.max(maxOfAMinusB[idx - 1], maxOfA[idx - 1] - array[idx]);
         maxOfAMinusB.push(currentMax);
     }
+
+    for (let idx = 2; idx < array.length; idx++) {
+        const currentMax = Math.max(maxOfAMinusBPlusC[idx - 1], maxofAMinusB[idx - 1] + array[idx]);
+    }
+
+    for (let idx = 3; idx < array.length; idx++) {
+        const currentMax = Math.max(maxOfAMinusBPlusCMinusD[idx - 1], maxOfAMinusBPlusC[idx -1] - array[idx]);
+        maxOfAMinusBPlusCMinusD.push(currentMax);
+    }
 }
