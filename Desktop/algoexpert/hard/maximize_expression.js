@@ -58,7 +58,8 @@ function maximizeExpression(array) {
     }
 
     for (let idx = 2; idx < array.length; idx++) { //start at idx2
-        const currentMax = Math.max(maxOfAMinusBPlusC[idx - 1], maxofAMinusB[idx - 1] + array[idx]);
+        const currentMax = Math.max(maxOfAMinusBPlusC[idx - 1], maxofAMinusB[idx - 1] + array[idx]); //max of A-B+C at idx - 1, or at idx + 1
+        maxOfAMinusBPlusC.push(currentMax);
     }
 
     for (let idx = 3; idx < array.length; idx++) {
