@@ -12,7 +12,9 @@
 //red = [1,3]
 //blue = [2,3]
 //max speed would be 5, 2 + 3
-//
+//redShirtSpeeds = [5,5,3,9,2]
+//blueShirtSpeeds = [3,6,7,2,1]
+//[9,7] = 9
 
 //time complexity
 
