@@ -32,6 +32,9 @@
 //sorting will help 
 //red = [2,3,5,5,9]
 //blue = [1,2,3,6,7]
+//we can easily find the largest and smallest arrays
+//have two pointers to help pair up small wt large or large wt large 
+//
 
 //time complexity
 
