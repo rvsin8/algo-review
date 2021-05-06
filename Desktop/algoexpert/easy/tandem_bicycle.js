@@ -31,5 +31,7 @@ function reverseArrayInPlace(array) {
         const temp = array[start];
         array[start] = array[end];
         array[end] = temp;
+        start++;
+        end--;
     }
 }
