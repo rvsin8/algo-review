@@ -22,3 +22,12 @@ function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
     }
     return totalSpeed;
 }
+
+function reverseArrayInPlace(array) {
+    let start = 0;
+    let end = array.length - 1;
+
+    while (start < end) {
+        
+    }
+}
