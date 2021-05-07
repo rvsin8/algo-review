@@ -38,3 +38,7 @@ function removeIslands(matrix) {
     }
     return matrix;
 }
+
+function changeOnesConnectedToBorderToTwos(matrix, startRow, startCol) {
+    const stack = [[startRow, startCol]];
+}
