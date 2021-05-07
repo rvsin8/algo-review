@@ -45,5 +45,9 @@ function changeOnesConnectedToBorderToTwos(matrix, startRow, startCol) {
     while (stack.length > 0) {
         const currentPosition = stack.pop();
         const [currentRow, currentCol] = currentPosition;
+
+        matrix[currentRow][currentCol] = 2;
+
+        const neighbors = getNeighbors(matrix, currentRow, currentCol);
     }
 }
