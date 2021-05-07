@@ -57,15 +57,15 @@ function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
     return totalSpeed;
 }
 
-function reverseArrayInPlace(array) {
-    let start = 0;
-    let end = array.length - 1;
+function reverseArrayInPlace(array) { //helper function that reverses an array
+    let start = 0; //pointer start at idx 0
+    let end = array.length - 1; //pointer at the array length - 1
 
-    while (start < end) {
-        const temp = array[start];
-        array[start] = array[end];
-        array[end] = temp;
-        start++;
-        end--;
+    while (start < end) { //as long as the pointers do not overlap 
+        const temp = array[start]; //swap two array values
+        array[start] = array[end]; //swap two array values
+        array[end] = temp; //swap two array values 
+        start++; //increment one pointer
+        end--; //increment the next pointer
     }
 }
