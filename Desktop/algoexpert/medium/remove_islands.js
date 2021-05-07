@@ -58,3 +58,12 @@ function changeOnesConnectedToBorderToTwos(matrix, startRow, startCol) {
         }
     }
 }
+
+function getNeighbors(matrix, row, col) {
+    const neighbors = [];
+
+    const numRows = matrix.length;
+    const numCols = matrix[row].length;
+
+    if
+}
