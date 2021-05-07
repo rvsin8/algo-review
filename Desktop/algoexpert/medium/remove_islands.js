@@ -41,4 +41,9 @@ function removeIslands(matrix) {
 
 function changeOnesConnectedToBorderToTwos(matrix, startRow, startCol) {
     const stack = [[startRow, startCol]];
+
+    while (stack.length > 0) {
+        const currentPosition = stack.pop();
+        const [currentRow, currentCol] = currentPosition;
+    }
 }
