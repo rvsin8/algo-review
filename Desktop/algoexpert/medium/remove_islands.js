@@ -31,7 +31,10 @@ function removeIslands(matrix) {
             if (color === 1) {
                 matrix[row][col] = 0;
 
+            } else if (color === 2) {
+                matrix[row][col] = 1;
             }
         }
     }
+    return matrix;
 }
