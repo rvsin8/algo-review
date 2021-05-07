@@ -42,8 +42,8 @@
 //O(1) we store nothing bc we use pointers
 
 function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
-    redShirtSpeeds.sort((a,b) => a - b);
-    blueShirtSpeeds.sort((a,b) => a - b);
+    redShirtSpeeds.sort((a,b) => a - b); //sort in ascending order
+    blueShirtSpeeds.sort((a,b) => a - b); //sort in ascending order
 
     if (!fastest) reverseArrayInPlace(redShirtSpeeds);
 
