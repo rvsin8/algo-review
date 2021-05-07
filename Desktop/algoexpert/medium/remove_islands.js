@@ -19,7 +19,9 @@ function removeIslands(matrix) {
 
             if (!isBorder) continue;
 
-            if
+            if (matrix[row][col] != 1) continue;
+
+            changeOnesConnectedToBorderToTwos(martrix, row, col);
 
         }
     }
