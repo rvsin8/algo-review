@@ -45,7 +45,7 @@ function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
     redShirtSpeeds.sort((a,b) => a - b); //sort in ascending order
     blueShirtSpeeds.sort((a,b) => a - b); //sort in ascending order
 
-    if (!fastest) reverseArrayInPlace(redShirtSpeeds);
+    if (!fastest) reverseArrayInPlace(redShirtSpeeds); //if our boolean is not fastest aka false then we reverse the red shirt array
 
     let totalSpeed = 0;
     for (let idx = 0; idx < redShirtSpeeds.length; idx++) {
