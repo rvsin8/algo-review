@@ -36,10 +36,10 @@
 //have two pointers to help pair up small wt large or large wt large 
 
 //time complexity
-//O(nlogn)
+//O(nlogn) bc we have quicksort 
 
 //space complexity 
-//O(n)
+//O(1) we store nothing bc we use pointers
 
 function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
     redShirtSpeeds.sort((a,b) => a - b);
