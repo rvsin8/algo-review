@@ -34,11 +34,12 @@
 //blue = [1,2,3,6,7]
 //we can easily find the largest and smallest arrays
 //have two pointers to help pair up small wt large or large wt large 
-//
 
 //time complexity
+//O(nlogn)
 
 //space complexity 
+//O(n)
 
 function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
     redShirtSpeeds.sort((a,b) => a - b);
