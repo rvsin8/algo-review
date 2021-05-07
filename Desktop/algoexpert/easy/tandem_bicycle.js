@@ -49,7 +49,7 @@ function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
 
     let totalSpeed = 0; //manipulate this to find the total speed 
     for (let idx = 0; idx < redShirtSpeeds.length; idx++) { //loop
-        const rider1 = redShirtsSpeeds[idx]; //in normal order
+        const rider1 = redShirtSpeeds[idx]; //in normal order
         const rider2 = blueShirtSpeeds[blueShirtSpeeds.length - idx - 1]; //ele in reverse order 
         totalSpeed += Math.max(rider1, rider2);//choose the max speed
 
