@@ -67,4 +67,8 @@ function getNeighbors(matrix, row, col) {
 
     if (row - 1 >= 0) neighbors.push([row - 1, col]);
     if (row + 1 < numRows) neighbors.push([row + 1, col]);
+    if (col - 1 >= 0) neighbors.push([row, col - 1]);
+    if (col + 1 < numCols) neighbors.push([row, col + 1]);
+
+    return neighbors;
 }
