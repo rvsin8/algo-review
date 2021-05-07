@@ -65,10 +65,10 @@ function getNeighbors(matrix, row, col) {
     const numRows = matrix.length;
     const numCols = matrix[row].length;
 
-    if (row - 1 >= 0) neighbors.push([row - 1, col]);
-    if (row + 1 < numRows) neighbors.push([row + 1, col]);
-    if (col - 1 >= 0) neighbors.push([row, col - 1]);
-    if (col + 1 < numCols) neighbors.push([row, col + 1]);
+    if (row - 1 >= 0) neighbors.push([row - 1, col]); //UP
+    if (row + 1 < numRows) neighbors.push([row + 1, col]); //DOWN
+    if (col - 1 >= 0) neighbors.push([row, col - 1]); //LEFT
+    if (col + 1 < numCols) neighbors.push([row, col + 1]); //RIGHT
 
     return neighbors;
 }
