@@ -65,5 +65,6 @@ function getNeighbors(matrix, row, col) {
     const numRows = matrix.length;
     const numCols = matrix[row].length;
 
-    if
+    if (row - 1 >= 0) neighbors.push([row - 1, col]);
+    if (row + 1 < numRows) neighbors.push([row + 1, col]);
 }
