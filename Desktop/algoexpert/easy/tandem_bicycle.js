@@ -47,9 +47,9 @@ function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
 
     if (!fastest) reverseArrayInPlace(redShirtSpeeds); //if our boolean is not fastest aka false then we reverse the red shirt array
 
-    let totalSpeed = 0;
-    for (let idx = 0; idx < redShirtSpeeds.length; idx++) {
-        const rider1 = redShirtsSpeeds[idx];
+    let totalSpeed = 0; //manipulate this to find the total speed 
+    for (let idx = 0; idx < redShirtSpeeds.length; idx++) { //loop
+        const rider1 = redShirtsSpeeds[idx]; 
         const rider2 = blueShirtSpeeds[blueShirtSpeeds.length - idx - 1];
         totalSpeed += Math.max(rider1, rider2);
 
