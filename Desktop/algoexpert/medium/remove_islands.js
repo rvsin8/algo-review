@@ -49,5 +49,12 @@ function changeOnesConnectedToBorderToTwos(matrix, startRow, startCol) {
         matrix[currentRow][currentCol] = 2;
 
         const neighbors = getNeighbors(matrix, currentRow, currentCol);
+        for (const neighbor of neighbors) {
+            const [row, col] = neighbor;
+
+            if (matrix[row][col] != 1) continue;
+
+            stack.push(neighbor);
+        }
     }
 }
