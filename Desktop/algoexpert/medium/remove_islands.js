@@ -5,13 +5,21 @@
 //we are given an input matrix aka a 2D array made up of only 1s and 0s
 //0 = white and 1 = black
 //an island is any number of 1 that are adjacaent or vertical, not on edges
-//
+//output has to be the islands replaced by 0s
+
+//easiest way
+//loop through the entire array
+//when we hit a 1 we will do a check and perform a function
+//look at the 1's neighbors
+//do this for all positions
+
 
 //time complexity 
 //O(wh)
 
 //space complexity 
 //O(wh)
+//there is one that runs in constant space but its too complicated
 
 
 function removeIslands(matrix) {
