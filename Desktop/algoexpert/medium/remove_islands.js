@@ -54,14 +54,14 @@ function removeIslands(matrix) {
 
         }
     }
-    for (let row = 0; row < matrix.length; row++) {
-        for (let col = 0; col < matrix[row].length; col++) {
-            const color = matrix[row][col];
+    for (let row = 0; row < matrix.length; row++) { //entire input matrix
+        for (let col = 0; col < matrix[row].length; col++) { //entire input matrix 
+            const color = matrix[row][col]; //position
             if (color === 1) {
-                matrix[row][col] = 0;
+                matrix[row][col] = 0; //change 1 to 0
 
             } else if (color === 2) {
-                matrix[row][col] = 1;
+                matrix[row][col] = 1; //change 2 to 1
             }
         }
     }
@@ -81,7 +81,7 @@ function changeOnesConnectedToBorderToTwos(matrix, startRow, startCol) {
         for (const neighbor of neighbors) {
             const [row, col] = neighbor;
 
-            if (matrix[row][col] != 1) continue;
+            if (matrix[row][col] != 1) continue; //
 
             stack.push(neighbor);
         }
