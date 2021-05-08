@@ -28,8 +28,7 @@
 //instead of creating a ds with true and flase values
 //we can replace all the edges 1 with 2
 //replace the 1's connected to the 1 on the edges with 2 as well
-//
-
+//we replace all 2's with 1's and all 1's with 0's
 
 //time complexity 
 //O(wh) where w id width and h is height, at most we can look at every position
@@ -37,6 +36,7 @@
 //space complexity 
 //O(wh) where w is width and h is height, we have to create another ds the same exact size of our original array
 //there is one that runs in constant space but its too complicated
+//for solution 2 we use DFS which uses a stack 
 
 
 function removeIslands(matrix) {
