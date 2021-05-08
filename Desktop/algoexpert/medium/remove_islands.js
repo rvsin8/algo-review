@@ -19,7 +19,10 @@
 //we can start by looping through the first row, first col, last row and last col
 //we find all ones connected to the ones at these edges
 //we store their positions and then loop through the interior 1 that are not connected to the edges and replace it with 0
-
+//create another 2D array that is identical to this array but have them all to false values
+//by doing this we can look at corresponding values
+//whatever is a true value are not islands so we keep those values
+//when we see the 1's that are false - we replace it with 0's
 
 
 //time complexity 
