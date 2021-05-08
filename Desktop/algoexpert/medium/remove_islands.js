@@ -40,7 +40,7 @@
 
 
 function removeIslands(matrix) {
-    for (let row = 0; row < matrix.length; row++) {
+    for (let row = 0; row < matrix.length; row++) { //
         for (let col = 0; col < matrix[row].length; col++) {
             const rowIsBorder = row === 0 || row === matrix.length - 1;
             const colIsBorder = col === 0 || col === matrix[row].length - 1;
@@ -50,7 +50,7 @@ function removeIslands(matrix) {
 
             if (matrix[row][col] != 1) continue;
 
-            changeOnesConnectedToBorderToTwos(martrix, row, col);
+            changeOnesConnectedToBorderToTwos(martrix, row, col);//helper that changes the 1's to 2's
 
         }
     }
@@ -75,7 +75,7 @@ function changeOnesConnectedToBorderToTwos(matrix, startRow, startCol) {
         const currentPosition = stack.pop();
         const [currentRow, currentCol] = currentPosition;
 
-        matrix[currentRow][currentCol] = 2;
+        matrix[currentRow][currentCol] = 2; //mark for us the current integer to 2
 
         const neighbors = getNeighbors(matrix, currentRow, currentCol);
         for (const neighbor of neighbors) {
