@@ -77,12 +77,12 @@ function changeOnesConnectedToBorderToTwos(matrix, startRow, startCol) {
         matrix[currentRow][currentCol] = 2; //mark for us the current integer to 2
 
         const neighbors = getNeighbors(matrix, currentRow, currentCol);
-        for (const neighbor of neighbors) {
-            const [row, col] = neighbor;
+        for (const neighbor of neighbors) { //loop[ through neighbors]
+            const [row, col] = neighbor; //decompose 
 
-            if (matrix[row][col] != 1) continue; //
+            if (matrix[row][col] != 1) continue; //the neighbor does not equal 1, then continue
 
-            stack.push(neighbor);
+            stack.push(neighbor); //otherwise add the neighbor to the stack
         }
     }
 }
