@@ -24,6 +24,12 @@
 //whatever is a true value are not islands so we keep those values
 //when we see the 1's that are false - we replace it with 0's
 
+//clever solution 2
+//instead of creating a ds with true and flase values
+//we can replace all the edges 1 with 2
+//replace the 1's connected to the 1 on the edges with 2 as well
+//
+
 
 //time complexity 
 //O(wh) where w id width and h is height, at most we can look at every position
