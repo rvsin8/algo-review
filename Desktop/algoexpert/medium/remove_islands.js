@@ -16,7 +16,10 @@
 //we keep doing this 
 
 //clever solution 1
-//
+//we can start by looping through the first row, first col, last row and last col
+//we find all ones connected to the ones at these edges
+//we store their positions and then loop through the interior 1 that are not connected to the edges and replace it with 0
+
 
 
 //time complexity 
