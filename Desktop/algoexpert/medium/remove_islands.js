@@ -42,13 +42,13 @@
 function removeIslands(matrix) {
     for (let row = 0; row < matrix.length; row++) { //
         for (let col = 0; col < matrix[row].length; col++) {
-          const rowIsBorder = row === 0 || row === matrix.length - 1; //return a boolean that lets us know if we are at the border
-          const colIsBorder = col === 0 || col === matrix[row].length - 1; //return a boolean that lets us know if we are at the border
-          const isBorder = rowIsBorder || colIsBorder; 
+          const rowIsBorder = row === 0 || row === matrix.length - 1; //return a boolean that lets us know if we are at the border for row
+          const colIsBorder = col === 0 || col === matrix[row].length - 1; //return a boolean that lets us know if we are at the border for col
+          const isBorder = rowIsBorder || colIsBorder; //border boolean
 
-          if (!isBorder) continue;
+          if (!isBorder) continue; //if it is not on a border then continue 
 
-          if (matrix[row][col] != 1) continue;
+          if (matrix[row][col] != 1) continue; //if it is equal to a 1 we look for other ones so continue
 
           changeOnesConnectedToBorderToTwos(martrix, row, col); //helper that changes the 1's to 2's
         }
