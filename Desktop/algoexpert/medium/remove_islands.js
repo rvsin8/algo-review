@@ -20,16 +20,16 @@
 //we find all ones connected to the ones at these edges
 //we store their positions and then loop through the interior 1 that are not connected to the edges and replace it with 0
 //create another 2D array that is identical to this array but have them all to false values
-//by doing this we can look at corresponding values
+//by doing this we can look at corresponding values via DFS
 //whatever is a true value are not islands so we keep those values
 //when we see the 1's that are false - we replace it with 0's
 
 
 //time complexity 
-//O(wh)
+//O(wh) where w id width and h is height, at most we can look at every position
 
 //space complexity 
-//O(wh)
+//O(wh) where w is width and h is height, we have to create another ds the same exact size of our original array
 //there is one that runs in constant space but its too complicated
 
 
