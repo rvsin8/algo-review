@@ -1,7 +1,11 @@
 //Remove Islands
 //Graphs
 
-//my understanding 
+//my understanding
+//we are given an input matrix aka a 2D array made up of only 1s and 0s
+//0 = white and 1 = black
+//an island is any number of 1 that are adjacaent or vertical, not on edges
+//
 
 //time complexity 
 //O(wh)
