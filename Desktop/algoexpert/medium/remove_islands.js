@@ -12,6 +12,11 @@
 //when we hit a 1 we will do a check and perform a function
 //look at the 1's neighbors
 //do this for all positions
+//once we find an island we replace it with a 0
+//we keep doing this 
+
+//clever solution 1
+//
 
 
 //time complexity 
