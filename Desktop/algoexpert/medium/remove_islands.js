@@ -42,16 +42,15 @@
 function removeIslands(matrix) {
     for (let row = 0; row < matrix.length; row++) { //
         for (let col = 0; col < matrix[row].length; col++) {
-            const rowIsBorder = row === 0 || row === matrix.length - 1;
-            const colIsBorder = col === 0 || col === matrix[row].length - 1;
-            const isBorder = rowIsBorder || colIsBorder;
+          const rowIsBorder = row === 0 || row === matrix.length - 1; //return a boolean that lets us know if we are at the border
+          const colIsBorder = col === 0 || col === matrix[row].length - 1; //return a boolean that lets us know if we are at the border
+          const isBorder = rowIsBorder || colIsBorder; 
 
-            if (!isBorder) continue;
+          if (!isBorder) continue;
 
-            if (matrix[row][col] != 1) continue;
+          if (matrix[row][col] != 1) continue;
 
-            changeOnesConnectedToBorderToTwos(martrix, row, col);//helper that changes the 1's to 2's
-
+          changeOnesConnectedToBorderToTwos(martrix, row, col); //helper that changes the 1's to 2's
         }
     }
     for (let row = 0; row < matrix.length; row++) { //entire input matrix
@@ -65,7 +64,7 @@ function removeIslands(matrix) {
             }
         }
     }
-    return matrix;
+    return matrix; //return our matrix
 }
 
 function changeOnesConnectedToBorderToTwos(matrix, startRow, startCol) {
