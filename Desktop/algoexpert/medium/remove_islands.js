@@ -68,11 +68,11 @@ function removeIslands(matrix) {
 }
 
 function changeOnesConnectedToBorderToTwos(matrix, startRow, startCol) {
-    const stack = [[startRow, startCol]];
+    const stack = [[startRow, startCol]]; //initialize a stack
 
     while (stack.length > 0) {
-        const currentPosition = stack.pop();
-        const [currentRow, currentCol] = currentPosition;
+        const currentPosition = stack.pop(); //pop the most recent ele
+        const [currentRow, currentCol] = currentPosition; //get current row and current col
 
         matrix[currentRow][currentCol] = 2; //mark for us the current integer to 2
 
