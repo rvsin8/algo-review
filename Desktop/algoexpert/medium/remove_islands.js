@@ -50,7 +50,7 @@ function removeIslands(matrix) {
 
           if (matrix[row][col] != 1) continue; //if it is equal to a 1 we look for other ones so continue
 
-          changeOnesConnectedToBorderToTwos(martrix, row, col); //helper that changes the 1's to 2's
+          changeOnesConnectedToBorderToTwos(matrix, row, col); //helper that changes the 1's to 2's
         }
     }
     for (let row = 0; row < matrix.length; row++) { //entire input matrix
