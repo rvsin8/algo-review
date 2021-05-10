@@ -28,7 +28,8 @@
 //via min heap we can just hand over the laptops not in use
 //min heap will tell us which range has the least time
 //it will keep track by end time
-
+ //if the end time is <= the start time, if it is not we need another laptop
+ //so we add [0,4] to the min heap that already has [3,10]
 
 //time complexity 
 //O(nlog(n))
