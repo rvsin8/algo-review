@@ -45,6 +45,8 @@
 //laptops = 1
 //we see that another one has start so now our laptop is at 2
 //we see that another has started so our laptop rentla is at 3
+//when we see an ending time equal or less than a starting time of another laptop, the laptop can take another laptop that was in use
+//
 
 //time complexity 
 //O(nlog(n)) whenever we insert and remove it is log n
