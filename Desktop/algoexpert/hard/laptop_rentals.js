@@ -23,7 +23,12 @@
 //after we visit [0,2] and [0,4] we need laptops = 2
 //after [0,2], [0,4] and [1,4] we need laqptops = 3
 //after [3,10] we need laptops = 3 bc one time period is gone but another starts 
-//so on 
+//so on, we always compare start time to every other runnign end time
+//this requires n^2 time complexity but with min heap it will be reduced
+//via min heap we can just hand over the laptops not in use
+//min heap will tell us which range has the least time
+//it will keep track by end time
+
 
 //time complexity 
 //O(nlog(n))
