@@ -21,7 +21,13 @@ function maximumSumSubmatrix(matrix, size) {
 
             const touchesLeftBorder = col - size < 0;
             if (!touchesLeftBorder) total -= sums[row][col - size];
+
+            const touchesTopOrLeftBorder = touchesTopBorder || touchesLeftBorder;
+            if (!touchesTopOrLeftBorder) total += sums[row - size][col - size];
+
+            maxSubMatrixSum = Math.max(maxSubMatrixSum, total);
         }
 
     }
+    return maxSubMatrixSum;
 }
