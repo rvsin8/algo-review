@@ -18,3 +18,14 @@ function riverSizes(matrix) {
     }
     return sizes;
 }
+
+function traverseNode(i, j, matrix, visited, sizes) {
+    let currentRiverSize = 0;
+    const nodesToExplore = [[i,j]];
+    while (nodesToExplore.length) {
+        const currentNode = nodesToExplore.pop();
+        i = currentNode[0];
+        j = currentNode[1];
+        if
+    }
+}
