@@ -28,16 +28,18 @@
 //via min heap we can just hand over the laptops not in use
 //min heap will tell us which range has the least time
 //it will keep track by end time
- //if the end time is <= the start time, if it is not we need another laptop
- //so we add [0,4] to the min heap that already has [0,2]
- //same goes for [1,4]
- //once we hit [3,10] we can remove [0,2] from the min heap since the time has expired and add [3,10]
+//if the end time is <= the start time, if it is not we need another laptop
+//so we add [0,4] to the min heap that already has [0,2]
+//same goes for [1,4]
+//once we hit [3,10] we can remove [0,2] from the min heap since the time has expired and add [3,10]
+//so on
 
 //time complexity 
-//O(nlog(n))
+//O(nlog(n)) whenever we insert and remove it is log n
+//we are also sorting which is n log n
 
 //space complexity 
-//O(n)
+//O(n) we can be storing at most n time ranges
 
 function laptopRentals(times) {
     if (times.length === 0) return 0;
