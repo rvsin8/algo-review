@@ -6,6 +6,10 @@
 //another input called size that will be an integer
 //we want the max sum submatrix
 //we want to add them by the size so if its 2 then the size by size is 4
+
+
+//brute force
+//h is rows and w is columns
 //
 
 //time complexity 
