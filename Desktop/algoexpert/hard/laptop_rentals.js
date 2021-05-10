@@ -16,6 +16,11 @@
 //[4,6], [0,4] we need three laptops because there is a 3 array overlap
 //[7,8], [9,11] and [3,10] we still only require three laptops
 
+//solving the problem via solution 1
+//use sorting and heap data structure 
+//sort by starting time --> [[0,2],[0,4],[1,4],[3,10],[4,6],[7,8],[9,11]]
+//
+
 //time complexity 
 //O(nlog(n))
 
