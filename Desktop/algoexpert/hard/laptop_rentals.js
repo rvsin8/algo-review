@@ -34,10 +34,15 @@
 //once we hit [3,10] we can remove [0,2] from the min heap since the time has expired and add [3,10]
 //so on
 
-//solution 2
+//solution 2 our solution
 //give a list of start times and list of end times and then sort it
 //start = [0,0,1,3,4,7,9]
 //end = [2,4,4,6,8,10,11]
+//get two pointers --> i and j
+//we can see three rentals start before one ends 
+//loop through all of our times, we compare i and j
+//if the ending time is before or equal to the starting time at then we free up a laptop
+//
 
 //time complexity 
 //O(nlog(n)) whenever we insert and remove it is log n
