@@ -13,6 +13,9 @@ function maximumSumSubmatrix(matrix, size) {
     let maxSubMatrixSum = -Infinity;
 
     for (let row = size - 1; row < matrix.length; row++) {
-        
+        for (let col = size - 1; col < matrix[row].length; col++) {
+            let total = sums[row][col];
+        }
+
     }
 }
