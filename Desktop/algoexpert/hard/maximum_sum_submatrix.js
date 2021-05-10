@@ -12,11 +12,9 @@
 //h is rows and w is columns
 //time complexity is width * height * size^2, disgusting
 //loop through the matrix and add all matrices 
-//
-
+//when we calculate these sums then we 
 
 //time complexity 
-
 
 //space complexity 
 
