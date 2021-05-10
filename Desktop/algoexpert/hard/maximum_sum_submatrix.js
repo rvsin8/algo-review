@@ -15,6 +15,12 @@ function maximumSumSubmatrix(matrix, size) {
     for (let row = size - 1; row < matrix.length; row++) {
         for (let col = size - 1; col < matrix[row].length; col++) {
             let total = sums[row][col];
+
+            const touchesTopBorder = row - size < 0;
+            if (!touchesTopBorder) total -= sums[row - size][col];
+
+            const touchesLeftBorder = col - size < 0;
+            if (!touchesLeftBorder) total -= sums[row][col - size];
         }
 
     }
