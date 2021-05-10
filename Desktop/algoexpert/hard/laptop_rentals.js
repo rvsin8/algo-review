@@ -6,7 +6,12 @@
 //first ele is the start time
 //second ele is the end time
 //0 <= start < end
-
+//how many laptops does the school requires such that every student has access to a laptop at any given time
+//a student has access to only one laptop 
+//[0,2][2,3]
+//one student wants the laptop from 0-2
+//another student wants the laptop from 2-3
+//the bounds here can overlap
 
 //time complexity 
 //O(nlog(n))
