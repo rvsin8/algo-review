@@ -10,9 +10,13 @@
 
 //brute force
 //h is rows and w is columns
+//time complexity is width * height * size^2, disgusting
+//loop through the matrix and add all matrices 
 //
 
+
 //time complexity 
+
 
 //space complexity 
 
