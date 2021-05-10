@@ -19,5 +19,10 @@ function laptopRentals(times) {
     let startIterator = 0;
     let endIterator = 0;
 
-    
+    while (startIterator < times.length) {
+        if (startTimes[startIterator] >= endTimes[endIterator]) {
+            usedLaptops--;
+            endIterator++;
+        }
+    }
 }
