@@ -37,3 +37,9 @@ function traverseNode(i, j, matrix, visited, sizes) {
     }
     if (currentRiverSize > 0) sizes.push(currentRiverSize);
 }
+
+function getUnvisitedNeighbors(i, j, matrix, visited) {
+    const unvisitedNeighbors = [];
+    if (i > 0 && !visited[i - 1][j]) unvisitedNeighbors.push([i - 1, j]);
+    if (i < matrix.length - 1 && !visited[i + 1][j]) unvisitedNeighbors.push([i + 1, j]);
+}
