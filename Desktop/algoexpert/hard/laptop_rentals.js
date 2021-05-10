@@ -19,7 +19,10 @@
 //solving the problem via solution 1
 //use sorting and heap data structure 
 //sort by starting time --> [[0,2],[0,4],[1,4],[3,10],[4,6],[7,8],[9,11]]
-//
+//laptops = 1 we need atleast one laptop
+//after we visit [0,2] and [0,4] we need laptops = 2
+//after [0,2], [0,4] and [1,4] we need laqptops = 3
+//after [3,10] we need laptops = 3 bc one time period is gone but another starts 
 
 //time complexity 
 //O(nlog(n))
