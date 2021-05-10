@@ -42,7 +42,9 @@
 //we can see three rentals start before one ends 
 //loop through all of our times, we compare i and j
 //if the ending time is before or equal to the starting time at then we free up a laptop
-//
+//laptops = 1
+//we see that another one has start so now our laptop is at 2
+//we see that another has started so our laptop rentla is at 3
 
 //time complexity 
 //O(nlog(n)) whenever we insert and remove it is log n
