@@ -24,5 +24,9 @@ function laptopRentals(times) {
             usedLaptops--;
             endIterator++;
         }
-    }
+
+        usedLaptops++;
+        startIterator++;
+    } 
+    return usedLaptops;
 }
