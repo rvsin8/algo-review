@@ -12,6 +12,9 @@
 //one student wants the laptop from 0-2
 //another student wants the laptop from 2-3
 //the bounds here can overlap
+//[0,2] overlaps with [1,4] so we need two laptops 
+//[4,6], [0,4] we need three laptops because there is a 3 array overlap
+//[7,8], [9,11] and [3,10] we still only require three laptops
 
 //time complexity 
 //O(nlog(n))
