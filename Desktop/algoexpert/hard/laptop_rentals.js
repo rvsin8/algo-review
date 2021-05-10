@@ -66,13 +66,13 @@ function laptopRentals(times) {
     let endIterator = 0; //pointer 2
 
     while (startIterator < times.length) { //if our pointers do not overlap
-        if (startTimes[startIterator] >= endTimes[endIterator]) {
-            usedLaptops--;
-            endIterator++;
+        if (startTimes[startIterator] >= endTimes[endIterator]) { //if the start time is greater than or equal to one of the end times im on
+            usedLaptops--; //subtract 1 from usedlaptop 
+            endIterator++; //keep iterating
         }
 
-        usedLaptops++;
-        startIterator++;
+        usedLaptops++; //else we add to laptop rentals
+        startIterator++; //keep iterating
     } 
-    return usedLaptops;
+    return usedLaptops; //return the used laptop solution
 }
