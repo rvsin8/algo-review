@@ -56,11 +56,11 @@
 //O(n) we can be storing at most n time ranges
 
 function laptopRentals(times) {
-    if (times.length === 0) return 0;
+    if (times.length === 0) return 0; //if our input is = 0, then return 0
 
-    let usedLaptops = 0;
-    const startTimes = times.map(a => a[0].sort((a,b) => a - b));
-    const endTimes = times.map(a => a[1].sort((a,b) => a - b));
+    let usedLaptops = 0; //we start with 0 laptops being rented
+    const startTimes = times.map(a => a[0].sort((a,b) => a - b)); //sort it in ascending order
+    const endTimes = times.map(a => a[1].sort((a,b) => a - b)); //sort it in ascending order
 
     let startIterator = 0;
     let endIterator = 0;
