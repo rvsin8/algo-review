@@ -62,10 +62,10 @@ function laptopRentals(times) {
     const startTimes = times.map(a => a[0].sort((a,b) => a - b)); //sort it in ascending order
     const endTimes = times.map(a => a[1].sort((a,b) => a - b)); //sort it in ascending order
 
-    let startIterator = 0;
-    let endIterator = 0;
+    let startIterator = 0; //pointer 1
+    let endIterator = 0; //pointer 2
 
-    while (startIterator < times.length) {
+    while (startIterator < times.length) { //if our pointers do not overlap
         if (startTimes[startIterator] >= endTimes[endIterator]) {
             usedLaptops--;
             endIterator++;
