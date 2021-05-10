@@ -2,6 +2,11 @@
 //Graphs
 
 //my understanding
+//classic graph traversal 
+//you are given a matrix aka 2d array, not an equal width and height
+//contains 0 and 1, 0 is land and 1 is river 
+//1's next to each other are rivers as well
+//we have to return an array of all the sizes of river
 
 //time complexity 
 
