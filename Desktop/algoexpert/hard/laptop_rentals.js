@@ -2,6 +2,11 @@
 //Heaps
 
 //my understanding 
+//one input that is an array and inside of it is more arrays with pairs of integers 
+//first ele is the start time
+//second ele is the end time
+//0 <= start < end
+
 
 //time complexity 
 //O(nlog(n))
