@@ -2,6 +2,11 @@
 //Dynamic Programming
 
 //my understanding 
+//we are given two inputs - first is a matrix aka 2d array and has unequal height and weight
+//another input called size that will be an integer
+//we want the max sum submatrix
+//we want to add them by the size so if its 2 then the size by size is 4
+//
 
 //time complexity 
 
