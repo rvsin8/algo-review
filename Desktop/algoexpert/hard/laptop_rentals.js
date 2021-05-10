@@ -9,3 +9,8 @@
 //space complexity 
 //O(n)
 
+function laptopRentals(times) {
+    if (times.length === 0) return 0;
+
+    
+}
