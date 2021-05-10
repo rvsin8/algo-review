@@ -1,4 +1,9 @@
 //River Sizes
 //Graphs
 
-//y understandings
+//my understanding
+
+//time complexity 
+
+//space complexity 
+
