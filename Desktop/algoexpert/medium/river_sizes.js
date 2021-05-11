@@ -48,7 +48,7 @@ function traverseNode(i, j, matrix, visited, sizes) { //helper function
         if (visited[i][j]) continue; //if i and j is truthy we want to continue
         visited[i][j] = true; //if they are not visited, we set them as visited 
         if (matrix[i][j] === 0) continue; //if we are dealing a piece of land we skip it
-        currentRiveSize++; //update current river size by 1
+        currentRiverSize++; //update current river size by 1
         const unvisitedNeighbors = getUnvisitedNeighbors(i, j, matrix, visited); //explore its neighboring nodes another helper 
         for (const neighbor of unvisitedNeighbors) { //for every neighbor in our unvisited neighbor
             nodesToExplore.push(neighbor); //we append every unvisited neighbor 
@@ -63,4 +63,5 @@ function getUnvisitedNeighbors(i, j, matrix, visited) { //helper number 2 be awa
     if (i < matrix.length - 1 && !visited[i + 1][j]) unvisitedNeighbors.push([i + 1, j]); //bottom row
     if (j > 0 && !visited[i][j - 1]) unvisitedNeighbors.push([i, j - 1]); //leftmost column
     if (j < matrix[0].length - 1 && !visited[i][j + 1]) unvisitedNeighbors.push([i, j + 1]); //rightmost column
+    return unvisitedNeighbors;
 }
