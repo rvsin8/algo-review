@@ -13,6 +13,8 @@
 //each node has a value 0 or 1 and each node has a neighboring node
 //you can traverse this matrix and at every node we check its every value, if it has a value 1 we can apply either DFS or BFS to find its length
 //whenever we find the value 1 we can start exploring its neighboring nodes and if that neighbor is also 1 so we do the same for that neighbor 
+//you will xplore a bunch of nodes multiple times we need to improve this 
+//we will keep track of a node we have visited and when we arrive to it again we just simply ignore it
 //
 
 //time complexity 
