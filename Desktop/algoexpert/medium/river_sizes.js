@@ -27,15 +27,15 @@
 //O(w*h) we are going to building this auxillary data structure the same exact size 
 
 function riverSizes(matrix) {
-    const sizes = [];
-    const visited = matrix.map(row => row.map(value => false));
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
-            if (visited[i][j]) continue;
-            traverseNode(i, j, matrix, visited, sizes);
+    const sizes = []; //initialize our sizes array that we will return in the end
+    const visited = matrix.map(row => row.map(value => false)); //it will be the same size of our input matrix and every value will be a boolean 
+    for (let i = 0; i < matrix.length; i++) { //iterate through the input matrix for i
+        for (let j = 0; j < matrix[i].length; j++) { //for j
+            if (visited[i][j]) continue; //if its visited at idx i and j then we just continue
+            traverseNode(i, j, matrix, visited, sizes); //otherwise we call a helper function
         }
     }
-    return sizes;
+    return sizes; //we return the sizes array
 }
 
 function traverseNode(i, j, matrix, visited, sizes) {
