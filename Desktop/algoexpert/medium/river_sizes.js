@@ -7,6 +7,11 @@
 //contains 0 and 1, 0 is land and 1 is river 
 //1's next to each other are rivers as well
 //we have to return an array of all the sizes of river
+//adjacent 1's do not count only horizontal and vertical 
+//we need to keep track of all 1's so we should treat it as a graph
+//if we treat this matrix as a graph we can treat every ele as a node 
+//each node has a value 0 or 1 and each node has a neighboring node
+//
 
 //time complexity 
 
