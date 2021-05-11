@@ -15,13 +15,16 @@
 //whenever we find the value 1 we can start exploring its neighboring nodes and if that neighbor is also 1 so we do the same for that neighbor 
 //you will xplore a bunch of nodes multiple times we need to improve this 
 //we will keep track of a node we have visited and when we arrive to it again we just simply ignore it
-//
+//we can do explore them iteratively or recursively 
+//we found another 1 so we increase the length to 2 and we explore that new 1 and find no other neighbor so the length we add to our final array is 2
+//and so on we do this for every node
 
 //time complexity 
-//O(wh)
+//O(w*h) w is the length and h is the height of the matrix
+//we visit every node at least once
 
 //space complexity 
-//O(wh)
+//O(w*h)
 
 function riverSizes(matrix) {
     const sizes = [];
