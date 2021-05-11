@@ -38,10 +38,10 @@ function riverSizes(matrix) {
     return sizes; //we return the sizes array
 }
 
-function traverseNode(i, j, matrix, visited, sizes) {
-    let currentRiverSize = 0;
-    const nodesToExplore = [[i,j]];
-    while (nodesToExplore.length) {
+function traverseNode(i, j, matrix, visited, sizes) { //helper function
+    let currentRiverSize = 0; //every potential river size begins with a length of 0
+    const nodesToExplore = [[i,j]]; //apply DFS, declare an array of nodes we need to explore begininng with i and j
+    while (nodesToExplore.length) { //
         const currentNode = nodesToExplore.pop();
         i = currentNode[0];
         j = currentNode[1];
