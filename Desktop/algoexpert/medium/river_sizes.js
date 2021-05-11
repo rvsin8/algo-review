@@ -50,17 +50,17 @@ function traverseNode(i, j, matrix, visited, sizes) { //helper function
         if (matrix[i][j] === 0) continue; //if we are dealing a piece of land we skip it
         currentRiveSize++; //update current river size by 1
         const unvisitedNeighbors = getUnvisitedNeighbors(i, j, matrix, visited); //explore its neighboring nodes another helper 
-        for (const neighbor of unvisitedNeighbors) { 
-            nodesToExplore.push(neighbor);
+        for (const neighbor of unvisitedNeighbors) { //for every neighbor in our unvisited neighbor
+            nodesToExplore.push(neighbor); //we append every unvisited neighbor 
         }
     }
-    if (currentRiverSize > 0) sizes.push(currentRiverSize);
+    if (currentRiverSize > 0) sizes.push(currentRiverSize); //if we have an actual river then add it to our sizes array
 }
 
-function getUnvisitedNeighbors(i, j, matrix, visited) {
-    const unvisitedNeighbors = [];
-    if (i > 0 && !visited[i - 1][j]) unvisitedNeighbors.push([i - 1, j]);
-    if (i < matrix.length - 1 && !visited[i + 1][j]) unvisitedNeighbors.push([i + 1, j]);
-    if (j > 0 && !visited[i][j - 1]) unvisitedNeighbors.push([i, j - 1]);
-    if (j < matrix[0].length - 1 && !visited[i][j + 1]) unvisitedNeighbors.push([i, j + 1]);
+function getUnvisitedNeighbors(i, j, matrix, visited) { //helper number 2 be aware of off by 1 errors
+    const unvisitedNeighbors = []; //empty array
+    if (i > 0 && !visited[i - 1][j]) unvisitedNeighbors.push([i - 1, j]); //above us
+    if (i < matrix.length - 1 && !visited[i + 1][j]) unvisitedNeighbors.push([i + 1, j]); //bottom row
+    if (j > 0 && !visited[i][j - 1]) unvisitedNeighbors.push([i, j - 1]); //leftmost column
+    if (j < matrix[0].length - 1 && !visited[i][j + 1]) unvisitedNeighbors.push([i, j + 1]); //rightmost column
 }
