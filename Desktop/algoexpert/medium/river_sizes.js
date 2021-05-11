@@ -18,8 +18,10 @@
 //
 
 //time complexity 
+//O(wh)
 
 //space complexity 
+//O(wh)
 
 function riverSizes(matrix) {
     const sizes = [];
