@@ -9,5 +9,8 @@
 //space complexity 
 //O(n^2)
 
-
+function fourNumberSum(array, targetSum) {
+    const allPairSums = {};
+    const quadruplets = [];
+}
 
