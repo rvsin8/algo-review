@@ -24,7 +24,7 @@
 //we visit every node at least once
 
 //space complexity 
-//O(w*h)
+//O(w*h) we are going to building this auxillary data structure the same exact size 
 
 function riverSizes(matrix) {
     const sizes = [];
