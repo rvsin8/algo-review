@@ -11,6 +11,8 @@
 //we need to keep track of all 1's so we should treat it as a graph
 //if we treat this matrix as a graph we can treat every ele as a node 
 //each node has a value 0 or 1 and each node has a neighboring node
+//you can traverse this matrix and at every node we check its every value, if it has a value 1 we can apply either DFS or BFS to find its length
+//whenever we find the value 1 we can start exploring its neighboring nodes and if that neighbor is also 1 so we do the same for that neighbor 
 //
 
 //time complexity 
