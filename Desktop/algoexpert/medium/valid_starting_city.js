@@ -21,6 +21,10 @@
 //runs in n^2 time 
 
 //solution 2 more optimal
+//we know we will have 1 valid city
+//the amount of fuel given will always equal to the distance
+//the city where we have the least amount of gas in must be the city we start at
+//
 
 
 //time complexity 
