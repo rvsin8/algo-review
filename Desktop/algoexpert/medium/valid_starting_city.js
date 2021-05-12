@@ -9,7 +9,9 @@
 //mpg for our imaginary car
 //the amount of cities will be the same as the length of our distances and fuel 
 //every city will be atleast 1 mile apart
-//
+//city 0 is 5 miles apart from city 1 and you can collect one gallon of gas that will allow you to travel ten more miles
+//determine a valid starting city that will let us travel around without running out of gas
+
 
 //time complexity 
 //O(n)
