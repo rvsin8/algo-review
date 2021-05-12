@@ -46,17 +46,17 @@ function maximumSumSubmatrix(matrix, size) {
 }
 
 function createSumMatrix(matrix) {
-    const sums = [];
-    for (let row = 0; row < matrix.length; row++) {
-        sums.push([]);
+    const sums = []; //empty array
+    for (let row = 0; row < matrix.length; row++) { //initializing a new structure
+        sums.push([]); //exact same size and shape as our original matrix filled with 0
         for (let col = 0; col < matrix[row].length; col++) {
             sums[row].push(0);
         }
     }
     sums[0][0] = matrix[0][0];
 
-    for (let idx = 1; idx < matrix[0].length; idx++) {
-        sums[0][idx] = sums[0][idx - 1] + matrix[0][idx];
+    for (let idx = 1; idx < matrix[0].length; idx++) { //first row 
+        sums[0][idx] = sums[0][idx - 1] + matrix[0][idx]; //looking at previous sum and adding the ele we are considering 
     }
 
     for (let idx = 1; idx < matrix.length; idx++) {
