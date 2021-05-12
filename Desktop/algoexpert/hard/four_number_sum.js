@@ -6,6 +6,10 @@
 //wants us ti implement a function that will give us all the four numbers that will give us the target number
 //brute force is bad for time complexity
 //a quadruplet can be expressed as a pair of numbers
+//x,y,z,k can be a quadruplet we can make this into pairs x + y = p ; z + k = q
+//we can reduce this to a variation of the two sum problem 
+//keep track of what numbers were used to find these big number sum
+//{P: [x,y]}
 
 //time complexity 
 //O(n^2)
