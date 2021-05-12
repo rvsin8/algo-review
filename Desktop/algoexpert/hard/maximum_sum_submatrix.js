@@ -27,16 +27,16 @@ function maximumSumSubmatrix(matrix, size) {
 
     for (let row = size - 1; row < matrix.length; row++) { //for loop 
         for (let col = size - 1; col < matrix[row].length; col++) { //for loop
-            let total = sums[row][col];
+            let total = sums[row][col]; //total is the sum of the row and col
 
-            const touchesTopBorder = row - size < 0;
-            if (!touchesTopBorder) total -= sums[row - size][col];
+            const touchesTopBorder = row - size < 0; //if we are touching the top border
+            if (!touchesTopBorder) total -= sums[row - size][col]; //if not touching the top border we will subtract all of the things above us we need to remove
 
-            const touchesLeftBorder = col - size < 0;
-            if (!touchesLeftBorder) total -= sums[row][col - size];
+            const touchesLeftBorder = col - size < 0; //same for left
+            if (!touchesLeftBorder) total -= sums[row][col - size]; //if not touching do the same
 
-            const touchesTopOrLeftBorder = touchesTopBorder || touchesLeftBorder;
-            if (!touchesTopOrLeftBorder) total += sums[row - size][col - size];
+            const touchesTopOrLeftBorder = touchesTopBorder || touchesLeftBorder; //if we tough both, overlap
+            if (!touchesTopOrLeftBorder) total += sums[row - size][col - size]; //we need to add back the overlap values
 
             maxSubMatrixSum = Math.max(maxSubMatrixSum, total);
         }
