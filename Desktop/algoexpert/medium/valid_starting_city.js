@@ -15,6 +15,13 @@
 //fuel = [1,2,1,0,3]
 //mpg = 10
 
+//solution 1
+//simply going through all the city and see if they work as a valid starting city 
+//brute force approach
+//runs in n^2 time 
+
+//solution 2 more optimal
+
 
 //time complexity 
 //O(n)
