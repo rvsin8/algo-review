@@ -10,6 +10,9 @@
 //we can reduce this to a variation of the two sum problem 
 //keep track of what numbers were used to find these big number sum
 //{P: [x,y]}
+//{6: [[4,2],[7,-1]}
+//{13: [[7,6]] 3: [[4,-1]] 10: [[6,4]]}
+//we want to avoid double counting
 
 //time complexity 
 //O(n^2)
