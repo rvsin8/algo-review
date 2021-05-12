@@ -11,6 +11,9 @@
 //every city will be atleast 1 mile apart
 //city 0 is 5 miles apart from city 1 and you can collect one gallon of gas that will allow you to travel ten more miles
 //determine a valid starting city that will let us travel around without running out of gas
+//distances = [5,25,15,10,15]
+//fuel = [1,2,1,0,3]
+//mpg = 10
 
 
 //time complexity 
@@ -20,7 +23,7 @@
 //O(1)
 
 
-function validStartingCity(distance, fuel, mpg) {
+function validStartingCity(distances, fuel, mpg) {
     const numberOfCities = distances.length;
     let milesRemaining = 0;
 
