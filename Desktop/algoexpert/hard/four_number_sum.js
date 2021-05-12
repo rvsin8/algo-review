@@ -14,7 +14,9 @@
 //{13: [[7,6]] 3: [[4,-1]] 10: [[6,4]] 6: [[4,2],[7,-1]]}
 //we want to avoid double counting
 //one four loop, two inner for loops to avoid double counting 
-//P = 4 + -1
+//P = 4 + -1, 4 + 1, 4 + 2
+//Q = 7 + 4, 6 + 4 
+
 
 //time complexity 
 //O(n^2)
