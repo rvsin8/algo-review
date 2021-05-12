@@ -2,6 +2,11 @@
 //Greedy Algorithms
 
 //my understandings 
+//we are given three inputs - distances, fuel and mpg all arrays
+//we need to imagine we have cities mapped out in a circular row
+//we have miles btw cities
+//gallons of fuel we can collect at each city
+//
 
 //time complexity 
 //O(n)
