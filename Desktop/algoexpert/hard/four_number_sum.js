@@ -20,6 +20,9 @@
 //the first pass will not generate anything
 //we iterate before 6, 6 + 7 = 13 and we add this to the hash table
 //{13: [[7,6]]}
+//we iterate through 4, P = 4 - 1 = 3 // 16 - 3 = 13
+//13 is in our hash table
+//[[7,6,4,-1]] our first quadruplet found
 
 //time complexity 
 //O(n^2)
