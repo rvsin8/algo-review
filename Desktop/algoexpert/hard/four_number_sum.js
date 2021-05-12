@@ -39,12 +39,12 @@ function fourNumberSum(array, targetSum) {
     const allPairSums = {}; //hash table that stores every sum in the array
     const quadruplets = []; //hold every sinlge quadruplet that gives us our target sum
     for (let i = 1; i < array.length - 1; i++) { //outer for loop
-        for (let j = i + 1; j < array.length; j++) {
-            const currentSum = array[i] + array[j];
-            const difference = targetSum - currentSum;
-            if (difference in allPairSums) {
-                for (const pair of allPairSums[difference]) {
-                    quadruplets.push(pair.concat([array[i], array[j]]));
+        for (let j = i + 1; j < array.length; j++) { //inner for loop
+            const currentSum = array[i] + array[j]; //get our pair
+            const difference = targetSum - currentSum; //get our difference
+            if (difference in allPairSums) { //if the difference is in our hash table
+                for (const pair of allPairSums[difference]) { //iterate through all the pairs
+                    quadruplets.push(pair.concat([array[i], array[j]])); //add our new pairs
                 }
             }
         }
