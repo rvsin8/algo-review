@@ -42,10 +42,10 @@ function validStartingCity(distances, fuel, mpg) {
     let indexOfStartingCityCandidates = 0; //first city
     let milesRemainingAtStartingCityCandidate = 0; //no gas at the beginning
 
-    for (let cityIdx = 1; cityIdx < numberOfCities; cityIdx++) { //loop through the cities
-        const distanceFromPreviousCity = distances[cityIdx - 1];
-        const fuelFromPreviousCity = fuel[cityIdx - 1];
-        milesRemaining += fuelFromPreviousCity * mpg - distanceFromPreviousCity;
+    for (let cityIdx = 1; cityIdx < numberOfCities; cityIdx++) { //loop through the cities, we go to the second city that is why we use 1
+        const distanceFromPreviousCity = distances[cityIdx - 1]; //how much gas/distance we got from the previous city avoids idx error
+        const fuelFromPreviousCity = fuel[cityIdx - 1]; //fuel of previous city
+        milesRemaining += fuelFromPreviousCity * mpg - distanceFromPreviousCity; //formula for miles ramining
 
         if (milesRemaining < milesRemainingAtStartingCityCandidate) {
             milesRemainingAtStartingCityCandidate = milesRemaining;
