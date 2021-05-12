@@ -16,7 +16,8 @@
 //one four loop, two inner for loops to avoid double counting 
 //P = 4 + -1, 4 + 1, 4 + 2
 //Q = 7 + 4, 6 + 4 
-
+//iterate through the array once
+//
 
 //time complexity 
 //O(n^2)
