@@ -16,6 +16,14 @@ function fourNumberSum(array, targetSum) {
         for (let j = i + 1; j < array.length; j++) {
             const currentSum = array[i] + array[j];
             const difference = targetSum - currentSum;
+            if (difference in allPairSums) {
+                for (const pair of allPairSums[difference]) {
+                    quadruplets.push(pair.concat([array[i], array[j]]));
+                }
+            }
+        }
+        for (let k = 0; k < i; k++) {
+            
         }
     }
 }
