@@ -62,4 +62,10 @@ function createSumMatrix(matrix) {
     for (let idx = 1; idx < matrix.length; idx++) {
         sums[idx][0] = sums[idx - 1][0] + matrix[idx][0];
     }
+
+    for (let row = 1; row < matrix.length; row++) {
+        for (let col = 1; col < matrix[row].length; col++) {
+            
+        }
+    }
 }
