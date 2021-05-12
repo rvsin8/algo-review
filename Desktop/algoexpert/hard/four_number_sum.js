@@ -11,8 +11,10 @@
 //keep track of what numbers were used to find these big number sum
 //{P: [x,y]}
 //{6: [[4,2],[7,-1]}
-//{13: [[7,6]] 3: [[4,-1]] 10: [[6,4]]}
+//{13: [[7,6]] 3: [[4,-1]] 10: [[6,4]] 6: [[4,2],[7,-1]]}
 //we want to avoid double counting
+//one four loop, two inner for loops to avoid double counting 
+//P = 4 + -1
 
 //time complexity 
 //O(n^2)
