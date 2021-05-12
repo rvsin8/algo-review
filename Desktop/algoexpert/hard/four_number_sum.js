@@ -24,6 +24,9 @@
 //13 is in our hash table
 //[[7,6,4,-1]] our first quadruplet found
 //so on
+//iterate through all the nums before 4
+//{13: [[7,6]] 11: [[7,4]] 10: [[6,4]]
+//we keep doing this until we find our second quadruplet --> [7,6,1,2]
 
 //time complexity 
 //O(n^2)
