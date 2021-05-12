@@ -2,6 +2,10 @@
 //Arrays
 
 //my understanding 
+//you get an array of distinct integers and a target number
+//wants us ti implement a function that will give us all the four numbers that will give us the target number
+//brute force is bad for time complexity
+//a quadruplet can be expressed as a pair of numbers
 
 //time complexity 
 //O(n^2)
