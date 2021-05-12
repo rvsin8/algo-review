@@ -26,7 +26,7 @@
 //space complexity
 //O(n) building an array
 
-function minNumbersOfCoinsForChnage(n, denoms) {
+function minNumberOfCoinsForChange(n, denoms) {
     const numOfCoins = new Array(n+1).fill(Infinity); //initialize array, we will fill it up with infinity bc it will simplify our formula 
     numOfCoins[0] = 0; //to make 0 dollars we need 0 coins
     for (const denom of denoms) { //for loop
