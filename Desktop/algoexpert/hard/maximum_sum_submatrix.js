@@ -65,7 +65,8 @@ function createSumMatrix(matrix) {
 
     for (let row = 1; row < matrix.length; row++) {
         for (let col = 1; col < matrix[row].length; col++) {
-            
+            sums[row][col] = sums[row - 1][col] + sums[row][col - 1] - sums[row - 1][col - 1] + matrix[row][col];
         }
     }
+    return sums;
 }
