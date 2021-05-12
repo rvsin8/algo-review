@@ -32,9 +32,9 @@ function minNumbersOfCoinsForChnage(n, denoms) {
     for (const denom of denoms) { //for loop
         for (let amount = 0; amount < numOfCoins.length; amount++){ //in range
             if (denom <= amount) { //can we even use our current coin to generate this ammount, if its less then we apply our formula
-                numOfCoins[amount] = Math.min(numOfCoins[amount], numOfCoins[amount - denom] + 1);
+                numOfCoins[amount] = Math.min(numOfCoins[amount], numOfCoins[amount - denom] + 1); //i dunno?
             }
         }
     }
-    return numOfCoins[n] !== Infinity ? numOfCoins[n] : -1;
+    return numOfCoins[n] !== Infinity ? numOfCoins[n] : -1; //review this
 }
