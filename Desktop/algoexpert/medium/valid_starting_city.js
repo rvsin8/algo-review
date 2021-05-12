@@ -24,7 +24,8 @@
 //we know we will have 1 valid city
 //the amount of fuel given will always equal to the distance
 //the city where we have the least amount of gas in must be the city we start at
-//
+//we are trying to pick the city with the minimum number of gas
+//we will iterate through every city starting with city 0 and return the city with the least amount of gas
 
 
 //time complexity 
