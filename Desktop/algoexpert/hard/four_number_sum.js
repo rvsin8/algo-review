@@ -33,7 +33,7 @@
 //O(n^3) worst in an edge case scenario 
 
 //space complexity 
-//O(n^2) avg / worst
+//O(n^2) avg / worst due to the hash table, we are storing roughly O N^2 sums
 
 function fourNumberSum(array, targetSum) {
     const allPairSums = {};
