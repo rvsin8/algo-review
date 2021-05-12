@@ -16,4 +16,10 @@ function validStartingCity(distance, fuel, mpg) {
 
     let indexOfStartingCityCandidates = 0;
     let milesRemainingAtStartingCityCandidate = 0;
+
+    for (let cityIdx = 1; cityIdx < numberOfCities; cityIdx++) {
+        const distanceFromPreviousCity = distances[cityIdx - 1];
+        const fuelFromPreviousCity = fuel[cityIdx - 1];
+        milesRemaining += fuelFromPreviousCity * mpg - distanceFromPreviousCity;
+    }
 }
