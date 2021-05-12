@@ -36,9 +36,9 @@
 //O(n^2) avg / worst due to the hash table, we are storing roughly O N^2 sums
 
 function fourNumberSum(array, targetSum) {
-    const allPairSums = {};
-    const quadruplets = [];
-    for (let i = 1; i < array.length - 1; i++) {
+    const allPairSums = {}; //hash table that stores every sum in the array
+    const quadruplets = []; //hold every sinlge quadruplet that gives us our target sum
+    for (let i = 1; i < array.length - 1; i++) { //outer for loop
         for (let j = i + 1; j < array.length; j++) {
             const currentSum = array[i] + array[j];
             const difference = targetSum - currentSum;
