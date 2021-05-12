@@ -48,16 +48,16 @@ function fourNumberSum(array, targetSum) {
                 }
             }
         }
-        for (let k = 0; k < i; k++) {
-            const currentSum = array[i] + array[k];
-            if (!(currentSum in allPairSums)) {
-                allPairSums[currentSum] = [[array[k], array[i]]];
-            } else {
-                allPairSums[currentSum].push([array[k], array[i]]);
+        for (let k = 0; k < i; k++) { //second for loop
+            const currentSum = array[i] + array[k]; //current sum is array at idx i and k
+            if (!(currentSum in allPairSums)) { //if the current sum in all pair sums
+                allPairSums[currentSum] = [[array[k], array[i]]]; // create an entirely new k-v pairs
+            } else { //if not, otherwise
+                allPairSums[currentSum].push([array[k], array[i]]); //we can append our new array to the existing value
             }
 
         }
     }
-    return quadruplets;
+    return quadruplets; //return the quadruplets
 }
 
