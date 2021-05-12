@@ -9,3 +9,7 @@
 //space complexity 
 //O(1)
 
+
+function validStartingCity(distance, fuel, mpg) {
+    
+}
