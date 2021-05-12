@@ -30,7 +30,7 @@
 
 //time complexity 
 //O(n^2) avg where n is the length of our input array we use two for loops
-//O(n^3) worst 
+//O(n^3) worst in an edge case scenario 
 
 //space complexity 
 //O(n^2) avg / worst
