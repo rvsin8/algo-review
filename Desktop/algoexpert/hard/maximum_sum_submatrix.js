@@ -22,7 +22,7 @@
 
 
 function maximumSumSubmatrix(matrix, size) {
-    const sums = createSumMatrix(matrix);
+    const sums = createSumMatrix(matrix); //create an array that stores sums
     let maxSubMatrixSum = -Infinity;
 
     for (let row = size - 1; row < matrix.length; row++) {
@@ -43,4 +43,11 @@ function maximumSumSubmatrix(matrix, size) {
 
     }
     return maxSubMatrixSum;
+}
+
+function createSumMatrix(matrix) {
+    const sums = [];
+    for (let row = 0; row < matrix.length; row++) {
+        
+    }
 }
