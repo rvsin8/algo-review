@@ -39,10 +39,10 @@ function validStartingCity(distances, fuel, mpg) {
     const numberOfCities = distances.length; //length of distances gives us number of cities 
     let milesRemaining = 0; //miles start at 0
 
-    let indexOfStartingCityCandidates = 0;
-    let milesRemainingAtStartingCityCandidate = 0;
+    let indexOfStartingCityCandidates = 0; //first city
+    let milesRemainingAtStartingCityCandidate = 0; //no gas at the beginning
 
-    for (let cityIdx = 1; cityIdx < numberOfCities; cityIdx++) {
+    for (let cityIdx = 1; cityIdx < numberOfCities; cityIdx++) { //loop through the cities
         const distanceFromPreviousCity = distances[cityIdx - 1];
         const fuelFromPreviousCity = fuel[cityIdx - 1];
         milesRemaining += fuelFromPreviousCity * mpg - distanceFromPreviousCity;
