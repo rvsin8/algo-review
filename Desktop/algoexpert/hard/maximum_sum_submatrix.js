@@ -23,10 +23,10 @@
 
 function maximumSumSubmatrix(matrix, size) {
     const sums = createSumMatrix(matrix); //create an array that stores sums
-    let maxSubMatrixSum = -Infinity;
+    let maxSubMatrixSum = -Infinity; //set it to float -infinity 
 
-    for (let row = size - 1; row < matrix.length; row++) {
-        for (let col = size - 1; col < matrix[row].length; col++) {
+    for (let row = size - 1; row < matrix.length; row++) { //for loop 
+        for (let col = size - 1; col < matrix[row].length; col++) { //for loop
             let total = sums[row][col];
 
             const touchesTopBorder = row - size < 0;
@@ -59,14 +59,14 @@ function createSumMatrix(matrix) {
         sums[0][idx] = sums[0][idx - 1] + matrix[0][idx]; //looking at previous sum and adding the ele we are considering 
     }
 
-    for (let idx = 1; idx < matrix.length; idx++) {
+    for (let idx = 1; idx < matrix.length; idx++) { //first col
         sums[idx][0] = sums[idx - 1][0] + matrix[idx][0];
     }
 
-    for (let row = 1; row < matrix.length; row++) {
+    for (let row = 1; row < matrix.length; row++) { //rest of the matrix
         for (let col = 1; col < matrix[row].length; col++) {
             sums[row][col] = sums[row - 1][col] + sums[row][col - 1] - sums[row - 1][col - 1] + matrix[row][col];
         }
     }
-    return sums;
+    return sums; //return sums lmao
 }
