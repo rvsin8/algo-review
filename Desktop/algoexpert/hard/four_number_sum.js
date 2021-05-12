@@ -29,10 +29,11 @@
 //we keep doing this until we find our second quadruplet --> [7,6,1,2]
 
 //time complexity 
-//O(n^2)
+//O(n^2) avg where n is the length of our input array we use two for loops
+//O(n^3) worst 
 
 //space complexity 
-//O(n^2)
+//O(n^2) avg / worst
 
 function fourNumberSum(array, targetSum) {
     const allPairSums = {};
