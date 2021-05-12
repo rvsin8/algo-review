@@ -38,11 +38,11 @@ function maximumSumSubmatrix(matrix, size) {
             const touchesTopOrLeftBorder = touchesTopBorder || touchesLeftBorder; //if we tough both, overlap
             if (!touchesTopOrLeftBorder) total += sums[row - size][col - size]; //we need to add back the overlap values
 
-            maxSubMatrixSum = Math.max(maxSubMatrixSum, total);
+            maxSubMatrixSum = Math.max(maxSubMatrixSum, total); //the sum of the matrix at row / col
         }
 
     }
-    return maxSubMatrixSum;
+    return maxSubMatrixSum; // return the answer
 }
 
 function createSumMatrix(matrix) {
