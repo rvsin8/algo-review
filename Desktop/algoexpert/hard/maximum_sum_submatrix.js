@@ -55,5 +55,11 @@ function createSumMatrix(matrix) {
     }
     sums[0][0] = matrix[0][0];
 
-    
+    for (let idx = 1; idx < matrix[0].length; idx++) {
+        sums[0][idx] = sums[0][idx - 1] + matrix[0][idx];
+    }
+
+    for (let idx = 1; idx < matrix.length; idx++) {
+        sums[idx][0] = sums[idx - 1][0] + matrix[idx][0];
+    }
 }
