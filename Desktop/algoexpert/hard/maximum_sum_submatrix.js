@@ -48,6 +48,12 @@ function maximumSumSubmatrix(matrix, size) {
 function createSumMatrix(matrix) {
     const sums = [];
     for (let row = 0; row < matrix.length; row++) {
-        
+        sums.push([]);
+        for (let col = 0; col < matrix[row].length; col++) {
+            sums[row].push(0);
+        }
     }
+    sums[0][0] = matrix[0][0];
+
+    
 }
