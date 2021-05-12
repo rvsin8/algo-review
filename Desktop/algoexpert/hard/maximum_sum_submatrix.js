@@ -15,8 +15,10 @@
 //when we calculate these sums then we 
 
 //time complexity 
+//O(w * h)
 
 //space complexity 
+//O(w * h)
 
 
 function maximumSumSubmatrix(matrix, size) {
