@@ -23,6 +23,7 @@
 //we iterate through 4, P = 4 - 1 = 3 // 16 - 3 = 13
 //13 is in our hash table
 //[[7,6,4,-1]] our first quadruplet found
+//so on
 
 //time complexity 
 //O(n^2)
