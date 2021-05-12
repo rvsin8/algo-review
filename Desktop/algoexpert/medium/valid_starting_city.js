@@ -6,6 +6,9 @@
 //we need to imagine we have cities mapped out in a circular row
 //we have miles btw cities
 //gallons of fuel we can collect at each city
+//mpg for our imaginary car
+//the amount of cities will be the same as the length of our distances and fuel 
+//every city will be atleast 1 mile apart
 //
 
 //time complexity 
