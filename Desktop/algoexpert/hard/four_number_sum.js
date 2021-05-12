@@ -17,7 +17,9 @@
 //P = 4 + -1, 4 + 1, 4 + 2
 //Q = 7 + 4, 6 + 4 
 //iterate through the array once
-//
+//the first pass will not generate anything
+//we iterate before 6, 6 + 7 = 13 and we add this to the hash table
+//{13: [[7,6]]}
 
 //time complexity 
 //O(n^2)
