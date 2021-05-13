@@ -21,4 +21,8 @@ function reverseWordsInString(string) {
             startOfWord = idx;
         }
     }
+    words.push(string.slice(startOfWord));
+
+    reverseList(words);
+    return words.join('');
 }
