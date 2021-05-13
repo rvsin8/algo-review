@@ -48,9 +48,9 @@ function getKnapsackItems(knapsackValues, items) { //helper
     const sequence = []; //empty array
     let i = knapsackValues.length - 1; //current index
     let c = knapsackValues[0].length - 1; //capacity index
-    while (i > 0){
-        if (knapsackValues[i][c] === knapsackValues[i - 1][c]) {
-            i -= 1;
+    while (i > 0){ //while i is greater than 0, not in the first row
+        if (knapsackValues[i][c] === knapsackValues[i - 1][c]) { //if the knap value at the current indices is equal to the previous row of the same capacity 
+            i -= 1; //
         } else {
             sequence.unshift(i - 1);
             c -= items[i - 1][1];
