@@ -26,3 +26,9 @@ function reverseWordsInString(string) {
     reverseList(words);
     return words.join('');
 }
+
+function reverseList(list) {
+    let start = 0,
+        end = list.length - 1;
+    while
+}
