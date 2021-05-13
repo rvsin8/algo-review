@@ -50,13 +50,13 @@ function getKnapsackItems(knapsackValues, items) { //helper
     let c = knapsackValues[0].length - 1; //capacity index
     while (i > 0){ //while i is greater than 0, not in the first row
         if (knapsackValues[i][c] === knapsackValues[i - 1][c]) { //if the knap value at the current indices is equal to the previous row of the same capacity 
-            i -= 1; //
+            i -= 1; //we update i, we move up the row
         } else {
-            sequence.unshift(i - 1);
-            c -= items[i - 1][1];
-            i -= 1;
+            sequence.unshift(i - 1); //we can append to our sequence, i-1 bc we have an additional row
+            c -= items[i - 1][1]; //update our capacity 
+            i -= 1; //update 
         }
-        if (c === 0) break;
+        if (c === 0) break; //if we ever get to the first column then break
     }
-    return sequence;
+    return sequence; //return our sequence
 }
