@@ -31,12 +31,12 @@ function knapsackProblem(items, capacity) {
         const currentWeight = items[i - 1][1]; //we have that first row with no items 
         const currentValue = items[i - 1][0]; //first value
         for (let c = 0; c < capacity + 1; c++) { //for capacity
-            if (currentWeight > c) { //
-                knapsackValues[i][c] = knapsackValues[i - 1][c];
+            if (currentWeight > c) { //is the current weight greater than c, cannot fit
+                knapsackValues[i][c] = knapsackValues[i - 1][c]; 
             } else {
-                knapsackValues[i][c] = Math.max (
-                    knapsackValues[i - 1][c],
-                    knapsackValues[i - 1][c - currentWeight] + currentValue,
+                knapsackValues[i][c] = Math.max ( //if we can fit, it will the max of
+                    knapsackValues[i - 1][c], //previous item
+                    knapsackValues[i - 1][c - currentWeight] + currentValue, //not adding the current item or adding the item 
                 );
             }
         }
