@@ -4,8 +4,10 @@
 //my understanding
 
 //time complexity 
+//O(n)
 
 //space complexity 
+//O(n)
 
 function reverseWordsInString(string) {
     const words = [];
