@@ -41,13 +41,13 @@ function knapsackProblem(items, capacity) {
             }
         }
     }
-    return [knapsackValues[items.length][capacity], getKnapsackItems(knapsackValues, items)];
+    return [knapsackValues[items.length][capacity], getKnapsackItems(knapsackValues, items)]; //answer with helper function
 }
 
-function getKnapsackItems(knapsackValues, items) {
-    const sequence = [];
-    let i = knapsackValues.length - 1;
-    let c = knapsackValues[0].length - 1;
+function getKnapsackItems(knapsackValues, items) { //helper 
+    const sequence = []; //empty array
+    let i = knapsackValues.length - 1; //current index
+    let c = knapsackValues[0].length - 1; //capacity index
     while (i > 0){
         if (knapsackValues[i][c] === knapsackValues[i - 1][c]) {
             i -= 1;
