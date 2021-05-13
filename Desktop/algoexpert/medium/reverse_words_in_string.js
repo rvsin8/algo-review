@@ -9,7 +9,8 @@
 //what defines a word here is any characters grouped together and not separated by white space
 //you are not guaranteed to have any words in your string
 //"     " is valid
-//"   a" --> "a   "
+//"   a" --> "a   " is valid as well
+//not allowed to use in built in split or reverse methods. 
 
 //time complexity 
 //O(n)
