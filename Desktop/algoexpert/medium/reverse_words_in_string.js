@@ -30,5 +30,11 @@ function reverseWordsInString(string) {
 function reverseList(list) {
     let start = 0,
         end = list.length - 1;
-    while
+    while (start < end) {
+        const temp = list[start];
+        list[start] = list[end];
+        list[end] = temp;
+        start++;
+        end--;
+    }
 }
