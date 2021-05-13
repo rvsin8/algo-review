@@ -2,6 +2,10 @@
 //Strings 
 
 //my understanding
+//given a string and return the same string with all the words reverse 
+//"AlgoExpert is the best!" --> "best! the is AlgoExpert"
+//we want to keep the spaces the same in the reverse string
+//
 
 //time complexity 
 //O(n)
