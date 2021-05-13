@@ -15,6 +15,10 @@ function reverseWordsInString(string) {
 
         if (character === ' ') {
             words.push(string.slice(startOfWord, idx));
+            startOfWord = idx;
+        } else if (string[startOfWord] === ' ') {
+            words.push(' ');
+            startOfWord = idx;
         }
     }
 }
