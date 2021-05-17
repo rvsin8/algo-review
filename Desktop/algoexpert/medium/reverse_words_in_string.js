@@ -11,6 +11,8 @@
 //"     " is valid
 //"   a" --> "a   " is valid as well
 //not allowed to use in built in split or reverse methods. 
+//can use ".join"
+//
 
 //time complexity 
 //O(n)
