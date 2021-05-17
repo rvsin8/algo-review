@@ -97,3 +97,7 @@ Chapter 4 - Sorting and Searching
 - Such partitioning buys us two things. First, the pivot element p ends up in the exact array position it will reside in the final sorted order. Second, after portioning no element flops to the other side in the final sorted order. Thus we can now sort the elements to the left and right of the pivot independently. This gives us an recursively algorithm, since we can use the partitioning approach to sort each subproblem. The algorithm must be correct since each element ultimately ends up in the proper position: [code]. 
 - But how long the entire quicksort take ? They explain this in the next three paragraphs. Read it. 
 - Thus, the worst case for quicksort is worse than heapsort or mergesort. To justify its name, quick sort had better be good in the average case. Understanding why requires some intuition about random sampling. 
+
+4.6.1 - Intuition: The Expected Case for Quicksort 
+- The expected performance of quicksort depends upon the height of the partition tree constructed by random pivot elements at each step. Mergesort ran in O(n log n) time because we split the keys into two equal halves, sorted them recursively and then merged the halves in linear time. Thus, whenever our pivot element is near the center of the sorted array (the pivot is close to the median element), we get a good split and realize the same performance as merge sort. 
+- The rest of this passage goes on about why quick sort is O(nlogn) in the average case, read it. 
