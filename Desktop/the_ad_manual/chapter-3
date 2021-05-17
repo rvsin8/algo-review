@@ -134,3 +134,6 @@ Chapter 4 - Sorting and Searching
 
 4.9.2 One Sided Binary Search 
 - One sided binary search is Mose useful whenever we are looking for a key that lies close to our current position. 
+
+4.9.3 Square and Other Roots
+- The square root of n is the number r such that r^2 = n. Square root computations are performed inside every pocket calculator, but it is instructive to develop an efficient algorithm to compute them. Root-finding algorithms that converge faster than binary search are known for both of these problems. Instead of always testing the midpoint of the interval, these algorithms interpolate to find a test point t closer to the actual root. Still binary search is simple, robust and works as well as possible without additional information on the nature of the function to be computed. Binary search and its variants are quintessential divide-and-conquer algorithms. 
