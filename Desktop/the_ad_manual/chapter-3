@@ -131,3 +131,6 @@ Chapter 4 - Sorting and Searching
 
 4.9.1 Counting Occurrences
 - Several interesting algorithms follow from simple variants of binary search. Suppose that we want to count the number of times a given key k occurs in a given sorted array. Because sorting groups all the copies of k into a contiguous block, the problem reduces to finding the right block and then measures its size. The binary search routine presented above anneals us to find the index of an element of the correct block (x) in O(lg n) time. The natural way to identify the boundaries of the block is to sequentially test elements to the left of x until we find the first one that differs from the search key and repeat this search to the right of x. The difference between the indices of the left and the right boundaries plus one gives the count of the number of occurrences of k. Continue reading this until we find out how each search takes O(lg n) time, so we can count the occurrences in the logarithmic time regardless oof the size of the block. 
+
+4.9.2 One Sided Binary Search 
+- One sided binary search is Mose useful whenever we are looking for a key that lies close to our current position. 
