@@ -151,3 +151,24 @@ Chapter 4 - Sorting and Searching
 - Any exponential can be represented by a recurrence: [formula].
 - Finally, lots of weird functions that cannot be described easily with conventional notation can be represented by a recurrence: [formula].
 - This means that recurrence relations are a very versatile way to represent functions. The self-reference property of recurrence relations is shared with recursive programs or algorithms, as the shared roots of both terms reflect. Essentially, recurrence relations provide a way to analyze recursive structures, such as algorithms.
+
+4.10.2 Divide-and-Conquer Recurrences 
+- Divide-and-conquer algorithms tend to break a given problem into some number of smaller pieces (say a), each of which is of size n/b. Further, they spend f(n) time to combine these subproblem solutions into a complete result. Let T(n) denote the worst-case time the algorithm takes to solve a problem of size n. Then T(n) is given by the following recurrence relation: [formula].
+- Consider the following examples:
+	> Sorting - the running time behavior of mergesort is governed by the recurrence T(n) = 2T(n/2) + 	O(n), since the algorithm divides the data into equal-sized halves and then spend the linear time 	merging the halves after they are sorted. In fact, this recurrence evaluates to T(n) = O(n lg n), just 	as we got by our previous analysis. 
+	> Binary Search - the running time behavior of binary search is governed by the recurrence T(n) = 	T(n/2) + O(1), since at each step we spend constant time to reduce the problem to an instance 	half its size. In fact, this recurrence evaluates to T(n) = O(lg n), just as we got by our previous 	analysis. 
+	> Fast Heap Construction - the bubble.down method of heap construction built an n-element 		heap by constructing two n/2 elements heaps and then merging them with the root in logarithmic 	time. This argument reduces to the recurrence relation T(n) = 2T(n/2) + O(lg n). In fact, this 		recurrence evaluates to T(n) = O(n), just as we got by our previous analysis. 
+	> Matrix Multiplication - as discussed in Section 2.5.4, the standard matrix multiplication 		algorithm for two n * n matrices takes O(n^3), because we compute the dot product of n terms for 	each of the n^2 elements in the product matrix. 
+- However, Strassen [Str69] discovered, a divide-and-conquer algorithm that manipulates the products of seven n/2 * n/2 matrix products to yield the product of two n * n matrices. This yields a time complexity recurrence T(n) = 7T(n/2) + O(n^2). In fact, this recurrence evaluates to T(n) = O(n^2.81), which seems impossible to predict without solving the recurrence. 
+
+4.10.3 Solving Divide-and-Conquer Recurrences(*) 
+- In fact, divide-and-conquer recurrences of the form T(n) = aT(n/b) + f(n) are generally easy to solve, because the solutions typically fall into one of three distinct cases:
+	> formula 1
+	> formula 2
+	> formula 3
+- Although this looks somewhat frightening, it really isn’t difficult to apply. The issue is identifying which case of this so0called master theorem holds for your given recurrence. Case 1 holds for heaps construction and matrix multiplication, while Case 2 holds mergseort and binary search. Case 3 generally arises for clumsier algorithm, where the cost of combining the subproblems dominates everything. 
+- The three causes of the master theorem correspond to three difference costs which might be dominant as a function of alb and f(n).
+	> Case 1: Too many leaves - if the number of leaf nodes outweighs the sum of the 		internal evaluation cost, the total running time is O(n^logba)
+	> Case 2: Equal work per level - as we move down the tree, each problem gets 		smaller but there are more of them to solve. If the sum of the internal evaluation 		costs at each level are equal, the total running time is the cost per level(n^logna) 		times the number of levels (Logbn), for a total running time os [expression].
+	> Case 3: too expensive a root - if the internal evaluation costs grow rapidly enough 	with n, then the cost of the root evaluation may dominate. if so the total running time 	is O(f(n)).
+
