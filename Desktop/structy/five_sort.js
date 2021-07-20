@@ -3,4 +3,4 @@ Write a function, fiveSort, that takes in an array of numbers as an argument. Th
 
 Elements that are not 5 can appear in any order in the output, as long as all 5s are at the end of the array.
 
-Update for git
+Update for git - part 2
