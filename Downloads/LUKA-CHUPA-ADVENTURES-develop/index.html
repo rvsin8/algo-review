@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+<div class="body-wrapper">
+    <div class="content-left">
+        <div class="sidebar-header">
+            <div class="app-title">
+                <img src="https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-2/img/logo.36f34a9f.svg" />
+            </div>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-body-menu">
+                <li><a class="active"><i class="far fa-chart-bar custom-chart"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-right">
+        <div class="cv-navbar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <form id="searchByNameForm">
+                            <div class="input-group border rounded-pill p-1">
+                                <div class="input-group-prepend border-0">
+                                    <button id="button-addon4" type="button" class="btn btn-link" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                                <input type="search" placeholder="Enter country here..." aria-describedby="button-addon4" name="searchByNameInput" required class="form-control bg-none border-0">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <form id="selectByNameForm">
+                            <div class="form-group">
+                                <div class="input-group border rounded-pill p-1">
+
+                                    <select class="form-control" id="countrySelection" style="border: none" name="countrySelection">
+                                        <option disabled>Select Country</option>
+                                        <option>UK</option><option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>Andorra</option><option>Angola</option><option>Anguilla</option><option>Antigua and Barbuda</option><option>Argentina</option><option>Armenia</option><option>Aruba</option><option>Australia</option><option>Austria</option><option>Azerbaijan</option><option>Bahamas</option><option>Bahrain</option><option>Bangladesh</option><option>Barbados</option><option>Belarus</option><option>Belgium</option><option>Belize</option><option>Benin</option><option>Bermuda</option><option>Bhutan</option><option>Bolivia</option><option>Bosnia</option><option>Botswana</option><option>Brazil</option><option>British Virgin Islands</option><option>Brunei</option><option>Bulgaria</option><option>Burkina Faso</option><option>Burundi</option><option>Cabo Verde</option><option>Cambodia</option><option>Cameroon</option><option>Canada</option><option>Caribbean Netherlands</option><option>Cayman Islands</option><option>Central African Republic</option><option>Chad</option><option>Channel Islands</option><option>Chile</option><option>China</option><option>Colombia</option><option>Comoros</option><option>Congo</option><option>Costa Rica</option><option>Croatia</option><option>Cuba</option><option>Curaçao</option><option>Cyprus</option><option>Czechia</option><option>Côte d'Ivoire</option><option>DRC</option><option>Denmark</option><option>Diamond Princess</option><option>Djibouti</option><option>Dominica</option><option>Dominican Republic</option><option>Ecuador</option><option>Egypt</option><option>El Salvador</option><option>Equatorial Guinea</option><option>Eritrea</option><option>Estonia</option><option>Ethiopia</option><option>Falkland Islands (Malvinas)</option><option>Faroe Islands</option><option>Fiji</option><option>Finland</option><option>France</option><option>French Guiana</option><option>French Polynesia</option><option>Gabon</option><option>Gambia</option><option>Georgia</option><option>Germany</option><option>Ghana</option><option>Gibraltar</option><option>Greece</option><option>Greenland</option><option>Grenada</option><option>Guadeloupe</option><option>Guatemala</option><option>Guinea</option><option>Guinea-Bissau</option><option>Guyana</option><option>Haiti</option><option>Holy See (Vatican City State)</option><option>Honduras</option><option>Hong Kong</option><option>Hungary</option><option>Iceland</option><option>India</option><option>Indonesia</option><option>Iran</option><option>Iraq</option><option>Ireland</option><option>Isle of Man</option><option>Israel</option><option>Italy</option><option>Jamaica</option><option>Japan</option><option>Jordan</option><option>Kazakhstan</option><option>Kenya</option><option>Kuwait</option><option>Kyrgyzstan</option><option>Lao People's Democratic Republic</option><option>Latvia</option><option>Lebanon</option><option>Lesotho</option><option>Liberia</option><option>Libyan Arab Jamahiriya</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>MS Zaandam</option><option>Macao</option><option>Macedonia</option><option>Madagascar</option><option>Malawi</option><option>Malaysia</option><option>Maldives</option><option>Mali</option><option>Malta</option><option>Marshall Islands</option><option>Martinique</option><option>Mauritania</option><option>Mauritius</option><option>Mayotte</option><option>Mexico</option><option>Micronesia</option><option>Moldova</option><option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Montserrat</option><option>Morocco</option><option>Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nepal</option><option>Netherlands</option><option>New Caledonia</option><option>New Zealand</option><option>Nicaragua</option><option>Niger</option><option>Nigeria</option><option>Norway</option><option>Oman</option><option>Pakistan</option><option>Palestine</option><option>Panama</option><option>Papua New Guinea</option><option>Paraguay</option><option>Peru</option><option>Philippines</option><option>Poland</option><option>Portugal</option><option>Qatar</option><option>Romania</option><option>Russia</option><option>Rwanda</option><option>Réunion</option><option>S. Korea</option><option>Saint Helena</option><option>Saint Kitts and Nevis</option><option>Saint Lucia</option><option>Saint Martin</option><option>Saint Pierre Miquelon</option><option>Saint Vincent and the Grenadines</option><option>Samoa</option><option>San Marino</option><option>Sao Tome and Principe</option><option>Saudi Arabia</option><option>Senegal</option><option>Serbia</option><option>Seychelles</option><option>Sierra Leone</option><option>Singapore</option><option>Sint Maarten</option><option>Slovakia</option><option>Slovenia</option><option>Solomon Islands</option><option>Somalia</option><option>South Africa</option><option>South Sudan</option><option>Spain</option><option>Sri Lanka</option><option>St. Barth</option><option>Sudan</option><option>Suriname</option><option>Swaziland</option><option>Sweden</option><option>Switzerland</option><option>Syrian Arab Republic</option><option>Taiwan</option><option>Tajikistan</option><option>Tanzania</option><option>Thailand</option><option>Timor-Leste</option><option>Togo</option><option>Trinidad and Tobago</option><option>Tunisia</option><option>Turkey</option><option>Turks and Caicos Islands</option><option>UAE</option><option>UK</option><option>USA</option><option>Uganda</option><option>Ukraine</option><option>Uruguay</option><option>Uzbekistan</option><option>Vanuatu</option><option>Venezuela</option><option>Vietnam</option><option>Wallis and Futuna</option><option>Western Sahara</option><option>Yemen</option><option>Zambia</option><option>Zimbabwe</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-main">
+            <div class="container-fluid">
+                <h3 class="page-title">World Stats</h3>
+
+                <div class="row mt-3" id="worldStatCards">
+                    <!-- load world cards -->
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 col-md-7 mb-3">
+                        <div class="card chart-card">
+                            <h5 class="card-header">Worldwide Chart</h5>
+                            <div class="card-body">
+                                <div class="chart-wrapper">
+                                    <div class="chart-container">
+                                        <canvas class="myChart-worldwide"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 mb-3">
+                        <div class="card chart-card">
+                            <h5 class="card-header">Cases Vs Recovered Vs Active Vs Deaths</h5>
+                            <div class="card-body">
+                                <div class="chart-wrapper">
+                                    <div class="chart-container">
+                                        <canvas class="pieChart-worldwide"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- country stats -->
+            <div class="container-fluid">
+                <h3 class="page-title mt-3">Country Stats</h3>
+
+                <div class="row mt-3" id="countryStatCards">
+                    <!-- load country cards -->
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 col-md-7 mb-3">
+                        <div class="card chart-card">
+                            <h5 class="card-header">Caronavirus in <span id="countryName"></span></h5>
+                            <div class="card-body">
+                                <div class="chart-wrapper">
+                                    <div class="chart-container">
+                                        <button  id="toggle-map" class="toggle btn btn-outline-primary btn-primary-custom mb-3">Chart</button>
+                                        <div id="chart-container-country"></div>
+                                        <div class="map active active-map d-none"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 mb-3">
+                        <div class="card chart-card">
+                            <h5 class="card-header">Cases Vs Recovered Vs Active Vs Deaths</h5>
+                            <div class="card-body">
+                                <div class="chart-wrapper">
+                                    <div class="chart-container">
+                                        <canvas class="pieChart-countrywide"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-footer">2021 &copy; Covid 19 Reports</div>
+    </div>
+</div>
+<!-- error toaster -->
+<div id="error-toaster" class="d-none">
+    <div class="error-text"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="./js/scripts.js" type="module"></script>
+</body>
+
+</html>
